@@ -8,35 +8,10 @@
   <meta name="theme-color" content="#0d0b08">
   <title>網站後台</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <style>
-    .admin-tool-shortcut {
-      position: fixed;
-      top: 14px;
-      right: 74px;
-      z-index: 99999;
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      padding: 0 14px;
-      border-radius: 7px;
-      background: #1f2933;
-      color: #fff;
-      font: 600 13px/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      text-decoration: none;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    }
-    .admin-tool-shortcut:hover { background: #111827; }
-    @media (max-width: 640px) {
-      .admin-tool-shortcut {
-        top: auto;
-        right: 12px;
-        bottom: 12px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./formatting-widget.css">
 </head>
 <body>
-  <a class="admin-tool-shortcut" href="./formatter.html" target="_blank" rel="noopener">文章格式化工具</a>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="./formatting-widget.js"></script>
 </body>
 </html>

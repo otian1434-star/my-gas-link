@@ -1,0 +1,205 @@
+.yw-editor {
+  border: 1px solid #d5dce3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.yw-editor-toolbar,
+.yw-editor-templates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  border-bottom: 1px solid #e6ebf0;
+  background: #f7f9fb;
+}
+
+.yw-editor-button {
+  min-height: 30px;
+  border: 1px solid #cfd8e3;
+  border-radius: 6px;
+  background: #fff;
+  color: #2f3b47;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.yw-editor-button:hover {
+  border-color: #9b7b2f;
+  color: #8a6a21;
+}
+
+.yw-editor-button.primary {
+  border-color: #9b7b2f;
+  background: #9b7b2f;
+  color: #fff;
+}
+
+.yw-editor-button.danger {
+  margin-left: auto;
+  border-color: #d0a0a0;
+  color: #a33;
+}
+
+.yw-editor-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 460px;
+}
+
+.yw-editor-pane {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.yw-editor-pane + .yw-editor-pane {
+  border-left: 1px solid #e6ebf0;
+}
+
+.yw-editor-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 12px;
+  border-bottom: 1px solid #e6ebf0;
+  background: #fbfcfd;
+  color: #526170;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.yw-editor-count {
+  color: #8b98a7;
+  font-weight: 500;
+}
+
+.yw-editor-textarea {
+  flex: 1;
+  width: 100%;
+  min-height: 400px;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  padding: 14px;
+  color: #1f2933;
+  background: #fff;
+  font: 14px/1.8 Consolas, "Microsoft JhengHei", monospace;
+}
+
+.yw-editor-preview {
+  flex: 1;
+  min-height: 400px;
+  overflow: auto;
+  padding: 16px;
+  background: #11100d;
+  color: #e8d9bd;
+  font: 14px/1.85 "Microsoft JhengHei", sans-serif;
+}
+
+.yw-editor-empty {
+  display: grid;
+  min-height: 260px;
+  place-items: center;
+  color: #786f62;
+  text-align: center;
+}
+
+.yw-preview h2,
+.yw-preview h3,
+.yw-preview h4 {
+  color: #d8b767;
+  margin: 18px 0 10px;
+  font-family: "Microsoft JhengHei", sans-serif;
+}
+
+.yw-preview h2 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(216, 183, 103, 0.35);
+  font-size: 20px;
+}
+
+.yw-preview h3 {
+  padding-left: 10px;
+  border-left: 3px solid #d8b767;
+  font-size: 16px;
+}
+
+.yw-preview h4 {
+  color: #8dd9ff;
+  font-size: 14px;
+}
+
+.yw-preview p { margin: 9px 0; }
+.yw-preview a { color: #e4c777; text-decoration: underline; }
+.yw-preview code { background: #211b13; color: #87e887; padding: 2px 6px; border-radius: 4px; }
+.yw-preview ul,
+.yw-preview ol { padding-left: 22px; margin: 10px 0; }
+.yw-preview li { margin: 5px 0; }
+.yw-preview blockquote {
+  margin: 12px 0;
+  padding: 10px 14px;
+  border-left: 4px solid #d8b767;
+  background: rgba(216, 183, 103, 0.1);
+}
+.yw-preview hr {
+  border: 0;
+  border-top: 1px solid rgba(216, 183, 103, 0.28);
+  margin: 18px 0;
+}
+.yw-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+.yw-preview th,
+.yw-preview td {
+  border: 1px solid rgba(216, 183, 103, 0.22);
+  padding: 8px 10px;
+}
+.yw-preview th {
+  color: #e4c777;
+  background: rgba(216, 183, 103, 0.12);
+}
+.yw-callout {
+  margin: 12px 0;
+  padding: 10px 14px;
+  border: 1px solid rgba(216, 183, 103, 0.24);
+  border-left-width: 4px;
+  background: rgba(216, 183, 103, 0.08);
+}
+.yw-callout.red { border-left-color: #e87070; color: #ffc2c2; background: rgba(139, 26, 26, 0.18); }
+.yw-callout.blue { border-left-color: #5da7e8; color: #c6e4ff; background: rgba(74, 144, 217, 0.14); }
+.yw-callout.green { border-left-color: #6fd08d; color: #c8ffd7; background: rgba(80, 200, 120, 0.12); }
+.yw-divider {
+  margin: 18px 0;
+  color: #8d7440;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.yw-tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid rgba(216, 183, 103, 0.4);
+  border-radius: 999px;
+  color: #e4c777;
+  font-size: 12px;
+  font-weight: 700;
+}
+.yw-tag.red { border-color: #e87070; color: #ff9c9c; }
+.yw-tag.blue { border-color: #5da7e8; color: #9fd5ff; }
+.yw-tag.green { border-color: #6fd08d; color: #a6efba; }
+
+@media (max-width: 900px) {
+  .yw-editor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yw-editor-pane + .yw-editor-pane {
+    border-left: 0;
+    border-top: 1px solid #e6ebf0;
+  }
+}

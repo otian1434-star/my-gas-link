@@ -912,6 +912,28 @@ img { max-width: 100%; display: block; }
 }
 .cms-callout.red { border-color: #e87070; background: rgba(139,26,26,0.12); }
 .cms-callout.blue { border-color: #4a90d9; background: rgba(74,144,217,0.1); }
+.cms-callout.green { border-color: #50c878; background: rgba(80,200,120,0.1); }
+.cms-divider {
+  color: var(--gold-dark);
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin: 18px 0;
+  text-align: center;
+}
+.cms-tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid var(--border-bright);
+  border-radius: 999px;
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 2px;
+}
+.cms-tag.red { border-color: rgba(232,112,112,0.65); color: #e87070; }
+.cms-tag.blue { border-color: rgba(74,144,217,0.65); color: #6aaee8; }
+.cms-tag.green { border-color: rgba(80,200,120,0.65); color: #78d998; }
 .cms-button {
   display: inline-block;
   background: linear-gradient(135deg, var(--gold-dark), var(--gold));

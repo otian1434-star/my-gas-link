@@ -1,2 +1,3 @@
-/formatter /admin/formatter.html 302!
-/formatter.html /admin/formatter.html 302!
+/formatter /admin/ 302!
+/formatter.html /admin/ 302!
+/admin/formatter.html /admin/ 302!

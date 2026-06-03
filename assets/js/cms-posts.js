@@ -76,23 +76,127 @@
     }
   }
 
-  function markdownLite(value) {
-    var html = escapeHTML(value)
-      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">')
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
-      .replace(/^### (.*)$/gm, '<h3>$1</h3>')
-      .replace(/^## (.*)$/gm, '<h2>$1</h2>')
-      .replace(/^# (.*)$/gm, '<h2>$1</h2>')
-      .replace(/^&gt; (.*)$/gm, '<blockquote>$1</blockquote>')
-      .replace(/^---$/gm, '<hr>')
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*(.*?)\*/g, '<em>$1</em>')
-      .replace(/^\- (.*)$/gm, '<li>$1</li>')
-      .replace(/\n{2,}/g, '</p><p>')
-      .replace(/\n/g, '<br>');
-    html = html.replace(/(<li>.*?<\/li>)(<br>)?/gs, function (match) {
-      return '<ul>' + match.replace(/<br>/g, '') + '</ul>';
+  function inlineMarkdown(value) {
+    var text = escapeHTML(value);
+    text = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
+    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    text = text.replace(/`([^`]+)`/g, '<code>$1</code>');
+    text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    text = text.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    text = text.replace(/\[TAG:([^\]]+)\]/g, function (_, tag) {
+      var colorMap = { '開服': 'red', '活動': 'red', '維護': 'blue', '更新': 'blue', '重要': 'red', '提示': 'blue', '完成': 'green', '成功': 'green' };
+      var cls = colorMap[tag] || 'gold';
+      return '<span class="cms-tag ' + cls + '">' + escapeHTML(tag) + '</span>';
     });
+    return text;
+  }
+
+  function markdownLite(value) {
+    var lines = String(value || '').split('\n');
+    var html = '';
+    var inUl = false;
+    var inOl = false;
+    var inTable = false;
+
+    function closeList() {
+      if (inUl) { html += '</ul>'; inUl = false; }
+      if (inOl) { html += '</ol>'; inOl = false; }
+    }
+
+    function closeTable() {
+      if (inTable) { html += '</tbody></table>'; inTable = false; }
+    }
+
+    lines.forEach(function (line) {
+      var trimmed = line.trim();
+
+      if (trimmed.indexOf('|') === 0 && trimmed.lastIndexOf('|') === trimmed.length - 1) {
+        var cells = trimmed.slice(1, -1).split('|').map(function (cell) { return cell.trim(); });
+        if (cells.every(function (cell) { return /^[-: ]+$/.test(cell); })) return;
+        closeList();
+        if (!inTable) {
+          html += '<table><thead><tr>';
+          cells.forEach(function (cell) { html += '<th>' + inlineMarkdown(cell) + '</th>'; });
+          html += '</tr></thead><tbody>';
+          inTable = true;
+        } else {
+          html += '<tr>';
+          cells.forEach(function (cell) { html += '<td>' + inlineMarkdown(cell) + '</td>'; });
+          html += '</tr>';
+        }
+        return;
+      }
+
+      closeTable();
+
+      if (!trimmed) {
+        closeList();
+        return;
+      }
+      if (trimmed.indexOf('### ') === 0) {
+        closeList();
+        html += '<h3>' + inlineMarkdown(trimmed.slice(4)) + '</h3>';
+        return;
+      }
+      if (trimmed.indexOf('## ') === 0) {
+        closeList();
+        html += '<h2>' + inlineMarkdown(trimmed.slice(3)) + '</h2>';
+        return;
+      }
+      if (trimmed.indexOf('# ') === 0) {
+        closeList();
+        html += '<h2>' + inlineMarkdown(trimmed.slice(2)) + '</h2>';
+        return;
+      }
+      if (trimmed === '---') {
+        closeList();
+        html += '<hr>';
+        return;
+      }
+      if (trimmed === '===') {
+        closeList();
+        html += '<div class="cms-divider">- * * * -</div>';
+        return;
+      }
+      if (trimmed.indexOf('!!! ') === 0) {
+        closeList();
+        html += '<div class="cms-callout red">' + inlineMarkdown(trimmed.slice(4)) + '</div>';
+        return;
+      }
+      if (trimmed.indexOf('??? ') === 0) {
+        closeList();
+        html += '<div class="cms-callout blue">' + inlineMarkdown(trimmed.slice(4)) + '</div>';
+        return;
+      }
+      if (trimmed.indexOf('+++ ') === 0) {
+        closeList();
+        html += '<div class="cms-callout green">' + inlineMarkdown(trimmed.slice(4)) + '</div>';
+        return;
+      }
+      if (trimmed.indexOf('> ') === 0) {
+        closeList();
+        html += '<blockquote>' + inlineMarkdown(trimmed.slice(2)) + '</blockquote>';
+        return;
+      }
+      if (trimmed.indexOf('- ') === 0 || trimmed.indexOf('* ') === 0 || trimmed.indexOf('• ') === 0) {
+        if (inOl) { html += '</ol>'; inOl = false; }
+        if (!inUl) { html += '<ul>'; inUl = true; }
+        html += '<li>' + inlineMarkdown(trimmed.slice(2)) + '</li>';
+        return;
+      }
+      if (/^\d+\.\s/.test(trimmed)) {
+        if (inUl) { html += '</ul>'; inUl = false; }
+        if (!inOl) { html += '<ol>'; inOl = true; }
+        html += '<li>' + inlineMarkdown(trimmed.replace(/^\d+\.\s/, '')) + '</li>';
+        return;
+      }
+
+      closeList();
+      html += '<p>' + inlineMarkdown(trimmed) + '</p>';
+    });
+
+    closeList();
+    closeTable();
     return html;
   }
 
@@ -120,7 +224,7 @@
       parts.push('<img class="post-cover" src="' + escapeHTML(post.coverImage) + '" alt="' + escapeHTML(post.title) + '">');
     }
     if (post.body || post.excerpt) {
-      parts.push('<div class="cms-markdown"><p>' + sanitizeTrustedHTML(markdownLite(post.body || post.excerpt || '')) + '</p></div>');
+      parts.push('<div class="cms-markdown">' + sanitizeTrustedHTML(markdownLite(post.body || post.excerpt || '')) + '</div>');
     }
     if (post.customHtml) {
       parts.push('<div class="cms-custom-html">' + sanitizeTrustedHTML(post.customHtml) + '</div>');

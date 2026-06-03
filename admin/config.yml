@@ -39,10 +39,10 @@ collections:
               - { label: 置頂, name: pinned, widget: boolean, default: false }
               - { label: 封面圖片, name: coverImage, widget: image, required: false }
               - { label: 摘要, name: excerpt, widget: text, required: false }
-              - label: Markdown 內文
+              - label: 文章內文
                 name: body
-                widget: markdown
-                hint: 可用工具列做標題、粗體、清單、連結、圖片等基本排版。
+                widget: yaowu_markdown
+                hint: 可直接使用上方按鈕與範本排版，儲存後會顯示在最新文章頁。
               - label: 自訂 HTML 區塊
                 name: customHtml
                 widget: code
