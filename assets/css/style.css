@@ -543,9 +543,30 @@ img { max-width: 100%; display: block; }
 /* ══════════════════════════════════════
    首頁 Section
 ══════════════════════════════════════ */
-.section { padding: 68px 0; }
+.section { padding: 68px 0; position: relative; overflow: hidden; }
 .section-alt { background: var(--bg2); }
-.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.section-bg-quick,
+.section-bg-server {
+  background-color: var(--bg2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section-bg-quick {
+  background-image:
+    linear-gradient(180deg, rgba(13,11,8,0.86), rgba(13,11,8,0.9)),
+    radial-gradient(ellipse 760px 320px at 50% 18%, rgba(201,169,110,0.18), transparent 68%),
+    url('../media/quick-nav-bg.webp');
+}
+.section-bg-server {
+  background-image:
+    linear-gradient(180deg, rgba(13,11,8,0.84), rgba(13,11,8,0.92)),
+    radial-gradient(ellipse 820px 360px at 50% 35%, rgba(201,169,110,0.16), transparent 70%),
+    url('../media/server-info-bg.jpg');
+  border-top: 1px solid rgba(201,169,110,0.1);
+  border-bottom: 1px solid rgba(201,169,110,0.08);
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 .section-header { text-align: center; margin-bottom: 44px; }
 .section-eyebrow {
   font-size: 10px; letter-spacing: 5px;
