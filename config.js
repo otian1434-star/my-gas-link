@@ -48,10 +48,8 @@ const FORUM_CONFIG = {
     ],
   },
 
-  // ── 申辦帳號 Google Form（換論壇時更換）─────────────────────
-  // 建立 Google Forms 表單後填入 URL，表單欄位：電子信箱、手機號碼
-  // 表單回覆設定「限制存取」，只有管理員帳號可查看資料
-  registerFormUrl: "https://docs.google.com/forms/d/e/XXXXXX/viewform",  // ← 填入你的 Google Form URL
+  // ── 申辦帳號表單 ────────────────────────────────────────────
+  // register.html 使用 Netlify Forms 收件，資料在 Netlify 專案 Forms 頁面查看。
 
   // ── 彈窗公告（可關閉或修改內容）─────────────────────────────
   popup: {
