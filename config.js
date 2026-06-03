@@ -48,6 +48,21 @@ const FORUM_CONFIG = {
     ],
   },
 
+  // ── 左右側懸浮圖片 ───────────────────────────────────────────
+  sideBanners: {
+    enabled: true,
+    left: {
+      image: "assets/media/side-line-official.png",
+      url: "https://lin.ee/u799TqF",
+      alt: "官方 LINE@",
+    },
+    right: {
+      image: "assets/media/side-auto-sponsor.png",
+      url: "",
+      alt: "自動贊助",
+    },
+  },
+
   // ── 申辦帳號表單 ────────────────────────────────────────────
   // register.html 使用 Netlify Forms 收件，資料在 Netlify 專案 Forms 頁面查看。
 

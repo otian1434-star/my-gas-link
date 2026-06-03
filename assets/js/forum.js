@@ -12,6 +12,7 @@
     removeOldNav();
     buildFooter();
     buildFloatingPanel();
+    buildSideBanners();
     initPopup();
     highlightNav();
     addPageHdrLine();
@@ -333,6 +334,34 @@
         </div>
       </div>
     </div>`;
+    document.body.insertAdjacentHTML('beforeend', html);
+  }
+
+  function buildSideBanners() {
+    const C = FORUM_CONFIG;
+    if (!C.sideBanners || !C.sideBanners.enabled) return;
+    const r = root();
+    const items = [
+      { side: 'left', ...(C.sideBanners.left || {}) },
+      { side: 'right', ...(C.sideBanners.right || {}) },
+    ].filter(item => item.image);
+    if (!items.length) return;
+
+    const html = `
+    <div id="side-floating-banners" aria-label="側邊快捷連結">
+      ${items.map(item => {
+        const image = resolveLink(item.image, r);
+        const alt = escapeHTML(item.alt || '');
+        const content = `<img src="${escapeHTML(image)}" alt="${alt}" loading="lazy">`;
+        if (!item.url) {
+          return `<div class="side-float-banner ${escapeHTML(item.side)} is-disabled" aria-label="${alt}">${content}</div>`;
+        }
+        const url = resolveLink(item.url, r);
+        const external = /^https?:\/\//.test(url);
+        return `<a class="side-float-banner ${escapeHTML(item.side)}" href="${escapeHTML(url)}" ${external ? 'target="_blank" rel="noopener"' : ''} aria-label="${alt}">${content}</a>`;
+      }).join('')}
+    </div>`;
+
     document.body.insertAdjacentHTML('beforeend', html);
   }
 
