@@ -44,6 +44,7 @@ const FORUM_CONFIG = {
       { label: "LINE 官方客服", icon: "LINE", url: "https://lin.ee/8Dy3o36", style: "line" },
       { label: "贊助連結", icon: "SP", url: "pages/sponsor.html", style: "gold" },
       { label: "遊戲下載", icon: "DL", url: "pages/download.html", style: "blue" },
+      { label: "全站搜尋", icon: "查", url: "pages/search.html", style: "dark" },
       { label: "最新文章", icon: "NEWS", url: "pages/news.html", style: "dark" },
     ],
   },

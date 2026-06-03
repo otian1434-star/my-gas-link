@@ -1385,6 +1385,148 @@ img { max-width: 100%; display: block; }
 .btn-small:hover { border-color: var(--gold); }
 
 /* ══════════════════════════════════════
+   全站搜尋
+══════════════════════════════════════ */
+.search-shell {
+  max-width: 920px;
+  margin: 0 auto 40px;
+}
+.search-panel {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.026), transparent 44%),
+    radial-gradient(ellipse at 50% 0%, rgba(201,169,110,0.1), transparent 62%),
+    var(--bg3);
+  border: 1px solid var(--border-bright);
+  padding: 24px;
+  box-shadow: 0 18px 54px rgba(0,0,0,0.42);
+}
+.search-panel label {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  color: var(--gold-light);
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+.search-input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px;
+  gap: 10px;
+}
+.search-input {
+  width: 100%;
+  min-width: 0;
+  background: rgba(8,6,4,0.88);
+  border: 1px solid rgba(201,169,110,0.28);
+  color: var(--white);
+  padding: 13px 15px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+}
+.search-input:focus {
+  border-color: var(--gold);
+  background: rgba(8,6,4,0.96);
+  box-shadow: 0 0 0 3px rgba(201,169,110,0.1);
+}
+.search-input::placeholder { color: var(--text-muted); }
+.search-submit {
+  border: 1px solid var(--border-bright);
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--bg);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: transform 0.18s, filter 0.18s;
+}
+.search-submit:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.search-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.search-chip-row button {
+  border: 1px solid rgba(201,169,110,0.24);
+  background: rgba(201,169,110,0.045);
+  color: var(--text-dim);
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.18s, border-color 0.18s, background 0.18s;
+}
+.search-chip-row button:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(201,169,110,0.08);
+}
+.search-summary {
+  margin: 22px 0 12px;
+  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.search-results {
+  display: grid;
+  gap: 12px;
+}
+.search-result-card {
+  display: block;
+  background: rgba(28,24,16,0.82);
+  border: 1px solid rgba(201,169,110,0.22);
+  border-left: 3px solid rgba(201,169,110,0.58);
+  padding: 18px 20px;
+  transition: transform 0.18s, border-color 0.18s, background 0.18s;
+}
+.search-result-card:hover {
+  transform: translateX(4px);
+  border-color: var(--gold);
+  background: rgba(35,31,23,0.92);
+}
+.search-result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+.search-result-meta span {
+  border: 1px solid rgba(201,169,110,0.24);
+  background: rgba(201,169,110,0.045);
+  color: var(--text-dim);
+  font-size: 11px;
+  padding: 2px 8px;
+}
+.search-result-card h2 {
+  font-family: 'Noto Serif TC', serif;
+  color: var(--white);
+  font-size: 19px;
+  letter-spacing: 2px;
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+.search-result-card p {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.85;
+}
+.search-result-card mark {
+  background: rgba(201,169,110,0.24);
+  color: var(--gold-light);
+  padding: 0 3px;
+}
+.search-empty {
+  border: 1px solid rgba(201,169,110,0.18);
+  background: rgba(201,169,110,0.04);
+  color: var(--text-dim);
+  padding: 28px 22px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* ══════════════════════════════════════
    格式化工具
 ══════════════════════════════════════ */
 .formatter-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; height: calc(100vh - var(--nav-h) - 130px); min-height: 500px; }
@@ -1560,6 +1702,11 @@ img { max-width: 100%; display: block; }
   .cms-hero-strip { padding: 18px 14px; }
   .ann-grid { grid-template-columns: 1fr; }
   .cms-grid { grid-template-columns: 1fr; }
+  .search-panel { padding: 18px 14px; }
+  .search-input-row { grid-template-columns: 1fr; }
+  .search-submit { min-height: 44px; }
+  .search-result-card { padding: 16px 14px; }
+  .search-result-card:hover { transform: none; }
   #floating-panel { right: 12px; bottom: 12px; }
   .side-float-banner {
     top: auto;

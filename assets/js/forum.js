@@ -45,6 +45,10 @@
         <div class="nav-item">
           <a class="nav-link-top" href="${r}index.html">首頁</a>
         </div>
+        <!-- 搜尋 -->
+        <div class="nav-item">
+          <a class="nav-link-top" href="${r}pages/search.html">搜尋</a>
+        </div>
         <!-- 遊戲下載 -->
         <div class="nav-item">
           <a class="nav-link-top" href="${r}pages/download.html">遊戲下載</a>
@@ -157,6 +161,7 @@
     <div id="mobile-menu">
       <div class="mob-section">主要</div>
       <a class="mob-link" href="${r}index.html">🏠 首頁</a>
+      <a class="mob-link" href="${r}pages/search.html">🔎 全站搜尋</a>
       <a class="mob-link" href="${r}pages/download.html">📥 遊戲下載</a>
       <a class="mob-link" href="${r}pages/version.html">🔧 版本設定</a>
       <a class="mob-link" href="${r}pages/updates.html">📋 更新歷程</a>
@@ -266,6 +271,7 @@
         <div>
           <div class="footer-col-title">遊戲資訊</div>
           <ul class="footer-links">
+            <li><a href="${r}pages/search.html">全站搜尋</a></li>
             <li><a href="${r}pages/download.html">遊戲下載</a></li>
             <li><a href="${r}pages/version.html">版本設定</a></li>
             <li><a href="${r}pages/updates.html">更新歷程</a></li>
