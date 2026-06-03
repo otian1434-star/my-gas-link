@@ -48,13 +48,13 @@
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <div class="section-eyebrow">ANNOUNCEMENTS</div>
-      <h2 class="section-title">最新公告</h2>
+      <div class="section-eyebrow" id="ann-eyebrow">ANNOUNCEMENTS</div>
+      <h2 class="section-title" id="ann-title">最新公告</h2>
       <div class="section-line"></div>
     </div>
     <div class="ann-grid" id="ann-grid"></div>
     <div style="text-align:center;margin-top:26px;">
-      <a class="btn-outline" href="pages/news.html">查看全部公告</a>
+      <a class="btn-outline" id="ann-button" href="pages/news.html">查看全部公告</a>
     </div>
   </div>
 </section>
@@ -63,30 +63,11 @@
 <section class="section section-alt">
   <div class="container">
     <div class="section-header">
-      <div class="section-eyebrow">QUICK NAVIGATION</div>
-      <h2 class="section-title">快速目錄</h2>
+      <div class="section-eyebrow" id="quick-eyebrow">QUICK NAVIGATION</div>
+      <h2 class="section-title" id="quick-title">快速目錄</h2>
       <div class="section-line"></div>
     </div>
-    <div class="dir-grid">
-      <a href="pages/download.html"         class="dir-card"><span class="dir-icon">📥</span><span class="dir-name">遊戲下載</span><span class="dir-desc">主程式下載</span></a>
-      <a href="pages/version.html"          class="dir-card"><span class="dir-icon">🔧</span><span class="dir-name">版本設定</span><span class="dir-desc">伺服器倍率</span></a>
-      <a href="pages/updates.html"          class="dir-card"><span class="dir-icon">📋</span><span class="dir-name">更新歷程</span><span class="dir-desc">版本更新紀錄</span></a>
-      <a href="pages/events.html"           class="dir-card"><span class="dir-icon">🎉</span><span class="dir-name">活動公告</span><span class="dir-desc">限時活動</span></a>
-      <a href="pages/features-jobs.html"    class="dir-card"><span class="dir-icon">⚔️</span><span class="dir-name">遊戲特色</span><span class="dir-desc">職業與系統</span></a>
-      <a href="pages/boss-schedule.html"    class="dir-card"><span class="dir-icon">👹</span><span class="dir-name">BOSS介紹</span><span class="dir-desc">時刻表與掉落</span></a>
-      <a href="pages/weapons-overview.html" class="dir-card"><span class="dir-icon">⚔️</span><span class="dir-name">武器介紹</span><span class="dir-desc">武器製作強化</span></a>
-      <a href="pages/armor-overview.html"   class="dir-card"><span class="dir-icon">🛡️</span><span class="dir-name">防具介紹</span><span class="dir-desc">防具總覽</span></a>
-      <a href="pages/items-gacha.html"      class="dir-card"><span class="dir-icon">🎁</span><span class="dir-name">道具介紹</span><span class="dir-desc">扭蛋龍眼等</span></a>
-      <a href="pages/dolls-guide.html"      class="dir-card"><span class="dir-icon">🧸</span><span class="dir-name">娃娃介紹</span><span class="dir-desc">聖物系統</span></a>
-      <a href="pages/transform-guide.html"  class="dir-card"><span class="dir-icon">🎭</span><span class="dir-name">變身介紹</span><span class="dir-desc">變身圖鑑</span></a>
-      <a href="pages/map.html"              class="dir-card"><span class="dir-icon">🗺️</span><span class="dir-name">地圖介紹</span><span class="dir-desc">地圖說明</span></a>
-      <a href="pages/sponsor.html"          class="dir-card"><span class="dir-icon">💎</span><span class="dir-name">贊助說明</span><span class="dir-desc">贊助方案</span></a>
-      <a href="pages/faq.html"              class="dir-card"><span class="dir-icon">❓</span><span class="dir-name">常見問題</span><span class="dir-desc">FAQ</span></a>
-      <a href="pages/promo.html"            class="dir-card"><span class="dir-icon">📢</span><span class="dir-name">推文說明</span><span class="dir-desc">推文獎勵</span></a>
-      <a href="pages/stream.html"           class="dir-card"><span class="dir-icon">🎥</span><span class="dir-name">直播說明</span><span class="dir-desc">直播合作</span></a>
-      <a href="pages/disclaimer.html"       class="dir-card"><span class="dir-icon">📄</span><span class="dir-name">免責聲明</span><span class="dir-desc">規章制度</span></a>
-      <a href="register.html"               class="dir-card highlight"><span class="dir-icon">📝</span><span class="dir-name">申辦帳號</span><span class="dir-desc">立即加入</span></a>
-    </div>
+    <div class="dir-grid" id="dir-grid"></div>
   </div>
 </section>
 
@@ -94,8 +75,8 @@
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <div class="section-eyebrow">SERVER INFO</div>
-      <h2 class="section-title">伺服器資訊</h2>
+      <div class="section-eyebrow" id="server-eyebrow">SERVER INFO</div>
+      <h2 class="section-title" id="server-title">伺服器資訊</h2>
       <div class="section-line"></div>
     </div>
     <div class="server-grid" id="server-info"></div>
@@ -106,13 +87,13 @@
 <section class="section section-alt">
   <div class="container">
     <div class="section-header">
-      <div class="section-eyebrow">PATCH NOTES</div>
-      <h2 class="section-title">更新歷程</h2>
+      <div class="section-eyebrow" id="updates-eyebrow">PATCH NOTES</div>
+      <h2 class="section-title" id="updates-title">更新歷程</h2>
       <div class="section-line"></div>
     </div>
     <div class="update-list" id="update-list"></div>
     <div style="text-align:center;margin-top:26px;">
-      <a class="btn-outline" href="pages/updates.html">查看完整歷程</a>
+      <a class="btn-outline" id="updates-button" href="pages/updates.html">查看完整歷程</a>
     </div>
   </div>
 </section>
@@ -132,19 +113,189 @@ if (window.netlifyIdentity) {
   });
 }
 (function () {
+  function escapeHTML(value) {
+    return String(value || '').replace(/[&<>"']/g, function (char) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char];
+    });
+  }
+
+  function resolveLink(url) {
+    if (/^(https?:|mailto:|tel:|#)/.test(url || '')) return url;
+    return String(url || '#').replace(/^\.\//, '');
+  }
+
+  function defaultHome(C) {
+    const updates = Array.isArray(C.updates) ? C.updates : [];
+    return {
+      sections: {
+        announcements: { eyebrow: 'ANNOUNCEMENTS', title: '最新公告', buttonText: '查看全部公告', buttonUrl: 'pages/news.html' },
+        quickLinks: { eyebrow: 'QUICK NAVIGATION', title: '快速目錄' },
+        serverInfo: { eyebrow: 'SERVER INFO', title: '伺服器資訊' },
+        updates: { eyebrow: 'PATCH NOTES', title: '更新歷程', buttonText: '查看完整歷程', buttonUrl: 'pages/updates.html' },
+      },
+      quickLinks: [
+        { icon: '📥', title: '遊戲下載', description: '主程式下載', url: 'pages/download.html', visible: true },
+        { icon: '🔧', title: '版本設定', description: '伺服器倍率', url: 'pages/version.html', visible: true },
+        { icon: '📋', title: '更新歷程', description: '版本更新紀錄', url: 'pages/updates.html', visible: true },
+        { icon: '🎉', title: '活動公告', description: '限時活動', url: 'pages/events.html', visible: true },
+        { icon: '⚔️', title: '遊戲特色', description: '職業與系統', url: 'pages/features-jobs.html', visible: true },
+        { icon: '👹', title: 'BOSS介紹', description: '時刻表與掉落', url: 'pages/boss-schedule.html', visible: true },
+        { icon: '⚔️', title: '武器介紹', description: '武器製作強化', url: 'pages/weapons-overview.html', visible: true },
+        { icon: '🛡️', title: '防具介紹', description: '防具總覽', url: 'pages/armor-overview.html', visible: true },
+        { icon: '🎁', title: '道具介紹', description: '扭蛋龍眼等', url: 'pages/items-gacha.html', visible: true },
+        { icon: '🧸', title: '娃娃介紹', description: '聖物系統', url: 'pages/dolls-guide.html', visible: true },
+        { icon: '🎭', title: '變身介紹', description: '變身圖鑑', url: 'pages/transform-guide.html', visible: true },
+        { icon: '🗺️', title: '地圖介紹', description: '地圖說明', url: 'pages/map.html', visible: true },
+        { icon: '💎', title: '贊助說明', description: '贊助方案', url: 'pages/sponsor.html', visible: true },
+        { icon: '❓', title: '常見問題', description: 'FAQ', url: 'pages/faq.html', visible: true },
+        { icon: '📢', title: '推文說明', description: '推文獎勵', url: 'pages/promo.html', visible: true },
+        { icon: '🎥', title: '直播說明', description: '直播合作', url: 'pages/stream.html', visible: true },
+        { icon: '📄', title: '免責聲明', description: '規章制度', url: 'pages/disclaimer.html', visible: true },
+        { icon: '📝', title: '申辦帳號', description: '立即加入', url: 'register.html', highlight: true, visible: true },
+      ],
+      serverCards: [
+        {
+          title: C.forumName,
+          subtitle: 'MAIN SERVER · ' + (C.serverVersion || '3.81'),
+          rows: [
+            { label: '版本', value: C.serverVersion || '3.81', highlight: true },
+            { label: '經驗倍率', value: '× 10', highlight: true },
+            { label: '掉落倍率', value: '× 4', highlight: true },
+            { label: '帳號上限', value: '3 帳號' },
+            { label: '攻城戰', value: '定期舉行' },
+            { label: '開放時間', value: '24 小時全天' },
+          ],
+        },
+        {
+          title: '最新更新',
+          subtitle: 'LATEST UPDATE · ' + (C.download ? C.download.updateDate || '' : ''),
+          rows: updates.slice(0, 5).map(function (u) {
+            const content = String(u.content || '');
+            return { label: u.date || '', value: content.substring(0, 28) + (content.length > 28 ? '…' : '') };
+          }),
+        },
+      ],
+      updates: updates.map(function (u) {
+        return Object.assign({ visible: true }, u);
+      }),
+    };
+  }
+
+  function mergeHome(base, data) {
+    if (!data || typeof data !== 'object') return base;
+    const sections = Object.assign({}, base.sections);
+    Object.keys(data.sections || {}).forEach(function (key) {
+      sections[key] = Object.assign({}, sections[key] || {}, data.sections[key] || {});
+    });
+    return {
+      sections: sections,
+      quickLinks: Array.isArray(data.quickLinks) && data.quickLinks.length ? data.quickLinks : base.quickLinks,
+      serverCards: Array.isArray(data.serverCards) && data.serverCards.length ? data.serverCards : base.serverCards,
+      updates: Array.isArray(data.updates) && data.updates.length ? data.updates : base.updates,
+    };
+  }
+
+  function loadHome(C) {
+    const fallback = defaultHome(C);
+    return fetch('data/home.json', { cache: 'no-store' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('home data not found');
+        return res.json();
+      })
+      .then(function (data) {
+        return mergeHome(fallback, data);
+      })
+      .catch(function () {
+        return fallback;
+      });
+  }
+
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (el && value !== undefined && value !== null) el.textContent = value;
+  }
+
+  function setButton(id, section) {
+    const el = document.getElementById(id);
+    if (!el || !section) return;
+    if (section.buttonText) el.textContent = section.buttonText;
+    if (section.buttonUrl) el.href = resolveLink(section.buttonUrl);
+  }
+
+  function renderSectionHeadings(home) {
+    const s = home.sections || {};
+    setText('ann-eyebrow', s.announcements && s.announcements.eyebrow);
+    setText('ann-title', s.announcements && s.announcements.title);
+    setButton('ann-button', s.announcements);
+    setText('quick-eyebrow', s.quickLinks && s.quickLinks.eyebrow);
+    setText('quick-title', s.quickLinks && s.quickLinks.title);
+    setText('server-eyebrow', s.serverInfo && s.serverInfo.eyebrow);
+    setText('server-title', s.serverInfo && s.serverInfo.title);
+    setText('updates-eyebrow', s.updates && s.updates.eyebrow);
+    setText('updates-title', s.updates && s.updates.title);
+    setButton('updates-button', s.updates);
+  }
+
+  function renderQuickLinks(home) {
+    const target = document.getElementById('dir-grid');
+    const links = (home.quickLinks || []).filter(function (link) {
+      return link.visible !== false;
+    });
+    target.innerHTML = links.length ? links.map(function (link) {
+      return '<a href="' + escapeHTML(resolveLink(link.url || '#')) + '" class="dir-card' + (link.highlight ? ' highlight' : '') + '">' +
+        '<span class="dir-icon">' + escapeHTML(link.icon || '•') + '</span>' +
+        '<span class="dir-name">' + escapeHTML(link.title || '未命名') + '</span>' +
+        '<span class="dir-desc">' + escapeHTML(link.description || '') + '</span>' +
+        '</a>';
+    }).join('') : '<p style="color:var(--text-dim);text-align:center;padding:30px 0;letter-spacing:2px;">暫無快速目錄</p>';
+  }
+
+  function renderServerInfo(home) {
+    const target = document.getElementById('server-info');
+    const cards = home.serverCards || [];
+    target.innerHTML = cards.length ? cards.map(function (card) {
+      const rows = Array.isArray(card.rows) ? card.rows : [];
+      return '<div class="server-card">' +
+        '<div class="server-card-name">' + escapeHTML(card.title || '') + '</div>' +
+        '<div class="server-card-sub">' + escapeHTML(card.subtitle || '') + '</div>' +
+        rows.map(function (row) {
+          return '<div class="server-info-row">' +
+            '<span class="server-info-key">' + escapeHTML(row.label || '') + '</span>' +
+            '<span class="server-info-val' + (row.highlight ? ' hl' : '') + '">' + escapeHTML(row.value || '') + '</span>' +
+            '</div>';
+        }).join('') +
+        '</div>';
+    }).join('') : '<div class="notice blue">目前尚無伺服器資訊。</div>';
+  }
+
+  function visibleUpdates(home) {
+    return (home.updates || []).filter(function (u) {
+      return u.visible !== false;
+    });
+  }
+
+  function renderUpdates(home) {
+    const target = document.getElementById('update-list');
+    const updates = visibleUpdates(home);
+    target.innerHTML = updates.length ? updates.slice(0, 6).map(function (u) {
+      return '<div class="update-item">' +
+        '<span class="update-date">' + escapeHTML(u.date || '') + '</span>' +
+        '<span class="update-tag">' + escapeHTML(u.tag || '') + '</span>' +
+        '<span class="update-content">' + escapeHTML(u.content || '') + '</span>' +
+        '</div>';
+    }).join('') : '<p style="color:var(--text-dim);text-align:center;padding:30px 0;letter-spacing:2px;">暫無更新記錄</p>';
+  }
+
   function fill() {
     if (typeof FORUM_CONFIG === 'undefined') { setTimeout(fill, 30); return; }
     const C = FORUM_CONFIG;
 
-    // Hero
     if (C.serverVersion) {
       document.getElementById('hero-eyebrow').textContent =
         'LINEAGE PRIVATE SERVER · VERSION ' + C.serverVersion;
     }
     const heroVideo = document.getElementById('hero-video');
-    if (heroVideo && C.heroVideo) {
-      heroVideo.src = C.heroVideo;
-    }
+    if (heroVideo && C.heroVideo) heroVideo.src = C.heroVideo;
     const heroCharacter = document.getElementById('hero-character');
     if (heroCharacter && C.heroImage) {
       heroCharacter.src = C.heroImage;
@@ -159,7 +310,6 @@ if (window.netlifyIdentity) {
     document.getElementById('hero-title-sub').textContent = C.heroSubTitle || '經典不敗';
     document.getElementById('hero-tagline').textContent = C.forumSlogan || '';
 
-    // Hero stats（從 heroBadges 解析或用 download info）
     const statsEl = document.getElementById('hero-stats');
     const stats = [
       { val: C.serverVersion || '381', label: '版　本' },
@@ -167,59 +317,28 @@ if (window.netlifyIdentity) {
       { val: '× 4',  label: '掉落倍率' },
       { val: '24H',  label: '全天開放' },
     ];
-    statsEl.innerHTML = stats.map((s, i) =>
-      (i > 0 ? '<div class="hero-stat-sep"></div>' : '') +
-      `<div class="hero-stat">
-        <div class="hero-stat-val">${s.val}</div>
-        <div class="hero-stat-label">${s.label}</div>
-      </div>`
-    ).join('');
+    statsEl.innerHTML = stats.map(function (s, i) {
+      return (i > 0 ? '<div class="hero-stat-sep"></div>' : '') +
+        '<div class="hero-stat">' +
+        '<div class="hero-stat-val">' + escapeHTML(s.val) + '</div>' +
+        '<div class="hero-stat-label">' + escapeHTML(s.label) + '</div>' +
+        '</div>';
+    }).join('');
 
-    // 公告格子（由 updates 產生）
-    const annGrid = document.getElementById('ann-grid');
-    if (window.ForumCmsPosts) {
-      ForumCmsPosts.renderAnnouncements(annGrid, C);
-    } else {
-      annGrid.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:30px 0;letter-spacing:2px;">文章讀取中</p>';
-    }
+    loadHome(C).then(function (home) {
+      renderSectionHeadings(home);
+      renderQuickLinks(home);
+      renderServerInfo(home);
+      renderUpdates(home);
 
-    // 伺服器資訊
-    const serverEl = document.getElementById('server-info');
-    serverEl.innerHTML = `
-      <div class="server-card">
-        <div class="server-card-name">${C.forumName}</div>
-        <div class="server-card-sub">MAIN SERVER · ${C.serverVersion || '3.81'}</div>
-        <div class="server-info-row"><span class="server-info-key">版本</span><span class="server-info-val hl">${C.serverVersion || '3.81'}</span></div>
-        <div class="server-info-row"><span class="server-info-key">經驗倍率</span><span class="server-info-val hl">× 10</span></div>
-        <div class="server-info-row"><span class="server-info-key">掉落倍率</span><span class="server-info-val hl">× 4</span></div>
-        <div class="server-info-row"><span class="server-info-key">帳號上限</span><span class="server-info-val">3 帳號</span></div>
-        <div class="server-info-row"><span class="server-info-key">攻城戰</span><span class="server-info-val">定期舉行</span></div>
-        <div class="server-info-row"><span class="server-info-key">開放時間</span><span class="server-info-val">24 小時全天</span></div>
-      </div>
-      <div class="server-card">
-        <div class="server-card-name">最新更新</div>
-        <div class="server-card-sub">LATEST UPDATE · ${C.download ? C.download.updateDate || '' : ''}</div>
-        ${C.updates && C.updates.length ? C.updates.slice(0, 5).map(u =>
-          `<div class="server-info-row">
-            <span class="server-info-key">${u.date}</span>
-            <span class="server-info-val" style="font-size:12px;text-align:right;max-width:200px;">${u.content.substring(0, 28)}${u.content.length > 28 ? '…' : ''}</span>
-          </div>`
-        ).join('') : '<div class="server-info-row"><span class="server-info-key">敬請期待</span></div>'}
-      </div>`;
-
-    // 更新歷程列表
-    const ulEl = document.getElementById('update-list');
-    if (C.updates && C.updates.length) {
-      ulEl.innerHTML = C.updates.slice(0, 6).map(u =>
-        `<div class="update-item">
-          <span class="update-date">${u.date}</span>
-          <span class="update-tag">${u.tag}</span>
-          <span class="update-content">${u.content}</span>
-        </div>`
-      ).join('');
-    } else {
-      ulEl.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:30px 0;letter-spacing:2px;">暫無更新記錄</p>';
-    }
+      const annGrid = document.getElementById('ann-grid');
+      const cmsFallback = Object.assign({}, C, { updates: visibleUpdates(home) });
+      if (window.ForumCmsPosts) {
+        ForumCmsPosts.renderAnnouncements(annGrid, cmsFallback);
+      } else {
+        annGrid.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:30px 0;letter-spacing:2px;">文章讀取中</p>';
+      }
+    });
   }
   fill();
 })();

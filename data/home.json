@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "announcements": {
+      "eyebrow": "ANNOUNCEMENTS",
+      "title": "最新公告",
+      "buttonText": "查看全部公告",
+      "buttonUrl": "pages/news.html"
+    },
+    "quickLinks": {
+      "eyebrow": "QUICK NAVIGATION",
+      "title": "快速目錄"
+    },
+    "serverInfo": {
+      "eyebrow": "SERVER INFO",
+      "title": "伺服器資訊"
+    },
+    "updates": {
+      "eyebrow": "PATCH NOTES",
+      "title": "更新歷程",
+      "buttonText": "查看完整歷程",
+      "buttonUrl": "pages/updates.html"
+    }
+  },
+  "quickLinks": [
+    { "icon": "📥", "title": "遊戲下載", "description": "主程式下載", "url": "pages/download.html", "highlight": false, "visible": true },
+    { "icon": "🔧", "title": "版本設定", "description": "伺服器倍率", "url": "pages/version.html", "highlight": false, "visible": true },
+    { "icon": "📋", "title": "更新歷程", "description": "版本更新紀錄", "url": "pages/updates.html", "highlight": false, "visible": true },
+    { "icon": "🎉", "title": "活動公告", "description": "限時活動", "url": "pages/events.html", "highlight": false, "visible": true },
+    { "icon": "⚔️", "title": "遊戲特色", "description": "職業與系統", "url": "pages/features-jobs.html", "highlight": false, "visible": true },
+    { "icon": "👹", "title": "BOSS介紹", "description": "時刻表與掉落", "url": "pages/boss-schedule.html", "highlight": false, "visible": true },
+    { "icon": "⚔️", "title": "武器介紹", "description": "武器製作強化", "url": "pages/weapons-overview.html", "highlight": false, "visible": true },
+    { "icon": "🛡️", "title": "防具介紹", "description": "防具總覽", "url": "pages/armor-overview.html", "highlight": false, "visible": true },
+    { "icon": "🎁", "title": "道具介紹", "description": "扭蛋龍眼等", "url": "pages/items-gacha.html", "highlight": false, "visible": true },
+    { "icon": "🧸", "title": "娃娃介紹", "description": "聖物系統", "url": "pages/dolls-guide.html", "highlight": false, "visible": true },
+    { "icon": "🎭", "title": "變身介紹", "description": "變身圖鑑", "url": "pages/transform-guide.html", "highlight": false, "visible": true },
+    { "icon": "🗺️", "title": "地圖介紹", "description": "地圖說明", "url": "pages/map.html", "highlight": false, "visible": true },
+    { "icon": "💎", "title": "贊助說明", "description": "贊助方案", "url": "pages/sponsor.html", "highlight": false, "visible": true },
+    { "icon": "❓", "title": "常見問題", "description": "FAQ", "url": "pages/faq.html", "highlight": false, "visible": true },
+    { "icon": "📢", "title": "推文說明", "description": "推文獎勵", "url": "pages/promo.html", "highlight": false, "visible": true },
+    { "icon": "🎥", "title": "直播說明", "description": "直播合作", "url": "pages/stream.html", "highlight": false, "visible": true },
+    { "icon": "📄", "title": "免責聲明", "description": "規章制度", "url": "pages/disclaimer.html", "highlight": false, "visible": true },
+    { "icon": "📝", "title": "申辦帳號", "description": "立即加入", "url": "register.html", "highlight": true, "visible": true }
+  ],
+  "serverCards": [
+    {
+      "title": "曜舞天堂",
+      "subtitle": "MAIN SERVER · 3.81 內掛版",
+      "rows": [
+        { "label": "版本", "value": "3.81 內掛版", "highlight": true },
+        { "label": "經驗倍率", "value": "× 10", "highlight": true },
+        { "label": "掉落倍率", "value": "× 4", "highlight": true },
+        { "label": "帳號上限", "value": "3 帳號", "highlight": false },
+        { "label": "攻城戰", "value": "定期舉行", "highlight": false },
+        { "label": "開放時間", "value": "24 小時全天", "highlight": false }
+      ]
+    },
+    {
+      "title": "最新更新",
+      "subtitle": "LATEST UPDATE · 2026/02/14",
+      "rows": [
+        { "label": "2026/02/28", "value": "曜舞天堂正式開服！感謝全體玩家的支持，讓我們一起創造傳說…", "highlight": false },
+        { "label": "2026/02/14", "value": "遊戲懶人包更新，新增打字不閃爍補丁，建議全員更新。", "highlight": false },
+        { "label": "2026/02/11", "value": "封測正式啟動！推文回報系統同步開放，好禮等你來領。", "highlight": false }
+      ]
+    }
+  ],
+  "updates": [
+    { "date": "2026/02/28", "tag": "開服", "title": "【開服】曜舞天堂正式開服公告", "content": "曜舞天堂正式開服！感謝全體玩家的支持，讓我們一起創造傳說！", "visible": true },
+    { "date": "2026/02/14", "tag": "維護", "title": "【維護】遊戲懶人包更新", "content": "遊戲懶人包更新，新增打字不閃爍補丁，建議全員更新。", "visible": true },
+    { "date": "2026/02/11", "tag": "封測", "title": "【封測】封測正式啟動", "content": "封測正式啟動！推文回報系統同步開放，好禮等你來領。", "visible": true }
+  ]
+}

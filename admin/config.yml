@@ -50,3 +50,76 @@ collections:
                 allow_language_selection: false
                 required: false
                 hint: 進階排版使用。可以貼入 HTML，例如 div、table、iframe、按鈕區塊。請只讓可信任管理者使用。
+      - name: home
+        label: 首頁底板管理
+        file: data/home.json
+        fields:
+          - label: 區塊標題
+            name: sections
+            widget: object
+            fields:
+              - label: 最新公告區塊
+                name: announcements
+                widget: object
+                fields:
+                  - { label: 小字標題, name: eyebrow, widget: string, required: false }
+                  - { label: 大標題, name: title, widget: string }
+                  - { label: 按鈕文字, name: buttonText, widget: string, required: false }
+                  - { label: 按鈕連結, name: buttonUrl, widget: string, required: false }
+              - label: 快速目錄區塊
+                name: quickLinks
+                widget: object
+                fields:
+                  - { label: 小字標題, name: eyebrow, widget: string, required: false }
+                  - { label: 大標題, name: title, widget: string }
+              - label: 伺服器資訊區塊
+                name: serverInfo
+                widget: object
+                fields:
+                  - { label: 小字標題, name: eyebrow, widget: string, required: false }
+                  - { label: 大標題, name: title, widget: string }
+              - label: 更新歷程區塊
+                name: updates
+                widget: object
+                fields:
+                  - { label: 小字標題, name: eyebrow, widget: string, required: false }
+                  - { label: 大標題, name: title, widget: string }
+                  - { label: 按鈕文字, name: buttonText, widget: string, required: false }
+                  - { label: 按鈕連結, name: buttonUrl, widget: string, required: false }
+          - label: 快速目錄卡片
+            name: quickLinks
+            widget: list
+            summary: "{{fields.title}} → {{fields.url}}"
+            fields:
+              - { label: 顯示, name: visible, widget: boolean, default: true }
+              - { label: 圖示, name: icon, widget: string, hint: 可填 emoji，例如 📥 或 ⚔️ }
+              - { label: 標題, name: title, widget: string }
+              - { label: 說明文字, name: description, widget: string, required: false }
+              - { label: 連結, name: url, widget: string }
+              - { label: 重點卡片, name: highlight, widget: boolean, default: false }
+          - label: 伺服器資訊卡片
+            name: serverCards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: 標題, name: title, widget: string }
+              - { label: 副標題, name: subtitle, widget: string, required: false }
+              - label: 內容列
+                name: rows
+                widget: list
+                summary: "{{fields.label}}：{{fields.value}}"
+                fields:
+                  - { label: 左側文字, name: label, widget: string }
+                  - { label: 右側內容, name: value, widget: string }
+                  - { label: 金色強調, name: highlight, widget: boolean, default: false }
+          - label: 更新歷程
+            name: updates
+            widget: list
+            summary: "{{fields.date}} [{{fields.tag}}] {{fields.content}}"
+            hint: 這裡會顯示在首頁「更新歷程」，也會作為首頁公告沒有文章時的備用內容。
+            fields:
+              - { label: 顯示, name: visible, widget: boolean, default: true }
+              - { label: 日期, name: date, widget: datetime, format: "YYYY/MM/DD", date_format: "YYYY/MM/DD", time_format: false }
+              - { label: 標籤, name: tag, widget: string }
+              - { label: 標題, name: title, widget: string, required: false }
+              - { label: 內容, name: content, widget: text }

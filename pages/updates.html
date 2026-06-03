@@ -21,21 +21,59 @@
   <p>伺服器版本更新與異動紀錄</p>
 </div>
 
-<div class="content-card" style="text-align:center;padding:60px 40px;">
-  <div style="font-size:64px;margin-bottom:20px;">📭</div>
-  <h2 style="color:var(--gold);font-size:1.6em;margin-bottom:15px;letter-spacing:2px;">暫無更新記錄</h2>
-  <p style="color:var(--text-secondary);font-size:1.05em;line-height:1.8;max-width:500px;margin:0 auto 25px;">
-    目前尚無版本更新記錄。每當伺服器進行功能調整、平衡修正或新內容上線時，管理團隊將在此發布詳細的更新說明。
-  </p>
-  <div class="notice gold" style="max-width:500px;margin:0 auto;text-align:left;">
-    <strong>📌 管理員說明</strong><br>
-    本區塊由管理團隊負責維護，更新記錄將依版本時間排序顯示，請各位冒險者定期查閱最新異動。
-  </div>
-</div>
+<div class="update-list" id="full-update-list"></div>
 
 </div>
 </div>
 <div id="footer-slot"></div>
 <script src="../assets/js/forum.js"></script>
+<script>
+(function () {
+  function escapeHTML(value) {
+    return String(value || '').replace(/[&<>"']/g, function (char) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char];
+    });
+  }
+
+  function renderEmpty(target) {
+    target.innerHTML = '<div class="content-card" style="text-align:center;padding:60px 40px;">' +
+      '<div style="font-size:64px;margin-bottom:20px;">📭</div>' +
+      '<h2 style="color:var(--gold);font-size:1.6em;margin-bottom:15px;letter-spacing:2px;">暫無更新記錄</h2>' +
+      '<p style="color:var(--text-secondary);font-size:1.05em;line-height:1.8;max-width:500px;margin:0 auto 25px;">目前尚無版本更新記錄。每當伺服器進行功能調整、平衡修正或新內容上線時，管理團隊將在此發布詳細的更新說明。</p>' +
+      '<div class="notice gold" style="max-width:500px;margin:0 auto;text-align:left;"><strong>📌 管理員說明</strong><br>本區塊可由後台「首頁底板管理」維護。</div>' +
+      '</div>';
+  }
+
+  function renderUpdates(target, updates) {
+    const visible = (updates || []).filter(function (item) {
+      return item.visible !== false;
+    });
+    if (!visible.length) {
+      renderEmpty(target);
+      return;
+    }
+    target.innerHTML = visible.map(function (item) {
+      return '<div class="update-item">' +
+        '<span class="update-date">' + escapeHTML(item.date || '') + '</span>' +
+        '<span class="update-tag">' + escapeHTML(item.tag || '') + '</span>' +
+        '<span class="update-content">' + escapeHTML(item.content || item.title || '') + '</span>' +
+        '</div>';
+    }).join('');
+  }
+
+  const target = document.getElementById('full-update-list');
+  fetch('../data/home.json', { cache: 'no-store' })
+    .then(function (res) {
+      if (!res.ok) throw new Error('home data not found');
+      return res.json();
+    })
+    .then(function (data) {
+      renderUpdates(target, data.updates || []);
+    })
+    .catch(function () {
+      renderUpdates(target, FORUM_CONFIG && FORUM_CONFIG.updates ? FORUM_CONFIG.updates : []);
+    });
+})();
+</script>
 </body>
 </html>

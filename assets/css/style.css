@@ -638,7 +638,7 @@ img { max-width: 100%; display: block; }
 .server-info-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(201,169,110,0.1); font-size: 13px; }
 .server-info-row:last-child { border-bottom: none; }
 .server-info-key { color: var(--text-dim); }
-.server-info-val { color: var(--white); font-weight: 500; }
+.server-info-val { color: var(--white); font-weight: 500; max-width: 62%; text-align: right; }
 .server-info-val.hl { color: var(--gold); font-family: 'Noto Serif TC', serif; font-weight: 700; }
 
 /* ══════════════════════════════════════
