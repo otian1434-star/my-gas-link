@@ -1,3 +1,14 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "category": "公告",
+      "layout": "standard",
+      "published": true,
+      "pinned": false,
+      "title": "再次測試",
+      "date": "2026/06/03",
+      "excerpt": "在測試一次",
+      "body": "在測試一次"
+    }
+  ]
 }
