@@ -451,13 +451,11 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
 }
 .hero-youtube-card {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: end;
-  justify-self: end;
-  width: min(430px, 31vw);
-  margin: 0 clamp(112px, 10vw, 170px) clamp(86px, 13vh, 142px) 0;
-  z-index: 4;
+  position: absolute;
+  right: clamp(280px, 16vw, 360px);
+  bottom: clamp(40px, 5vh, 70px);
+  width: clamp(520px, 38vw, 820px);
+  z-index: 1;
   border: 1px solid rgba(231,201,138,0.54);
   background: rgba(9,7,5,0.78);
   box-shadow: 0 26px 58px rgba(0,0,0,0.62), 0 0 26px rgba(201,169,110,0.16);
@@ -531,6 +529,15 @@ img { max-width: 100%; display: block; }
   50%  { transform: scaleY(1); transform-origin: top; }
   51%  { transform: scaleY(1); transform-origin: bottom; }
   100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@media (min-width: 1600px) {
+  .hero-youtube-card {
+    left: 31vw;
+    right: auto;
+    bottom: 36px;
+    width: min(44vw, 860px);
+  }
 }
 
 /* ══════════════════════════════════════
@@ -1068,7 +1075,7 @@ img { max-width: 100%; display: block; }
   position: fixed;
   top: 50%;
   z-index: 1040;
-  width: clamp(118px, 10.5vw, 168px);
+  width: clamp(150px, 12vw, 210px);
   transform: translateY(-50%);
   display: block;
   border: 1px solid var(--border-bright);
@@ -1535,8 +1542,8 @@ img { max-width: 100%; display: block; }
   #floating-panel { right: 12px; bottom: 12px; }
   .side-float-banner {
     top: auto;
-    bottom: 92px;
-    width: 88px;
+    bottom: 96px;
+    width: 110px;
     transform: none;
   }
   .side-float-banner.left { left: 10px; }
