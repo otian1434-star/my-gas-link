@@ -1,14 +1,3 @@
 {
-  "posts": [
-    {
-      "category": "公告",
-      "layout": "standard",
-      "published": true,
-      "pinned": true,
-      "title": "測試",
-      "date": "2026/06/03",
-      "excerpt": "測試測試",
-      "body": "主打一個測試"
-    }
-  ]
+  "posts": []
 }
