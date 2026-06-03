@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  <title>戰場徽章與 PVP 勳章系統</title>
+  <style>
+    /* 核心修正：讓主體由內容完全撐開，實現全展 */
+    body, html {
+      margin: 0; padding: 0; 
+      width: 100%;
+      height: auto; 
+      min-height: 100%;
+      background-color: #050000;
+      background-image: radial-gradient(circle at 50% 50%, #330000 0%, #050000 100%);
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden; 
+      /* 載入中先鎖定垂直捲軸 */
+      overflow-y: hidden; 
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #container { 
+      position: relative; 
+      width: 100%; 
+      display: block; 
+    }
+    
+    /* 2. Loading 遮罩：強化視覺份量 */
+    #loading {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 9999; transition: opacity 1s ease-out;
+      background: radial-gradient(circle at 50% 50%, #330000 0%, #050000 100%);
+    }
+
+    #loading.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* 放大戰鬥核心 */
+    .battle-core {
+      position: relative; width: 160px; height: 160px;
+      display: flex; justify-content: center; align-items: center;
+      margin-bottom: 40px;
+    }
+
+    /* 外層血紅環：加粗並增加發光 */
+    .blood-ring {
+      position: absolute; width: 100%; height: 100%;
+      border: 6px solid transparent;
+      border-top: 6px solid #ff1744;
+      border-bottom: 6px solid #d50000;
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(255, 23, 68, 0.5);
+      animation: spin 2s linear infinite, bloodGlow 2s ease-in-out infinite alternate;
+    }
+
+    /* 新增內層戰火環 */
+    .blood-ring-inner {
+      position: absolute; width: 75%; height: 75%;
+      border: 3px dashed #ff5252;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: spinReverse 4s linear infinite;
+    }
+
+    .icon {
+      font-size: 85px; z-index: 1;
+      text-shadow: 0 0 30px rgba(255, 23, 68, 1);
+      animation: clash 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate;
+    }
+
+    /* 強化文字氣勢 */
+    .loading-text {
+      color: #ff1744; 
+      font-size: 30px; 
+      font-weight: 900; 
+      letter-spacing: 12px;
+      text-shadow: 0 0 20px rgba(213, 0, 0, 0.8);
+      animation: pulseText 1.5s infinite alternate;
+      padding-left: 12px; /* 補償字距偏移 */
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    @keyframes spinReverse { 100% { transform: rotate(-360deg); } }
+    @keyframes bloodGlow { 100% { box-shadow: 0 0 45px #ff1744, inset 0 0 25px #d50000; } }
+    @keyframes clash { 0% { transform: scale(0.85); } 100% { transform: scale(1.1); } }
+    @keyframes pulseText { 0% { opacity: 0.5; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1.05); } }
+
+    /* 3. Iframe 核心：全展開設定 */
+    #pvp-frame {
+      width: 100%; 
+      height: 5500px; /* 這裡設定超長高度，確保內容一次全展，不被截斷 */
+      border: none; 
+      display: block;
+      opacity: 0; 
+      transition: opacity 1.5s ease-in;
+      overflow: hidden; /* 徹底關閉內部捲軸 */
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="loading">
+      <div class="battle-core">
+        <div class="blood-ring"></div>
+        <div class="blood-ring-inner"></div>
+        <div class="icon">🛡️</div>
+      </div>
+      <div class="loading-text">戰火榮耀同步中</div>
+    </div>
+
+    <iframe 
+      id="pvp-frame" 
+      src="https://script.google.com/macros/s/AKfycbwCIqltaSdo_L8-f-pXDSHF_v3ZSGrndfoVKLSQe0664mdZDkdExFK4JCmD937Ajukb/exec" 
+      scrolling="no" 
+      onload="pvpLoaded()">
+    </iframe>
+  </div>
+
+  <script>
+    function pvpLoaded() {
+      // 4. 關鍵：載入完成後解鎖網頁捲軸，讓玩家能一口氣滑到最底
+      document.body.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = 'auto';
+
+      document.body.style.backgroundImage = 'none';
+      document.body.style.backgroundColor = '#ffffff';
+      
+      const loading = document.getElementById('loading');
+      loading.classList.add('hide');
+      
+      const iframe = document.getElementById('pvp-frame');
+      iframe.style.opacity = '1';
+
+      setTimeout(() => { 
+        loading.style.display = 'none'; 
+      }, 1000);
+    }
+
+    // 備用解鎖方案（8秒防止網路慢導致卡死）
+    setTimeout(() => {
+      const loader = document.getElementById('loading');
+      if (loader.style.display !== 'none') {
+        pvpLoaded();
+      }
+    }, 8000);
+  </script>
+</body>
+</html>

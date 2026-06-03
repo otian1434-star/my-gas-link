@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>赫卡特介紹</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; 
+      background-color: #080012;
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #loading {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 9999; 
+      background: radial-gradient(circle at 50% 50%, #220033 0%, #080012 100%);
+      transition: opacity 1s ease-out, visibility 1s;
+    }
+
+    #loading.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* --- 強化後的視覺核心 --- */
+    .magic-core { 
+      position: relative; 
+      width: 160px; height: 160px; /* 放大整體尺寸 */
+      display: flex; justify-content: center; align-items: center; 
+      margin-bottom: 40px; 
+    }
+    
+    /* 外圈光環：加粗並增加光暈 */
+    .rune-ring { 
+      position: absolute; width: 100%; height: 100%; 
+      border: 5px solid transparent; 
+      border-top: 5px solid #b300ff; 
+      border-bottom: 5px solid #b300ff; 
+      border-radius: 50%; 
+      box-shadow: 0 0 25px rgba(179, 0, 255, 0.4);
+      animation: spin 2.5s linear infinite; 
+    }
+
+    /* 新增內圈光環：增加豐富度 */
+    .rune-ring-inner {
+      position: absolute; width: 70%; height: 70%; 
+      border: 3px dashed #e0b3ff; 
+      border-radius: 50%; 
+      opacity: 0.5;
+      animation: spinReverse 4s linear infinite;
+    }
+
+    .icon { 
+      font-size: 80px; /* 放大圖示 */
+      text-shadow: 0 0 30px rgba(179, 0, 255, 1); 
+      animation: float 2s ease-in-out infinite alternate; 
+    }
+
+    .loading-text { 
+      color: #e0b3ff; 
+      font-size: 28px; /* 放大字體 */
+      font-weight: 900; /* 加粗字體 */
+      letter-spacing: 10px; /* 拉開字距增加氣勢 */
+      text-shadow: 0 0 20px rgba(179, 0, 255, 0.8);
+      animation: pulseText 1.5s infinite alternate; 
+      padding-left: 10px; /* 修正字距造成的視覺偏心 */
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    @keyframes spinReverse { 100% { transform: rotate(-360deg); } }
+    @keyframes float { 100% { transform: translateY(-15px); } }
+    @keyframes pulseText { 0% { opacity: 0.5; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1.05); } }
+    
+    #hecate-frame {
+      width: 100%;
+      height: 3500px;
+      border: none;
+      display: block;
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading">
+    <div class="magic-core">
+      <div class="rune-ring"></div>
+      <div class="rune-ring-inner"></div> <div class="icon">🌙</div>
+    </div>
+    <div class="loading-text">黑魔力降臨中</div>
+  </div>
+
+  <iframe id="hecate-frame" src="https://script.google.com/macros/s/AKfycbwh3CcGEMEUjHRCH0AXqJiAMW2wBozY7iTb7sYdYSjPFS9bQIhbp-KZXSkIRJkSUyby/exec" onload="startPage()"></iframe>
+
+  <script>
+    function startPage() {
+      document.documentElement.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
+      document.body.style.backgroundColor = '#ffffff';
+
+      const loader = document.getElementById('loading');
+      const frame = document.getElementById('hecate-frame');
+      
+      loader.classList.add('hide'); 
+      frame.style.opacity = '1'; 
+    }
+
+    setTimeout(() => {
+      const loader = document.getElementById('loading');
+      if (!loader.classList.contains('hide')) {
+        startPage();
+      }
+    }, 8000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<div style="
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    color: #202124; 
+    background-color: #f8f9fa; 
+    padding: 15px; 
+    border-radius: 12px; 
+    max-width: 900px; 
+    margin: 0 auto;
+    line-height: 1.6;">
+
+    <h2 style="color: #1a73e8; border-bottom: 3px solid #1a73e8; padding-bottom: 12px; margin-top: 0; text-align: center; font-size: 1.6em;">
+        💎 核心道具介紹：洗血與能力重置
+    </h2>
+
+    <div style="background-color: #ffffff; border: 2px solid #fbc02d; border-radius: 12px; overflow: hidden; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <div style="background: linear-gradient(135deg, #fbc02d 0%, #f57f17 100%); color: #fff; padding: 12px 20px; font-weight: bold; font-size: 1.2em; display: flex; align-items: center; justify-content: space-between;">
+            <span>🕯️ 回憶蠟燭 (能力重置)</span>
+            <span style="font-size: 0.75em; background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 20px;">推薦首選</span>
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; align-items: center; justify-content: center;">
+            <div style="flex: 1; min-width: 280px; max-width: 380px; text-align: center;">
+                <img src="https://telegraph-image-1n0.pages.dev/file/AgACAgUAAyEGAAS3SV8sAAIC02nPyB3v87panPoE6TDNGP_0J-iCAAL9D2sbfymBVjVeeSojYnZOAQADAgADbQADOwQ.png" alt="回憶蠟燭" style="width: 100%; max-width: 380px; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            </div>
+            
+            <div style="flex: 1.2; min-width: 280px;">
+                <h4 style="color: #e65100; margin-top: 0; border-left: 4px solid #e65100; padding-left: 10px; margin-bottom: 10px;">📜 詳細說明</h4>
+                <ul style="padding-left: 20px; color: #444; margin-bottom: 15px;">
+                    <li><strong>功能：</strong>重置角色初始點數、等級配點及萬能藥。</li>
+                    <li><strong>優勢：</strong><span style="color: #d32f2f; font-weight: bold;">等級與經驗值完全保留</span>，無需重練。</li>
+                    <li><strong>機制：</strong>配點後，系統依據新點數重新計算血魔最大值。</li>
+                    <li><strong>管道：</strong>藍鑽商城 / 推文商城。</li>
+                </ul>
+                
+                <div style="background-color: #fffde7; padding: 12px; border-radius: 6px; border: 1px dashed #fbc02d; margin-bottom: 10px;">
+                    <strong style="color: #3e2723;">💡 白話懶人包：</strong><br>
+                    不想重新練等的人選這個！點數重配後，血量會根據新能力直接更新。
+                </div>
+
+                <div style="color: #d32f2f; font-weight: bold; font-size: 0.9em; background: #ffebee; padding: 8px; border-radius: 4px;">
+                    ⚠️ 注意：使用完畢後請「重新登入」遊戲以同步數值。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <div style="background: #757575; color: #fff; padding: 12px 20px; font-weight: bold; font-size: 1.2em;">
+            🩸 洗血藥水 (基礎重置)
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; align-items: center; justify-content: center;">
+            <div style="flex: 1; min-width: 280px; max-width: 380px; text-align: center;">
+                <img src="https://telegraph-image-1n0.pages.dev/file/AgACAgUAAyEGAAS3SV8sAAIC1GnPyEbSAAFTn4eZtYmzr5DPHjbImAAC_g9rG38pgVaISPmWxG5YawEAAwIAA20AAzsE.png" alt="洗血藥水" style="width: 100%; max-width: 380px; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            </div>
+            
+            <div style="flex: 1.2; min-width: 280px;">
+                <h4 style="color: #424242; margin-top: 0; border-left: 4px solid #757575; padding-left: 10px; margin-bottom: 10px;">📜 詳細說明</h4>
+                <ul style="padding-left: 20px; color: #444; margin-bottom: 15px;">
+                    <li><strong>功能：</strong>角色等級降回 <span style="color: #d32f2f; font-weight: bold;">LV.1</span>。</li>
+                    <li><strong>機制：</strong>建議先將「體質」點滿至 25 再使用。重新練等時，系統會依當前體質/精神給予血魔加成。</li>
+                    <li><strong>管道：</strong>奇物商。</li>
+                </ul>
+                
+                <div style="background-color: #f5f5f5; padding: 12px; border-radius: 6px; border: 1px dashed #bdbdbd;">
+                    <strong style="color: #424242;">💡 白話懶人包：</strong><br>
+                    適合想挑戰最高血量且「願意重新練等」的玩家，等級會歸零。
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

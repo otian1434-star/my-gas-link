@@ -1,0 +1,163 @@
+<div style="
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    color: #202124; 
+    background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 3px rgba(60,64,67,0.3); 
+    max-width: 950px; 
+    margin: 0 auto;
+    line-height: 1.6;">
+
+    <h2 style="color: #1a73e8; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 0;">
+        🖼️ BOSS 收藏系統圖鑑
+    </h2>
+    <p style="color: #5f6368; font-size: 0.9em; margin-bottom: 20px;">
+        💡 擊殺 BOSS 並收藏其道具，即可解鎖永久能力加成！
+    </p>
+
+    <div style="
+        position: sticky; 
+        top: 0; 
+        background: rgba(255,255,255,0.95); 
+        padding: 10px 0; 
+        border-bottom: 1px solid #eee; 
+        margin-bottom: 20px; 
+        z-index: 10; 
+        display: flex; 
+        gap: 10px; 
+        overflow-x: auto; 
+        white-space: nowrap;">
+        <a href="#rank-green" style="text-decoration: none; background-color: #e6f4ea; color: #137333; padding: 6px 12px; border-radius: 20px; font-weight: bold; border: 1px solid #ceead6; font-size: 14px;">🟢 高級</a>
+        <a href="#rank-blue" style="text-decoration: none; background-color: #e8f0fe; color: #1967d2; padding: 6px 12px; border-radius: 20px; font-weight: bold; border: 1px solid #d2e3fc; font-size: 14px;">🔵 稀有</a>
+        <a href="#rank-red" style="text-decoration: none; background-color: #fce8e6; color: #c5221f; padding: 6px 12px; border-radius: 20px; font-weight: bold; border: 1px solid #fad2cf; font-size: 14px;">🔴 英雄</a>
+        <a href="#rank-purple" style="text-decoration: none; background-color: #f3e8fd; color: #8430ce; padding: 6px 12px; border-radius: 20px; font-weight: bold; border: 1px solid #e9d2fd; font-size: 14px;">🟣 傳說</a>
+        <a href="#rank-yellow" style="text-decoration: none; background-color: #fef7e0; color: #b06000; padding: 6px 12px; border-radius: 20px; font-weight: bold; border: 1px solid #feefc3; font-size: 14px;">🟡 神話</a>
+    </div>
+
+    <h3 id="rank-green" style="color: #137333; border-left: 5px solid #34a853; padding-left: 10px; margin-top: 30px;">⚔️ 高級 BOSS 收藏 (🟢)</h3>
+    <div style="overflow-x: auto; border: 1px solid #dadce0; border-radius: 8px;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 500px; font-size: 14px;">
+            <thead><tr style="background-color: #f1f3f4; color: #444;"><th style="padding:10px; text-align:left; width: 40%;">BOSS 名稱</th><th style="padding:10px; text-align:left;">收藏能力</th></tr></thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;"><td>巨大鱷魚</td><td>HP+25</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>迪哥</td><td>HP+25</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>西瑪</td><td>回魔+10</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>巴土瑟</td><td>魔法爆擊倍率+0.1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>卡士伯</td><td>魔法攻擊/命中+1</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>馬庫爾</td><td>魔法爆擊倍率+0.1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>伊弗利特</td><td>近戰傷害+1, HP+10</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>飛龍 / 豪勢</td><td>遠距攻擊+1, HP+10</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>曼波兔 / 樹精</td><td>藥水恢復+3%</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>賽尼斯</td><td>魔攻+1, MP+5</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>反王肯恩</td><td>近戰傷害+1, HP+10</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>鑽石高崙</td><td>傷害減免+1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>瑪依奴夏門</td><td>精神+1</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>巴貝多</td><td>狩獵經驗+5%</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>卡普</td><td>MP+10</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>巨大蜈蚣</td><td>PVP 傷害+1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>浮士德</td><td>防禦-2</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>艾爾摩大將軍</td><td>近距命中+1, MP+5</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>疾風的夏斯奇</td><td>遠距命中+1, MP+5</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>狂風的夏斯奇</td><td>魔攻+1, MP+5</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>須曼</td><td>抗魔+2</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="rank-blue" style="color: #1967d2; border-left: 5px solid #1a73e8; padding-left: 10px; margin-top: 30px;">🌟 稀有 BOSS 收藏 (🔵)</h3>
+    <div style="overflow-x: auto; border: 1px solid #dadce0; border-radius: 8px;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 500px; font-size: 14px;">
+            <thead><tr style="background-color: #f1f3f4; color: #444;"><th style="padding:10px; text-align:left; width: 40%;">BOSS 名稱</th><th style="padding:10px; text-align:left;">收藏能力</th></tr></thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;"><td>魔法師 / 黑長者</td><td>法術傷害+6</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>德雷克</td><td>PVP 傷害+2</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>庫曼</td><td>防禦-3</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>變形怪首領</td><td>魔攻+2</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>巴風特</td><td>近戰傷害+2, 近戰命中+2</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>巴列斯</td><td>昏迷命中+3</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>巨大牛人</td><td>傷害減免+1, HP+50</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>巨蟻女皇</td><td>遠距傷害+2, 遠距命中+2</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>四大精靈王</td><td>對應能力(力敏智精)+1</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>深淵之主</td><td>HP 恢復+3, MP 恢復+3</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>阿利歐克</td><td>法術減傷+2</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>半魚人首領</td><td>PVP 減傷+1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>大王烏賊</td><td>藥水恢復量+5%</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>塔洛斯 / 曼孟 / 瑪雅</td><td>魔武傷害+2%</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>冰之女王</td><td>魔法命中+2</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>冰魔</td><td>遠距命中+4</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>大腳瑪幽</td><td>近距命中+4</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="rank-red" style="color: #c5221f; border-left: 5px solid #ea4335; padding-left: 10px; margin-top: 30px;">🔱 英雄 BOSS 收藏 (🔴)</h3>
+    <div style="overflow-x: auto; border: 1px solid #dadce0; border-radius: 8px;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 500px; font-size: 14px;">
+            <thead><tr style="background-color: #f1f3f4; color: #444;"><th style="padding:10px; text-align:left; width: 40%;">BOSS 名稱</th><th style="padding:10px; text-align:left;">收藏能力</th></tr></thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;"><td>潔尼斯女王</td><td>精神+1, 魔攻+2</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>幻象眼魔</td><td>智力+1, 法術傷害+8</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>吸血鬼</td><td>抗魔+5, HP+50</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>騎士范德</td><td>昏迷命中+6</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>殭屍王</td><td>防禦-1, 傷害減免+2</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>黑豹</td><td>近距攻擊+3, 遠距攻擊+3</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>木乃伊王</td><td>魔攻+2, MP+30</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>艾莉絲</td><td>近距命中+3, 遠距命中+3</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>巫妖</td><td>魔法命中+3</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>死亡騎士</td><td>力量+1, HP 恢復+3</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>不死鳥</td><td>敏捷+1, MP 恢復+3</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>惡魔</td><td>敏捷+1, 智力+1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>古代巨人 / 克特</td><td>魔防+10</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="rank-purple" style="color: #8430ce; border-left: 5px solid #a142f4; padding-left: 10px; margin-top: 30px;">🐲 傳說 BOSS 收藏 (🟣)</h3>
+    <div style="overflow-x: auto; border: 1px solid #dadce0; border-radius: 8px;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 500px; font-size: 14px;">
+            <thead><tr style="background-color: #f1f3f4; color: #444;"><th style="padding:10px; text-align:left; width: 40%;">BOSS 名稱</th><th style="padding:10px; text-align:left;">收藏能力</th></tr></thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;"><td>暗殺軍王．史雷佛</td><td>經驗+3%, HP+50, 無視閃避+1</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>冥法軍王．海露拜</td><td>經驗+3%, HP+50, 無視迴避+1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>魔獸軍王．巴蘭卡</td><td>經驗+3%, HP+50, 昏迷抗性+5</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>法令軍王．蕾雅</td><td>經驗+3%, HP+50, 魔法穿透+1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>長老．琪娜</td><td>經驗+3%, MP+50, 魔法爆擊+1%</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>長老．巴塔斯</td><td>經驗+3%, HP+50, 近遠爆擊+1%</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>長老．巴洛斯</td><td>經驗+3%, HP+70, 力量+1</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>長老．安迪斯</td><td>經驗+3%, HP+70, 敏捷+1</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>長老．艾迪爾</td><td>經驗+3%, HP+70, 智力+1</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>長老．泰瑪斯</td><td>經驗+3%, HP+50, 魔法減免+3</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>長老．拉曼斯</td><td>經驗+3%, HP+50, 傷害減免+2</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>長老．巴陸德</td><td>經驗+3%, MP+50, 精神+1</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="rank-yellow" style="color: #b06000; border-left: 5px solid #fbbc04; padding-left: 10px; margin-top: 30px;">👑 神話 BOSS 收藏 (🟡)</h3>
+    <div style="overflow-x: auto; border: 1px solid #dadce0; border-radius: 8px;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 500px; font-size: 14px;">
+            <thead><tr style="background-color: #f1f3f4; color: #444;"><th style="padding:10px; text-align:left; width: 40%;">BOSS 名稱</th><th style="padding:10px; text-align:left;">收藏能力</th></tr></thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;"><td>鐮刀死神</td><td>經驗+6%, 魔武發動+1%, 魔減+8</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>林德拜爾</td><td>魔武發動+1%, 魔攻+5, 風抗+10</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>安塔瑞斯</td><td>魔武發動+1%, 魔減+4, 敏+2, 地抗+10</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>法利昂</td><td>魔武發動+1%, 傷減+3, 智+2, 水抗+10</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>巴拉卡斯</td><td>魔武發動+1%, 法傷+20, 力+2, 火抗+10</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>吉爾塔斯</td><td>經驗+6%, 魔武發動+1%, PVP減傷+2, 抗魔+10</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>獨角獸</td><td>魔武發動+1%, 魔武傷+2%, 魔爆+1%</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>沙蟲</td><td>經驗+12%, PvP 增傷+3, 抗魔+10</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>白面金毛殺生石</td><td>經驗+6%, 魔武爆擊+1%, 遠攻+5</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>混沌</td><td>近攻+4, 遠攻+4, 魔攻+3</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>死亡</td><td>經驗+6%, 魔武爆擊+1%, 近攻+5</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>墮落</td><td>經驗+6%, 魔武發動+1%, 魔命+3</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>炎魔</td><td>經驗+6%, 魔法爆擊+1%, 近命+6</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>火焰之影</td><td>經驗+6%, 魔法爆擊+1%, 遠命+6</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>底比斯 賀洛斯/玉藻前</td><td>智力+3, 魔武傷害+5%</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>底比斯 阿努比斯/巨型骷髏</td><td>力量+3, 魔武傷害+5%</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><td>白面金毛九尾狐/杰弗雷庫(雄)</td><td>敏捷+3, 魔武傷害+5%</td></tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><td>杰弗雷庫(雌)</td><td>精神+3, 魔武傷害+5%</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>

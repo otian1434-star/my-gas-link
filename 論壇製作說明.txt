@@ -1,0 +1,43 @@
+我希望做一個自動化生成的天堂私服論壇
+
+1.要可以方便修改內容
+2.可以方便套皮複製(改名稱)
+3.在我有多個社團的情況下 相同內容的東西 可以快速進行統一修改
+4.有申辦帳號系統(會員制)
+-申辦帳號需要
+電子信箱
+手機
+要有驗證碼防機器人
+這些資料為個人資料 需要保密存取 只有有權限者可以看到
+
+5.要有幾個導入連結(這些連結換論壇就會更換)
+-LINE@官方
+-LINE社群
+
+6.首頁需要有更新歷程的區塊
+
+7.首頁需要有一個根目錄供玩家點選區塊
+
+8.懸浮視窗可以讓玩家點進來就跳的資訊
+
+總資料夾內有論壇所需要放置的內容
+
+
+github用這組帳號密碼
+https://github.com/adscf0221-jpg
+
+我是用google登入的 如果有需要我在手動幫你操作
+我已經有登入好的瀏覽器
+
+
+
+網站範例在這邊:
+1.https://lionlion726.github.io/lineage-forum/
+
+2.https://godhash.vip/zh_TW/home
+
+3.https://godhash.vip/zh_TW/main
+
+4.https://sites.google.com/view/quan-yao-heaven/%E9%A6%96%E9%A0%81
+
+5.https://scoriginal1.dpdns.org/

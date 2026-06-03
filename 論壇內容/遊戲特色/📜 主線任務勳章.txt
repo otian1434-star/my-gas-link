@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>主線任務勳章介紹</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0;
+      width: 100%;
+      height: 100%;
+      /* 2. 初始禁止捲動，防止載入中畫面亂跑 */
+      overflow: hidden; 
+      background-color: #0d1117;
+      background-image: radial-gradient(circle at 50% 50%, #1a2333 0%, #0d1117 100%);
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: background-color 1s ease, background-image 1s ease;
+    }
+
+    #container { position: relative; width: 100%; }
+
+    /* 3. 優化 Loading 區塊，改為 fixed 確保覆蓋全螢幕 */
+    #loading {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 100; transition: opacity 1s ease-out;
+      background: inherit;
+    }
+
+    .magic-circle {
+      position: relative; width: 120px; height: 120px;
+      display: flex; justify-content: center; align-items: center;
+      margin-bottom: 20px;
+    }
+    .ring {
+      position: absolute; width: 100%; height: 100%;
+      border: 4px dashed #ffd700; border-radius: 50%;
+      animation: spin 5s linear infinite;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+    .icon {
+      font-size: 50px; z-index: 1;
+      animation: pulseIcon 1.5s infinite alternate;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+    .loading-text {
+      color: #ffd700; font-size: 22px; font-weight: bold; letter-spacing: 4px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+      animation: pulseIcon 1.5s infinite alternate;
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    @keyframes pulseIcon {
+      0% { opacity: 0.7; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1.05); }
+    }
+    
+    /* 4. Iframe 高度保持 3500px，並優化手機捲動感 */
+    iframe {
+      width: 100%; height: 3500px; border: none; display: block;
+      background-color: transparent; opacity: 0; transition: opacity 1.5s ease-in;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="loading">
+      <div class="magic-circle">
+        <div class="ring"></div>
+        <div class="icon">📜</div>
+      </div>
+      <div class="loading-text">主線任務解析中</div>
+    </div>
+    
+    <iframe id="quest-frame" src="https://script.google.com/macros/s/AKfycbyxbaMtaKU9uPhAhYZAXwdwPJyrv7EWYej35qhuYiLJB0NF3UnMF6eWswjyOMw_Hx8C/exec" onload="questLoaded()"></iframe>
+  </div>
+
+  <script>
+    function questLoaded() {
+      // 5. 關鍵修正：載入完成後恢復網頁捲動功能
+      document.documentElement.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
+
+      document.body.style.backgroundImage = 'none';
+      document.body.style.backgroundColor = '#ffffff';
+      
+      const loading = document.getElementById('loading');
+      loading.style.opacity = '0';
+      
+      setTimeout(() => { 
+        loading.style.display = 'none'; 
+      }, 1000);
+      
+      document.getElementById('quest-frame').style.opacity = '1';
+    }
+  </script>
+</body>
+</html>

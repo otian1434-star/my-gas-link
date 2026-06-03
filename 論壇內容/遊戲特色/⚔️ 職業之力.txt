@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>職業之力介紹</title>
+  <style>
+    /* 初始狀態鎖定滾動 */
+    html, body {
+      margin: 0; 
+      padding: 0; 
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* 初始禁止捲動 */
+      background-color: #040914;
+      background-image: radial-gradient(circle at 50% 50%, #0a192f 0%, #040914 100%);
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    #container { 
+      position: relative; 
+      width: 100%; 
+      height: 100%;
+      -webkit-overflow-scrolling: touch; /* 優化 iOS 滾動流暢度 */
+    }
+
+    /* Loading 區塊 */
+    #loading {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+      z-index: 9999; 
+      transition: opacity 0.8s ease-out, visibility 0.8s;
+      background: #040914;
+    }
+
+    .power-core {
+      position: relative; width: 100px; height: 100px;
+      display: flex; justify-content: center; align-items: center;
+      margin-bottom: 25px;
+    }
+    .energy-ring {
+      position: absolute; width: 100%; height: 100%;
+      border: 3px solid transparent; border-top: 3px solid #00e5ff; border-bottom: 3px solid #00e5ff;
+      border-radius: 50%;
+      animation: spin 1.5s linear infinite, glow 2s ease-in-out infinite alternate;
+    }
+    .icon {
+      font-size: 50px; z-index: 1;
+      text-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
+      animation: float 2s ease-in-out infinite alternate;
+    }
+    .loading-text {
+      color: #00e5ff; font-size: 20px; font-weight: bold; letter-spacing: 4px;
+      text-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+      animation: pulseText 1.5s infinite alternate;
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    @keyframes glow { 100% { box-shadow: 0 0 20px #00e5ff, inset 0 0 15px #00e5ff; } }
+    @keyframes float { 100% { transform: translateY(-10px); } }
+    @keyframes pulseText { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+
+    /* Iframe 修正 */
+    iframe {
+      width: 100%; 
+      height: 3500px; /* 保持你設定的高度 */
+      border: none; 
+      display: block;
+      opacity: 0; 
+      transition: opacity 1.2s ease-in;
+      background-color: #ffffff; /* 載入後底色轉白 */
+    }
+    
+    /* 輔助類別：當載入完成時使用 */
+    .loaded-body {
+      overflow: auto !important;
+      overflow-x: hidden !important;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading">
+    <div class="power-core">
+      <div class="energy-ring"></div>
+      <div class="icon">⚔️</div>
+    </div>
+    <div class="loading-text">職業之力覺醒中</div>
+  </div>
+
+  <div id="container">
+    <iframe id="class-frame" 
+            src="https://script.google.com/macros/s/AKfycbxRJqmRNxsCC1omYPX4ne2Ccks5sG4pNVbBzJjZVo3p0Fp3uXvemL2785bLwYMq_FIL3Q/exec" 
+            onload="classLoaded()">
+    </iframe>
+  </div>
+
+  <script>
+    function classLoaded() {
+      // 1. 解除滾動限制
+      const html = document.documentElement;
+      const body = document.body;
+      
+      html.classList.add('loaded-body');
+      body.classList.add('loaded-body');
+      
+      // 2. 處理 Loading 動畫與層級
+      const loading = document.getElementById('loading');
+      loading.style.opacity = '0';
+      loading.style.pointerEvents = 'none'; // 關鍵：讓觸摸事件穿透，不干擾捲動
+      
+      // 3. 顯示 Iframe
+      const frame = document.getElementById('class-frame');
+      frame.style.opacity = '1';
+
+      // 4. 背景色切換
+      body.style.backgroundImage = 'none';
+      body.style.backgroundColor = '#ffffff';
+
+      // 5. 延遲徹底移除 Loading 節點
+      setTimeout(() => {
+        loading.style.display = 'none';
+      }, 800);
+    }
+
+    // 備用方案：如果 Iframe 載入太慢，5秒後強制開啟捲動功能
+    setTimeout(() => {
+      if (document.getElementById('loading').style.display !== 'none') {
+        classLoaded();
+      }
+    }, 5000);
+  </script>
+</body>
+</html>

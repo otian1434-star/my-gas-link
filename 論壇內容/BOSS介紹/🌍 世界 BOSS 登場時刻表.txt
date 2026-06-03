@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>世界 BOSS 登場時刻表 - 深淵睜眼版</title>
+  <style>
+    /* 全域設定 */
+    body, html {
+      margin: 0;
+      padding: 0;
+      /* 關鍵修正 2：移除 overflow: hidden，改為允許垂直捲動 */
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: #000000;
+      background-image: radial-gradient(circle at 50% 50%, #2a0a0a 0%, #000000 100%);
+      font-family: 'Segoe UI', "Microsoft JhengHei", serif;
+      transition: background-color 1.2s ease;
+      -webkit-overflow-scrolling: touch; /* 優化手機滑動流暢度 */
+    }
+
+    #container {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    /* 讀取中提示樣式 */
+    #loading {
+      position: fixed; /* 改為 fixed 確保遮罩全螢幕 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      background: inherit;
+      transition: opacity 0.8s ease-out;
+      pointer-events: none; /* 消失時不干擾點擊 */
+    }
+
+    /* --- 惡魔之眼特效 --- */
+    .boss-eye-wrapper {
+      position: relative;
+      width: 200px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .boss-eye {
+      position: relative;
+      width: 160px;
+      height: 80px;
+      background: #000;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 25px 8px rgba(255, 0, 0, 0.6);
+      animation: eyeOpen 1s forwards;
+    }
+
+    .sclera {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #6a1111, #b11f1f, #6a1111);
+    }
+
+    .pupil {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle at 50% 50%, #ffffaa 0%, #ffff00 50%, #ff4500 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 20px 10px rgba(255, 69, 0, 0.8);
+      animation: pupilTremor 0.3s infinite;
+    }
+
+    .eye-pulse {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: rgba(255, 0, 0, 0.4);
+      border-radius: 50%;
+      filter: blur(20px);
+      animation: medalPulse 1.5s ease-out infinite;
+    }
+
+    .loading-text {
+      margin-top: 20px;
+      color: #ffca28;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-shadow: 0 0 15px rgba(255, 69, 0, 0.9);
+      animation: pulseText 1.5s infinite;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    /* --- 動態效果 --- */
+    @keyframes eyeOpen { 0% { transform: scaleY(0); } 100% { transform: scaleY(1); } }
+    @keyframes pupilTremor { 0%, 100% { transform: translate(-50%, -50%) scale(1); } 50% { transform: translate(-51%, -49%) scale(1.05); } }
+    @keyframes medalPulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
+    @keyframes pulseText { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+    /* --- 內容框架 --- */
+    #iframe-wrapper {
+      width: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch; /* 關鍵修正 3：修正手機端 Iframe 捲動問題 */
+    }
+
+    iframe {
+      width: 1px; /* 技巧：針對部分手機瀏覽器修正寬度溢出 */
+      min-width: 100%;
+      height: 4000px; 
+      border: none;
+      display: block;
+      background-color: transparent;
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div id="loading">
+      <div class="boss-eye-wrapper">
+        <div class="boss-eye">
+          <div class="sclera"></div>
+          <div class="pupil"></div>
+        </div>
+        <div class="eye-pulse"></div>
+      </div>
+      <div class="loading-text">偵測到世界 BOSS 波動<br>正在開啟深淵傳送門...</div>
+    </div>
+
+    <div id="iframe-wrapper">
+      <iframe 
+        id="boss-frame"
+        src="https://script.google.com/macros/s/AKfycbwqHJZ_kKqCKLHhhnO64hz3MQaiDZFQJdO2PUB8wn4r1iWDntJiPdr9N6b9JORQz2s1/exec" 
+        onload="bossLoaded()">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    // 內容載入後的動作
+    function bossLoaded() {
+      // 1. 變更背景
+      document.body.style.backgroundImage = 'none';
+      document.body.style.backgroundColor = '#ffffff';
+
+      // 2. 隱藏載入動畫
+      const loading = document.getElementById('loading');
+      loading.style.opacity = '0';
+      setTimeout(() => {
+        loading.style.display = 'none';
+      }, 800);
+      
+      // 3. 顯示表格
+      document.getElementById('boss-frame').style.opacity = '1';
+    }
+
+    // 關鍵修正 4：防呆機制
+    // 如果 8 秒後 iframe 還沒觸發 onload (可能是 Google 伺服器慢或網路不穩)，強行進入頁面
+    setTimeout(() => {
+      const frame = document.getElementById('boss-frame');
+      if (frame.style.opacity !== '1') {
+        bossLoaded();
+      }
+    }, 8000);
+  </script>
+
+</body>
+</html>

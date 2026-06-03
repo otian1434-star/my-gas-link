@@ -1,0 +1,793 @@
+<div style="font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif; color: #333; max-width: 1000px; margin: 0 auto; line-height: 1.6;">
+    <h2 style="text-align: center; color: #1a73e8; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-bottom: 20px;">
+        🧸 娃娃圖鑑收藏清單
+    </h2>
+    <div style="overflow-x: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; border: 1px solid #ddd;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; min-width: 800px;">
+            <thead>
+                <tr style="background-color: #1a73e8; color: #ffffff; text-align: left;">
+                    <th style="padding: 12px 15px; border-bottom: 2px solid #1557b0; width: 50%;">所需娃娃卡</th>
+                    <th style="padding: 12px 15px; border-bottom: 2px solid #1557b0; width: 25%;">圖鑑名稱</th>
+                    <th style="padding: 12px 15px; border-bottom: 2px solid #1557b0; width: 25%;">獲得能力</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：石頭高崙(一般)<br>娃娃卡：野狼寶寶(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我曾住過的故鄉是北島</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：肥肥(一般)<br>娃娃卡：雪怪(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">圓圓的</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：木刻人偶(一般)<br>娃娃卡：奎斯坦修(一般)<br>娃娃卡：豬八戒(稀有)<br>娃娃卡：老虎(稀有)<br>娃娃卡：狸貓(英雄)<br>娃娃卡：黑色曼波兔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不是吃的</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+5</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：石頭高崙(一般)<br>娃娃卡：木刻人偶(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">頭上戴了什麼</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：蛇女(一般)<br>娃娃卡：希爾黛絲(一般)<br>娃娃卡：奎斯坦修(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">要一起游泳嗎</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力回復量+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：肥肥(一般)<br>娃娃卡：雪怪(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不需要減肥</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近.遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：蛇女(一般)<br>娃娃卡：野狼寶寶(一般)<br>娃娃卡：木刻人偶(一般)<br>娃娃卡：阿魯巴(藍)(稀有)<br>娃娃卡：吉爾塔斯(唯一)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">意外的敏捷啊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：肥肥(一般)<br>娃娃卡：雪怪(一般)<br>娃娃卡：奎斯坦修(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">敢惹我就咬你</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：雪怪(一般)<br>娃娃卡：雪人(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">歐瑞的吉祥物</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+15</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：蛇女(一般)<br>娃娃卡：美人魚(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們不太一樣了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：石頭高崙(一般)<br>娃娃卡：火焰娃娃(一般)<br>娃娃卡：橘炙娃娃(紅)(一般)<br>娃娃卡：橘炙娃娃(綠)(一般)<br>娃娃卡：橘炙娃娃(橘)(一般)<br>娃娃卡：橘炙娃娃(藍)(一般)<br>娃娃卡：熔岩高崙(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">哥是在熔岩裡出生的</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：蛇女(一般)<br>娃娃卡：思克巴(高級)<br>娃娃卡：千年九尾狐(英雄)<br>娃娃卡：潔尼斯女王(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">可怕的姐姐們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離爆擊率+1%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：雪人(高級)<br>娃娃卡：熔岩高崙(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不行不要過來</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：長者(高級)<br>娃娃卡：思克巴(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">長老曾經很風光</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+15</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：希爾黛絲(一般)<br>娃娃卡：奎斯坦修(一般)<br>娃娃卡：美人魚(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我會在海音裡活下來的</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離迴避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：思克巴(高級)<br>娃娃卡：史巴托(高級)<br>娃娃卡：亞力安(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們來自龍界</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離迴避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：雪人(高級)<br>娃娃卡：稻草人(高級)<br>娃娃卡：史巴托(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">一起玩吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：肥肥(一般)<br>娃娃卡：食人妖精王(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">胖子跟大胖子</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：思克巴(高級)<br>娃娃卡：思克巴女皇(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">上鉤拳姊妹</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：熔岩高崙(高級)<br>娃娃卡：鑽石高崙(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">哥哥有比較貴一點</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離迴避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：阿魯巴(稀有)<br>娃娃卡：巨人(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">優秀生長版持有者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">經驗值獎勵+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：飛龍(稀有)<br>娃娃卡：思克巴女皇(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我有翅膀</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：黑長者(稀有)<br>娃娃卡：飛龍(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">龍谷BOSS是我</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：思克巴(高級)<br>娃娃卡：鑽石高崙(稀有)<br>娃娃卡：思克巴女皇(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">想擁有鑽石</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近.遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：石頭高崙(一般)<br>娃娃卡：熔岩高崙(高級)<br>娃娃卡：鑽石高崙(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">去找媽媽吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力回復量+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：石頭高崙(一般)<br>娃娃卡：稻草人(高級)<br>娃娃卡：食人妖精王(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">Smile</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：亞力安(高級)<br>娃娃卡：黑長者(稀有)<br>娃娃卡：飛龍(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">龍間入口由我來守護</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離迴避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：史巴托(高級)<br>娃娃卡：暗黑騎士(女)(高級)<br>娃娃卡：神聖劍士(男)(高級)<br>娃娃卡：秩序的死亡之劍(稀有)<br>娃娃卡：騎士范德(英雄)<br>娃娃卡：天上騎士(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">揮劍吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">經驗值獎勵+3%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：亞力安(高級)<br>娃娃卡：獨眼巨人(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">她們被稱為古代的怪物</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：長者(高級)<br>娃娃卡：黑長者(稀有)<br>娃娃卡：巫妖(英雄)<br>娃娃卡：唐三藏(傳說)<br>娃娃卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">夢想成為大魔法師</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：阿魯巴(稀有)<br>娃娃卡：巨人(稀有)<br>娃娃卡：獨眼巨人(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">看看誰比較高吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+70</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：阿魯巴(稀有)<br>娃娃卡：獨眼巨人(英雄)<br>娃娃卡：幻象眼魔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">視力至少2.0</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士范德(英雄)<br>娃娃卡：幻象眼魔(英雄)<br>娃娃卡：巫妖(英雄)<br>娃娃卡：潔尼斯女王(英雄)<br>娃娃卡：殭屍王(英雄)<br>娃娃卡：鐮刀死神(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">在傲慢之塔見吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+100</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：希爾黛絲(一般)<br>娃娃卡：飛龍(稀有)<br>娃娃卡：幻象眼魔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">需要的話就空中懸浮</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">精神+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：飛龍(稀有)<br>娃娃卡：死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你是龍吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力量+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士范德(英雄)<br>娃娃卡：死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">誰的劍最強呢</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近.距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：肥肥(一般)<br>娃娃卡：蛇女(一般)<br>娃娃卡：石頭高崙(一般)<br>娃娃卡：野狼寶寶(一般)<br>娃娃卡：希爾黛絲(一般)<br>娃娃卡：奎斯坦修(一般)<br>娃娃卡：紅色妖魔(高級)<br>娃娃卡：葛林(稀有)<br>娃娃卡：聖誕妖精(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">烏合之眾</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">經驗值獎勵+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：雪人(高級)<br>娃娃卡：長者(高級)<br>娃娃卡：美人魚(高級)<br>娃娃卡：稻草人(高級)<br>娃娃卡：熔岩高崙(高級)<br>娃娃卡：思克巴(高級)<br>娃娃卡：史巴托(高級)<br>娃娃卡：亞力安(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">有備無患</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">經驗值獎勵+1%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：黑長者(稀有)<br>娃娃卡：食人妖精王(稀有)<br>娃娃卡：飛龍(稀有)<br>娃娃卡：阿魯巴(稀有)<br>娃娃卡：鑽石高崙(稀有)<br>娃娃卡：思克巴女皇(稀有)<br>娃娃卡：巨人(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">瑩雪之功</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">經驗值獎勵+3%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士范德(英雄)<br>娃娃卡：獨眼巨人(英雄)<br>娃娃卡：木乃伊王(英雄)<br>娃娃卡：幻象眼魔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">大器晚成</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">經驗值獎勵+5%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：肥肥(一般)<br>娃娃卡：雪怪(一般)<br>娃娃卡：阿魯巴(稀有)<br>娃娃卡：巨人(稀有)<br>娃娃卡：艾莉絲(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">偶像粉絲團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離迴避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：思克巴(高級)<br>娃娃卡：思克巴女皇(稀有)<br>娃娃卡：吸血鬼(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我血不夠</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：熔岩高崙(高級)<br>娃娃卡：阿魯巴(稀有)<br>娃娃卡：鑽石高崙(稀有)<br>娃娃卡：木乃伊王(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">強壯的小孩</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：少年帕克(高級)<br>娃娃卡：少女帕歐(高級)<br>娃娃卡：蕾雅(稀有)<br>娃娃卡：艾莉絲(英雄)<br>娃娃卡：吸血鬼(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">美少女美少年</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離爆擊率+1%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：木乃伊王(英雄)<br>娃娃卡：吸血鬼(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">晚上很危險</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離爆擊率+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：木乃伊王(英雄)<br>娃娃卡：幻象眼魔(英雄)<br>娃娃卡：冰之女王(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">燃盡之後只剩灰燼</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：惡魔(傳說)<br>娃娃卡：冰之女王(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">冷酷與熱情</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+5</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：黑長者(稀有)<br>娃娃卡：巴蘭卡(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">無法得知的表情</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：黑妖(男)(高級)<br>娃娃卡：黑妖(女)(高級)<br>娃娃卡：巴蘭卡(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">拉斯塔巴德的戰士</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離爆擊率+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：巴風特(英雄)<br>娃娃卡：惡魔(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">有名的惡魔們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：拉拉(稀有)<br>娃娃卡：死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">沒有盡頭的戰鬥</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：巴風特(英雄)<br>娃娃卡：巫妖(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">一團貪婪</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">智力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：樹精(稀有)<br>娃娃卡：巴風特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">比誰都塊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法法爆擊率+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：妖精(女)(高級)<br>娃娃卡：拉拉(稀有)<br>娃娃卡：艾莉絲(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">金髮美女</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：槍手(男)(高級)<br>娃娃卡：槍手(女)(高級)<br>娃娃卡：拉拉(稀有)<br>娃娃卡：榭莉(稀有)<br>娃娃卡：達伊諾思打者(稀有)<br>娃娃卡：巴克休(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們終於來了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：拉拉(稀有)<br>娃娃卡：榭莉(稀有)<br>娃娃卡：達伊諾思打者(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">吉祥物</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離迴避+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：榭莉(稀有)<br>娃娃卡：達伊諾思打者(稀有)<br>娃娃卡：淘氣龍(英雄)<br>娃娃卡：藍飛龍(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">恐龍朋友們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力回復量+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：稻草人(高級)<br>娃娃卡：拉拉(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">新手教學</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10 魔力上限+5</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：石頭高崙(一般)<br>娃娃卡：雪人(高級)<br>娃娃卡：飛龍(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">撿拾達人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+50</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：王族(男)(高級)<br>娃娃卡：騎士(男)(高級)<br>娃娃卡：法師(男)(高級)<br>娃娃卡：妖精(男)(高級)<br>娃娃卡：黑妖(男)(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們是男子漢</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：王族(女)(高級)<br>娃娃卡：騎士(女)(高級)<br>娃娃卡：法師(女)(高級)<br>娃娃卡：妖精(女)(高級)<br>娃娃卡：黑妖(女)(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">美女折磨人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：妖精(男)(高級)<br>娃娃卡：妖精(女)(高級)<br>娃娃卡：黑妖(男)(高級)<br>娃娃卡：黑妖(女)(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">光明與黑暗</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：雪怪(一般)<br>娃娃卡：雪人(高級)<br>娃娃卡：伊弗利特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不要逃一起玩</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+4</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：拉拉(稀有)<br>娃娃卡：達伊諾思打者(稀有)<br>娃娃卡：獨眼巨人(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我和朋友們I</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：暗黑騎士(男)(高級)<br>娃娃卡：榭莉(稀有)<br>娃娃卡：艾依爾(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我和朋友們II</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：王族(男)(高級)<br>娃娃卡：騎士(女)(高級)<br>娃娃卡：妖精(女)(高級)<br>娃娃卡：神聖劍士(高級)<br>娃娃卡：狂戰士(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">亞丁5人組</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：拉拉(稀有)<br>娃娃卡：艾莉絲(英雄)<br>娃娃卡：克特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">克特和艾莉絲</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力量+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：石頭高崙(一般)<br>娃娃卡：熔岩高崙(高級)<br>娃娃卡：鑽石高崙(稀有)<br>娃娃卡：安塔瑞斯(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">地之王登場</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+50</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：亞力安(高級)<br>娃娃卡：黑長者(稀有)<br>娃娃卡：飛龍(稀有)<br>娃娃卡：阿魯巴(稀有)<br>娃娃卡：安塔瑞斯(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">嗚哇大哥來龍谷了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：巴風特(英雄)<br>娃娃卡：安塔瑞斯(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">恩巴風特你的魔杖呢</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法攻擊力+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士范德(英雄)<br>娃娃卡：木乃伊王(英雄)<br>娃娃卡：吸血鬼(英雄)<br>娃娃卡：安塔瑞斯(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不要一直待在塔裡出去玩</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">經驗值獎勵+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：惡魔(傳說)<br>娃娃卡：冰之女王(傳說)<br>娃娃卡：安塔瑞斯(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">說的恢復力不就是我們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力回復量+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：巴克休(英雄)<br>娃娃卡：獨角獸(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">獨角獸與巴克休</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：熔岩高崙(高級)<br>娃娃卡：巴克休(英雄)<br>娃娃卡：獨角獸(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你怎麼變得這麼強壯</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：伊弗利特(英雄)<br>娃娃卡：巴克休(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">如果要來的話就來阿</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：希爾黛絲(一般)<br>娃娃卡：奎斯坦修(一般)<br>娃娃卡：美人魚(高級)<br>娃娃卡：巴克休(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">伊娃的祝福快點</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：丹迪(稀有)<br>娃娃卡：達伊諾思投手(稀有)<br>娃娃卡：榭莉(稀有)<br>娃娃卡：達伊諾思打者(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">恐龍軍團的進擊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：丹迪(稀有)<br>娃娃卡：達伊諾思投手(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我的朋友們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士(男)(高級)<br>娃娃卡：騎士(女)(高級)<br>娃娃卡：暗黑騎士(男)(高級)<br>娃娃卡：神聖劍士(高級)<br>娃娃卡：狂戰士(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">要見面的人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：不死鳥(傳說)<br>娃娃卡：黑暗長者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不死鳥和暗黑長者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近.遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：思克巴(高級)<br>娃娃卡：飛龍(稀有)<br>娃娃卡：思克巴女皇(稀有)<br>娃娃卡：不死鳥(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">飛起來吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">減免傷害+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：長者(高級)<br>娃娃卡：黑長者(稀有)<br>娃娃卡：黑暗長者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們視長老團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法攻擊力+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士范德(英雄)<br>娃娃卡：黑暗長者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">想變得跟我一樣大你還早</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：狂風的夏斯奇(英雄)<br>娃娃卡：疾風的夏斯奇(英雄)<br>娃娃卡：大腳瑪幽(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">又淤青啦</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：黑長者(稀有)<br>娃娃卡：渾沌的活鎧甲(稀有)<br>娃娃卡：浮士德(英雄)<br>娃娃卡：炎魔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">陰森森的港覺</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：浮士德(英雄)<br>娃娃卡：大腳瑪幽(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">浮士德和大腳的瑪幽</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：樹精(稀有)<br>娃娃卡：浮士德(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">中邪的樹</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士范德(英雄)<br>娃娃卡：狂風的夏斯奇(英雄)<br>娃娃卡：疾風的夏斯奇(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">艾爾摩大將軍</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士帕克(稀有)<br>娃娃卡：伊弗利特(英雄)<br>娃娃卡：狂風的夏斯奇(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">染成紅色</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士帕克(稀有)<br>娃娃卡：疾風的夏斯奇(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">需要綠色</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：獨眼巨人(英雄)<br>娃娃卡：伊弗利特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">把湯姆交出來就能免除血光</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+500</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：巨大守護螞蟻(稀有)<br>娃娃卡：巴克休(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">剷除螞蟻仇人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：巨大守護螞蟻(稀有)<br>娃娃卡：樹精(稀有)<br>娃娃卡：巴克休(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你說有一個不是昆蟲</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：樹精(稀有)<br>娃娃卡：力卡溫(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">樹精和力卡溫</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：木刻人偶(一般)<br>娃娃卡：樹精(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">出生的秘密</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+200</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：野狼寶寶(一般)<br>娃娃卡：力卡溫(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">滿月很危險</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：哈維(藍)(稀有)<br>娃娃卡：獨眼巨人(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">遺忘之島看守人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷命中+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：飛龍(稀有)<br>娃娃卡：思克巴女皇(稀有)<br>娃娃卡：哈維(藍)(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">旋風小子</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近.遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：長者(高級)<br>娃娃卡：黑長者(稀有)<br>娃娃卡：阿努比斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">聽說最近我的雷電很夯</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：曼波兔(稀有)<br>娃娃卡：巴克休(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">曼波兔和青蛙</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：狂風的夏斯奇(英雄)<br>娃娃卡：疾風的夏斯奇(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">雙胞胎的困擾</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：雪怪(一般)<br>娃娃卡：雪人(高級)<br>娃娃卡：曼波兔(稀有)<br>娃娃卡：大腳瑪幽(英雄)<br>娃娃卡：艾比諾不死鳥(傳說)<br>娃娃卡：艾比諾惡魔(傳說)<br>娃娃卡：艾比諾獨角獸(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白中之白</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：帕拉丁(傳說)<br>娃娃卡：甘特(傳說)<br>娃娃卡：歐吉王(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">心臟變強壯</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷命中+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：阿勒尼亞(稀有)<br>娃娃卡：天上騎士(英雄)<br>娃娃卡：獨角獸(傳說)<br>娃娃卡：帕拉丁(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神聖的組合</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：黑長者(稀有)<br>娃娃卡：巴風特(英雄)<br>娃娃卡：帕拉丁(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">退下吧魔鬼阿</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：克特(英雄)<br>娃娃卡：甘特(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">層級不符</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離爆擊率+1%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：希爾黛絲(一般)<br>娃娃卡：史巴托(高級)<br>娃娃卡：樹精(稀有)<br>娃娃卡：艾莉絲(英雄)<br>娃娃卡：甘特(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">一個一個來吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：力卡溫(稀有)<br>娃娃卡：獨眼巨人(英雄)<br>娃娃卡：烏格奴斯(英雄)<br>娃娃卡：高崙守護者(英雄)<br>娃娃卡：歐吉王(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">巨人的進擊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：賽尼斯(英雄)<br>娃娃卡：傑克吳燈籠(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔女和南瓜</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：吸血鬼(英雄)<br>娃娃卡：浮士德(英雄)<br>娃娃卡：傑克吳燈籠(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">可怕的小子</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：達伊諾思投手(稀有)<br>娃娃卡：傑克吳燈籠(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">打破南瓜</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：巴風特(英雄)<br>娃娃卡：賽尼斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔女與惡魔</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：吸血鬼(英雄)<br>娃娃卡：賽尼斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑暗的人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+50</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：思克巴(高級)<br>娃娃卡：思克巴女皇(稀有)<br>娃娃卡：賽尼斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔女軍團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力回復量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：騎士(男)(高級)<br>娃娃卡：騎士(女)(高級)<br>娃娃卡：法師(男)(高級)<br>娃娃卡：法師(女)(高級)<br>娃娃卡：黃金騎士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">素養課程</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+15</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：阿魯巴(稀有)<br>娃娃卡：哈維(藍)(稀有)<br>娃娃卡：大腳瑪幽(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">相同又不同的你</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：黃金安迪斯(稀有)<br>娃娃卡：獨眼巨人(英雄)<br>娃娃卡：克特(英雄)<br>娃娃卡：千年九尾狐(英雄)<br>娃娃卡：炎魔(英雄)<br>娃娃卡：黑豹(英雄)<br>娃娃卡：烏格奴斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">金光幸運英雄娃娃</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：黃金安迪斯(稀有)<br>娃娃卡：不死鳥(傳說)<br>娃娃卡：鐮刀死神(傳說)<br>娃娃卡：唐三藏(傳說)<br>娃娃卡：屠龍者(傳說)<br>娃娃卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">金光幸運傳說娃娃</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：墮落(傳說)<br>娃娃卡：黑暗長者(傳說)<br>娃娃卡：黑暗之星宙斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">智慧的娃娃</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：甘特(傳說)<br>娃娃卡：黑暗之星宙斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">歡迎光臨說話之島</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：賽尼斯(英雄)<br>娃娃卡：黑暗之星宙斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑魔法之上的黑魔法</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法爆擊率率+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：艾依爾(英雄)<br>娃娃卡：暗黑騎士團莉爾利(英雄)<br>娃娃卡：伊詩蒂(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">真正的女戰士</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體質+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：狂風的夏斯奇(英雄)<br>娃娃卡：疾風的夏斯奇(英雄)<br>娃娃卡：暗黑騎士團莉爾利(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">莉爾莉和夏斯奇</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：賽尼斯(英雄)<br>娃娃卡：伊詩蒂(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">孽緣和糾纏</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：哈維(藍)(稀有)<br>娃娃卡：哈維(稀有)<br>娃娃卡：艾依爾(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">這世界上沒有壞哈維</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：暗黑騎士(男)(高級)<br>娃娃卡：暗黑騎士團莉爾利(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你為什麼從那裡出來</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：王族(男)(高級)<br>娃娃卡：王族(女)(高級)<br>娃娃卡：騎士(男)(高級)<br>娃娃卡：騎士(女)(高級)<br>娃娃卡：黃金巡守(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">通識課程第二堂課</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+15</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：神聖劍士(高級)<br>娃娃卡：狂戰士(高級)<br>娃娃卡：暗黑騎士團莉爾利(英雄)<br>娃娃卡：帕拉丁(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">強勢的小鬼們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：屠龍者(傳說)<br>娃娃卡：安塔瑞斯(神話)<br>娃娃卡：巴拉卡斯(神話)<br>娃娃卡：林德拜爾(神話)<br>娃娃卡：法利昂(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">屠龍者的驕傲</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害.傷害減免+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：獨角獸(傳說)<br>娃娃卡：甘特(傳說)<br>娃娃卡：安塔瑞斯(神話)<br>娃娃卡：法利昂(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">強而有力的娃娃</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">減免傷害+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：龍騎士(男)(高級)<br>娃娃卡：龍騎士(女)(高級)<br>娃娃卡：黑長者(稀有)<br>娃娃卡：淘氣龍(英雄)<br>娃娃卡：藍飛龍(英雄)<br>娃娃卡：黑暗長者(傳說)<br>娃娃卡：安塔瑞斯(神話)<br>娃娃卡：法利昂(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我要招喚龍了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">減免傷害+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：不死鳥(傳說)<br>娃娃卡：安塔瑞斯(神話)<br>娃娃卡：法利昂(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你要我代替巴拉卡斯</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷耐性+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：希爾黛絲(一般)<br>娃娃卡：伊弗利特(英雄)<br>娃娃卡：不死鳥(傳說)<br>娃娃卡：法利昂(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">赴湯蹈火的拍檔</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：巴蘭卡(傳說)<br>娃娃卡：巴拉卡斯(神話)<br>娃娃卡：法利昂(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">法利昂和巴蘭卡</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害減免+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：希爾黛絲(一般)<br>娃娃卡：美人魚(高級)<br>娃娃卡：哈維(藍)(稀有)<br>娃娃卡：巴克休(英雄)<br>娃娃卡：法利昂(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">接受水之洗禮吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：孫悟空(稀有)<br>娃娃卡：沙悟淨(稀有)<br>娃娃卡：豬八戒(稀有)<br>娃娃卡：唐三藏(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">西天取經的隊伍</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：火焰娃娃(一般)<br>娃娃卡：橘炙娃娃(紅)(一般)<br>娃娃卡：橘炙娃娃(綠)(一般)<br>娃娃卡：橘炙娃娃(橘)(一般)<br>娃娃卡：橘炙娃娃(藍)(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">燃燒的五彩靈魂</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">HP+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：吉爾塔斯(唯一)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">來自異界的支配者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力敏智+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：槍手(男)(高級)<br>娃娃卡：槍手(女)(高級)<br>娃娃卡：龍騎士(男)(高級)<br>娃娃卡：龍騎士(女)(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">槍手與龍騎士</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：阿魯巴(藍)(稀有)<br>娃娃卡：阿魯巴(紅)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">阿魯巴的雙重奏</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：艾比諾不死鳥(傳說)<br>娃娃卡：艾比諾惡魔(傳說)<br>娃娃卡：艾比諾獨角獸(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">艾比諾的守護者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：孫悟空(稀有)<br>娃娃卡：覺醒孫悟空(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">傳說中的齊天大聖</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">HP+30</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：老虎(稀有)<br>娃娃卡：黑豹(英雄)<br>娃娃卡：狸貓(英雄)<br>娃娃卡：黑色曼波兔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">淘氣的動物農場</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：天上騎士(英雄)<br>娃娃卡：炎魔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神聖與墮落的邊界</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：秩序的死亡之劍(稀有)<br>娃娃卡：渾沌的活鎧甲(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">秩序與混沌的鎧甲</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：少年帕克(高級)<br>娃娃卡：少女帕歐(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">雪壁上的孩子們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">HP+15</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：唐三藏(傳說)<br>娃娃卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">傳說級的大法師</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">SP+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：千年九尾狐(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">擁有千年的智慧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：淘氣龍(英雄)<br>娃娃卡：藍飛龍(英雄)<br>娃娃卡：屠龍者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">屠龍者與被屠者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近遠攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：紅色妖魔(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">紅色妖魔的進擊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">HP+15</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：葛林(稀有)<br>娃娃卡：聖誕妖精(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">聖誕節的惡作劇</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">HP+25</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：烏格奴斯(英雄)<br>娃娃卡：高崙守護者(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">高崙與巨像</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">HP+30</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：鐮刀死神(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">鐮刀死神的收割</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">智力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：暗黑騎士(女)(高級)<br>娃娃卡：蕾雅(稀有)<br>娃娃卡：阿勒尼亞(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">美麗的致命誘惑</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害減免+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">娃娃卡：孫悟空(稀有)<br>娃娃卡：覺醒孫悟空(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">覺醒的猴王</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

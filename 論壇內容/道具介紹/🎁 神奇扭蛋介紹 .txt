@@ -1,0 +1,162 @@
+<div style="
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    color: #202124; 
+    background-color: #ffffff; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 3px rgba(60,64,67,0.3); 
+    max-width: 100%; 
+    margin: 0 auto;
+    line-height: 1.6;
+    box-sizing: border-box;
+    overflow-x: hidden;"> <h2 style="color: #1a73e8; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 0; font-size: 1.5em;">
+        🎁 物品與機率一覽
+    </h2>
+
+    <div style="background-color: #fff8e1; border: 2px solid #fbc02d; border-radius: 8px; padding: 15px; margin-bottom: 20px; position: relative; box-sizing: border-box;">
+        <div style="position: absolute; top: -12px; left: 15px; background-color: #fbc02d; color: #fff; padding: 2px 10px; border-radius: 12px; font-weight: bold; font-size: 0.8em;">
+            🌟 特殊大獎
+        </div>
+        <h3 style="margin-top: 5px; color: #b06000; font-size: 1.1em; display: flex; align-items: center;">
+            <span style="font-size: 1.2em; margin-right: 8px;">🏅</span> 特殊裝備：扭蛋徽章
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+            <div style="width: 100%;">
+                <strong>📦 道具名稱：</strong><span style="color: #c5221f; font-weight: bold;">神奇徽章 (3天)</span>
+            </div>
+            <div style="width: 100%;">
+                <strong>⚔️ 裝備能力：</strong><br>
+                <div style="margin-top: 5px; display: flex; flex-wrap: wrap; gap: 5px;">
+                    <span style="background-color: #fff; border: 1px solid #fdd835; padding: 2px 6px; border-radius: 4px; color: #d32f2f; font-size: 0.85em;">PVP 額外傷害 +8</span>
+                    <span style="background-color: #fff; border: 1px solid #fdd835; padding: 2px 6px; border-radius: 4px; color: #1976d2; font-size: 0.85em;">PVP 額外減免 +4</span>
+                    <span style="background-color: #fff; border: 1px solid #fdd835; padding: 2px 6px; border-radius: 4px; color: #7b1fa2; font-size: 0.85em;">魔攻 +4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="color: #444; font-size: 1.1em; margin-bottom: 10px;">📋 詳細內容物清單</h3>
+    <div style="border: 1px solid #dadce0; border-radius: 8px; overflow: hidden;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; word-break: break-all;">
+            <thead>
+                <tr style="background-color: #f1f3f4; color: #444;">
+                    <th style="padding: 10px 5px; border-bottom: 2px solid #dadce0; text-align: left; width: 50%;">道具名稱</th>
+                    <th style="padding: 10px 5px; border-bottom: 2px solid #dadce0; text-align: center; width: 25%;">數量</th>
+                    <th style="padding: 10px 5px; border-bottom: 2px solid #dadce0; text-align: center; width: 25%;">機率</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">穿雲箭 (血盟 / 組隊)</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="text-align: center;"><span style="background:#e6f4ea; color:#137333; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">9.3%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">變形石 / 娃娃召喚石</td>
+                    <td style="text-align: center;">500</td>
+                    <td style="text-align: center;"><span style="background:#e6f4ea; color:#137333; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">8.9%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">魔法寶石 / 精靈玉</td>
+                    <td style="text-align: center;">300</td>
+                    <td style="text-align: center;"><span style="background:#e6f4ea; color:#137333; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">8.5%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">強化戰鬥卷軸</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="text-align: center;"><span style="background:#e6f4ea; color:#137333; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">8.0%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">奧里哈魯根箭</td>
+                    <td style="text-align: center;">4,000</td>
+                    <td style="text-align: center;"><span style="background:#e6f4ea; color:#137333; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">8.0%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">復活卷軸</td>
+                    <td style="text-align: center;">10</td>
+                    <td style="text-align: center;"><span style="background:#e6f4ea; color:#137333; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">6.0%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">空的魔法卷軸 (等級4)</td>
+                    <td style="text-align: center;">40 ~ 100</td>
+                    <td style="text-align: center;"><span style="background:#e6f4ea; color:#137333; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">5.0%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">空的魔法卷軸 (等級5)</td>
+                    <td style="text-align: center;">40 ~ 100</td>
+                    <td style="text-align: center;"><span style="background:#e8f0fe; color:#1967d2; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">4.0%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">(玩家) EXP護身符</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#e8f0fe; color:#1967d2; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">4.0%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">肉</td>
+                    <td style="text-align: center;">50</td>
+                    <td style="text-align: center;"><span style="background:#e8f0fe; color:#1967d2; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">1.2%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">純白的萬能藥</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#e8f0fe; color:#1967d2; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">1.0%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">武器 / 防具 / 飾品 粉末</td>
+                    <td style="text-align: center;">10</td>
+                    <td style="text-align: center;"><span style="background:#e8f0fe; color:#1967d2; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">1.0%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px; color:#1967d2; font-weight:bold;">稀有 變身/娃娃卡寶箱</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#e8f0fe; color:#1967d2; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">1.0%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px; color:#c5221f; font-weight:bold;">稀有製作秘笈</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#fce8e6; color:#c5221f; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">0.9%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">詛咒的 防爆卷軸</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#fce8e6; color:#c5221f; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">0.9%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">一般的 防爆卷軸</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#fce8e6; color:#c5221f; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">0.5%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px; font-weight:bold;">祝福的 防爆卷軸</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#fce8e6; color:#c5221f; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">0.1%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">各式萬能藥</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#fce8e6; color:#c5221f; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">0.1%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px;">高技碎片箱 (自選)</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#fce8e6; color:#c5221f; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">0.1%</span></td>
+                </tr>
+                <tr style="background-color: #fcfcfc; border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px; color:#c5221f; font-weight:bold;">英雄 變身/娃娃卡寶箱</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#fce8e6; color:#c5221f; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">0.1%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 8px 5px; color:#c5221f; font-weight:bold;">英雄製作秘笈</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"><span style="background:#fce8e6; color:#c5221f; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">0.1%</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee; background-color: #fffde7;">
+                    <td style="padding: 8px 5px; color:#b06000; font-weight:bold;">神奇徽章 (3天)</td>
+                    <td style="text-align: center; font-weight:bold;">1</td>
+                    <td style="text-align: center;"><span style="background:#e8f0fe; color:#1967d2; padding:2px 5px; border-radius:12px; font-weight:bold; font-size: 0.85em;">1.0%</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,247 @@
+<div style="
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    color: #202124; 
+    background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 3px rgba(60,64,67,0.3); 
+    max-width: 950px; 
+    margin: 0 auto;
+    line-height: 1.6;">
+
+    <h2 style="color: #1a73e8; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 0;">
+        🧸 天堂M 魔法娃娃總覽
+    </h2>
+
+    <div style="background-color: #fff8e1; border-left: 5px solid #ffb300; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+        <h3 style="margin-top: 0; color: #e65100; font-size: 1.1em;">💡 重要提示</h3>
+        <ul style="margin: 5px 0 0 0; padding-left: 20px; color: #333; line-height: 1.8;">
+            <li><strong>召喚方式：</strong>所有娃娃皆須使用 <span style="color:#d32f2f; font-weight:bold;">”娃娃石”</span> 召喚 (主城 NPC 購買)。</li>
+            <li><strong>圖鑑查詢：</strong>詳細圖鑑請至官方論壇參閱 (已有智能調整)。</li>
+            <li><strong>自動功能：</strong>自動召喚請於 <span style="color:#1976d2; font-weight:bold;">LH狀態設定</span>，並設定「自動娃娃卷軸」。</li>
+        </ul>
+    </div>
+
+    <div style="background-color: #ffebee; border: 2px dashed #d32f2f; padding: 15px; margin-bottom: 25px; border-radius: 4px; text-align: center;">
+        <strong style="color: #b71c1c; font-size: 1.1em;">⚠️ 官方嚴正注意 ⚠️</strong>
+        <div style="color: #c62828; margin-top: 5px; font-weight: bold;">
+            目前「神話娃娃」與「唯一娃娃」尚未開放合成！<br>
+            若玩家自行嘗試合成導致異常，<span style="text-decoration: underline;">官方將不予補發</span>，請務必留意！
+        </div>
+    </div>
+
+    <div style="
+        position: sticky; 
+        top: 0; 
+        background: rgba(255,255,255,0.98); 
+        padding: 10px 0; 
+        border-bottom: 1px solid #eee; 
+        margin-bottom: 20px; 
+        z-index: 10; 
+        display: flex; 
+        gap: 8px; 
+        overflow-x: auto; 
+        white-space: nowrap;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <a href="#gen-doll" style="text-decoration: none; background: #f5f5f5; color: #616161; padding: 5px 12px; border-radius: 15px; font-size: 13px; border: 1px solid #e0e0e0;">⚪ 一般</a>
+        <a href="#adv-doll" style="text-decoration: none; background: #e8f5e9; color: #2e7d32; padding: 5px 12px; border-radius: 15px; font-size: 13px; border: 1px solid #c8e6c9;">🟢 高級</a>
+        <a href="#rare-doll" style="text-decoration: none; background: #e3f2fd; color: #1565c0; padding: 5px 12px; border-radius: 15px; font-size: 13px; border: 1px solid #bbdefb;">🔵 稀有</a>
+        <a href="#hero-doll" style="text-decoration: none; background: #ffebee; color: #c62828; padding: 5px 12px; border-radius: 15px; font-size: 13px; border: 1px solid #ffcdd2;">🔴 英雄</a>
+        <a href="#legend-doll" style="text-decoration: none; background: #f3e5f5; color: #7b1fa2; padding: 5px 12px; border-radius: 15px; font-size: 13px; border: 1px solid #e1bee7;">🟣 傳說</a>
+        <a href="#myth-doll" style="text-decoration: none; background: #fff8e1; color: #f9a825; padding: 5px 12px; border-radius: 15px; font-size: 13px; border: 1px solid #fdd835;">👑 神話 / 唯一</a>
+    </div>
+
+    <style>
+        .doll-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin-bottom: 35px; }
+        .doll-card { padding: 12px; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; }
+        .doll-name { font-weight: bold; font-size: 1.05em; margin-bottom: 6px; border-bottom: 1px dashed rgba(0,0,0,0.15); padding-bottom: 4px; }
+        .doll-stat { font-size: 0.85em; color: #555; line-height: 1.6; }
+        
+        .c-gen { background: #fdfdfd; border: 1px solid #e0e0e0; }
+        .c-gen .doll-name { color: #616161; }
+        
+        .c-adv { background: #f1f8e9; border: 1px solid #c8e6c9; }
+        .c-adv .doll-name { color: #2e7d32; }
+        
+        .c-rare { background: #e3f2fd; border: 1px solid #bbdefb; }
+        .c-rare .doll-name { color: #1565c0; }
+        
+        .c-hero { background: #ffebee; border: 1px solid #ffcdd2; }
+        .c-hero .doll-name { color: #c62828; }
+        
+        .c-legend { background: #f3e5f5; border: 1px solid #e1bee7; }
+        .c-legend .doll-name { color: #7b1fa2; }
+        
+        .c-myth { background: #fffde7; border: 1px solid #fff59d; }
+        .c-myth .doll-name { color: #f57f17; }
+
+        .c-unique { background: #e0f7fa; border: 1px solid #80deea; }
+        .c-unique .doll-name { color: #00838f; }
+
+        .s-header { margin-top: 30px; margin-bottom: 15px; font-size: 1.2em; padding: 8px 10px; border-radius: 4px; }
+    </style>
+
+    <h3 id="gen-doll" class="s-header" style="background-color: #f5f5f5; color: #424242; border-left: 5px solid #9e9e9e;">⚪ 一般娃娃</h3>
+    <div class="doll-grid">
+        <div class="doll-card c-gen"><span class="doll-name">肥肥</span><span class="doll-stat">負重+100</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">雪怪</span><span class="doll-stat">防禦-2</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">蛇女</span><span class="doll-stat">每64秒魔力恢復25</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">石頭高崙</span><span class="doll-stat">傷害減免+1</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">野狼寶寶</span><span class="doll-stat">近距離攻擊+1</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">木刻人偶</span><span class="doll-stat">體力上限+50</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">希爾黛絲</span><span class="doll-stat">遠距離攻擊+1</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">奎斯坦修</span><span class="doll-stat">體力上限+50</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">火焰娃娃</span><span class="doll-stat">防禦-2</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">橘炙娃娃(紅)</span><span class="doll-stat">每64秒魔力恢復25</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">橘炙娃娃(綠)</span><span class="doll-stat">近距離攻擊+1</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">橘炙娃娃(橘)</span><span class="doll-stat">傷害減免+1</span></div>
+        <div class="doll-card c-gen"><span class="doll-name">橘炙娃娃(藍)</span><span class="doll-stat">遠距離攻擊+1</span></div>
+    </div>
+
+    <h3 id="adv-doll" class="s-header" style="background-color: #e8f5e9; color: #2e7d32; border-left: 5px solid #43a047;">🟢 高級娃娃</h3>
+    <div class="doll-grid">
+        <div class="doll-card c-adv"><span class="doll-name">雪人</span><span class="doll-stat">每64秒魔力恢復25, 魔力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">長者</span><span class="doll-stat">智力+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">美人魚</span><span class="doll-stat">每64秒魔力恢復25, 魔力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">稻草人</span><span class="doll-stat">遠距離攻擊+1, 遠距離命中+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">熔岩高崙</span><span class="doll-stat">防禦-2, 傷害減免+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">思克巴</span><span class="doll-stat">每64秒魔力恢復25, 魔力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">史巴托</span><span class="doll-stat">近距離攻擊+1, 近距離命中+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">亞力安</span><span class="doll-stat">遠距離攻擊+1, 遠距離命中+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">王族(男)</span><span class="doll-stat">近距離攻擊+1, 近距離命中+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">王族(女)</span><span class="doll-stat">近距離攻擊+1, 近距離命中+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">騎士(男)</span><span class="doll-stat">防禦-2, 傷害減免+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">騎士(女)</span><span class="doll-stat">防禦-2, 傷害減免+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">法師(男)</span><span class="doll-stat">智力+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">法師(女)</span><span class="doll-stat">智力+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">妖精(男)</span><span class="doll-stat">遠距離攻擊+1, 遠距離命中+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">妖精(女)</span><span class="doll-stat">遠距離攻擊+1, 遠距離命中+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">黑妖(男)</span><span class="doll-stat">智力+1, 魔力上限+70</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">黑妖(女)</span><span class="doll-stat">近距離攻擊+1, 近距離命中+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">暗黑騎士(男)</span><span class="doll-stat">防禦-2, 傷害減免+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">暗黑騎士(女)</span><span class="doll-stat">防禦-2, 傷害減免+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">神聖劍士(男)</span><span class="doll-stat">智力+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">神聖劍士</span><span class="doll-stat">智力+1</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">槍手(男)</span><span class="doll-stat">每64秒魔力恢復25, 魔力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">槍手(女)</span><span class="doll-stat">每64秒魔力恢復25, 魔力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">龍騎士(男)</span><span class="doll-stat">每64秒體力恢復25, 體力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">龍騎士(女)</span><span class="doll-stat">每64秒體力恢復25, 體力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">少年帕克</span><span class="doll-stat">每64秒體力恢復25, 體力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">少女帕歐</span><span class="doll-stat">每64秒體力恢復25, 體力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">狂戰士</span><span class="doll-stat">每64秒體力恢復25, 體力上限+50</span></div>
+        <div class="doll-card c-adv"><span class="doll-name">紅色妖魔</span><span class="doll-stat">遠距離攻擊+1, 遠距離命中+1</span></div>
+    </div>
+
+    <h3 id="rare-doll" class="s-header" style="background-color: #e3f2fd; color: #1565c0; border-left: 5px solid #1e88e5;">🔵 稀有娃娃</h3>
+    <div class="doll-grid">
+        <div class="doll-card c-rare"><span class="doll-name">黑長者</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">食人妖精王</span><span class="doll-stat">防禦-3, 傷害減免+2</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">飛龍</span><span class="doll-stat">遠距離攻擊+3, 遠距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">阿魯巴</span><span class="doll-stat">防禦-3, 傷害減免+2</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">鑽石高崙</span><span class="doll-stat">防禦-3, 傷害減免+2</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">思克巴女皇</span><span class="doll-stat">每64秒魔力恢復35, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">巨人</span><span class="doll-stat">防禦-3, 傷害減免+2</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">巨大守護螞蟻</span><span class="doll-stat">每64秒體力恢復35, 體力上限+100</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">黃金騎士</span><span class="doll-stat">近距離攻擊+3, 近距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">樹精</span><span class="doll-stat">每64秒魔力恢復35, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">曼波兔</span><span class="doll-stat">每64秒體力恢復35, 體力上限+100</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">力卡溫</span><span class="doll-stat">近距離攻擊+3, 近距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">哈維(藍)</span><span class="doll-stat">智力+1, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">黃金安迪斯</span><span class="doll-stat">每64秒體力恢復35, 體力上限+100</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">騎士帕克</span><span class="doll-stat">近距離攻擊+3, 近距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">拉拉</span><span class="doll-stat">智力+1, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">丹迪</span><span class="doll-stat">遠距離攻擊+3, 遠距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">達伊諾思投手</span><span class="doll-stat">遠距離攻擊+3, 遠距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">榭莉</span><span class="doll-stat">遠距離攻擊+3, 遠距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">達伊諾思打者</span><span class="doll-stat">近距離攻擊+3, 近距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">黃金巡守</span><span class="doll-stat">遠距離攻擊+3, 遠距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">蕾雅</span><span class="doll-stat">智力+1, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">孫悟空</span><span class="doll-stat">負重增加+1000</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">沙悟淨</span><span class="doll-stat">負重增加+1000</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">豬八戒</span><span class="doll-stat">負重增加+1000</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">老虎</span><span class="doll-stat">近距離攻擊+3, 近距離命中+3</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">阿勒尼亞</span><span class="doll-stat">每64秒體力恢復35, 體力上限+100</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">哈維</span><span class="doll-stat">智力+1, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">秩序的死亡之劍</span><span class="doll-stat">每64秒魔力恢復35, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">渾沌的活鎧甲</span><span class="doll-stat">每64秒魔力恢復35, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">葛林</span><span class="doll-stat">每64秒體力恢復35, 體力上限+100</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">聖誕妖精</span><span class="doll-stat">每64秒魔力恢復35, 魔力上限+70</span></div>
+        <div class="doll-card c-rare"><span class="doll-name">阿魯巴(藍)</span><span class="doll-stat">防禦-3, 傷害減免+2</span></div>
+    </div>
+
+    <h3 id="hero-doll" class="s-header" style="background-color: #ffebee; color: #c62828; border-left: 5px solid #e53935;">🔴 英雄娃娃</h3>
+    <div class="doll-grid">
+        <div class="doll-card c-hero"><span class="doll-name">巴風特</span><span class="doll-stat">智力+1, 魔攻+2, 防禦-3, 魔力上限+100, 每64秒魔力恢復30</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">騎士范德</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">艾莉絲</span><span class="doll-stat">智力+1, 魔攻+2, 防禦-3, 魔力上限+100, 每64秒魔力恢復30</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">獨眼巨人</span><span class="doll-stat">傷減+3, 負重+1000, 防禦-4, 每64秒體力恢復35</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">木乃伊王</span><span class="doll-stat">智力+1, 魔攻+2, 防禦-3, 魔力上限+100, 每64秒魔力恢復30</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">幻象眼魔</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">巫妖</span><span class="doll-stat">智力+1, 魔攻+2, 防禦-3, 魔力上限+100, 每64秒魔力恢復30</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">吸血鬼</span><span class="doll-stat">智力+1, 魔攻+2, 防禦-3, 魔力上限+100, 每64秒魔力恢復30</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">伊弗利特</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">克特</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">巴克休</span><span class="doll-stat">傷減+3, 負重+1000, 防禦-4, 每64秒體力恢復35</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">浮士德</span><span class="doll-stat">傷減+3, 負重+1000, 防禦-4, 每64秒體力恢復35</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">狂風的夏斯奇</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">疾風的夏斯奇</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">大腳瑪幽</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">賽尼斯</span><span class="doll-stat">智力+1, 魔攻+2, 防禦-3, 魔力上限+100, 每64秒魔力恢復30</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">阿努比斯</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">傑克吳燈籠</span><span class="doll-stat">傷減+3, 負重+1000, 防禦-4, 每64秒體力恢復35</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">艾依爾</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">暗黑騎士團莉爾利</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">伊詩蒂</span><span class="doll-stat">智力+1, 魔攻+2, 防禦-3, 魔力上限+100, 每64秒魔力恢復30</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">千年九尾狐</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">淘氣龍</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">天上騎士</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">炎魔</span><span class="doll-stat">防禦-3, 力量+1, 近距攻擊+5, 近距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">潔尼斯女王</span><span class="doll-stat">智力+1, 魔攻+2, 防禦-3, 魔力上限+100, 每64秒魔力恢復30</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">殭屍王</span><span class="doll-stat">傷減+3, 負重+1000, 防禦-4, 每64秒體力恢復35</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">黑豹</span><span class="doll-stat">防禦-5, 智力+3, 魔攻+3, 魔力上限+150, 每64秒魔力恢復50</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">烏格奴斯</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">狸貓</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">高崙守護者</span><span class="doll-stat">傷減+3, 負重+1000, 防禦-4, 每64秒體力恢復35</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">黑色曼波兔</span><span class="doll-stat">近距離攻擊+1, 近距離命中+1</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">覺醒孫悟空</span><span class="doll-stat">傷減+3, 負重+1000, 防禦-4, 每64秒體力恢復35</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">藍飛龍</span><span class="doll-stat">防禦-3, 敏捷+1, 遠距攻擊+5, 遠距命中+5</span></div>
+        <div class="doll-card c-hero"><span class="doll-name">阿魯巴(紅)</span><span class="doll-stat">傷減+3, 負重+1000, 防禦-4, 每64秒體力恢復35</span></div>
+    </div>
+
+    <h3 id="legend-doll" class="s-header" style="background-color: #f3e5f5; color: #7b1fa2; border-left: 5px solid #8e24aa;">🟣 傳說娃娃</h3>
+    <div class="doll-grid">
+        <div class="doll-card c-legend"><span class="doll-name">死亡騎士</span><span class="doll-stat">防禦-5, 力量+3, 近距攻擊+9, 近距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">巴蘭卡</span><span class="doll-stat">防禦-8, 負重+1000, 傷害減免+6, 每64秒體力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">墮落</span><span class="doll-stat">防禦-5, 力量+3, 近距攻擊+9, 近距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">惡魔</span><span class="doll-stat">防禦-5, 敏捷+3, 遠距攻擊+9, 遠距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">冰之女王</span><span class="doll-stat">防禦-5, 智力+3, 魔攻+3, 魔力上限+150, 每64秒魔力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">獨角獸</span><span class="doll-stat">防禦-5, 敏捷+3, 遠距攻擊+9, 遠距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">帕拉丁</span><span class="doll-stat">防禦-8, 負重+1000, 傷害減免+6, 每64秒體力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">甘特</span><span class="doll-stat">防禦-8, 負重+1000, 傷害減免+6, 每64秒體力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">歐吉王</span><span class="doll-stat">防禦-8, 負重+1000, 傷害減免+6, 每64秒體力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">不死鳥</span><span class="doll-stat">防禦-5, 敏捷+3, 遠距攻擊+9, 遠距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">黑暗長者</span><span class="doll-stat">防禦-5, 智力+3, 魔攻+3, 魔力上限+150, 每64秒魔力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">黑暗之星宙斯</span><span class="doll-stat">防禦-5, 智力+3, 魔攻+3, 魔力上限+150, 每64秒魔力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">鐮刀死神</span><span class="doll-stat">防禦-5, 智力+3, 魔攻+3, 魔力上限+150, 每64秒魔力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">唐三藏</span><span class="doll-stat">防禦-5, 力量+3, 近距攻擊+9, 近距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">屠龍者</span><span class="doll-stat">防禦-5, 力量+3, 近距攻擊+9, 近距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">黑暗哈汀</span><span class="doll-stat">防禦-5, 智力+3, 魔攻+3, 魔力上限+150, 每64秒魔力恢復50</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">艾比諾不死鳥</span><span class="doll-stat">防禦-5, 敏捷+3, 遠距攻擊+9, 遠距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">艾比諾惡魔</span><span class="doll-stat">防禦-5, 力量+3, 近距攻擊+9, 近距命中+9</span></div>
+        <div class="doll-card c-legend"><span class="doll-name">艾比諾獨角獸</span><span class="doll-stat">防禦-5, 敏捷+3, 遠距攻擊+9, 遠距命中+9</span></div>
+    </div>
+
+    <h3 id="myth-doll" class="s-header" style="background-color: #fff8e1; color: #f9a825; border-left: 5px solid #fdd835;">👑 神話娃娃</h3>
+    <div class="doll-grid">
+        <div class="doll-card c-myth"><span class="doll-name">安塔瑞斯</span><span class="doll-stat">防禦-11, 傷害減免+10, 負重+2500, 體力上限+400, 每64秒體力恢復60</span></div>
+        <div class="doll-card c-myth"><span class="doll-name">巴拉卡斯</span><span class="doll-stat">防禦-8, 力量+5, 近距攻擊+12, 近距命中+12</span></div>
+        <div class="doll-card c-myth"><span class="doll-name">林德拜爾</span><span class="doll-stat">防禦-8, 敏捷+5, 遠距攻擊+12, 遠距命中+12</span></div>
+        <div class="doll-card c-myth"><span class="doll-name">法利昂</span><span class="doll-stat">防禦-8, 智力+5, 魔攻+5, 魔力上限+250, 每64秒魔力恢復60</span></div>
+    </div>
+
+    <h3 class="s-header" style="background-color: #e0f7fa; color: #00838f; border-left: 5px solid #00bcd4;">🌌 唯一娃娃</h3>
+    <div class="doll-grid" style="grid-template-columns: 1fr;">
+        <div class="doll-card c-unique"><span class="doll-name">吉爾塔斯</span><span class="doll-stat">防禦-15, 力敏智+7, 近遠距攻擊+20, 近遠距命中+20, 魔攻+10, 傷害減免+15, 每64秒體/魔恢復60</span></div>
+    </div>
+
+</div>

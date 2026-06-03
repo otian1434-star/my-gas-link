@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>貴賓卡介紹</title>
+  <style>
+    /* 全域設定：尊爵深紫黑背景，凸顯金色奢華感 */
+    body, html {
+      margin: 0; padding: 0; overflow: hidden;
+      background-color: #0a0010;
+      background-image: radial-gradient(circle at 50% 50%, #290033 0%, #0a0010 100%);
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 1s ease, background-image 1s ease;
+    }
+    #container { position: relative; width: 100%; height: 100vh; }
+    
+    /* 載入畫面 */
+    #loading {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 10; transition: opacity 1s ease-out;
+    }
+    .vip-core {
+      position: relative; width: 150px; height: 150px;
+      display: flex; justify-content: center; align-items: center;
+      margin-bottom: 25px;
+    }
+    
+    /* 外層流動金環 */
+    .gold-ring {
+      position: absolute; width: 100%; height: 100%;
+      border: 4px solid transparent; 
+      border-top: 4px solid #fbc02d; 
+      border-bottom: 4px solid #f9a825;
+      border-radius: 50%;
+      animation: spin 3s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite, vipGlow 2s ease-in-out infinite alternate;
+    }
+    /* 內層點狀金環 */
+    .gold-ring::before {
+      content: ''; position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px;
+      border: 2px dotted #fff9c4; border-radius: 50%;
+      animation: spinReverse 6s linear infinite;
+    }
+    
+    .icon {
+      font-size: 70px; z-index: 1;
+      text-shadow: 0 0 25px rgba(251, 192, 45, 1);
+      animation: float 2s ease-in-out infinite alternate;
+    }
+    .loading-text {
+      color: #fbc02d; font-size: 26px; font-weight: bold; letter-spacing: 6px;
+      text-shadow: 0 0 15px rgba(249, 168, 37, 0.8);
+      animation: pulseText 1.5s infinite alternate;
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    @keyframes spinReverse { 100% { transform: rotate(-360deg); } }
+    @keyframes vipGlow { 100% { box-shadow: 0 0 35px #fbc02d, inset 0 0 20px #f9a825; } }
+    @keyframes float { 100% { transform: translateY(-10px) scale(1.05); } }
+    @keyframes pulseText { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+
+    /* iframe 內容 */
+    #vip-frame {
+      width: 100%; height: 100%; border: none; display: block;
+      background-color: transparent; opacity: 0; transition: opacity 1.5s ease-in;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="loading">
+      <div class="vip-core">
+        <div class="gold-ring"></div>
+        <div class="icon">👑</div>
+      </div>
+      <div class="loading-text">尊爵通道開啟中</div>
+    </div>
+
+    <iframe 
+      id="vip-frame" 
+      src="https://script.google.com/macros/s/AKfycbyOPqXMXjZyxwm7H_VfyiDFC8HMOqKje4CinRjx1FCAOT7zLB2WxRY4aw_STnPnSLRa/exec" 
+      onload="vipLoaded()">
+    </iframe>
+  </div>
+
+  <script>
+    function vipLoaded() {
+      // 載入完成後轉為白底
+      document.body.style.backgroundImage = 'none';
+      document.body.style.backgroundColor = '#ffffff';
+      
+      const loading = document.getElementById('loading');
+      loading.style.opacity = '0';
+      
+      const iframe = document.getElementById('vip-frame');
+      iframe.style.opacity = '1';
+
+      setTimeout(() => { loading.style.display = 'none'; }, 1000);
+    }
+  </script>
+</body>
+</html>

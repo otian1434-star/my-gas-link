@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: otian1434-star/my-gas-link
+  branch: main
+
+local_backend: true
+locale: zh_Hant
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: site_data
+    label: 網站內容
+    files:
+      - name: posts
+        label: 文章管理
+        file: data/posts.json
+        fields:
+          - label: 文章
+            name: posts
+            widget: list
+            summary: "{{fields.date}} [{{fields.category}}] {{fields.title}}"
+            fields:
+              - { label: 標題, name: title, widget: string }
+              - label: 分類
+                name: category
+                widget: select
+                options: [公告, 活動, 更新, 規章, 攻略, 下載, 制裁名單]
+                default: 公告
+              - label: 版面樣式
+                name: layout
+                widget: select
+                options:
+                  - { label: 標準文章, value: standard }
+                  - { label: 重點公告, value: featured }
+                  - { label: 簡短公告, value: compact }
+                default: standard
+              - { label: 日期, name: date, widget: datetime, format: "YYYY/MM/DD", date_format: "YYYY/MM/DD", time_format: false }
+              - { label: 顯示在網站, name: published, widget: boolean, default: true }
+              - { label: 置頂, name: pinned, widget: boolean, default: false }
+              - { label: 封面圖片, name: coverImage, widget: image, required: false }
+              - { label: 摘要, name: excerpt, widget: text, required: false }
+              - label: Markdown 內文
+                name: body
+                widget: markdown
+                hint: 可用工具列做標題、粗體、清單、連結、圖片等基本排版。
+              - label: 自訂 HTML 區塊
+                name: customHtml
+                widget: code
+                default_language: html
+                allow_language_selection: false
+                required: false
+                hint: 進階排版使用。可以貼入 HTML，例如 div、table、iframe、按鈕區塊。請只讓可信任管理者使用。

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  <title>傲慢的掛飾</title>
+  <style>
+    /* 核心修正：讓主體完全由內容撐開 */
+    body, html {
+      margin: 0; padding: 0; 
+      width: 100%;
+      height: auto; 
+      min-height: 100%;
+      background-color: #0f0202;
+      background-image: radial-gradient(circle at 50% 50%, #2a0505 0%, #0f0202 100%);
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      /* 載入中先鎖定捲軸 */
+      overflow-y: hidden; 
+      -webkit-overflow-scrolling: touch; /* 優化手機滑動流暢度 */
+    }
+
+    #container { 
+      position: relative; 
+      width: 100%; 
+      display: block; /* 改為區塊模式，避免 Flex 限制長度 */
+    }
+
+    /* Loading 視覺：維持大氣風格 */
+    #loading {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 9999; transition: opacity 1s ease-out;
+      background: radial-gradient(circle at 50% 50%, #2a0505 0%, #0f0202 100%);
+    }
+
+    #loading.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .amulet-core {
+      position: relative; width: 160px; height: 160px;
+      display: flex; justify-content: center; align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .gold-ring {
+      position: absolute; width: 100%; height: 100%;
+      border: 6px solid transparent; 
+      border-top: 6px solid #d4af37; 
+      border-bottom: 6px solid #d4af37;
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+      animation: spin 3s ease-in-out infinite, goldGlow 2s infinite alternate;
+    }
+
+    .crimson-pulse {
+      position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px;
+      border: 3px dashed #ff3333; 
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: spinReverse 5s linear infinite;
+    }
+
+    .icon {
+      font-size: 85px; z-index: 1;
+      text-shadow: 0 0 35px rgba(212, 175, 55, 1);
+      animation: float 2s ease-in-out infinite alternate;
+    }
+
+    .loading-text {
+      color: #d4af37; 
+      font-size: 30px; 
+      font-weight: 900; 
+      letter-spacing: 12px;
+      text-shadow: 0 0 20px rgba(255, 51, 51, 0.8);
+      animation: pulseText 1.5s infinite alternate;
+      padding-left: 12px;
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    @keyframes spinReverse { 100% { transform: rotate(-360deg); } }
+    @keyframes goldGlow { 100% { box-shadow: 0 0 50px #d4af37, inset 0 0 30px #ff3333; } }
+    @keyframes float { 100% { transform: translateY(-15px); } }
+    @keyframes pulseText { 0% { opacity: 0.5; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1.05); } }
+    
+    /* Iframe 設定：全展開核心 */
+    iframe {
+      width: 100%; 
+      /* 這裡的高度增加到 5500px 確保全展開，不再卡在中間 */
+      height: 5500px; 
+      border: none; 
+      display: block;
+      opacity: 0; 
+      transition: opacity 1.5s ease-in;
+      overflow: hidden; /* 強制關閉內部捲軸 */
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="loading">
+      <div class="amulet-core">
+        <div class="gold-ring"></div>
+        <div class="crimson-pulse"></div>
+        <div class="icon">📿</div>
+      </div>
+      <div class="loading-text">傲慢之力匯聚中</div>
+    </div>
+    
+    <iframe id="amulet-frame" 
+            src="https://script.google.com/macros/s/AKfycbz6wGQng91BNYh4LxvWoPjvIwIrpk6owUM0qXA1SX3k2rmBtljQUtXzMEvCnYakCS3o/exec" 
+            scrolling="no" 
+            onload="amuletLoaded()"></iframe>
+  </div>
+
+  <script>
+    function amuletLoaded() {
+      // 載入完成後解除主頁面鎖定，讓手機可以從頭滑到尾
+      document.body.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = 'auto';
+      
+      document.body.style.backgroundImage = 'none';
+      document.body.style.backgroundColor = '#ffffff';
+      
+      const loading = document.getElementById('loading');
+      loading.classList.add('hide');
+      
+      setTimeout(() => { 
+        loading.style.display = 'none'; 
+      }, 1000);
+      
+      document.getElementById('amulet-frame').style.opacity = '1';
+    }
+
+    // 防卡死機制
+    setTimeout(() => {
+      if (document.getElementById('loading').style.display !== 'none') {
+        amuletLoaded();
+      }
+    }, 8000);
+  </script>
+</body>
+</html>

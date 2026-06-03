@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>防具總覽 - 曜天堂論壇</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../config.js"></script>
+</head>
+<body>
+<div id="header-slot"></div>
+<div id="nav-slot"></div>
+<div id="main-wrap">
+<div id="page-content">
+
+<div class="page-hdr">
+  <h1>🛡️ 防具總覽</h1>
+  <p>各類防具與飾品屬性一覽</p>
+</div>
+
+<div class="content-embed">
+<div style="
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #202124;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(60,64,67,0.3);
+    max-width: 950px;
+    margin: 0 auto;
+    line-height: 1.6;">
+
+    <h2 style="color: #1a73e8; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 0;">
+        🛡️ 防具與飾品總覽
+    </h2>
+    <p style="color: #5f6368; font-size: 0.9em; margin-bottom: 20px;">
+        💡 獲取方式：透過怪物掉落及合成製作。
+    </p>
+
+    <style>
+        .rank-gen { background: #eee; color: #666; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .rank-adv { background: #e8f5e9; color: #2e7d32; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .rank-rare { background: #e3f2fd; color: #1565c0; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .rank-hero { background: #ffebee; color: #c62828; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .rank-legend { background: #f3e5f5; color: #7b1fa2; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .rank-myth { background: #fff8e1; color: #f9a825; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; border: 1px solid #fdd835; }
+        .table-container { overflow-x: auto; border: 1px solid #dadce0; border-radius: 8px; margin-bottom: 30px; background: #fff; }
+        .gear-table { width: 100%; border-collapse: collapse; min-width: 800px; font-size: 14px; table-layout: fixed; }
+        .gear-table th { background-color: #f8f9fa; color: #444; padding: 12px 10px; text-align: left; border-bottom: 2px solid #dadce0; }
+        .gear-table td { padding: 10px 10px; border-bottom: 1px solid #eee; word-break: break-word; }
+        .col-name { width: 220px; white-space: nowrap; }
+        .col-rank { width: 100px; white-space: nowrap; }
+        .col-ability { width: auto; }
+        .gear-table tr:nth-child(even) { background-color: #fcfcfc; }
+        .section-title { color: #1a73e8; margin-top: 30px; margin-bottom: 10px; font-size: 1.2em; display: flex; align-items: center; border-left: 4px solid #1a73e8; padding-left: 10px; }
+    </style>
+
+    <h3 id="head" class="section-title">🪖 頭盔系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者頭盔</td><td><span class="rank-gen">一般</span></td><td>防禦-1</td></tr>
+                <tr><td>旅人頭盔</td><td><span class="rank-adv">高級</span></td><td>防禦-2, 魔防+5</td></tr>
+                <tr><td>鋼鐵頭盔</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 力+1, 魔防+8</td></tr>
+                <tr><td>精靈頭盔</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 敏+1, 魔防+8</td></tr>
+                <tr><td>法師之帽</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 智+1, 魔防+8</td></tr>
+                <tr><td>武官頭盔</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 力+1, 魔防+15</td></tr>
+                <tr><td>迅捷頭盔</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 敏+1, 魔防+15</td></tr>
+                <tr><td>神官頭盔</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 智+1, 魔防+15</td></tr>
+                <tr><td>死亡騎士頭盔</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 力+2, 魔防+20</td></tr>
+                <tr><td>守護者頭盔</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 敏+2, 魔防+20</td></tr>
+                <tr><td>惡魔頭盔</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 智+2, 魔防+20</td></tr>
+                <tr><td>真冥皇頭盔</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 力+3, 魔防+30</td></tr>
+                <tr><td>火焰之影頭盔</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 敏+3, 魔防+30</td></tr>
+                <tr><td>艾歐丁頭盔</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 智+3, 魔防+30</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="armor" class="section-title">👕 盔甲系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者盔甲</td><td><span class="rank-gen">一般</span></td><td>防禦-5</td></tr>
+                <tr><td>旅人盔甲</td><td><span class="rank-adv">高級</span></td><td>防禦-7</td></tr>
+                <tr><td>鋼鐵金屬盔甲</td><td><span class="rank-rare">稀有</span></td><td>防禦-9, 回血+6</td></tr>
+                <tr><td>精靈金屬盔甲</td><td><span class="rank-rare">稀有</span></td><td>防禦-9, 回血+3, 回魔+3</td></tr>
+                <tr><td>法師長袍</td><td><span class="rank-rare">稀有</span></td><td>防禦-9, 回魔+6</td></tr>
+                <tr><td>武官護鎧</td><td><span class="rank-hero">英雄</span></td><td>防禦-12, 回血+8</td></tr>
+                <tr><td>迅捷盔甲</td><td><span class="rank-hero">英雄</span></td><td>防禦-12, 回血+4, 回魔+4</td></tr>
+                <tr><td>神官法袍</td><td><span class="rank-hero">英雄</span></td><td>防禦-12, 回魔+8</td></tr>
+                <tr><td>死亡騎士盔甲</td><td><span class="rank-legend">傳說</span></td><td>防禦-15, 回血+12</td></tr>
+                <tr><td>守護者盔甲</td><td><span class="rank-legend">傳說</span></td><td>防禦-15, 回血+6, 回魔+6</td></tr>
+                <tr><td>惡魔盔甲</td><td><span class="rank-legend">傳說</span></td><td>防禦-15, 回魔+12</td></tr>
+                <tr><td>真冥皇盔甲</td><td><span class="rank-myth">神話</span></td><td>防禦-18, 回血魔+20, 機率增傷</td></tr>
+                <tr><td>火焰之影盔甲</td><td><span class="rank-myth">神話</span></td><td>防禦-18, 回血魔+10, 機率反傷</td></tr>
+                <tr><td>艾歐丁盔甲</td><td><span class="rank-myth">神話</span></td><td>防禦-18, 回血魔+20, 受擊回血</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="gloves" class="section-title">🧤 手套系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者手套</td><td><span class="rank-gen">一般</span></td><td>防禦-1</td></tr>
+                <tr><td>旅人手套</td><td><span class="rank-adv">高級</span></td><td>防禦-2</td></tr>
+                <tr><td>鋼鐵手套</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 近傷+1, 近命+1</td></tr>
+                <tr><td>精靈腕甲</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 遠傷+1, 遠命+1</td></tr>
+                <tr><td>法師手套</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 魔攻+1</td></tr>
+                <tr><td>武官手套</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 近傷+2, 近命+2</td></tr>
+                <tr><td>迅捷手套</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 遠傷+2, 遠命+2</td></tr>
+                <tr><td>神官手套</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 魔攻+1, 魔命+1</td></tr>
+                <tr><td>死亡騎士手套</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 近傷+3, 近命+3</td></tr>
+                <tr><td>守護者手套</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 遠傷+3, 遠命+3</td></tr>
+                <tr><td>惡魔手套</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 魔攻+2, 魔命+2</td></tr>
+                <tr><td>真冥皇手套</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 近傷+5, 近命+5</td></tr>
+                <tr><td>火焰之影手套</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 遠傷+5, 遠命+5</td></tr>
+                <tr><td>艾歐丁手套</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 魔攻+4, 魔命+2</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="boots" class="section-title">👢 鞋子系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者長靴</td><td><span class="rank-gen">一般</span></td><td>防禦-2</td></tr>
+                <tr><td>旅人長靴</td><td><span class="rank-adv">高級</span></td><td>防禦-2, 傷害減免+1</td></tr>
+                <tr><td>鋼鐵長靴</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 力+1, 傷減+1</td></tr>
+                <tr><td>精靈長靴</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 敏+1, 傷減+1</td></tr>
+                <tr><td>法師長靴</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 智+1, 傷減+1</td></tr>
+                <tr><td>武官長靴</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 力+1, 傷減+2</td></tr>
+                <tr><td>迅捷長靴</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 敏+1, 傷減+2</td></tr>
+                <tr><td>神官長靴</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 智+1, 傷減+2</td></tr>
+                <tr><td>死亡騎士長靴</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 力+2, 傷減+3</td></tr>
+                <tr><td>守護者長靴</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 敏+2, 傷減+3</td></tr>
+                <tr><td>惡魔長靴</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 智+2, 傷減+3</td></tr>
+                <tr><td>真冥皇長靴</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 力+3, 傷減+5</td></tr>
+                <tr><td>火焰之影長靴</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 敏+3, 傷減+5</td></tr>
+                <tr><td>艾歐丁長靴</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 智+3, 傷減+5</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="legs" class="section-title">🦵 脛甲系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者脛甲</td><td><span class="rank-gen">一般</span></td><td>防禦-2</td></tr>
+                <tr><td>旅人脛甲</td><td><span class="rank-adv">高級</span></td><td>防禦-2, 傷害減免+1</td></tr>
+                <tr><td>鋼鐵脛甲</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 力+1, 傷減+1</td></tr>
+                <tr><td>精靈脛甲</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 敏+1, 傷減+1</td></tr>
+                <tr><td>法師脛甲</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 智+1, 傷減+1</td></tr>
+                <tr><td>武官脛甲</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 力+1, 傷減+2</td></tr>
+                <tr><td>迅捷脛甲</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 敏+1, 傷減+2</td></tr>
+                <tr><td>神官脛甲</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 智+1, 傷減+2</td></tr>
+                <tr><td>死亡騎士脛甲</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 力+2, 傷減+3</td></tr>
+                <tr><td>守護者脛甲</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 敏+2, 傷減+3</td></tr>
+                <tr><td>惡魔脛甲</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 智+2, 傷減+3</td></tr>
+                <tr><td>真冥皇脛甲</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 力+3, 傷減+5</td></tr>
+                <tr><td>火焰之影脛甲</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 敏+3, 傷減+5</td></tr>
+                <tr><td>艾歐丁脛甲</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 智+3, 傷減+5</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="shield" class="section-title">🛡️ 副手系列 (盾牌/臂甲/水晶球)</h3>
+    <div style="background-color: #fff3e0; border-left: 5px solid #ff9800; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+        <strong style="color: #e65100; font-size: 1.1em;">⚠️ 重要備註</strong>
+        <div style="color: #333; margin-top: 5px;">本服設定：<strong>「雙手武器」皆可穿戴副手裝備</strong>，請安心搭配！</div>
+    </div>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者盾牌</td><td><span class="rank-gen">一般</span></td><td>防禦-2</td></tr>
+                <tr><td>旅人盾牌</td><td><span class="rank-adv">高級</span></td><td>防禦-2, 傷害減免+1</td></tr>
+                <tr><td>鋼鐵盾牌</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 力+1, 傷減+1</td></tr>
+                <tr><td>精靈盾牌</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 敏+1, 傷減+1</td></tr>
+                <tr><td>法師水晶球</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 智+1, 傷減+1</td></tr>
+                <tr><td>武官盾牌</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 力+1, 傷減+2</td></tr>
+                <tr><td>迅捷臂甲</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 敏+1, 傷減+2</td></tr>
+                <tr><td>神官魔法書</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 智+1, 傷減+2</td></tr>
+                <tr><td>死亡騎士盾牌</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 力+2, 傷減+3</td></tr>
+                <tr><td>守護者臂甲</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 敏+2, 傷減+3</td></tr>
+                <tr><td>惡魔水晶球</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 智+2, 傷減+3</td></tr>
+                <tr><td>真冥皇盾牌</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 力+3, 傷減+5</td></tr>
+                <tr><td>火焰之影臂甲</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 敏+3, 傷減+5</td></tr>
+                <tr><td>艾歐丁臂甲</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 智+3, 傷減+5</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="cloak" class="section-title">🧥 斗篷系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者斗篷</td><td><span class="rank-gen">一般</span></td><td>防禦-1</td></tr>
+                <tr><td>旅人斗篷</td><td><span class="rank-adv">高級</span></td><td>防禦-2, 魔防+5</td></tr>
+                <tr><td>鋼鐵斗篷</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 力+1, 魔防+8</td></tr>
+                <tr><td>精靈斗篷</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 敏+1, 魔防+8</td></tr>
+                <tr><td>法師斗篷</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 智+1, 魔防+8</td></tr>
+                <tr><td>武官斗篷</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 力+1, 魔防+15</td></tr>
+                <tr><td>迅捷斗篷</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 敏+1, 魔防+15</td></tr>
+                <tr><td>神官斗篷</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 智+1, 魔防+15</td></tr>
+                <tr><td>死亡騎士斗篷</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 力+2, 魔防+20</td></tr>
+                <tr><td>守護者斗篷</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 敏+2, 魔防+20</td></tr>
+                <tr><td>惡魔斗篷</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 智+2, 魔防+20</td></tr>
+                <tr><td>真冥皇斗篷</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 力+3, 魔防+30</td></tr>
+                <tr><td>火焰之影斗篷</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 敏+3, 魔防+30</td></tr>
+                <tr><td>艾歐丁斗篷</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 智+3, 魔防+30</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="inner" class="section-title">🎽 內衣系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者內衣</td><td><span class="rank-gen">一般</span></td><td>防禦-1</td></tr>
+                <tr><td>旅人內衣</td><td><span class="rank-adv">高級</span></td><td>防禦-2, 魔防+5</td></tr>
+                <tr><td>鋼鐵內衣</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 力+1, 魔防+8</td></tr>
+                <tr><td>精靈內衣</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 敏+1, 魔防+8</td></tr>
+                <tr><td>法師內衣</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 智+1, 魔防+8</td></tr>
+                <tr><td>武官內衣</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 力+1, 魔防+15</td></tr>
+                <tr><td>迅捷內衣</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 敏+1, 魔防+15</td></tr>
+                <tr><td>神官內衣</td><td><span class="rank-hero">英雄</span></td><td>防禦-3, 智+1, 魔防+15</td></tr>
+                <tr><td>死亡騎士內衣</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 力+2, 魔防+20</td></tr>
+                <tr><td>守護者內衣</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 敏+2, 魔防+20</td></tr>
+                <tr><td>惡魔內衣</td><td><span class="rank-legend">傳說</span></td><td>防禦-4, 智+2, 魔防+20</td></tr>
+                <tr><td>真冥皇內衣</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 力+3, 魔防+30</td></tr>
+                <tr><td>火焰之影內衣</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 敏+3, 魔防+30</td></tr>
+                <tr><td>艾歐丁內衣</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 智+3, 魔防+30</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="acc-neck" class="section-title">📿 項鍊系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者項鍊</td><td><span class="rank-gen">一般</span></td><td>防禦-1</td></tr>
+                <tr><td>旅人項鍊</td><td><span class="rank-adv">高級</span></td><td>防禦-2, HP+20</td></tr>
+                <tr><td>鋼鐵項鍊</td><td><span class="rank-rare">稀有</span></td><td>防禦-3, HP+100</td></tr>
+                <tr><td>精靈項鍊</td><td><span class="rank-rare">稀有</span></td><td>防禦-3, HP+50, MP+50</td></tr>
+                <tr><td>法師項鍊</td><td><span class="rank-rare">稀有</span></td><td>防禦-3, MP+100</td></tr>
+                <tr><td>武官項鍊</td><td><span class="rank-hero">英雄</span></td><td>防禦-4, HP+250</td></tr>
+                <tr><td>迅捷項鍊</td><td><span class="rank-hero">英雄</span></td><td>防禦-4, HP+125, MP+125</td></tr>
+                <tr><td>神官項鍊</td><td><span class="rank-hero">英雄</span></td><td>防禦-4, MP+250</td></tr>
+                <tr><td>死亡騎士項鍊</td><td><span class="rank-legend">傳說</span></td><td>防禦-5, HP+500</td></tr>
+                <tr><td>守護者項鍊</td><td><span class="rank-legend">傳說</span></td><td>防禦-5, HP+250, MP+250</td></tr>
+                <tr><td>惡魔項鍊</td><td><span class="rank-legend">傳說</span></td><td>防禦-5, MP+500</td></tr>
+                <tr><td>真冥皇項鍊</td><td><span class="rank-myth">神話</span></td><td>防禦-7, HP+1200</td></tr>
+                <tr><td>火焰之影項鍊</td><td><span class="rank-myth">神話</span></td><td>防禦-7, HP+600, MP+600</td></tr>
+                <tr><td>艾歐丁項鍊</td><td><span class="rank-myth">神話</span></td><td>防禦-7, MP+1200</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="section-title">🥋 腰帶系列</h3>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者腰帶</td><td><span class="rank-gen">一般</span></td><td>防禦-1, 負重+200, 回血魔+2</td></tr>
+                <tr><td>旅人腰帶</td><td><span class="rank-adv">高級</span></td><td>防禦-2, 負重+500, 回血魔+4</td></tr>
+                <tr><td>鋼鐵腰帶</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 負重+1000, 回血魔+6, 力+1</td></tr>
+                <tr><td>精靈腰帶</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 負重+1000, 回血魔+6, 敏+1</td></tr>
+                <tr><td>法師腰帶</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, 負重+1000, 回血魔+6, 智+1</td></tr>
+                <tr><td>武官腰帶</td><td><span class="rank-hero">英雄</span></td><td>防禦-2, 負重+2000, 回血魔+8, 力+2</td></tr>
+                <tr><td>迅捷腰帶</td><td><span class="rank-hero">英雄</span></td><td>防禦-2, 負重+2000, 回血魔+8, 敏+2</td></tr>
+                <tr><td>神官腰帶</td><td><span class="rank-hero">英雄</span></td><td>防禦-2, 負重+2000, 回血魔+8, 智+2</td></tr>
+                <tr><td>死亡騎士腰帶</td><td><span class="rank-legend">傳說</span></td><td>防禦-3, 負重+3000, 回血魔+10, 力+3</td></tr>
+                <tr><td>守護者腰帶</td><td><span class="rank-legend">傳說</span></td><td>防禦-3, 負重+3000, 回血魔+10, 敏+3</td></tr>
+                <tr><td>惡魔腰帶</td><td><span class="rank-legend">傳說</span></td><td>防禦-3, 負重+3000, 回血魔+10, 智+3</td></tr>
+                <tr><td>真冥皇腰帶</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 負重+5000, 回血魔+15, 力+5</td></tr>
+                <tr><td>火焰之影腰帶</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 負重+5000, 回血魔+15, 敏+5</td></tr>
+                <tr><td>艾歐丁腰帶</td><td><span class="rank-myth">神話</span></td><td>防禦-5, 負重+5000, 回血魔+15, 智+5</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="acc-ring" class="section-title">💍 戒指系列</h3>
+    <h4 style="color: #d32f2f; margin: 15px 0 5px 0;">⚔️ 攻擊戒指</h4>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者攻擊戒指</td><td><span class="rank-gen">一般</span></td><td>防禦-1</td></tr>
+                <tr><td>旅人攻擊戒指</td><td><span class="rank-adv">高級</span></td><td>防-1, 近/遠命+1</td></tr>
+                <tr><td>鋼鐵戒指(攻)</td><td><span class="rank-rare">稀有</span></td><td>防-1, 額外攻擊+2, HP+20</td></tr>
+                <tr><td>精靈戒指(攻)</td><td><span class="rank-rare">稀有</span></td><td>防-1, 遠距攻擊+2, HP/MP+10</td></tr>
+                <tr><td>法師戒指(攻)</td><td><span class="rank-rare">稀有</span></td><td>防-1, 魔法攻擊+1, MP+20</td></tr>
+                <tr><td>武官戒指(攻)</td><td><span class="rank-hero">英雄</span></td><td>防-1, 額外攻擊+4, HP+30</td></tr>
+                <tr><td>迅捷戒指(攻)</td><td><span class="rank-hero">英雄</span></td><td>防-1, 遠距攻擊+4, HP/MP+15</td></tr>
+                <tr><td>神官戒指(攻)</td><td><span class="rank-hero">英雄</span></td><td>防-1, 魔法攻擊+4, MP+30</td></tr>
+                <tr><td>死亡騎士戒指(攻)</td><td><span class="rank-legend">傳說</span></td><td>防-1, 額外攻擊+6, HP+40</td></tr>
+                <tr><td>守護者戒指(攻)</td><td><span class="rank-legend">傳說</span></td><td>防-1, 遠距攻擊+6, HP/MP+20</td></tr>
+                <tr><td>惡魔戒指(攻)</td><td><span class="rank-legend">傳說</span></td><td>防-1, 魔法攻擊+6, MP+40</td></tr>
+                <tr><td>真冥皇戒指(攻)</td><td><span class="rank-myth">神話</span></td><td>防-1, 額外攻擊+8, HP+50</td></tr>
+                <tr><td>火焰之影戒指(攻)</td><td><span class="rank-myth">神話</span></td><td>防-1, 遠距攻擊+8, HP/MP+25</td></tr>
+                <tr><td>艾歐丁戒指(攻)</td><td><span class="rank-myth">神話</span></td><td>防-1, 魔法攻擊+8, MP+50</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4 style="color: #1976d2; margin: 15px 0 5px 0;">🛡️ 防禦戒指</h4>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者戒指</td><td><span class="rank-gen">一般</span></td><td>防禦-1</td></tr>
+                <tr><td>旅人防禦戒指</td><td><span class="rank-adv">高級</span></td><td>防禦-1, 回血+2, 回魔+3</td></tr>
+                <tr><td>鋼鐵戒指(防)</td><td><span class="rank-rare">稀有</span></td><td>防-1, 傷減+2, HP/MP+10</td></tr>
+                <tr><td>精靈戒指(防)</td><td><span class="rank-rare">稀有</span></td><td>防-1, 昏迷耐性+1, HP/MP+10</td></tr>
+                <tr><td>法師戒指(防)</td><td><span class="rank-rare">稀有</span></td><td>防-1, PVP減免+2, HP/MP+10</td></tr>
+                <tr><td>武官戒指(防)</td><td><span class="rank-hero">英雄</span></td><td>防-2, 傷減+4, MR+5, HP/MP+50</td></tr>
+                <tr><td>迅捷戒指(防)</td><td><span class="rank-hero">英雄</span></td><td>防-2, 昏迷耐性+3, MR+5, HP/MP+30</td></tr>
+                <tr><td>神官戒指(防)</td><td><span class="rank-hero">英雄</span></td><td>防-2, PVP減免+5, MR+5, 昏迷耐性+2, HP/MP+20</td></tr>
+                <tr><td>死亡騎士戒指(防)</td><td><span class="rank-legend">傳說</span></td><td>防-2, 傷減+5, MR+8, HP/MP+100</td></tr>
+                <tr><td>守護者戒指(防)</td><td><span class="rank-legend">傳說</span></td><td>防-2, 昏迷耐性+5, MR+8, HP/MP+80</td></tr>
+                <tr><td>惡魔戒指(防)</td><td><span class="rank-legend">傳說</span></td><td>防-2, PVP減免+6, MR+8, 昏迷耐性+3, HP/MP+70</td></tr>
+                <tr><td>真冥皇戒指(防)</td><td><span class="rank-myth">神話</span></td><td>防-2, 傷減+6, MR+10, HP/MP+150</td></tr>
+                <tr><td>火焰之影戒指(防)</td><td><span class="rank-myth">神話</span></td><td>防-2, 昏迷耐性+6, MR+10, HP/MP+130</td></tr>
+                <tr><td>艾歐丁戒指(防)</td><td><span class="rank-myth">神話</span></td><td>防-2, PVP減免+7, MR+10, 昏迷耐性+4, HP/MP+130</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="acc-ear" class="section-title">👂 耳環系列(僅可帶一個)</h3>
+    <h4 style="color: #d32f2f; margin: 15px 0 5px 0;">⚔️ 攻擊耳環</h4>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者攻擊耳環</td><td><span class="rank-gen">一般</span></td><td>防禦-1</td></tr>
+                <tr><td>旅人攻擊耳環</td><td><span class="rank-adv">高級</span></td><td>防禦-1, 藥水恢復率+2</td></tr>
+                <tr><td>鋼鐵耳環(攻)</td><td><span class="rank-rare">稀有</span></td><td>防禦-1, 近距離命中+1, 額外攻擊+1, 藥水恢復率+4</td></tr>
+                <tr><td>精靈耳環(攻)</td><td><span class="rank-rare">稀有</span></td><td>防禦-1, 遠距離命中+1, 額外攻擊+1, 藥水恢復率+4</td></tr>
+                <tr><td>法師耳環(攻)</td><td><span class="rank-rare">稀有</span></td><td>防禦-1, 魔法攻擊+1, 藥水恢復率+4</td></tr>
+                <tr><td>武官耳環(攻)</td><td><span class="rank-hero">英雄</span></td><td>防禦-1, 近距離命中+2, 額外攻擊+2, 藥水恢復率+6</td></tr>
+                <tr><td>迅捷耳環(攻)</td><td><span class="rank-hero">英雄</span></td><td>防禦-1, 遠距離命中+2, 額外攻擊+2, 藥水恢復率+6</td></tr>
+                <tr><td>神官耳環(攻)</td><td><span class="rank-hero">英雄</span></td><td>防禦-1, 魔法攻擊+2, 藥水恢復率+6</td></tr>
+                <tr><td>死亡騎士耳環(攻)</td><td><span class="rank-legend">傳說</span></td><td>防禦-1, 近距離命中+4, 額外攻擊+4, 藥水恢復率+8</td></tr>
+                <tr><td>守護者耳環(攻)</td><td><span class="rank-legend">傳說</span></td><td>防禦-1, 遠距離命中+4, 額外攻擊+4, 藥水恢復率+8</td></tr>
+                <tr><td>惡魔耳環(攻)</td><td><span class="rank-legend">傳說</span></td><td>防禦-1, 魔法攻擊+4, 藥水恢復率+8</td></tr>
+                <tr><td>真冥皇耳環(攻)</td><td><span class="rank-myth">神話</span></td><td>防禦-1, 近距離命中+6, 額外攻擊+6, 藥水恢復率+10</td></tr>
+                <tr><td>火焰之影耳環(攻)</td><td><span class="rank-myth">神話</span></td><td>防禦-1, 遠距離命中+6, 額外攻擊+6, 藥水恢復率+10</td></tr>
+                <tr><td>艾歐丁耳環(攻)</td><td><span class="rank-myth">神話</span></td><td>防禦-1, 魔法攻擊+6, 藥水恢復率+10</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4 style="color: #1976d2; margin: 15px 0 5px 0;">🛡️ 防禦耳環</h4>
+    <div class="table-container">
+        <table class="gear-table">
+            <thead><tr><th class="col-name">裝備名稱</th><th class="col-rank">階級</th><th class="col-ability">裝備能力</th></tr></thead>
+            <tbody>
+                <tr><td>修練者防禦耳環</td><td><span class="rank-gen">一般</span></td><td>防禦-2, HP+30, MR+2</td></tr>
+                <tr><td>旅人防禦耳環</td><td><span class="rank-adv">高級</span></td><td>防禦-2, HP+50, MR+2, 藥水恢復率+2</td></tr>
+                <tr><td>鋼鐵耳環(防)</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, HP+80, MR+4, 傷減+1, 藥水恢復率+4</td></tr>
+                <tr><td>精靈耳環(防)</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, HP+80, MR+4, 各屬防+5, 藥水恢復率+4</td></tr>
+                <tr><td>法師耳環(防)</td><td><span class="rank-rare">稀有</span></td><td>防禦-2, HP+80, MR+4, PVP減傷+1, 藥水恢復率+4</td></tr>
+                <tr><td>武官耳環(防)</td><td><span class="rank-hero">英雄</span></td><td>防禦-2, HP+120, MR+6, 傷減+2, 藥水恢復率+6</td></tr>
+                <tr><td>迅捷耳環(防)</td><td><span class="rank-hero">英雄</span></td><td>防禦-2, HP+120, MR+6, 各屬防+8, 藥水恢復率+6</td></tr>
+                <tr><td>神官耳環(防)</td><td><span class="rank-hero">英雄</span></td><td>防禦-2, HP+120, MR+6, PVP減傷+2, 藥水恢復率+6</td></tr>
+                <tr><td>死亡騎士耳環(防)</td><td><span class="rank-legend">傳說</span></td><td>防禦-2, HP+180, MR+8, 傷減+3, 藥水恢復率+8</td></tr>
+                <tr><td>守護者耳環(防)</td><td><span class="rank-legend">傳說</span></td><td>防禦-2, HP+180, MR+8, 各屬防+15, 藥水恢復率+8</td></tr>
+                <tr><td>惡魔耳環(防)</td><td><span class="rank-legend">傳說</span></td><td>防禦-2, HP+180, MR+8, PVP減傷+3, 藥水恢復率+8</td></tr>
+                <tr><td>真冥皇耳環(防)</td><td><span class="rank-myth">神話</span></td><td>防禦-2, HP+280, MR+12, 傷減+5, 藥水恢復率+10</td></tr>
+                <tr><td>火焰之影耳環(防)</td><td><span class="rank-myth">神話</span></td><td>防禦-2, HP+280, MR+12, 各屬防+25, 藥水恢復率+10</td></tr>
+                <tr><td>艾歐丁耳環(防)</td><td><span class="rank-myth">神話</span></td><td>防禦-2, HP+280, MR+12, PVP減傷+5, 藥水恢復率+10</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
+<div id="footer-slot"></div>
+<script src="../assets/js/forum.js"></script>
+</body>
+</html>

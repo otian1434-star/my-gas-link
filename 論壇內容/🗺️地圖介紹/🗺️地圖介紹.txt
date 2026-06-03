@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* 純 CSS 繪製的羊皮紙背景，絕不會破圖 */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #eaddc5;
+      background-image: radial-gradient(circle at 50% 50%, #eaddc5 0%, #c1a87d 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    #container {
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+    }
+
+    /* 讀取畫面：置中並蓋住畫面 */
+    #loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 150px;
+      z-index: 10;
+      transition: opacity 0.8s ease-out; /* 柔和淡出 */
+    }
+
+    /* 核心特效：卷軸地圖展開動畫 */
+    .map-scroll {
+      position: relative;
+      width: 90px;
+      height: 10px;
+      background: #f4e4bc;
+      border-left: 10px solid #5d4037; /* 卷軸木軸 */
+      border-right: 10px solid #5d4037;
+      border-top: 2px solid #5d4037;
+      border-bottom: 2px solid #5d4037;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+      animation: openMap 1.2s ease-in-out infinite alternate; /* 上下展開循環 */
+    }
+
+    @keyframes openMap {
+      0% { height: 10px; }
+      100% { height: 120px; }
+    }
+
+    /* 讀取文字閃爍效果 */
+    .loading-text {
+      margin-top: 30px;
+      color: #5d4037;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    /* 您的試算表內容：初始透明，讀取完畢後淡入 */
+    iframe {
+      width: 100%;
+      height: 3500px; /* 記得在協作平台把藍色框框往下拉長 */
+      border: none;
+      display: block;
+      opacity: 0; 
+      transition: opacity 1s ease-in; 
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div id="loading">
+      <div class="map-scroll"></div>
+      <div class="loading-text">地圖展開中...</div>
+    </div>
+
+    <iframe 
+      id="content-frame"
+      src="https://script.google.com/macros/s/AKfycbzmRjPOsDlgisbW2GJ9IpGpa9BlVbdbgZP2I56hT6JJA8EcX2BX-hm0Ugp9bpYmhwij/exec" 
+      onload="mapLoaded()">
+    </iframe>
+  </div>
+
+  <script>
+    // 當 iframe 內的內容完全載入後，執行切換特效
+    function mapLoaded() {
+      // 1. 隱藏地圖動畫 (淡出)
+      document.getElementById('loading').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+      }, 800); 
+      
+      // 2. 顯示真正的表格內容 (淡入)
+      document.getElementById('content-frame').style.opacity = '1';
+    }
+  </script>
+
+</body>
+</html>

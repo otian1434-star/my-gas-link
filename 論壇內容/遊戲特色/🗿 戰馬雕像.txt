@@ -1,0 +1,133 @@
+<div style="
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    color: #202124; 
+    background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 3px rgba(60,64,67,0.3); 
+    max-width: 950px; 
+    margin: 0 auto;
+    line-height: 1.5;">
+
+    <h2 style="color: #1a73e8; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 0; font-size: 1.3em;">
+        🗿 雕像特殊裝備介紹
+    </h2>
+
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+        <div style="flex: 1; min-width: 280px; background-color: #f8f9fa; border: 1px solid #dadce0; border-radius: 8px; padding: 15px;">
+            <h3 style="margin-top: 0; color: #444; font-size: 1em; border-left: 4px solid #607d8b; padding-left: 10px;">🛠️ 強化與取得說明</h3>
+            <ul style="margin: 10px 0 0 0; padding-left: 18px; color: #3c4043; font-size: 0.9em;">
+                <li style="margin-bottom: 5px;"><strong>強化道具：</strong>雕像升級石 <span style="font-size: 0.85em; color: #5f6368;">(精靈墓穴)</span></li>
+                <li style="margin-bottom: 5px;"><strong>強化費用：</strong>每次 <span style="color: #d93025; font-weight: bold;">10,000 天幣</span></li>
+                <li><strong>失敗機制：</strong><span style="background-color: #e6f4ea; color: #137333; padding: 2px 6px; border-radius: 10px; font-weight: bold;">失敗不退階</span></li>
+            </ul>
+        </div>
+
+        <div style="flex: 0.8; min-width: 280px; background-color: #fff; border: 1px solid #e8eaed; border-radius: 8px; padding: 10px;">
+            <h3 style="margin-top: 0; color: #1e8e3e; font-size: 0.9em; text-align: center;">📈 強化成功機率</h3>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; font-size: 0.8em; text-align: center;">
+                <div style="border: 1px solid #eee; padding: 2px;">0→1: 20%</div>
+                <div style="border: 1px solid #eee; padding: 2px;">1→2: 10%</div>
+                <div style="border: 1px solid #eee; padding: 2px;">2→3: 9%</div>
+                <div style="border: 1px solid #eee; padding: 2px;">3→4: 8%</div>
+                <div style="border: 1px solid #eee; padding: 2px;">4→5: 7%</div>
+                <div style="border: 1px solid #eee; padding: 2px;">5→6: 6%</div>
+                <div style="border: 1px solid #eee; padding: 2px;">6→7: 5%</div>
+                <div style="border: 1px solid #eee; padding: 2px;">7→8: 4%</div>
+                <div style="background: #feefee; border: 1px solid #f5c6cb; color: #d93025; padding: 2px;">8→9: 3%</div>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="color: #c62828; font-size: 1.1em; margin-bottom: 8px;">🔥 烈焰戰馬雕像 (近戰)</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 12px; border: 1px solid #ffcdd2; table-layout: fixed; word-wrap: break-word; margin-bottom: 25px;">
+        <thead>
+            <tr style="background-color: #e53935; color: #fff;">
+                <th style="padding: 6px 2px; width: 12%;">等級</th>
+                <th style="padding: 6px 2px; width: 28%;">基礎能力</th>
+                <th style="padding: 6px 2px;">特殊能力加成</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr style="border-bottom: 1px solid #ffebee;"><td>+0</td><td>防+1, 體+10</td><td>近距離傷害+1</td></tr>
+            <tr style="background-color: #fffafa; border-bottom: 1px solid #ffebee;"><td>+1</td><td>防+1, 體+20</td><td>近距離傷害+1</td></tr>
+            <tr style="border-bottom: 1px solid #ffebee;"><td>+2</td><td>防+2, 體+30</td><td>近距離傷害+1</td></tr>
+            <tr style="background-color: #fffafa; border-bottom: 1px solid #ffebee;"><td>+3</td><td>防+2, 體+50</td><td>近距離傷害+2, <span style="color:#d32f2f;">PVP近距離傷害+1</span></td></tr>
+            <tr style="border-bottom: 1px solid #ffebee;"><td>+4</td><td>防+2, 體+70</td><td>近距離傷害+2, <span style="color:#d32f2f;">PVP近距離傷害+1</span></td></tr>
+            <tr style="background-color: #fffafa; border-bottom: 1px solid #ffebee;"><td>+5</td><td>防+3, 體+90</td><td>近距離傷害+2, <span style="color:#d32f2f;">PVP近距離傷害+2</span></td></tr>
+            <tr style="border-bottom: 1px solid #ffebee;"><td>+6</td><td>防+3, 體+100</td><td>近距離傷害+3, <span style="color:#d32f2f;">PVP近距離傷害+2</span></td></tr>
+            <tr style="background-color: #fffafa; border-bottom: 1px solid #ffebee;"><td>+7</td><td>防+3, 體+120</td><td>近距離傷害+3, <span style="color:#d32f2f;">PVP近距離傷害+3, 力量+1</span></td></tr>
+            <tr style="border-bottom: 1px solid #ffebee;"><td>+8</td><td>防+4, 體+150</td><td>近距離傷害+3, <span style="color:#d32f2f;">PVP近距離傷害+3, 力量+2</span></td></tr>
+            <tr style="background-color: #ffebee; font-weight: bold;"><td>+9</td><td>防+5, 體+200</td><td>近距離傷害+5, <span style="color:#d32f2f;">PVP近距離傷害+5, 力量+3</span></td></tr>
+        </tbody>
+    </table>
+
+    <h3 style="color: #2e7d32; font-size: 1.1em; margin-bottom: 8px;">🍃 疾風戰馬雕像 (遠程)</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 12px; border: 1px solid #c8e6c9; table-layout: fixed; word-wrap: break-word; margin-bottom: 25px;">
+        <thead>
+            <tr style="background-color: #43a047; color: #fff;">
+                <th style="padding: 6px 2px; width: 12%;">等級</th>
+                <th style="padding: 6px 2px; width: 28%;">基礎能力</th>
+                <th style="padding: 6px 2px;">特殊能力加成</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr style="border-bottom: 1px solid #e8f5e9;"><td>+0</td><td>防+1, 體+10</td><td>遠距離傷害+1</td></tr>
+            <tr style="background-color: #f1f8e9; border-bottom: 1px solid #e8f5e9;"><td>+1</td><td>防+1, 體+20</td><td>遠距離傷害+1</td></tr>
+            <tr style="border-bottom: 1px solid #e8f5e9;"><td>+2</td><td>防+2, 體+30</td><td>遠距離傷害+1</td></tr>
+            <tr style="background-color: #f1f8e9; border-bottom: 1px solid #e8f5e9;"><td>+3</td><td>防+2, 體+50</td><td>遠距離傷害+2, <span style="color:#2e7d32;">PVP遠距離傷害+1</span></td></tr>
+            <tr style="border-bottom: 1px solid #e8f5e9;"><td>+4</td><td>防+2, 體+70</td><td>遠距離傷害+2, <span style="color:#2e7d32;">PVP遠距離傷害+1</span></td></tr>
+            <tr style="background-color: #f1f8e9; border-bottom: 1px solid #e8f5e9;"><td>+5</td><td>防+3, 體+90</td><td>遠距離傷害+2, <span style="color:#2e7d32;">PVP遠距離傷害+2</span></td></tr>
+            <tr style="border-bottom: 1px solid #e8f5e9;"><td>+6</td><td>防+3, 體+100</td><td>遠距離傷害+3, <span style="color:#2e7d32;">PVP遠距離傷害+2</span></td></tr>
+            <tr style="background-color: #f1f8e9; border-bottom: 1px solid #e8f5e9;"><td>+7</td><td>防+3, 體+120</td><td>遠距離傷害+3, <span style="color:#2e7d32;">PVP遠距離傷害+3, 敏捷+1</span></td></tr>
+            <tr style="border-bottom: 1px solid #e8f5e9;"><td>+8</td><td>防+4, 體+150</td><td>遠距離傷害+3, <span style="color:#2e7d32;">PVP遠距離傷害+3, 敏捷+2</span></td></tr>
+            <tr style="background-color: #e8f5e9; font-weight: bold;"><td>+9</td><td>防+5, 體+200</td><td>遠距離傷害+5, <span style="color:#2e7d32;">PVP遠距離傷害+5, 敏捷+3</span></td></tr>
+        </tbody>
+    </table>
+
+    <h3 style="color: #0277bd; font-size: 1.1em; margin-bottom: 8px;">❄️ 寒冰戰馬雕像 (魔法)</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 12px; border: 1px solid #b3e5fc; table-layout: fixed; word-wrap: break-word; margin-bottom: 25px;">
+        <thead>
+            <tr style="background-color: #039be5; color: #fff;">
+                <th style="padding: 6px 2px; width: 12%;">等級</th>
+                <th style="padding: 6px 2px; width: 28%;">基礎能力</th>
+                <th style="padding: 6px 2px;">特殊能力加成</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr style="border-bottom: 1px solid #e1f5fe;"><td>+0</td><td>防+1, 體+10</td><td>魔防+1, 魔攻+1</td></tr>
+            <tr style="background-color: #f1faff; border-bottom: 1px solid #e1f5fe;"><td>+1</td><td>防+1, 體+20</td><td>魔防+1, 魔攻+1</td></tr>
+            <tr style="border-bottom: 1px solid #e1f5fe;"><td>+2</td><td>防+2, 體+30</td><td>魔防+1, 魔攻+1</td></tr>
+            <tr style="background-color: #f1faff; border-bottom: 1px solid #e1f5fe;"><td>+3</td><td>防+2, 體+50</td><td>魔防+2, 魔攻+2</td></tr>
+            <tr style="border-bottom: 1px solid #e1f5fe;"><td>+4</td><td>防+2, 體+70</td><td>魔防+2, 魔攻+2</td></tr>
+            <tr style="background-color: #f1faff; border-bottom: 1px solid #e1f5fe;"><td>+5</td><td>防+3, 體+90</td><td>魔防+2, 魔攻+2</td></tr>
+            <tr style="border-bottom: 1px solid #e1f5fe;"><td>+6</td><td>防+3, 體+100</td><td>魔防+3, 魔攻+3</td></tr>
+            <tr style="background-color: #f1faff; border-bottom: 1px solid #e1f5fe;"><td>+7</td><td>防+3, 體+120</td><td>魔防+3, 魔攻+3, <span style="color:#0277bd;">智力+1</span></td></tr>
+            <tr style="border-bottom: 1px solid #e1f5fe;"><td>+8</td><td>防+4, 體+150</td><td>魔防+3, 魔攻+3, <span style="color:#0277bd;">智力+2</span></td></tr>
+            <tr style="background-color: #e1f5fe; font-weight: bold;"><td>+9</td><td>防+5, 體+200</td><td>魔防+5, 魔攻+5, <span style="color:#0277bd;">智力+3</span></td></tr>
+        </tbody>
+    </table>
+
+    <h3 style="color: #f57f17; font-size: 1.1em; margin-bottom: 8px;">🏆 黃金戰馬雕像 (防禦)</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 12px; border: 1px solid #fff9c4; table-layout: fixed; word-wrap: break-word;">
+        <thead>
+            <tr style="background-color: #fbc02d; color: #fff;">
+                <th style="padding: 6px 2px; width: 12%;">等級</th>
+                <th style="padding: 6px 2px; width: 28%;">基礎能力</th>
+                <th style="padding: 6px 2px;">特殊能力加成</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr style="border-bottom: 1px solid #fff59d;"><td>+0</td><td>防+1, 體+10</td><td>傷害減傷+1, PVP減傷+1</td></tr>
+            <tr style="background-color: #fffde7; border-bottom: 1px solid #fff59d;"><td>+1</td><td>防+1, 體+20</td><td>傷害減傷+1, PVP減傷+1</td></tr>
+            <tr style="border-bottom: 1px solid #fff59d;"><td>+2</td><td>防+2, 體+30</td><td>傷害減傷+1, PVP減傷+1</td></tr>
+            <tr style="background-color: #fffde7; border-bottom: 1px solid #fff59d;"><td>+3</td><td>防+2, 體+50</td><td>傷害減傷+2, PVP減傷+2</td></tr>
+            <tr style="border-bottom: 1px solid #fff59d;"><td>+4</td><td>防+2, 體+70</td><td>傷害減傷+2, PVP減傷+2</td></tr>
+            <tr style="background-color: #fffde7; border-bottom: 1px solid #fff59d;"><td>+5</td><td>防+3, 體+90</td><td>傷害減傷+2, PVP減傷+2</td></tr>
+            <tr style="border-bottom: 1px solid #fff59d;"><td>+6</td><td>防+3, 體+100</td><td>傷害減傷+3, PVP減傷+3</td></tr>
+            <tr style="background-color: #fffde7; border-bottom: 1px solid #fff59d;"><td>+7</td><td>防+3, 體+120</td><td>傷害減傷+3, PVP減傷+3, <span style="color:#d32f2f;">力敏+1</span></td></tr>
+            <tr style="border-bottom: 1px solid #fff59d;"><td>+8</td><td>防+4, 體+150</td><td>傷害減傷+3, PVP減傷+3, <span style="color:#d32f2f;">力敏智+1</span></td></tr>
+            <tr style="background-color: #fff9c4; font-weight: bold;"><td>+9</td><td>防+5, 體+200</td><td>傷害減傷+5, PVP減傷+5, <span style="color:#d32f2f;">力敏智精+2</span></td></tr>
+        </tbody>
+    </table>
+</div>

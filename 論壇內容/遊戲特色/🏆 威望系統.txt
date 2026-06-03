@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>威望系統介紹</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0; 
+      width: 100%;
+      height: 100%;
+      /* 2. 初始鎖定捲軸 */
+      overflow: hidden; 
+      background-color: #050a14;
+      background-image: radial-gradient(circle at 50% 50%, #111d36 0%, #050a14 100%);
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: background-color 1s ease, background-image 1s ease;
+    }
+
+    #container { position: relative; width: 100%; }
+
+    /* 3. Loading 遮罩優化：改為 fixed 並置中 */
+    #loading {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 100; transition: opacity 1s ease-out;
+      background: inherit;
+    }
+
+    .prestige-core {
+      position: relative; width: 120px; height: 120px;
+      display: flex; justify-content: center; align-items: center;
+      margin-bottom: 25px;
+    }
+    .glory-ring {
+      position: absolute; width: 100%; height: 100%;
+      border: 4px solid transparent;
+      border-top: 4px solid #ffd700;
+      border-bottom: 4px solid #ffaa00;
+      border-radius: 50%;
+      animation: spin 3s linear infinite, gloryGlow 2s ease-in-out infinite alternate;
+    }
+    .glory-ring::before {
+      content: ''; position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px;
+      border: 2px dashed #ffea00; border-radius: 50%;
+      animation: spinReverse 6s linear infinite;
+    }
+    .icon {
+      font-size: 50px; z-index: 1;
+      text-shadow: 0 0 25px rgba(255, 215, 0, 1);
+      animation: float 2s ease-in-out infinite alternate;
+    }
+    .loading-text {
+      color: #ffd700; font-size: 22px; font-weight: bold; letter-spacing: 4px;
+      text-shadow: 0 0 15px rgba(255, 170, 0, 0.8);
+      animation: pulseText 1.5s infinite alternate;
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    @keyframes spinReverse { 100% { transform: rotate(-360deg); } }
+    @keyframes gloryGlow { 100% { box-shadow: 0 0 30px #ffd700, inset 0 0 20px #ffaa00; } }
+    @keyframes float { 100% { transform: translateY(-10px); } }
+    @keyframes pulseText { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+
+    /* 4. Iframe 維持原連結與高度，優化手機捲動 */
+    iframe {
+      width: 100%; height: 3500px; border: none; display: block;
+      background-color: transparent; opacity: 0; transition: opacity 1.5s ease-in;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="loading">
+      <div class="prestige-core">
+        <div class="glory-ring"></div>
+        <div class="icon">🏆</div>
+      </div>
+      <div class="loading-text">威望加冕中</div>
+    </div>
+
+    <iframe id="prestige-frame" src="https://script.google.com/macros/s/AKfycbwMmO5mDWsveBL3mxz3_Hn9dp0Z7atd18Dv8Ah91A3hMdnmXLk4imbf7KNhbjfGkei9/exec" onload="prestigeLoaded()"></iframe>
+  </div>
+
+  <script>
+    function prestigeLoaded() {
+      // 5. 關鍵修正：當 iframe 載入完成，解開捲軸鎖定
+      document.documentElement.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
+
+      document.body.style.backgroundImage = 'none';
+      document.body.style.backgroundColor = '#ffffff';
+      
+      const loading = document.getElementById('loading');
+      loading.style.opacity = '0';
+      
+      setTimeout(() => { 
+        loading.style.display = 'none'; 
+      }, 1000);
+      
+      document.getElementById('prestige-frame').style.opacity = '1';
+    }
+  </script>
+</body>
+</html>

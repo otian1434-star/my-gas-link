@@ -1,0 +1,123 @@
+外掛偵測驗證 全流程!一次看全部懂
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<style>
+    /* 專用風格 */
+    .anti-cheat-section {
+        background-color: #1a1a1a;
+        color: #f1c40f; /* 金色 */
+        padding: 40px;
+        font-family: "Microsoft JhengHei", sans-serif;
+        border: 2px solid #d4af37;
+        max-width: 1000px;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px #000;
+        margin-bottom: 30px;
+        color: #ffd700;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    /* 影片區域 */
+    .video-container {
+        flex: 1;
+        min-width: 350px;
+    }
+    .video-placeholder {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 比例 */
+        height: 0;
+        overflow: hidden;
+        border: 3px solid #d4af37;
+    }
+    .video-placeholder iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 文字步驟區 */
+    .steps-container {
+        flex: 1;
+        min-width: 300px;
+    }
+    .step-item {
+        background: rgba(255, 215, 0, 0.1);
+        margin-bottom: 15px;
+        padding: 15px;
+        border-left: 5px solid #d4af37;
+    }
+    .step-item h4 {
+        margin: 0 0 10px 0;
+        color: #fff;
+    }
+
+    /* 獎勵區塊 */
+    .reward-box {
+        background: linear-gradient(145deg, #8b0000, #4a0000);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 30px;
+        border: 1px dashed #ffd700;
+    }
+    .reward-highlight {
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffd700;
+    }
+</style>
+</head>
+<body>
+
+<div class="anti-cheat-section">
+    <div class="section-title">防外掛驗證教學</div>
+    
+    <div class="content-wrapper">
+        <div class="video-container">
+            <div class="video-placeholder">
+                <iframe src="https://www.youtube.com/embed/K68WhwkzNRU" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p style="text-align: center; color: #aaa; margin-top: 10px;">▲ 30秒快速上手教學影片</p>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-item">
+                <h4>STEP 1. 安全定位</h4>
+                <p>遇到偵測彈窗時，請立即將角色移動至安全處，避免被怪物攻擊。</p>
+            </div>
+            <div class="step-item">
+                <h4>STEP 2. 獲取代碼</h4>
+                <p>點開【LM 喝水程式】，確認「驗證視窗」內顯示的英文字母代碼。</p>
+            </div>
+            <div class="step-item">
+                <h4>STEP 3. 完成驗證</h4>
+                <p>在遊戲聊天對話框直接輸入該代碼，按下 Enter 即可完成。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="reward-box">
+        <p>✨ 驗證成功福利 ✨</p>
+        <div class="reward-highlight">血量魔力全回復 + 通暢體魄狀態 + 防外掛驗證箱</div>
+        <p style="font-size: 14px; margin-top: 5px;">* 堅持手動經典，營造最公平的 3.81 遊戲環境 *</p>
+    </div>
+</div>
+
+</body>
+</html>

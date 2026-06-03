@@ -1,0 +1,1665 @@
+<div style="font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif; color: #333; max-width: 1000px; margin: 0 auto; line-height: 1.6;">
+    <h2 style="text-align: center; color: #1a73e8; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-bottom: 20px;">
+        📖 變身圖鑑收藏清單
+    </h2>
+    <div style="overflow-x: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; border: 1px solid #ddd;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; min-width: 800px;">
+            <thead>
+                <tr style="background-color: #1a73e8; color: #ffffff; text-align: left;">
+                    <th style="padding: 12px 15px; border-bottom: 2px solid #1557b0; width: 50%;">所需變身卡</th>
+                    <th style="padding: 12px 15px; border-bottom: 2px solid #1557b0; width: 25%;">圖鑑名稱</th>
+                    <th style="padding: 12px 15px; border-bottom: 2px solid #1557b0; width: 25%;">獲得能力</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：食人妖精(一般)<br>變身卡：食人妖精王(一般)<br>變身卡：南瓜(稀有)<br>變身卡：地獄的傑克吳燈籠(英雄)<br>變身卡：惡夢的傑克吳燈籠(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">圓圓兄弟</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+5</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：紙人(一般)<br>變身卡：雪人(一般)<br>變身卡：黑貓(高級)<br>變身卡：溫迪(高級)<br>變身卡：貓咪法師(高級)<br>變身卡：貓咪戰士(高級)<br>變身卡：貓咪騎士(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">曾想當人類</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：浣熊(一般)<br>變身卡：曼波兔(一般)<br>變身卡：黑兔少女(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">兔子和狸貓</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：果凍怪(一般)<br>變身卡：橘子(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">四角型和圓型</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：骷髏槍兵(一般)<br>變身卡：骷髏弓箭手(一般)<br>變身卡：骷髏(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">結果是骨頭組合</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：骷髏弓箭手(一般)<br>變身卡：妖魔巡守(一般)<br>變身卡：妖魔弓箭手(一般)<br>變身卡：強盜頭目(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">拙劣的弓箭手團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：哥布林(一般)<br>變身卡：歐姆民兵(一般)<br>變身卡：安普長老(一般)<br>變身卡：強盜矮人(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">矮小的小鬼</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">閃避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：思克巴(一般)<br>變身卡：長者(一般)<br>變身卡：黑暗妖精法師(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">學會了光箭</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+15</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：妖魔巡守(一般)<br>變身卡：妖魔弓箭手(一般)<br>變身卡：都達瑪拉妖魔(一般)<br>變身卡：妖魔鬥士(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">將來的希望是辛巴</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：達伊諾思打者(高級)<br>變身卡：達伊諾思投手(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">NC達伊諾思</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：德雷克(高級)<br>變身卡：刺客首領(高級)<br>變身卡：布雷哲(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">雙手各拿一把劍</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：骷髏槍兵(一般)<br>變身卡：都達瑪拉妖魔(一般)<br>變身卡：狂暴槍騎(高級)<br>變身卡：狂暴將軍(高級)<br>變身卡：黑騎士(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">第一次拿的槍</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗妖精法師(一般)<br>變身卡：墮落的賽尼斯(高級)<br>變身卡：魔法師(高級)<br>變身卡：奧爾汀(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔力的重要性</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：奇異鸚鵡(一般)<br>變身卡：桓夢(高級)<br>變身卡：海洋哈維(高級)<br>變身卡：優卡(高級)<br>變身卡：海馬守衛(高級)<br>變身卡：深海獵人(高級)<br>變身卡：袋鼠拳擊手(高級)<br>變身卡：變色龍大師(高級)<br>變身卡：佩利克(稀有)<br>變身卡：拉班(稀有)<br>變身卡：青蛙孟克(稀有)<br>變身卡：惡霸鯊魚(稀有)<br>變身卡：菲爾菲爾(稀有)<br>變身卡：瑪依奴(稀有)<br>變身卡：Doguri(英雄)<br>變身卡：古代企鵝(英雄)<br>變身卡：挪威海怪(英雄)<br>變身卡：齊天大聖(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">未知的動物</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力恢復量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：德雷克(高級)<br>變身卡：魔法師(高級)<br>變身卡：奧爾汀(高級)<br>變身卡：布雷哲(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我曾經也是首領</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(高級)<br>變身卡：黑暗妖精(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變身界的兩大支柱</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力恢復量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：哥布林(一般)<br>變身卡：侏儒(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">最好的蠟燭</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：長者(一般)<br>變身卡：魔法師(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">鴛鴦戒指的傳說</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：強盜弓箭手(一般)<br>變身卡：骷髏弓箭手(一般)<br>變身卡：妖魔弓箭手(一般)<br>變身卡：火焰弓箭手(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">弓箭手們的聚會</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+20</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗法師(稀有)<br>變身卡：黑法師(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑魔法師們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：妖魔(一般)<br>變身卡：紅色妖魔(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們是同一個種族</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：惡魔(稀有)<br>變身卡：炎魔(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔族領袖們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力恢復量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：賞金獵人(高級)<br>變身卡：海音警衛(稀有)<br>變身卡：亞丁騎士(稀有)<br>變身卡：亞丁狂暴槍騎(稀有)<br>變身卡：亞丁菁英騎士(稀有)<br>變身卡：海音騎士(稀有)<br>變身卡：海音狂暴槍騎(稀有)<br>變身卡：海音弓手(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">亞丁守護者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：歐吉王(稀有)<br>變身卡：巨大牛人(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">遺忘之島在哪裡</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狼人(一般)<br>變身卡：萊肯(一般)<br>變身卡：力卡溫(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">鬢毛飛揚</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：奇異鸚鵡(一般)<br>變身卡：海洋哈維(高級)<br>變身卡：哈維(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">種類</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：紙人(一般)<br>變身卡：奧爾汀(高級)<br>變身卡：惡魔(稀有)<br>變身卡：巴爾塔扎爾(稀有)<br>變身卡：梅奎爾(稀有)<br>變身卡：卡斯帕(稀有)<br>變身卡：塞瑪(稀有)<br>變身卡：方(稀有)<br>變身卡：火焰通(稀有)<br>變身卡：秩序的煉金術師(英雄)<br>變身卡：混沌的煉金術師(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">象牙塔居民</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗騎士(稀有)<br>變身卡：銀光騎士(稀有)<br>變身卡：黃金騎士(稀有)<br>變身卡：白金騎士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">劍的達人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗刺客(稀有)<br>變身卡：銀光刺客(稀有)<br>變身卡：黃金刺客(稀有)<br>變身卡：白金刺客(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">雙手的達人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗巡守(稀有)<br>變身卡：銀光巡守(稀有)<br>變身卡：黃金巡守(稀有)<br>變身卡：白金巡守(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">弓箭手的達人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗法師(稀有)<br>變身卡：銀光法師(稀有)<br>變身卡：黃金法師(稀有)<br>變身卡：白金法師(稀有)<br>變身卡：紅魔法師(稀有)<br>變身卡：背叛的祭司(稀有)<br>變身卡：神聖魔法師(稀有)<br>變身卡：墮落的修道士(稀有)<br>變身卡：犧牲的聖職者(稀有)<br>變身卡：魔女(稀有)<br>變身卡：懺悔的修女(稀有)<br>變身卡：查曼卡(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔法的達人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗騎士(稀有)<br>變身卡：黑暗法師(稀有)<br>變身卡：黑暗巡守(稀有)<br>變身卡：黑暗刺客(稀有)<br>變身卡：黑暗狂暴槍兵(稀有)<br>變身卡：黑暗死神(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑暗聚會</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+1000</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：銀光騎士(稀有)<br>變身卡：銀光法師(稀有)<br>變身卡：銀光巡守(稀有)<br>變身卡：銀光刺客(稀有)<br>變身卡：銀光狂暴槍騎(稀有)<br>變身卡：銀光死神(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">銀光聚會</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金騎士(稀有)<br>變身卡：黃金法師(稀有)<br>變身卡：黃金刺客(稀有)<br>變身卡：黃金巡守(稀有)<br>變身卡：黃金狂暴槍騎(稀有)<br>變身卡：黃金死神(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黃金聚會</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力恢復量+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金騎士(稀有)<br>變身卡：白金法師(稀有)<br>變身卡：白金巡守(稀有)<br>變身卡：白金刺客(稀有)<br>變身卡：白金狂暴槍騎(稀有)<br>變身卡：白金死神(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金聚會</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力量+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：炎魔(稀有)<br>變身卡：歐吉王(稀有)<br>變身卡：巨大牛人(稀有)<br>變身卡：力卡溫(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">巨人族</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：奇異鸚鵡(一般)<br>變身卡：侏儒(高級)<br>變身卡：海洋哈維(高級)<br>變身卡：黑法師(稀有)<br>變身卡：哈維(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">賽跑的運動員們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：賽尼斯(英雄)<br>變身卡：塞巴斯蒂安(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">賽尼斯的過去與現在</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(矛)(英雄)<br>變身卡：塞巴斯蒂安(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">槍的達人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+50</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：覺醒炎魔(英雄)<br>變身卡：死亡騎士(焚焰)(英雄)<br>變身卡：雷神(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">擁有燃燒之得人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海露拜(英雄)<br>變身卡：警衛(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">遠距離的達人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔攻+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：甘特(英雄)<br>變身卡：宙斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">說話之島的英雄們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">精神+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：反王肯恩(英雄)<br>變身卡：賽尼斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">最佳情侶</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魅力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金騎士(稀有)<br>變身卡：死亡騎士(黃金)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">擁有金光之劍的人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離爆擊率+1%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：賽尼斯(英雄)<br>變身卡：宙斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔法界的對手</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：薩提爾士兵(高級)<br>變身卡：薩提爾戰士(高級)<br>變身卡：薩蒂羅斯_魔術師(高級)<br>變身卡：巴列斯(英雄)<br>變身卡：巴風特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">有堅硬的角的人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：炎魔(稀有)<br>變身卡：覺醒炎魔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔族的名子</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑騎士(高級)<br>變身卡：克特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">天生的追蹤者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：力卡溫(稀有)<br>變身卡：克特(英雄)<br>變身卡：巴風特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">話島的主人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+70</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(高級)<br>變身卡：死亡騎士(黃金)(英雄)<br>變身卡：死亡騎士(焚焰)(英雄)<br>變身卡：暗黑死亡騎士(英雄)<br>變身卡：烈焰死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">死亡騎士的收集者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海音警衛(稀有)<br>變身卡：警衛(弓)(英雄)<br>變身卡：警衛(矛)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">警衛的威力</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體質+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狂暴槍騎(高級)<br>變身卡：狂暴將軍(高級)<br>變身卡：警衛(矛)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">等待龍騎士的人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：甘特(英雄)<br>變身卡：宙斯(英雄)<br>變身卡：塞巴斯蒂安(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">為了特羅斯大人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：桓夢(高級)<br>變身卡：優卡(高級)<br>變身卡：天上騎士(英雄)<br>變身卡：天上的守護騎士(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">天上騎士與孩子們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：反王肯恩(英雄)<br>變身卡：賽尼斯(英雄)<br>變身卡：甘特(英雄)<br>變身卡：宙斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">紅騎士團和黑騎士團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海洋哈維(高級)<br>變身卡：哈維(稀有)<br>變身卡：覺醒炎魔(英雄)<br>變身卡：天上騎士(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">華麗的翅膀與持有者們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：刺客首領(高級)<br>變身卡：布雷哲(高級)<br>變身卡：黑法師(稀有)<br>變身卡：海露拜(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">首先登場的黑暗妖精</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：惡魔(稀有)<br>變身卡：反王肯恩(英雄)<br>變身卡：克特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">套裝的主人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：甘特(英雄)<br>變身卡：屠龍者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">以傳說之名</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(黃金)(英雄)<br>變身卡：死亡騎士(焚焰)(英雄)<br>變身卡：屠龍者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">擊倒龍的主人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金騎士(稀有)<br>變身卡：克特(英雄)<br>變身卡：屠龍者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">金光的盔甲</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：強盜弓箭手(一般)<br>變身卡：狼人(一般)<br>變身卡：萊肯(一般)<br>變身卡：小小鬼(粉紅)(一般)<br>變身卡：奇異鸚鵡(一般)<br>變身卡：食人妖精(一般)<br>變身卡：思克巴(一般)<br>變身卡：紙人(一般)<br>變身卡：骷髏槍兵(一般)<br>變身卡：妖魔(一般)<br>變身卡：浣熊(一般)<br>變身卡：骷髏弓箭手(一般)<br>變身卡：哥布林(一般)<br>變身卡：長者(一般)<br>變身卡：歐姆民兵(一般)<br>變身卡：妖魔巡守(一般)<br>變身卡：食人妖精王(一般)<br>變身卡：妖魔弓箭手(一般)<br>變身卡：黑暗妖精法師(一般)<br>變身卡：骷髏(一般)<br>變身卡：曼波兔(一般)<br>變身卡：雪人(一般)<br>變身卡：果凍怪(一般)<br>變身卡：橘子(一般)<br>變身卡：安普長老(一般)<br>變身卡：巨蟻(一般)<br>變身卡：都達瑪拉妖魔(一般)<br>變身卡：妖魔鬥士(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">烏合之眾</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：侏儒(高級)<br>變身卡：火焰弓箭手(高級)<br>變身卡：黑騎士(高級)<br>變身卡：刺客首領(高級)<br>變身卡：賞金獵人(高級)<br>變身卡：達伊諾思投手(高級)<br>變身卡：海洋哈維(高級)<br>變身卡：死亡騎士(高級)<br>變身卡：優卡(高級)<br>變身卡：黑暗妖精(高級)<br>變身卡：布雷哲(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">有備無患</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">智力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：惡魔(稀有)<br>變身卡：炎魔(稀有)<br>變身卡：歐吉王(稀有)<br>變身卡：黑暗騎士(稀有)<br>變身卡：黑暗法師(稀有)<br>變身卡：黑暗巡守(稀有)<br>變身卡：黑暗刺客(稀有)<br>變身卡：銀光騎士(稀有)<br>變身卡：銀光法師(稀有)<br>變身卡：銀光巡守(稀有)<br>變身卡：銀光刺客(稀有)<br>變身卡：黃金騎士(稀有)<br>變身卡：黃金法師(稀有)<br>變身卡：黃金刺客(稀有)<br>變身卡：黃金巡守(稀有)<br>變身卡：白金騎士(稀有)<br>變身卡：白金法師(稀有)<br>變身卡：白金巡守(稀有)<br>變身卡：巨大牛人(稀有)<br>變身卡：力卡溫(稀有)<br>變身卡：黑法師(稀有)<br>變身卡：紅色妖魔(稀有)<br>變身卡：哈維(稀有)<br>變身卡：海音警衛(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">瑩雪之功</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：巴列斯(英雄)<br>變身卡：反王肯恩(英雄)<br>變身卡：賽尼斯(英雄)<br>變身卡：海露拜(英雄)<br>變身卡：甘特(英雄)<br>變身卡：死亡騎士(黃金)(英雄)<br>變身卡：覺醒炎魔(英雄)<br>變身卡：死亡騎士(焚焰)(英雄)<br>變身卡：天上騎士(英雄)<br>變身卡：克特(英雄)<br>變身卡：巴風特(英雄)<br>變身卡：宙斯(英雄)<br>變身卡：警衛(弓)(英雄)<br>變身卡：警衛(矛)(英雄)<br>變身卡：塞巴斯蒂安(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">大器晚成</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真死亡騎士(稀有)<br>變身卡：真黑暗妖精(稀有)<br>變身卡：少女賽尼斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變得更強回歸得她們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體質+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗法師(稀有)<br>變身卡：銀光法師(稀有)<br>變身卡：黃金法師(稀有)<br>變身卡：白金法師(稀有)<br>變身卡：少女賽尼斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">少女賽尼斯的詭計</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">閃避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗騎士(稀有)<br>變身卡：銀光騎士(稀有)<br>變身卡：黃金騎士(稀有)<br>變身卡：白金騎士(稀有)<br>變身卡：真死亡騎士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">真死亡騎士的威嚴</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗巡守(稀有)<br>變身卡：銀光巡守(稀有)<br>變身卡：黃金巡守(稀有)<br>變身卡：白金巡守(稀有)<br>變身卡：真黑暗妖精(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">真黑暗妖精的判斷力</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔攻+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：夜巡(稀有)<br>變身卡：黑暗刺客(稀有)<br>變身卡：銀光刺客(稀有)<br>變身卡：黃金刺客(稀有)<br>變身卡：白金刺客(稀有)<br>變身卡：暗夜聖殿騎士(金色)(英雄)<br>變身卡：暗夜聖殿騎士(紅色)(英雄)<br>變身卡：暗夜聖殿騎士(紫色)(英雄)<br>變身卡：暗夜聖殿騎士(藍色)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">夜巡的勇猛</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(高級)<br>變身卡：真死亡騎士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">小死神的畢業</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗妖精(高級)<br>變身卡：真黑暗妖精(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">更華麗的魔法團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：墮落的賽尼斯(高級)<br>變身卡：少女賽尼斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">接收我的魔法吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狂暴槍騎(高級)<br>變身卡：夜巡(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">矛的隱藏魅力</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：妖魔鬥士(一般)<br>變身卡：布雷哲(高級)<br>變身卡：真死亡騎士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">快刀斬亂麻</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：妖魔弓箭手(一般)<br>變身卡：優卡(高級)<br>變身卡：真黑暗妖精(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">速弓之才</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗妖精法師(一般)<br>變身卡：魔法師(高級)<br>變身卡：少女賽尼斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">夢幻之斧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：都達瑪拉妖魔(一般)<br>變身卡：黑騎士(高級)<br>變身卡：夜巡(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">槍林彈雨</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：達伊諾思打者(高級)<br>變身卡：達伊諾思投手(高級)<br>變身卡：真死亡騎士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">達伊諾思的劍應援團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：達伊諾思打者(高級)<br>變身卡：達伊諾思投手(高級)<br>變身卡：真黑暗妖精(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">達伊諾思的弓應援團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：達伊諾思打者(高級)<br>變身卡：達伊諾思投手(高級)<br>變身卡：少女賽尼斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">達伊諾思的魔法應援團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：達伊諾思打者(高級)<br>變身卡：達伊諾思投手(高級)<br>變身卡：夜巡(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">達伊諾思的矛應援團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+5</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：依詩蒂(英雄)<br>變身卡：絲莉安(英雄)<br>變身卡：特羅斯(英雄)<br>變身卡：歐瑞(綠)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">英雄在此處降臨</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+5</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：甘特(英雄)<br>變身卡：特羅斯(英雄)<br>變身卡：宙斯(英雄)<br>變身卡：塞巴斯蒂安(英雄)<br>變身卡：暗黑龍宙斯(傳說)<br>變身卡：暗黑龍阿頓(傳說)<br>變身卡：暗黑龍絲莉安(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">傳說的開始</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海露拜(英雄)<br>變身卡：絲莉安(英雄)<br>變身卡：天上騎士(英雄)<br>變身卡：警衛(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">極強的弓弦</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：巴列斯(英雄)<br>變身卡：依詩蒂(英雄)<br>變身卡：克特(英雄)<br>變身卡：巴風特(英雄)<br>變身卡：國王 艾歐丁(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">君主之名的勇氣</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：賽尼斯(英雄)<br>變身卡：覺醒炎魔(英雄)<br>變身卡：宙斯(英雄)<br>變身卡：歐瑞(綠)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔法是對妖精行不通的</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：橘子(一般)<br>變身卡：紅色妖魔(稀有)<br>變身卡：格鬥家男(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">武術達人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：橘子(一般)<br>變身卡：紅色妖魔(稀有)<br>變身卡：格鬥家女(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">意外的面貌</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+5</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：格鬥家男(英雄)<br>變身卡：格鬥家女(英雄)<br>變身卡：格鬥家(紅)(英雄)<br>變身卡：格鬥家(黃)(英雄)<br>變身卡：格鬥家(藍)(英雄)<br>變身卡：格鬥家(女)(藍)(英雄)<br>變身卡：禪(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">格鬥之霸</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+2 遠距離攻擊力+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：反王肯恩(英雄)<br>變身卡：海露拜(英雄)<br>變身卡：丹特斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">為了解放魔族的力量</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1 遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：依詩蒂(英雄)<br>變身卡：特羅斯(英雄)<br>變身卡：布魯迪卡(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">死手狄亞得要塞吧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：布魯迪卡(英雄)<br>變身卡：丹特斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">欲醉之人欲檔之人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金安迪斯(稀有)<br>變身卡：黃金史雷佛(稀有)<br>變身卡：布魯迪卡(英雄)<br>變身卡：丹特斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">悲劇的對立</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+50</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金安迪斯(稀有)<br>變身卡：黃金史雷佛(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">威脅亞丁的破壞者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+50</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗刺客(稀有)<br>變身卡：銀光刺客(稀有)<br>變身卡：黃金刺客(稀有)<br>變身卡：白金刺客(稀有)<br>變身卡：黃金史雷佛(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">迴避是最好的防禦</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1 遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗巡守(稀有)<br>變身卡：銀光巡守(稀有)<br>變身卡：黃金巡守(稀有)<br>變身卡：白金巡守(稀有)<br>變身卡：黃金安迪斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">那只是隔殘像</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+150</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：長者(一般)<br>變身卡：墮落的賽尼斯(高級)<br>變身卡：少女賽尼斯(稀有)<br>變身卡：黑法師(稀有)<br>變身卡：老虎(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">給我食物就給你魔力</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法爆擊率+1%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：奇異鸚鵡(一般)<br>變身卡：浣熊(一般)<br>變身卡：曼波兔(一般)<br>變身卡：紅狼蛛(一般)<br>變身卡：飛蛾人(一般)<br>變身卡：飛蛾女王(一般)<br>變身卡：大黃蜂殺手(高級)<br>變身卡：超級螳螂(高級)<br>變身卡：鼴鼠坦克(高級)<br>變身卡：鼴鼠戰士(高級)<br>變身卡：鬣狗獵人(高級)<br>變身卡：老虎(稀有)<br>變身卡：豹人(英雄)<br>變身卡：雪之蜥蜴人(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">野生的致命生存力</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+150</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：桓夢(高級)<br>變身卡：老虎(稀有)<br>變身卡：潘(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">才不是小龐跟詹姆士咧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷耐性+7%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：鐵門騎士(一般)<br>變身卡：石頭高崙(高級)<br>變身卡：鐵門騎士團長(稀有)<br>變身卡：甘特(英雄)<br>變身卡：特羅斯(英雄)<br>變身卡：塞巴斯蒂安(英雄)<br>變身卡：鋼鐵阿頓(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">鐵甕城</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：墮落的賽尼斯(高級)<br>變身卡：黑法師(稀有)<br>變身卡：賽尼斯(英雄)<br>變身卡：黑暗之星宙斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">漆黑的魔力</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：依詩蒂(英雄)<br>變身卡：絲莉安(英雄)<br>變身卡：歐瑞(綠)(英雄)<br>變身卡：月之絲莉安(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">月光</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力量+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：墓穴守護者騎士(稀有)<br>變身卡：墓穴守護者法師(稀有)<br>變身卡：墓穴守護者(稀有)<br>變身卡：依詩蒂(英雄)<br>變身卡：絲莉安(英雄)<br>變身卡：宙斯(英雄)<br>變身卡：巨大的墓穴守護者(英雄)<br>變身卡：鋼鐵阿頓(傳說)<br>變身卡：屠龍者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">守護城遇到屠龍者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：特羅斯(英雄)<br>變身卡：鋼鐵阿頓(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">巴生的后羿</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體質+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：地獄之花(一般)<br>變身卡：安特(一般)<br>變身卡：樹精鹿(一般)<br>變身卡：樹精戰士(一般)<br>變身卡：錘鈴(一般)<br>變身卡：歐瑞(綠)(英雄)<br>變身卡：月之絲莉安(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">精靈的記憶</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">智力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：夜巡(稀有)<br>變身卡：警衛(紅)(矛)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">買+9貝卡合金</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷命中+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金安迪斯(稀有)<br>變身卡：警衛(紅)(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">還剩一步</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：骷髏槍兵(一般)<br>變身卡：骷髏弓箭手(一般)<br>變身卡：骷髏(一般)<br>變身卡：真死亡騎士(稀有)<br>變身卡：真死亡騎士(紅)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不死族的生存力</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：少女賽尼斯(稀有)<br>變身卡：黑法師(稀有)<br>變身卡：真死亡騎士(紅)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">使用治癒術狩獵死神的法師</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(焚焰)(英雄)<br>變身卡：真死亡騎士(紅)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">紅騎士</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">精神+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海音警衛(稀有)<br>變身卡：暗殺軍王史雷佛(稀有)<br>變身卡：冥法軍王海露拜(稀有)<br>變身卡：警衛(紅)(弓)(英雄)<br>變身卡：警衛(紅)(矛)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">尋找未守規矩的人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔攻+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：暗殺軍王史雷佛(稀有)<br>變身卡：黃金安迪斯(稀有)<br>變身卡：黃金史雷佛(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">拉斯塔巴德的暗殺者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+5</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金刺客(稀有)<br>變身卡：白金刺客(稀有)<br>變身卡：魔獸軍王巴蘭卡(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">血痕的鋼爪</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">力量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗妖精法師(一般)<br>變身卡：黑法師(稀有)<br>變身卡：冥法軍王海露拜(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">職務室內架魔法結界</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金法師(稀有)<br>變身卡：少女賽尼斯(稀有)<br>變身卡：法令軍王蕾雅(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">乎出的魔法力量</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">智力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：暗殺軍王史雷佛(稀有)<br>變身卡：冥法軍王海露拜(稀有)<br>變身卡：魔獸軍王巴蘭卡(稀有)<br>變身卡：法令軍王蕾雅(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">君王集結</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔攻+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：魔獸軍王巴蘭卡(稀有)<br>變身卡：長老拉米阿斯(稀有)<br>變身卡：長老提亞麥斯(稀有)<br>變身卡：長老巴洛麥斯(稀有)<br>變身卡：長老比亞塔斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">強悍的象徵</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金巡守(稀有)<br>變身卡：冥法軍王海露拜(稀有)<br>變身卡：長老安迪斯(稀有)<br>變身卡：黃金安迪斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">敏捷的象徵</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離爆擊+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：少女賽尼斯(稀有)<br>變身卡：長老凱伊納(稀有)<br>變身卡：長老伊戴亞(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">明智的象徵</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：法令軍王蕾雅(稀有)<br>變身卡：長老凱伊納(稀有)<br>變身卡：長老伊戴亞(稀有)<br>變身卡：宙斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">什麼是賢者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+50</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：長老安迪斯(稀有)<br>變身卡：黃金安迪斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">安迪斯的雙擊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">精神+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：冥法軍王海露拜(稀有)<br>變身卡：長老安迪斯(稀有)<br>變身卡：警衛(紅)(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">弱點攻擊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：長老凱伊納(稀有)<br>變身卡：長老拉米阿斯(稀有)<br>變身卡：長老伊戴亞(稀有)<br>變身卡：長老提亞麥斯(稀有)<br>變身卡：長老巴洛麥斯(稀有)<br>變身卡：長老安迪斯(稀有)<br>變身卡：長老比亞塔斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">此刻開始募集長老</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：長老提亞麥斯(稀有)<br>變身卡：長老巴洛麥斯(稀有)<br>變身卡：長老安迪斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們是兄弟嗎</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力回復量+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：奧爾汀(高級)<br>變身卡：長老伊戴亞(稀有)<br>變身卡：賽尼斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">智慧的象徵</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：魔獸軍王巴蘭卡(稀有)<br>變身卡：長老提亞麥斯(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔獸軍王的指導</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：布雷哲(高級)<br>變身卡：暗殺軍王史雷佛(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">暗殺者相見</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：墮落的賽尼斯(高級)<br>變身卡：法令軍王蕾雅(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">法令軍王的指導</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔防防禦+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：火焰弓箭手(高級)<br>變身卡：黑暗妖精(高級)<br>變身卡：冥法軍王海露拜(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神弓的相見</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+50</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金巡守(稀有)<br>變身卡：冥法軍王海露拜(稀有)<br>變身卡：警衛(紅)(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">迴避投射體的爽感</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：歐姆民兵(一般)<br>變身卡：魔獸軍王巴蘭卡(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔獸軍王的職務室緣分</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗妖精法師(一般)<br>變身卡：法令軍王蕾雅(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">法令軍王的職務室緣分</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海盜獵人雷歐(一般)<br>變身卡：火焰弓箭手(高級)<br>變身卡：刺客首領(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">同業者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：桓夢(高級)<br>變身卡：老虎(稀有)<br>變身卡：海盜獵人珍(稀有)<br>變身卡：狼騎士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">獵人與朋友們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海盜獵人雷歐(一般)<br>變身卡：長老安迪斯(稀有)<br>變身卡：黃金安迪斯(稀有)<br>變身卡：海盜獵人珍(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不會錯過</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：依詩蒂(英雄)<br>變身卡：依詩蒂(槍)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">武器大師</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離爆擊+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：絲莉安(英雄)<br>變身卡：宙斯(英雄)<br>變身卡：依詩蒂(槍)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔力彈</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離爆擊率+1%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：覺醒炎魔(英雄)<br>變身卡：歐瑞(綠)(英雄)<br>變身卡：塞巴斯蒂安(英雄)<br>變身卡：依詩蒂(槍)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">降魔儀式</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金安迪斯(稀有)<br>變身卡：海盜獵人珍(稀有)<br>變身卡：依詩蒂(槍)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">敏捷的象徵II</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+20</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：布魯迪卡(英雄)<br>變身卡：月之絲莉安(傳說)<br>變身卡：黑暗殺手(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">既遠又近</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：冥法軍王海露拜(稀有)<br>變身卡：魔獸軍王巴蘭卡(稀有)<br>變身卡：覺醒炎魔(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">重量級聚會</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：屠龍者(傳說)<br>變身卡：黑暗殺手(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">雙胞屠龍者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海盜獵人雷歐(一般)<br>變身卡：銀光火槍手(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">彈藥手</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗妖精(高級)<br>變身卡：黑暗火槍手(稀有)<br>變身卡：海盜獵人珍(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">暗黑沙手</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗火槍手(稀有)<br>變身卡：銀光火槍手(稀有)<br>變身卡：黃金火槍手(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">雙重子彈</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗火槍手(稀有)<br>變身卡：銀光火槍手(稀有)<br>變身卡：黃金火槍手(稀有)<br>變身卡：白金火槍手(稀有)<br>變身卡：槍手(男)(神話)<br>變身卡：槍手(女)(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">槍手部隊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗火槍手(稀有)<br>變身卡：銀光火槍手(稀有)<br>變身卡：黃金火槍手(稀有)<br>變身卡：白金火槍手(稀有)<br>變身卡：依詩蒂(槍)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">射擊隊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力回復量+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金巡守(稀有)<br>變身卡：黃金火槍手(稀有)<br>變身卡：白金巡守(稀有)<br>變身卡：白金火槍手(稀有)<br>變身卡：歐瑞(綠)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">新舊聯合</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：曼波兔(一般)<br>變身卡：曼玻兔(紅蘿菠)(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">紅蘿蔔紅蘿蔔</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真死亡騎士(紅)(英雄)<br>變身卡：真死亡騎士(藍)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">支配死亡騎士</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：浣熊(一般)<br>變身卡：果凍怪(一般)<br>變身卡：橘子(一般)<br>變身卡：曼玻兔(紅蘿菠)(稀有)<br>變身卡：巴風特(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">有毅力的草食動物</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(紅)(弓)(英雄)<br>變身卡：警衛(紅)(矛)(英雄)<br>變身卡：歐瑞(綠)(英雄)<br>變身卡：真死亡騎士(藍)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">colorful</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：絲莉安(英雄)<br>變身卡：警衛(弓)(英雄)<br>變身卡：警衛(紅)(弓)(英雄)<br>變身卡：歐瑞(綠)(英雄)<br>變身卡：格立特(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">有自信就進來</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：依詩蒂(英雄)<br>變身卡：絲莉安(英雄)<br>變身卡：特羅斯(英雄)<br>變身卡：格立特(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">沒看到阿頓耶</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：反王肯恩(英雄)<br>變身卡：阿斯態爾(英雄)<br>變身卡：覺醒 肯勞厄爾(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">反王的資格</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法爆擊率+3%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：賽尼斯(英雄)<br>變身卡：阿斯態爾(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">無法到手的男人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：鋼鐵阿頓(傳說)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神話阿頓</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：月之絲莉安(傳說)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神話絲莉安</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗之星宙斯(傳說)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神話宙斯</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+150</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：屠龍者(傳說)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神話屠龍者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：鋼鐵阿頓(傳說)<br>變身卡：屠龍者(傳說)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神話戰場之劍</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗之星宙斯(傳說)<br>變身卡：月之絲莉安(傳說)<br>變身卡：鋼鐵阿頓(傳說)<br>變身卡：屠龍者(傳說)<br>變身卡：黑暗殺手(傳說)<br>變身卡：席琳的守衛(傳說)<br>變身卡：格蘭肯的逆麟(傳說)<br>變身卡：殷海薩的影子(傳說)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神話歷史的開始</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力回復量+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：克特(英雄)<br>變身卡：真死亡騎士(紅)(英雄)<br>變身卡：荊棘公主艾薇(英雄)<br>變身卡：暗夜殺戮者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我是騎士</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+500</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：追蹤者凱伊(稀有)<br>變身卡：屠龍者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">與龍有關的人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狂暴槍騎(高級)<br>變身卡：夜巡(稀有)<br>變身卡：追蹤者凱伊(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">2格攻擊的達人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：銀光龍騎士(稀有)<br>變身卡：黃金龍騎士(稀有)<br>變身卡：白金龍騎士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">鎖鏈劍的達人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：達伊諾思打者(高級)<br>變身卡：達伊諾思投手(高級)<br>變身卡：追蹤者凱伊(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">達伊諾思的鎖鏈劍應援團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+35</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗龍騎士(稀有)<br>變身卡：銀光龍騎士(稀有)<br>變身卡：白金龍騎士(稀有)<br>變身卡：龍鬥士(傳說)<br>變身卡：龍騎士(男)(神話)<br>變身卡：龍騎士(女)(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">龍鬥士集結</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：骷髏槍兵(一般)<br>變身卡：都達瑪拉妖魔(一般)<br>變身卡：追蹤者卡爾(一般)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們是2格攻擊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：賽尼斯(英雄)<br>變身卡：依詩蒂(英雄)<br>變身卡：荊棘公主艾薇(英雄)<br>變身卡：依詩蒂(槍)(英雄)<br>變身卡：姬武者(英雄)<br>變身卡：家門守護者菲莉亞(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">女英雄聚會</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真黑暗妖精(稀有)<br>變身卡：法令軍王蕾雅(稀有)<br>變身卡：長老凱伊納(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">Girl Crush</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：老虎(稀有)<br>變身卡：武獅(稀有)<br>變身卡：格鬥家男(英雄)<br>變身卡：死神(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">為了充滿活力的新年</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+80</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：老虎(稀有)<br>變身卡：武獅(稀有)<br>變身卡：死神(英雄)<br>變身卡：屠龍者(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">新年的主角就是我</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+15</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：歐瑞靈魂(稀有)<br>變身卡：歐瑞十字弓(稀有)<br>變身卡：冰原狼人(稀有)<br>變身卡：歐瑞(藍)(英雄)<br>變身卡：歐瑞(綠)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">高貴的誕生歐瑞</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+100</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海露拜(英雄)<br>變身卡：絲莉安(英雄)<br>變身卡：警衛(紅)(弓)(英雄)<br>變身卡：歐瑞(藍)(英雄)<br>變身卡：歐瑞(綠)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">精誠所至</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：賽尼斯(英雄)<br>變身卡：依詩蒂(英雄)<br>變身卡：荊棘公主艾薇(英雄)<br>變身卡：依詩蒂(槍)(英雄)<br>變身卡：潘朵拉(英雄)<br>變身卡：世拉(英雄)<br>變身卡：蘿絲瑪莉(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">亞丁大陸的絕世美女</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：長者(一般)<br>變身卡：惡魔(稀有)<br>變身卡：潘朵拉(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不賣藥水給卡歐</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：食人妖精(一般)<br>變身卡：侏儒(高級)<br>變身卡：惡夢的稻草人(稀有)<br>變身卡：稻草人(藍)(稀有)<br>變身卡：潘朵拉(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">食人妖精去解開稻草人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+2 近距離命中+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗騎士(稀有)<br>變身卡：銀光騎士(稀有)<br>變身卡：黃金騎士(稀有)<br>變身卡：白金騎士(稀有)<br>變身卡：潘朵拉(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">又擋住碼頭的路了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：墮落的賽尼斯(高級)<br>變身卡：黑騎士(高級)<br>變身卡：黑暗妖精警衛(稀有)<br>變身卡：伊娃守護者(英雄)<br>變身卡：沙哈守護者(英雄)<br>變身卡：帕格里奧守護者(英雄)<br>變身卡：馬普勒守護者(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">守護賽尼斯</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：骷髏弓箭手(一般)<br>變身卡：妖魔巡守(一般)<br>變身卡：妖魔弓箭手(一般)<br>變身卡：黑暗妖精盜賊(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">要我教你單手射箭的方法</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真死亡騎士(紅)(英雄)<br>變身卡：真死亡騎士(藍)(英雄)<br>變身卡：地獄死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">死亡騎士地獄降臨</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+5</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：鋼鐵阿頓(傳說)<br>變身卡：屠龍者(傳說)<br>變身卡：地獄死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你說現在誰最強</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：浣熊(一般)<br>變身卡：曼波兔(一般)<br>變身卡：黑暗妖精警衛(稀有)<br>變身卡：黑暗妖精盜賊(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑暗妖精的興趣是狩獵</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：幻影騎士(傳說)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神話戰場的先鋒大將</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：反王肯恩(英雄)<br>變身卡：特羅斯(英雄)<br>變身卡：暗夜殺戮者(傳說)<br>變身卡：幻影騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不畏懼死亡的英雄</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：獵人里德(稀有)<br>變身卡：甘特(英雄)<br>變身卡：暗黑騎士莉爾利(英雄)<br>變身卡：幻影騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不退縮的英雄</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真死亡騎士(稀有)<br>變身卡：獵人里德(稀有)<br>變身卡：海露拜(英雄)<br>變身卡：暗黑騎士莉爾利(英雄)<br>變身卡：死神(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">召喚死亡之人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗刺客(稀有)<br>變身卡：暗殺軍王史雷佛(稀有)<br>變身卡：黃金史雷佛(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">暗黑之影</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：海盜獵人雷歐(一般)<br>變身卡：獵人戴伊(一般)<br>變身卡：獵人里德(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">傑出的獵人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗騎士(稀有)<br>變身卡：銀光騎士(稀有)<br>變身卡：甘特(英雄)<br>變身卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑暗哈汀的英雄們I</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗巡守(稀有)<br>變身卡：銀光巡守(稀有)<br>變身卡：海露拜(英雄)<br>變身卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑暗哈汀的英雄們II</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗刺客(稀有)<br>變身卡：克特(英雄)<br>變身卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑魔法的奇蹟</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：銀光刺客(稀有)<br>變身卡：警衛(弓)(英雄)<br>變身卡：黑暗哈汀(傳說)<br>變身卡：黑暗騎士(男)(神話)<br>變身卡：黑暗騎士(女)(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">以暗黑騎士之名I</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金巡守(稀有)<br>變身卡：警衛(弓)(英雄)<br>變身卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">以暗黑騎士之名II</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+80</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金騎士(稀有)<br>變身卡：特羅斯(英雄)<br>變身卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">哈汀的呼喚</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金巡守(稀有)<br>變身卡：巴風特(英雄)<br>變身卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">哈汀的記憶</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(弓)(英雄)<br>變身卡：警衛(綠)(弓)(英雄)<br>變身卡：警衛(紅)(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">警衛I</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(弓)(英雄)<br>變身卡：警衛(綠)(矛)(英雄)<br>變身卡：警衛(紅)(矛)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">警衛II</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金法師(稀有)<br>變身卡：海音警衛(稀有)<br>變身卡：警衛(綠)(矛)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">英雄篇章</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">智力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(綠)(弓)(英雄)<br>變身卡：警衛(紅)(弓)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">弓 警備</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(綠)(矛)(英雄)<br>變身卡：警衛(紅)(矛)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">矛 警備</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真死亡騎士(稀有)<br>變身卡：追蹤者凱伊(稀有)<br>變身卡：波若斯妖魔鬥士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">波若斯妖魔鬥士和朋友們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：夜巡(稀有)<br>變身卡：少女賽尼斯(稀有)<br>變身卡：波若斯妖魔法師(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">波若斯妖魔法師和朋友們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷命中+2%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真黑暗妖精(稀有)<br>變身卡：黑暗妖精盜賊(稀有)<br>變身卡：波若斯妖魔弓箭手(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">波若斯妖魔弓箭手和朋友們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：波若斯妖魔鬥士(稀有)<br>變身卡：波若斯妖魔法師(稀有)<br>變身卡：波若斯妖魔弓箭手(稀有)<br>變身卡：妖魔士兵(稀有)<br>變身卡：妖魔弓手(稀有)<br>變身卡：妖魔斧兵(稀有)<br>變身卡：妖魔騎兵(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">波若斯妖魔朋友們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狂暴將軍(高級)<br>變身卡：桓夢(高級)<br>變身卡：武獅(稀有)<br>變身卡：韓服少年(稀有)<br>變身卡：韓服少女(稀有)<br>變身卡：舞獅(金)(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">迎接新春</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">閃避率+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(高級)<br>變身卡：死亡騎士(黃金)(英雄)<br>變身卡：死亡騎士(焚焰)(英雄)<br>變身卡：地獄死亡騎士(傳說)<br>變身卡：憎恨的死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">死亡騎士愛好家</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狂暴將軍(紅)(英雄)<br>變身卡：狂暴將軍(藍)(英雄)<br>變身卡：幻影騎士(傳說)<br>變身卡：憎恨的死亡騎士(傳說)<br>變身卡：昔日的騎士范德(傳說)<br>變身卡：勞待碼依(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">傳說的對手</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1 近距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真死亡騎士(稀有)<br>變身卡：丹特斯(英雄)<br>變身卡：憎恨的死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">危險的英雄們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1 遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(綠)(矛)(英雄)<br>變身卡：警衛(紅)(矛)(英雄)<br>變身卡：警衛(矛)隊長(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">隊長對你們很失望</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(弓)(英雄)<br>變身卡：警衛(綠)(弓)(英雄)<br>變身卡：警衛(紅)(弓)(英雄)<br>變身卡：警衛(弓)隊長(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">隊長對你們也很失望</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗妖精警衛(稀有)<br>變身卡：狂暴將軍(紅)(英雄)<br>變身卡：狂暴將軍(藍)(英雄)<br>變身卡：警衛(矛)隊長(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">這樣使用矛就行了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+50</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：火焰弓箭手(高級)<br>變身卡：白金巡守(稀有)<br>變身卡：歐瑞(藍)(英雄)<br>變身卡：警衛(弓)隊長(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">這樣射箭就行了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離爆擊率+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：憎恨的死亡騎士(傳說)<br>變身卡：帕拉丁(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">這是龍的問題</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：歐瑞(藍)(英雄)<br>變身卡：暗黑騎士莉爾利(英雄)<br>變身卡：帕拉丁(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">十字軍和英雄們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：魔幻士兵(一般)<br>變身卡：菁英魔幻士兵(稀有)<br>變身卡：艾依爾(英雄)<br>變身卡：帕拉丁(傳說)<br>變身卡：神聖劍士(男)(神話)<br>變身卡：神聖劍士(女)(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">以神聖劍士團的名義</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：真死亡騎士(紅)(英雄)<br>變身卡：狂暴將軍(紅)(英雄)<br>變身卡：刺客首領(紅)(英雄)<br>變身卡：狂戰士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">紅色饗宴</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔攻+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：刺客首領(高級)<br>變身卡：白金刺客(稀有)<br>變身卡：鬼靈(稀有)<br>變身卡：刺客首領(紅)(英雄)<br>變身卡：Mr斯摩格(傳說)<br>變身卡：暗殺的雅莉亞精靈(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">黑暗中的影子</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+35</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金火槍手(稀有)<br>變身卡：黃金龍騎士(稀有)<br>變身卡：狂暴將軍(紅)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">跟隨大師</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力回復量+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：暗殺軍王史雷佛(稀有)<br>變身卡：布魯迪卡(英雄)<br>變身卡：黃金布雷哲(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">暗殺軍團3隊長</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力回復量+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(焚焰)(英雄)<br>變身卡：警衛(綠)(弓)(英雄)<br>變身卡：黃金布雷哲(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">4人4色</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+200</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：妖魔巡守(一般)<br>變身卡：艾依爾(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">在其他世界見過的感覺</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑騎士(高級)<br>變身卡：黑暗妖精警衛(稀有)<br>變身卡：狂暴將軍(紅)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">需要盾牌嗎</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">閃避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：獵人戴伊(一般)<br>變身卡：黑暗妖精(高級)<br>變身卡：銀光法師(稀有)<br>變身卡：刺客首領(紅)(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">組合不錯</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+15</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：墮落的賽尼斯(高級)<br>變身卡：惡魔(稀有)<br>變身卡：天上騎士(英雄)<br>變身卡：荊棘公主艾薇(英雄)<br>變身卡：艾依爾(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">只有我沒翅膀</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：魔獸軍王巴蘭卡(稀有)<br>變身卡：艾依爾(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">金髮太過分</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金騎士(稀有)<br>變身卡：白金龍騎士(稀有)<br>變身卡：菁英魔幻士兵(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">別人的劍看起來很好</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：魔幻士兵(一般)<br>變身卡：菁英魔幻士兵(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">射手與副射手</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠/近距離迴避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：惡魔(稀有)<br>變身卡：素還真(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">征服邪惡的青香白蓮</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法爆擊率+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狂暴槍騎(高級)<br>變身卡：狂暴將軍(高級)<br>變身卡：素還真(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">半神半聖亦半仙</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：傑克吳燈籠(紅)(英雄)<br>變身卡：棄天帝(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">傑克吳的組合</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：生日慶祝妖精(稀有)<br>變身卡：邪惡蛋糕怪(稀有)<br>變身卡：邪惡麋鹿(稀有)<br>變身卡：素還真(英雄)<br>變身卡：傑克吳燈籠(紅)(英雄)<br>變身卡：葉小釵(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">佛心活動</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔攻+1 魔力上限+15</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：傑克吳燈籠(紅)(英雄)<br>變身卡：黑暗之星宙斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們長的有一點像</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊+2 遠距離攻擊+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：艾爾摩將軍(稀有)<br>變身卡：艾爾摩士兵(稀有)<br>變身卡：艾爾魔法師(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">戰場中的士兵們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1 遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：巨大牛人(稀有)<br>變身卡：黑暗妖精警衛(稀有)<br>變身卡：艾爾摩士兵(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">消滅怪獸的士兵們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：炎魔(稀有)<br>變身卡：少女賽尼斯(稀有)<br>變身卡：艾爾魔法師(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">使用黑暗力量的人</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力回復量+5</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：追蹤者凱伊(稀有)<br>變身卡：獵人里德(稀有)<br>變身卡：艾爾摩將軍(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">把逃兵一個不漏的抓起來</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：天鵝的勞安格林(傳說)<br>變身卡：哈汀之魂(傳說)<br>變身卡：漆黑的死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">有紫色的感覺</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔攻+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：依詩蒂(英雄)<br>變身卡：天鵝的勞安格林(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我給人的感覺煥然一新</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：宙斯(英雄)<br>變身卡：歐瑞(藍)(英雄)<br>變身卡：格立特(弓)(英雄)<br>變身卡：鋼鐵阿頓(傳說)<br>變身卡：天鵝的勞安格林(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">之前好像不是這名成員</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗哈汀(傳說)<br>變身卡：哈汀之魂(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我內在的另一個我</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：魔法師(高級)<br>變身卡：黃金法師(稀有)<br>變身卡：賽尼斯(英雄)<br>變身卡：黑暗之星宙斯(傳說)<br>變身卡：黑暗哈汀(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你再找魔法師麼</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：地獄死亡騎士(傳說)<br>變身卡：憎恨的死亡騎士(傳說)<br>變身卡：漆黑的死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">傳說的3兄弟</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離迴避率+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：兔子少女(英雄)<br>變身卡：地獄死亡騎士(傳說)<br>變身卡：憎恨的死亡騎士(傳說)<br>變身卡：漆黑的死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">死亡騎士相鬥兔子遭殃</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">支撐耐性+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑法師(稀有)<br>變身卡：黑暗妖精盜賊(稀有)<br>變身卡：巴列斯(英雄)<br>變身卡：漆黑的死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你們是黑暗的爪牙嗎</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體質+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(高級)<br>變身卡：真死亡騎士(紅)(英雄)<br>變身卡：真死亡騎士(藍)(英雄)<br>變身卡：漆黑的死亡騎士(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">死亡騎士收集家</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">閃避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：伯爵安托里歐(英雄)<br>變身卡：師團長哈波(英雄)<br>變身卡：公爵馬庫斯(傳說)<br>變身卡：軍團長艾克斯特(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">星星10個</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：巨蟻女皇士兵(高級)<br>變身卡：巨蟻女皇隊長(稀有)<br>變身卡：伯爵安托里歐(英雄)<br>變身卡：公爵馬庫斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你忘上我往下集合I</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：沙蟲士兵(高級)<br>變身卡：沙蟲隊長(稀有)<br>變身卡：師團長哈波(英雄)<br>變身卡：軍團長艾克斯特(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你忘上我往下集合II</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：巨蟻(一般)<br>變身卡：巨大兵蟻(一般)<br>變身卡：公爵馬庫斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">螞蟻的時代來臨了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑騎士(高級)<br>變身卡：波若斯妖魔鬥士(稀有)<br>變身卡：巴風特(英雄)<br>變身卡：軍團長艾克斯特(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">哈爾巴斯的蹤跡</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：巨蟻女皇隊長(稀有)<br>變身卡：沙蟲隊長(稀有)<br>變身卡：警衛(矛)隊長(傳說)<br>變身卡：警衛(弓)隊長(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我也是隊長</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：莉茲(英雄)<br>變身卡：伯爵安托里歐(英雄)<br>變身卡：師團長哈波(英雄)<br>變身卡：巴士瑟(英雄)<br>變身卡：卡士伯(英雄)<br>變身卡：西瑪(英雄)<br>變身卡：馬庫爾(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">共同販售區</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：紅色妖魔(稀有)<br>變身卡：兔子少女(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">謎樣的存在</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：小小鬼(粉紅)(一般)<br>變身卡：墮落的賽尼斯(高級)<br>變身卡：兔子少女(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">少女的進化</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離攻擊力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：潘朵拉(英雄)<br>變身卡：莉茲(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">不是天天可見的商店</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1 遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：死亡騎士(高級)<br>變身卡：惡魔(稀有)<br>變身卡：甘特(英雄)<br>變身卡：莉茲(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你我的全盛時期</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黃金史雷佛(稀有)<br>變身卡：布魯迪卡(英雄)<br>變身卡：伯爵安托里歐(英雄)<br>變身卡：女僕安娜(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">在沙漠的風沙中I</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：布雷哲(高級)<br>變身卡：冥法軍王海露拜(稀有)<br>變身卡：師團長哈波(英雄)<br>變身卡：凱普莉夏(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">在沙漠的風沙中II</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：聖地的侏儒斧頭兵(稀有)<br>變身卡：聖地的侏儒弓手(稀有)<br>變身卡：聖地的侏儒槍兵(稀有)<br>變身卡：聖地的侏儒劍士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">朝聖時刻到來</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：妖魔(一般)<br>變身卡：狂暴槍騎(高級)<br>變身卡：聖地的侏儒斧頭兵(稀有)<br>變身卡：聖地的侏儒槍兵(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">合併至亦部隊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+20</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：妖魔弓箭手(一般)<br>變身卡：德雷克(高級)<br>變身卡：聖地的侏儒槍兵(稀有)<br>變身卡：聖地的侏儒劍士(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">忠於基本的組合</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狂暴將軍(高級)<br>變身卡：聖地的侏儒槍兵(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">在槍面前我們互毆一下</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+10</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗妖精盜賊(稀有)<br>變身卡：聖地的侏儒弓手(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">你絕對躲不了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離攻擊力+1 遠距離攻擊力+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：巨蟻女皇隊長(稀有)<br>變身卡：沙蟲隊長(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">中階管理職的痛苦</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+30</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：強盜弓箭手(一般)<br>變身卡：強盜頭目(高級)<br>變身卡：通緝犯庫傑(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">威頓村莊的威脅者</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+3</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：沙蟲士兵(高級)<br>變身卡：巨蟻女皇士兵(高級)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">沒有惡意</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：釣魚少年保羅(稀有)<br>變身卡：天上騎士(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">奇異國度的保羅</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：少女賽尼斯(稀有)<br>變身卡：白色幼犬(稀有)<br>變身卡：釣魚少年保羅(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">陣雨</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：變形怪(神話)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變形怪-光與影子</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：憎恨的死亡騎士(傳說)<br>變身卡：帕拉丁(傳說)<br>變身卡：變形怪(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變形怪-祝福與詛咒</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：月之絲莉安(傳說)<br>變身卡：警衛(弓)隊長(傳說)<br>變身卡：變形怪(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變形怪-神弓</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗之星宙斯(傳說)<br>變身卡：帕拉丁(傳說)<br>變身卡：變形怪(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變形怪-神聖與黑暗</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+100</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：屠龍者(傳說)<br>變身卡：警衛(矛)隊長(傳說)<br>變身卡：變形怪(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變形怪-開始與結束</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：地獄死亡騎士(傳說)<br>變身卡：幻影騎士(傳說)<br>變身卡：變形怪(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變形怪-血與深淵</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體質+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗殺手(傳說)<br>變身卡：變形怪(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變形怪-黑暗中的目標</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">支撐耐性+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：暗夜殺戮者(傳說)<br>變身卡：黑暗哈汀(傳說)<br>變身卡：變形怪(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">變形怪-黑暗中的英雄</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(綠)(弓)(英雄)<br>變身卡：警衛(綠)(矛)(英雄)<br>變身卡：鋼鐵阿頓(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">集合啦奇岩村莊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：艾依爾(英雄)<br>變身卡：伯爵安托里歐(英雄)<br>變身卡：葉小釵(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">盔甲不過是個累贅</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力回復量+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：炎魔(稀有)<br>變身卡：覺醒炎魔(英雄)<br>變身卡：棄天帝(英雄)<br>變身卡：覺醒 愛爾芬(英雄)<br>變身卡：貝里斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">覺醒本身</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">負重獎勵+100</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：愛爾芬(乞丐)(稀有)<br>變身卡：莉茲(英雄)<br>變身卡：棄天帝(英雄)<br>變身卡：貝里斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">乞丐與瘋子</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">防禦+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：瘋狗(一般)<br>變身卡：白色幼犬(稀有)<br>變身卡：貝里斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">犬競技場的回憶</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法防禦+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：紙人(一般)<br>變身卡：果凍怪(一般)<br>變身卡：橘子(一般)<br>變身卡：曼玻兔(紅蘿菠)(稀有)<br>變身卡：莉茲(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">有發瘋的原因</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：老虎(稀有)<br>變身卡：暗殺軍王史雷佛(稀有)<br>變身卡：黑暗妖精盜賊(稀有)<br>變身卡：賽尼斯(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">感謝勇士的金幣支援</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+80</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：絲莉安(英雄)<br>變身卡：月之絲莉安(傳說)<br>變身卡：赫發斯特斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我的小妖精</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：歐吉王(稀有)<br>變身卡：哈維(稀有)<br>變身卡：老虎(稀有)<br>變身卡：白色幼犬(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">一二三四啊</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：菁英魔幻士兵(稀有)<br>變身卡：艾爾摩將軍(稀有)<br>變身卡：聖地的侏儒劍士(稀有)<br>變身卡：巨蟻女皇隊長(稀有)<br>變身卡：沙蟲隊長(稀有)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">進退兩難</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離傷害+1 近距離傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗龍騎士(稀有)<br>變身卡：銀光龍騎士(稀有)<br>變身卡：白金龍騎士(稀有)<br>變身卡：貝里斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">尷尬的關係</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離爆擊率+1%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：荊棘公主艾薇(英雄)<br>變身卡：艾依爾(英雄)<br>變身卡：貝里斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">我們是拿著劍的少女們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">藥水恢復+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：憎恨的死亡騎士(傳說)<br>變身卡：漆黑的死亡騎士(傳說)<br>變身卡：第1代多魯嘉(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">家門的詛咒</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：屠龍者(傳說)<br>變身卡：第1代多魯嘉(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">原祖中的原祖</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：第1代多魯嘉(傳說)<br>變身卡：職業變身(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">神話:戰場的勇猛</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：優秀騎士(英雄)<br>變身卡：優秀巡守(英雄)<br>變身卡：優秀法師(英雄)<br>變身卡：優秀狂暴槍騎(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">獨特的軍團</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金騎士(稀有)<br>變身卡：優秀騎士(英雄)<br>變身卡：幻影騎士(傳說)<br>變身卡：貝里斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">刀的匠人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離傷害+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金巡守(稀有)<br>變身卡：格立特(弓)(英雄)<br>變身卡：師團長哈波(英雄)<br>變身卡：優秀巡守(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">弓的匠人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離傷害+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：白金法師(稀有)<br>變身卡：賽尼斯(英雄)<br>變身卡：宙斯(英雄)<br>變身卡：優秀法師(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔法的匠人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：狂暴將軍(藍)(英雄)<br>變身卡：優秀狂暴槍騎(英雄)<br>變身卡：貝里斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">矛的匠人們</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷命中+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(綠)(矛)(英雄)<br>變身卡：警衛(紅)(矛)(英雄)<br>變身卡：優秀狂暴槍騎(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">警衛募集作戰I</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離命中+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(綠)(弓)(英雄)<br>變身卡：警衛(紅)(弓)(英雄)<br>變身卡：優秀巡守(英雄)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">警衛募集作戰II</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷耐性+1%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：哈汀之魂(傳說)<br>變身卡：不敗的甘特(傳說)<br>變身卡：吉倫(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">跟隨老師</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">迴避率+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：不敗的甘特(傳說)<br>變身卡：赫發斯特斯(傳說)<br>變身卡：吉倫(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">孩子就托您照顧了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">敏捷+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：甘特(英雄)<br>變身卡：不敗的甘特(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">甘特的進化</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體質+1</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：特羅斯(英雄)<br>變身卡：不敗的甘特(傳說)<br>變身卡：吉倫(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">新的希望</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">智力+1</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：月之絲莉安(傳說)<br>變身卡：黑暗殺手(傳說)<br>變身卡：警衛(弓)隊長(傳說)<br>變身卡：軍團長艾克斯特(傳說)<br>變身卡：赫發斯特斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">挑著用的樂趣</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+30</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：反王肯恩(英雄)<br>變身卡：特羅斯(英雄)<br>變身卡：赫發斯特斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">摩登家族</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">減免傷害+3</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：阿斯態爾(英雄)<br>變身卡：赫發斯特斯(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">老公的過去被我發現了</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷命中+5%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗之星宙斯(傳說)<br>變身卡：哈汀之魂(傳說)<br>變身卡：吉倫(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">魔法師3隊長</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：宙斯(英雄)<br>變身卡：吉倫(傳說)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">青出於藍</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：變形怪(神話)<br>變身卡：職業變身(神話)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:神話般的存在</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：地獄死亡騎士(傳說)<br>變身卡：憎恨的死亡騎士(傳說)<br>變身卡：漆黑的死亡騎士(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:詛咒的枷鎖</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">無視傷害減免+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：屠龍者(傳說)<br>變身卡：第1代多魯嘉(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:從過去中解脫</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">支撐耐性+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(弓)隊長(傳說)<br>變身卡：赫發斯特斯(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:亞丁國王之劍</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP減傷+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：哈汀之魂(傳說)<br>變身卡：吉倫(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:知識與智慧</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">傷害減免+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：公爵馬庫斯(傳說)<br>變身卡：軍團長艾克斯特(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:哈爾巴斯的力量</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害.PVP減免+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：不敗的甘特(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:不敗神話</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷命中+3%</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：暗夜殺戮者(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:龍之騎士</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+100</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：天鵝的勞安格林(傳說)<br>變身卡：貝里斯(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:騎士團的解放</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近距離傷害.命中+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：警衛(矛)隊長(傳說)<br>變身卡：警衛(弓)隊長(傳說)<br>變身卡：白金死亡騎士(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金死亡騎士:釋放的詛咒</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">遠距離傷害.命中+2</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px 15px; color: #555;">變身卡：變形怪(神話)<br>變身卡：職業變身(神話)<br>變身卡：白金死亡騎士(神話)<br>變身卡：白金巴風特(神話)</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金巴風特:集結</td>
+                    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔法傷害.命中+2</td>
+                </tr>
+                <tr style="background-color: #f8f9fa; border
+<tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：白金死亡騎士(神話)<br>變身卡：白金巴風特(神話)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金巴風特:白金</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">昏迷命中+10%</td>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：貝里斯(傳說)<br>變身卡：白金巴風特(神話)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金巴風特:暗黑騎士團</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+200</td>
+</tr>
+<tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：月之絲莉安(傳說)<br>變身卡：軍團長艾克斯特(傳說)<br>變身卡：白金巴風特(神話)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金巴風特:瞄準</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害+5</td>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：黑暗哈汀(傳說)<br>變身卡：哈汀之魂(傳說)<br>變身卡：白金巴風特(神話)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">白金巴風特:魔物的解放</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">PVP傷害減免+5</td>
+</tr>
+<tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：職業變身(神話)<br>變身卡：支配者吉爾塔斯(唯一)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">支配者吉爾塔斯:壓倒</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">近.遠.魔法傷害+5</td>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：變形怪(神話)<br>變身卡：支配者吉爾塔斯(唯一)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">支配者吉爾塔斯:支配</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+5</td>
+</tr>
+<tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：白金死亡騎士(神話)<br>變身卡：支配者吉爾塔斯(唯一)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">支配者吉爾塔斯:殲滅</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力上限+5</td>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：白金巴風特(神話)<br>變身卡：支配者吉爾塔斯(唯一)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">支配者吉爾塔斯:破壞</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">體力恢復量+1</td>
+</tr>
+<tr style="background-color: #f8f9fa; border-bottom: 1px solid #eee;">
+    <td style="padding: 10px 15px; color: #555;">變身卡：變形怪(神話)<br>變身卡：職業變身(神話)<br>變身卡：白金死亡騎士(神話)<br>變身卡：白金巴風特(神話)<br>變身卡：支配者吉爾塔斯(唯一)</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #202124;">支配者吉爾塔斯:集中</td>
+    <td style="padding: 10px 15px; font-weight: bold; color: #d32f2f;">魔力上限+5</td>
+</tr>

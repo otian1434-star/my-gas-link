@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>申辦帳號 - 曜天堂論壇</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="config.js"></script>
+</head>
+<body>
+
+<div id="header-slot"></div>
+<div id="nav-slot"></div>
+
+<div id="main-wrap">
+  <div id="page-content">
+
+    <div class="page-hdr">
+      <h1>📝 申辦帳號</h1>
+      <p>填寫申請資料後，管理員將會確認並與您聯繫</p>
+    </div>
+
+    <div class="notice blue" style="margin-bottom:20px;">
+      🔒 <strong>個人資料保護聲明：</strong>
+      您填寫的電子信箱與手機號碼僅供身份驗證及客服聯繫使用，
+      資料存放於受保護的 Google Workspace，僅授權管理員可查閱，絕不外洩或分享。
+    </div>
+
+    <div class="reg-wrap">
+      <div class="content-card">
+        <h3>📌 申請注意事項</h3>
+        <ul style="padding-left:20px;line-height:2;color:var(--text-muted);font-size:14px;">
+          <li>每人限申請一組帳號</li>
+          <li>請確認電子信箱及手機號碼填寫正確</li>
+          <li>提交後請耐心等候，管理員審核通常在 24 小時內完成</li>
+          <li>審核通過後，管理員將透過 LINE@ 或信箱通知您</li>
+        </ul>
+      </div>
+
+      <!-- 申辦表單 -->
+      <div class="content-card" id="reg-form-area">
+        <h3>✍️ 填寫申請資料</h3>
+
+        <form id="reg-form" onsubmit="regSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="reg-name">遊戲暱稱 <span style="color:#ff6464;">*</span></label>
+            <input class="form-input" type="text" id="reg-name" name="entry.name"
+                   placeholder="請輸入您在遊戲中使用的暱稱" required maxlength="20">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-email">電子信箱 <span style="color:#ff6464;">*</span></label>
+            <input class="form-input" type="email" id="reg-email" name="entry.email"
+                   placeholder="example@gmail.com" required>
+            <div class="form-hint">📧 此信箱用於接收官方通知，請確認可正常收信</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-phone">手機號碼 <span style="color:#ff6464;">*</span></label>
+            <input class="form-input" type="tel" id="reg-phone" name="entry.phone"
+                   placeholder="0912-345-678" required
+                   pattern="[0-9\-\s]{9,15}">
+            <div class="form-hint">📱 此手機號碼為保密存取，僅管理員可查閱</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-how">如何得知本伺服器</label>
+            <select class="form-input" id="reg-how" name="entry.how">
+              <option value="">— 請選擇 —</option>
+              <option value="FB社團">Facebook 社團推文</option>
+              <option value="朋友介紹">朋友介紹</option>
+              <option value="YouTube">YouTube 影片</option>
+              <option value="直播">直播</option>
+              <option value="其他">其他</option>
+            </select>
+          </div>
+
+          <!-- 驗證碼 -->
+          <div class="form-group">
+            <label class="form-label">驗證碼 <span style="color:#ff6464;">*</span></label>
+            <div class="captcha-row" style="margin-bottom:10px;">
+              <div class="captcha-display" id="captcha-display"></div>
+              <button type="button" class="captcha-btn" onclick="refreshCaptcha()" title="刷新驗證碼">🔄</button>
+            </div>
+            <input class="form-input" type="text" id="reg-captcha" placeholder="請輸入上方驗證碼"
+                   required autocomplete="off" maxlength="6">
+            <div class="form-hint">🤖 請輸入圖中的英數字，不區分大小寫</div>
+          </div>
+
+          <button type="submit" class="form-submit" id="reg-submit-btn">
+            ✅ 送出申請
+          </button>
+        </form>
+
+        <!-- 送出成功畫面 -->
+        <div id="reg-success" style="display:none;text-align:center;padding:30px 0;">
+          <div style="font-size:48px;margin-bottom:16px;">🎉</div>
+          <div style="font-size:20px;color:var(--gold-bright);font-weight:900;margin-bottom:12px;">申請已送出！</div>
+          <div style="color:var(--text-muted);line-height:2;font-size:14px;">
+            感謝您的申請！<br>
+            管理員將在 24 小時內審核，並透過信箱或 LINE@ 通知您。<br><br>
+            如有急迫問題，可直接聯繫官方 LINE@ 客服。
+          </div>
+          <a href="#" id="reg-line-btn" style="display:inline-block;margin-top:20px;background:var(--green-line);color:#fff;padding:12px 28px;border-radius:8px;font-weight:bold;">
+            加入官方 LINE@
+          </a>
+        </div>
+      </div>
+
+      <div class="notice gold" style="text-align:center;">
+        🎮 若想直接加入遊戲，可先至
+        <a href="pages/download.html" style="color:var(--gold-bright);font-weight:bold;">遊戲下載</a>
+        頁面取得最新懶人包，遊戲帳號可於登入介面直接創建！
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="footer-slot"></div>
+
+<script src="assets/js/forum.js"></script>
+<script>
+// ── 驗證碼邏輯 ──────────────────────────────────────────────
+var _captchaCode = '';
+
+function genCaptcha() {
+  var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  var code = '';
+  for (var i = 0; i < 5; i++) code += chars[Math.floor(Math.random() * chars.length)];
+  return code;
+}
+
+function refreshCaptcha() {
+  _captchaCode = genCaptcha();
+  document.getElementById('captcha-display').textContent = _captchaCode;
+}
+
+// ── 表單提交 ─────────────────────────────────────────────────
+function regSubmit(e) {
+  e.preventDefault();
+  var input = document.getElementById('reg-captcha').value.toUpperCase().trim();
+  if (input !== _captchaCode) {
+    alert('驗證碼錯誤，請重新輸入！');
+    refreshCaptcha();
+    document.getElementById('reg-captcha').value = '';
+    return;
+  }
+
+  var btn = document.getElementById('reg-submit-btn');
+  btn.disabled = true;
+  btn.textContent = '送出中…';
+
+  // 收集資料送往 Google Forms
+  var C = FORUM_CONFIG;
+  var name  = encodeURIComponent(document.getElementById('reg-name').value);
+  var email = encodeURIComponent(document.getElementById('reg-email').value);
+  var phone = encodeURIComponent(document.getElementById('reg-phone').value);
+  var how   = encodeURIComponent(document.getElementById('reg-how').value);
+
+  // 若已設定 Google Form URL 則跳轉，否則直接顯示成功
+  if (C.registerFormUrl && C.registerFormUrl.indexOf('XXXXXX') === -1) {
+    // 嘗試用 fetch 無痛提交（同源表單填充）
+    // 由於 Google Forms 不支援 CORS，改為新分頁開啟表單
+    var formUrl = C.registerFormUrl.replace('/viewform', '/formResponse');
+    window.open(C.registerFormUrl, '_blank');
+  }
+
+  // 顯示成功畫面
+  document.getElementById('reg-form').style.display = 'none';
+  document.getElementById('reg-success').style.display = 'block';
+  document.getElementById('reg-line-btn').href = C.lineOfficial;
+}
+
+// ── 初始化 ───────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function () {
+  refreshCaptcha();
+});
+</script>
+
+</body>
+</html>
