@@ -6,10 +6,14 @@
 const FORUM_CONFIG = {
 
   // ── 論壇基本資訊 ─────────────────────────────────────────────
-  forumName:     "曜天堂",                          // 短名稱（Logo 顯示）
-  forumFullName: "曜天堂私服論壇",                   // 完整名稱
-  forumSlogan:   "唯我獨尊 · 經典 3.81 手動天M版",   // 標語
-  serverVersion: "3.81 手動（天M版）",               // 遊戲版本
+  forumName:     "曜舞天堂",                        // 短名稱（Logo 顯示）
+  forumFullName: "曜舞天堂 經典不敗",                // 完整名稱
+  forumSlogan:   "經典不敗 · 3.81 內掛版",          // 標語
+  serverVersion: "3.81 內掛版",                    // 遊戲版本
+  heroTitle:     "曜舞天堂",
+  heroSubTitle:  "經典不敗",
+  heroVideo:     "assets/media/hero-bg.mp4",
+  heroImage:     "assets/media/hero-characters.png",
 
   // ── 社群連結（換論壇時更換這兩個網址）─────────────────────────
   lineOfficial:   "https://lin.ee/a3TiZsP",           // LINE@ 官方客服
@@ -28,7 +32,20 @@ const FORUM_CONFIG = {
   },
 
   // ── 贊助連結（換論壇時更換）──────────────────────────────────
-  sponsorUrl: "#",   // ← 填入贊助頁面 URL
+  sponsorUrl: "pages/sponsor.html",   // ← 填入贊助頁面 URL
+
+  // ── 浮動快捷視窗 ─────────────────────────────────────────────
+  floatingPanel: {
+    enabled: true,
+    title: "曜舞快捷",
+    note: "官方客服 · 贊助入口 · 下載資訊",
+    links: [
+      { label: "LINE 官方客服", icon: "LINE", url: "https://lin.ee/a3TiZsP", style: "line" },
+      { label: "贊助連結", icon: "SP", url: "pages/sponsor.html", style: "gold" },
+      { label: "遊戲下載", icon: "DL", url: "pages/download.html", style: "blue" },
+      { label: "最新文章", icon: "NEWS", url: "pages/news.html", style: "dark" },
+    ],
+  },
 
   // ── 申辦帳號 Google Form（換論壇時更換）─────────────────────
   // 建立 Google Forms 表單後填入 URL，表單欄位：電子信箱、手機號碼
@@ -37,9 +54,9 @@ const FORUM_CONFIG = {
 
   // ── 彈窗公告（可關閉或修改內容）─────────────────────────────
   popup: {
-    enabled:  true,
+    enabled:  false,
     title:    "📢 最新公告",
-    content:  `⚔️ <strong>曜天堂</strong> 正式開服！<br><br>
+    content:  `⚔️ <strong>曜舞天堂</strong> 正式開服！<br><br>
                📅 <strong>開服時間：</strong>2026/02/28 20:00<br>
                🎁 開服禮包 · 全員贈送<br>
                💬 加入官方LINE獲取最新消息`,
@@ -50,14 +67,14 @@ const FORUM_CONFIG = {
 
   // ── 首頁更新歷程（最新在前，最多顯示 5 筆）───────────────────
   updates: [
-    { date: "2026/02/28", tag: "開服", title: "【開服】曜天堂正式開服公告", content: "曜天堂正式開服！感謝全體玩家的支持，讓我們一起創造傳說！" },
+    { date: "2026/02/28", tag: "開服", title: "【開服】曜舞天堂正式開服公告", content: "曜舞天堂正式開服！感謝全體玩家的支持，讓我們一起創造傳說！" },
     { date: "2026/02/14", tag: "維護", title: "【維護】遊戲懶人包更新", content: "遊戲懶人包更新，新增打字不閃爍補丁，建議全員更新。" },
     { date: "2026/02/11", tag: "封測", title: "【封測】封測正式啟動", content: "封測正式啟動！推文回報系統同步開放，好禮等你來領。" },
   ],
 
   // ── 首頁 Hero 倍率說明（可自行修改）──────────────────────────
   heroBadges: [
-    "✦ 版本 3.81",
+    "✦ 3.81 內掛版",
     "⚡ 經驗 x10",
     "💰 金幣 x3",
     "🎁 掉寶 x2",
@@ -67,5 +84,5 @@ const FORUM_CONFIG = {
 
   // ── 客服資訊 ──────────────────────────────────────────────────
   lineId:   "@021ngtgv",
-  teamName: "曜天堂管理團隊",
+  teamName: "曜舞天堂管理團隊",
 };

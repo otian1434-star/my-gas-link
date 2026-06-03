@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>曜天堂私服論壇</title>
+<title>曜舞天堂 經典不敗</title>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script src="config.js"></script>
@@ -14,19 +14,25 @@
 
 <!-- ══ Hero ══ -->
 <section id="hero">
-  <div class="hero-bg-layer" id="hero-bg"></div>
+  <div class="hero-bg-layer" id="hero-bg">
+    <video class="hero-video" id="hero-video" autoplay muted loop playsinline></video>
+  </div>
   <div class="hero-content">
-    <div class="hero-eyebrow" id="hero-eyebrow">LINEAGE PRIVATE SERVER</div>
-    <h1 class="hero-title" id="hero-title-main">
-      經典不敗<span id="hero-title-sub">曜天堂</span>
-    </h1>
-    <p class="hero-tagline" id="hero-tagline"></p>
-    <div class="hero-divider"></div>
-    <div class="hero-stats" id="hero-stats"></div>
-    <div class="hero-btns">
-      <a class="btn-primary" href="register.html">立即申請帳號</a>
-      <a class="btn-outline" href="pages/download.html">遊戲下載</a>
+    <div class="hero-copy">
+      <div class="hero-eyebrow" id="hero-eyebrow">LINEAGE PRIVATE SERVER</div>
+      <h1 class="hero-title" id="hero-title-main">
+        曜舞天堂<span id="hero-title-sub">經典不敗</span>
+      </h1>
+      <p class="hero-tagline" id="hero-tagline"></p>
+      <div class="hero-divider"></div>
+      <div class="hero-stats" id="hero-stats"></div>
+      <div class="hero-btns">
+        <a class="btn-primary" href="register.html">立即申請帳號</a>
+        <a class="btn-outline" href="pages/download.html">遊戲下載</a>
+        <a class="btn-outline" href="pages/news.html">最新文章</a>
+      </div>
     </div>
+    <img class="hero-character" id="hero-character" src="assets/media/hero-characters.png" alt="曜舞天堂 經典主視覺">
   </div>
   <div class="hero-scroll">
     <div class="hero-scroll-line"></div>
@@ -132,8 +138,17 @@ if (window.netlifyIdentity) {
       document.getElementById('hero-eyebrow').textContent =
         'LINEAGE PRIVATE SERVER · VERSION ' + C.serverVersion;
     }
-    document.getElementById('hero-title-main').childNodes[0].textContent = C.heroBadges && C.heroBadges[0] ? '經典不敗' : C.forumName;
-    document.getElementById('hero-title-sub').textContent = C.forumName;
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo && C.heroVideo) {
+      heroVideo.src = C.heroVideo;
+    }
+    const heroCharacter = document.getElementById('hero-character');
+    if (heroCharacter && C.heroImage) {
+      heroCharacter.src = C.heroImage;
+      heroCharacter.alt = C.forumFullName || C.forumName;
+    }
+    document.getElementById('hero-title-main').childNodes[0].textContent = C.heroTitle || C.forumName;
+    document.getElementById('hero-title-sub').textContent = C.heroSubTitle || '經典不敗';
     document.getElementById('hero-tagline').textContent = C.forumSlogan || '';
 
     // Hero stats（從 heroBadges 解析或用 download info）

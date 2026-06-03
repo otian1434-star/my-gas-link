@@ -103,7 +103,7 @@
     <div class="faq-title">冒險者服務中心 FAQ</div>
 
     <div class="faq-item">
-        <span class="faq-q">Ｑ１、 如何註冊「權曜天堂」遊戲帳號？</span>
+        <span class="faq-q">Ｑ１、 如何註冊「曜舞天堂」遊戲帳號？</span>
         <span class="faq-a">於遊戲登入介面直接輸入您預想的帳號與密碼，即完成開創並可直接登入。</span>
     </div>
 
@@ -163,7 +163,7 @@
     </div>
 
     <div class="footer-info">
-        權曜天堂管理團隊 敬啟 | 客服 ID：@021ngtgv
+        曜舞天堂管理團隊 敬啟 | 客服 ID：@021ngtgv
     </div>
 </div>
 

@@ -1,5 +1,5 @@
 /* ================================================================
-   曜天堂論壇 - 全站共用 JS  forum.js
+   曜舞天堂 - 全站共用 JS  forum.js
    頂部水平導覽列版本
    ================================================================ */
 
@@ -11,6 +11,7 @@
     buildHeader();
     removeOldNav();
     buildFooter();
+    buildFloatingPanel();
     initPopup();
     highlightNav();
     addPageHdrLine();
@@ -293,6 +294,54 @@
   }
 
   /* ================================================================
+     浮動快捷視窗
+  ================================================================ */
+  function buildFloatingPanel() {
+    const C = FORUM_CONFIG;
+    if (!C.floatingPanel || !C.floatingPanel.enabled) return;
+    const r = root();
+    const links = C.floatingPanel.links || [];
+    const panelOpen = window.matchMedia && window.matchMedia('(max-width: 640px)').matches ? '' : 'open';
+    const html = `
+    <div id="floating-panel" class="${panelOpen}">
+      <button class="float-toggle" onclick="forumToggleFloat()" aria-label="快捷連結">
+        <span>快捷</span>
+      </button>
+      <div class="float-box">
+        <div class="float-head">
+          <div>
+            <strong>${escapeHTML(C.floatingPanel.title || '快捷連結')}</strong>
+            <span>${escapeHTML(C.floatingPanel.note || '')}</span>
+          </div>
+          <button onclick="forumToggleFloat()" aria-label="收合">×</button>
+        </div>
+        <div class="float-links">
+          ${links.map(link => {
+            const url = resolveLink(link.url || '#', r);
+            const external = /^https?:\/\//.test(url);
+            return `<a class="float-link ${escapeHTML(link.style || 'dark')}" href="${url}" ${external ? 'target="_blank" rel="noopener"' : ''}>
+              <span>${escapeHTML(link.icon || 'GO')}</span>
+              <strong>${escapeHTML(link.label || '連結')}</strong>
+            </a>`;
+          }).join('')}
+        </div>
+      </div>
+    </div>`;
+    document.body.insertAdjacentHTML('beforeend', html);
+  }
+
+  function escapeHTML(value) {
+    return String(value || '').replace(/[&<>"']/g, function (char) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char];
+    });
+  }
+
+  function resolveLink(url, r) {
+    if (/^(https?:|mailto:|tel:|#)/.test(url)) return url;
+    return r + url.replace(/^\.\//, '');
+  }
+
+  /* ================================================================
      彈出公告
   ================================================================ */
   function initPopup() {
@@ -352,4 +401,8 @@ function forumToggleMobile() {
 function forumClosePopup() {
   const o = document.getElementById('popup-overlay');
   if (o) o.classList.remove('open');
+}
+function forumToggleFloat() {
+  const p = document.getElementById('floating-panel');
+  if (p) p.classList.toggle('open');
 }
