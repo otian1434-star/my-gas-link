@@ -452,10 +452,10 @@ img { max-width: 100%; display: block; }
 }
 .hero-youtube-card {
   position: absolute;
-  right: clamp(280px, 16vw, 360px);
+  right: 0;
   bottom: clamp(40px, 5vh, 70px);
   width: clamp(520px, 38vw, 820px);
-  z-index: 1;
+  z-index: 3;
   border: 1px solid rgba(231,201,138,0.54);
   background: rgba(9,7,5,0.78);
   box-shadow: 0 26px 58px rgba(0,0,0,0.62), 0 0 26px rgba(201,169,110,0.16);
@@ -533,8 +533,8 @@ img { max-width: 100%; display: block; }
 
 @media (min-width: 1600px) {
   .hero-youtube-card {
-    left: 31vw;
-    right: auto;
+    left: auto;
+    right: 0;
     bottom: 36px;
     width: min(44vw, 860px);
   }
@@ -1075,7 +1075,7 @@ img { max-width: 100%; display: block; }
   position: fixed;
   top: 50%;
   z-index: 1040;
-  width: clamp(150px, 12vw, 210px);
+  width: clamp(178px, 14vw, 250px);
   transform: translateY(-50%);
   display: block;
   border: 1px solid var(--border-bright);
@@ -1543,7 +1543,7 @@ img { max-width: 100%; display: block; }
   .side-float-banner {
     top: auto;
     bottom: 96px;
-    width: 110px;
+    width: 128px;
     transform: none;
   }
   .side-float-banner.left { left: 10px; }
