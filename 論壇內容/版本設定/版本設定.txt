@@ -22,9 +22,9 @@
     <h3 style="color: #00e5ff; margin-top: 20px;">💎 基礎倍率與版本</h3>
     <ul style="list-style: none; padding-left: 10px;">
         <li>🔹 遊戲版本：<span style="color: #ff9800; font-weight: bold;">3.81 內掛版</span></li>
-        <li>🔹 經驗倍率：<span style="color: #00ff7f; font-weight: bold;">10 倍</span></li>
-        <li>🔹 金幣倍率：<span style="color: #00ff7f; font-weight: bold;">3 倍</span></li>
-        <li>🔹 掉寶倍率：<span style="color: #00ff7f; font-weight: bold;">2 倍</span></li>
+        <li>🔹 經驗倍率：<span style="color: #00ff7f; font-weight: bold;">3 倍</span></li>
+        <li>🔹 金幣倍率：<span style="color: #00ff7f; font-weight: bold;">1 倍</span></li>
+        <li>🔹 掉落倍率：<span style="color: #00ff7f; font-weight: bold;">2 倍</span></li>
         <li>🔹 武防強化：<span style="color: #00ff7f; font-weight: bold;">2 倍</span></li>
         <li>🔹 正義倍率：<span style="color: #00ff7f; font-weight: bold;">3 倍</span></li>
         <li>🔹 負重倍率：<span style="color: #00ff7f; font-weight: bold;">4 倍</span></li>
@@ -42,8 +42,8 @@
     <h3 style="color: #00e5ff; margin-top: 25px;">🛡️ 帳號與發話限制</h3>
     <div style="background-color: #2d2d2d; padding: 15px; border-radius: 8px; border-left: 4px solid #ff4444;">
         <div>🚫 <strong>多開限制：</strong>IP 限制 3 開</div>
-        <div>👤 <strong>角色限制：</strong>每帳號可創 2 隻</div>
-        <div>🗣️ <strong>公頻發話：</strong>Lv.30 以上</div>
+        <div>👤 <strong>角色限制：</strong>每帳號可創 4 隻</div>
+        <div>🗣️ <strong>公頻發話：</strong>Lv.10 以上</div>
         <div>🤫 <strong>密語發話：</strong>Lv.5 以上</div>
     </div>
 

@@ -47,11 +47,13 @@
       "subtitle": "MAIN SERVER · 3.81 內掛版",
       "rows": [
         { "label": "版本", "value": "3.81 內掛版", "highlight": true },
-        { "label": "經驗倍率", "value": "× 10", "highlight": true },
-        { "label": "掉落倍率", "value": "× 4", "highlight": true },
-        { "label": "帳號上限", "value": "3 帳號", "highlight": false },
-        { "label": "攻城戰", "value": "定期舉行", "highlight": false },
-        { "label": "開放時間", "value": "24 小時全天", "highlight": false }
+        { "label": "經驗倍率", "value": "× 3", "highlight": true },
+        { "label": "掉落倍率", "value": "× 2", "highlight": true },
+        { "label": "金幣倍率", "value": "× 1", "highlight": true },
+        { "label": "多開限制", "value": "IP 限制 3 開", "highlight": false },
+        { "label": "角色限制", "value": "每帳號可創 4 隻", "highlight": false },
+        { "label": "公頻發話", "value": "Lv.10 以上", "highlight": false },
+        { "label": "密語發話", "value": "Lv.5 以上", "highlight": false }
       ]
     },
     {

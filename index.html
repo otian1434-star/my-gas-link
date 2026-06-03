@@ -159,11 +159,13 @@ if (window.netlifyIdentity) {
           subtitle: 'MAIN SERVER · ' + (C.serverVersion || '3.81'),
           rows: [
             { label: '版本', value: C.serverVersion || '3.81', highlight: true },
-            { label: '經驗倍率', value: '× 10', highlight: true },
-            { label: '掉落倍率', value: '× 4', highlight: true },
-            { label: '帳號上限', value: '3 帳號' },
-            { label: '攻城戰', value: '定期舉行' },
-            { label: '開放時間', value: '24 小時全天' },
+            { label: '經驗倍率', value: '× 3', highlight: true },
+            { label: '掉落倍率', value: '× 2', highlight: true },
+            { label: '金幣倍率', value: '× 1', highlight: true },
+            { label: '多開限制', value: 'IP 限制 3 開' },
+            { label: '角色限制', value: '每帳號可創 4 隻' },
+            { label: '公頻發話', value: 'Lv.10 以上' },
+            { label: '密語發話', value: 'Lv.5 以上' },
           ],
         },
         {
@@ -313,9 +315,9 @@ if (window.netlifyIdentity) {
     const statsEl = document.getElementById('hero-stats');
     const stats = [
       { val: C.serverVersion || '381', label: '版　本' },
-      { val: '× 10', label: '經驗倍率' },
-      { val: '× 4',  label: '掉落倍率' },
-      { val: '24H',  label: '全天開放' },
+      { val: '× 3', label: '經驗倍率' },
+      { val: '× 2', label: '掉落倍率' },
+      { val: '× 1', label: '金幣倍率' },
     ];
     statsEl.innerHTML = stats.map(function (s, i) {
       return (i > 0 ? '<div class="hero-stat-sep"></div>' : '') +
