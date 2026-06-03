@@ -65,7 +65,14 @@ const FORUM_CONFIG = {
   },
 
   // ── 申辦帳號表單 ────────────────────────────────────────────
-  // register.html 使用 Netlify Forms 收件，資料在 Netlify 專案 Forms 頁面查看。
+  // provider: "auto" 會在 Apps Script 網址設定後送到 Google 試算表，否則保留 Netlify Forms 收件。
+  registrationForm: {
+    provider: "auto", // auto | appsScript | netlify
+    appsScript: {
+      endpoint: "", // Google Apps Script Web App /exec 網址
+      token: "",    // 選填，需與 Apps Script 內的 TOKEN 相同
+    },
+  },
 
   // ── 彈窗公告（可關閉或修改內容）─────────────────────────────
   popup: {

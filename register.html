@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="config.js"></script>
 </head>
-<body>
+<body class="register-page">
 
 <div id="header-slot"></div>
 <div id="nav-slot"></div>
@@ -24,9 +24,8 @@
     </div>
 
     <div class="notice blue" style="margin-bottom:20px;">
-      🔒 <strong>個人資料保護聲明：</strong>
-      您填寫的電子信箱與手機號碼僅供身份驗證及客服聯繫使用，
-      資料會送至受保護的網站後台表單系統，僅網站管理員可查閱，絕不公開顯示。
+      🔒 <strong>個人資料保護聲明：</strong><br>
+      <span>資料只做帳號審核與客服聯繫，不公開顯示。</span>
     </div>
 
     <div class="reg-wrap">
@@ -51,9 +50,44 @@
           </p>
 
           <div class="form-group">
-            <label class="form-label" for="reg-name">遊戲暱稱 <span style="color:#ff6464;">*</span></label>
+            <label class="form-label" for="reg-account">遊戲帳號 <span style="color:#ff6464;">*</span></label>
+            <input class="form-input" type="text" id="reg-account" name="gameAccount"
+                   placeholder="請輸入欲申請的遊戲帳號" required maxlength="20" autocomplete="username">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-password">遊戲密碼 <span style="color:#ff6464;">*</span></label>
+            <input class="form-input" type="password" id="reg-password" name="gamePassword"
+                   placeholder="請輸入欲設定的遊戲密碼" required minlength="4" maxlength="24" autocomplete="new-password">
+            <div class="form-hint">🔐 建議不要使用與其他網站相同的密碼</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-name">暱稱 <span style="color:#ff6464;">*</span></label>
             <input class="form-input" type="text" id="reg-name" name="playerName"
                    placeholder="請輸入您在遊戲中使用的暱稱" required maxlength="20">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">職業與性別 <span style="color:#ff6464;">*</span></label>
+            <input type="hidden" id="reg-character-choice" name="characterChoice" required>
+            <div class="class-choice-grid" id="reg-character-grid">
+              <label class="class-choice"><input type="checkbox" data-character-choice value="王族-男"><span>王族 男</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="王族-女"><span>王族 女</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="騎士-男"><span>騎士 男</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="騎士-女"><span>騎士 女</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="妖精-男"><span>妖精 男</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="妖精-女"><span>妖精 女</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="法師-男"><span>法師 男</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="法師-女"><span>法師 女</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="黑妖-男"><span>黑妖 男</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="黑妖-女"><span>黑妖 女</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="幻術-男"><span>幻術 男</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="幻術-女"><span>幻術 女</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="龍騎-男"><span>龍騎 男</span></label>
+              <label class="class-choice"><input type="checkbox" data-character-choice value="龍騎-女"><span>龍騎 女</span></label>
+            </div>
+            <div class="form-hint">請勾選 1 個職業與性別</div>
           </div>
 
           <div class="form-group">
@@ -148,6 +182,68 @@ function encodeFormData(form) {
   return new URLSearchParams(new FormData(form)).toString();
 }
 
+function getCharacterChoice() {
+  var checked = document.querySelector('[data-character-choice]:checked');
+  return checked ? checked.value : '';
+}
+
+function syncCharacterChoice() {
+  var hidden = document.getElementById('reg-character-choice');
+  if (hidden) hidden.value = getCharacterChoice();
+}
+
+function registrationFormConfig() {
+  var C = typeof FORUM_CONFIG !== 'undefined' ? FORUM_CONFIG : {};
+  var reg = C.registrationForm || {};
+  var app = reg.appsScript || {};
+  return {
+    provider: reg.provider || 'netlify',
+    endpoint: app.endpoint || '',
+    token: app.token || '',
+  };
+}
+
+function appsScriptReady(settings) {
+  return !!(settings.endpoint && /^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/i.test(settings.endpoint));
+}
+
+function buildApplicationPayload(form, settings) {
+  var data = new FormData();
+  data.append('gameAccount', form.gameAccount.value.trim());
+  data.append('gamePassword', form.gamePassword.value);
+  data.append('playerName', form.playerName.value.trim());
+  data.append('characterChoice', form.characterChoice.value);
+  data.append('email', form.email.value.trim());
+  data.append('phone', form.phone.value.trim());
+  data.append('source', form.source.value || '');
+  data.append('submittedAt', new Date().toISOString());
+  data.append('pageUrl', window.location.href);
+  if (settings.token) data.append('token', settings.token);
+  return data;
+}
+
+function submitToAppsScript(form, settings) {
+  if (!appsScriptReady(settings)) {
+    return Promise.reject(new Error('Apps Script endpoint is not configured'));
+  }
+
+  return fetch(settings.endpoint, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: buildApplicationPayload(form, settings),
+  });
+}
+
+function submitToNetlify(form) {
+  return fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encodeFormData(form),
+  }).then(function (res) {
+    if (!res.ok) throw new Error('Form submit failed');
+  });
+}
+
 function showSubmitError(message) {
   var btn = document.getElementById('reg-submit-btn');
   btn.disabled = false;
@@ -165,6 +261,11 @@ function regSubmit(e) {
     document.getElementById('reg-captcha').value = '';
     return;
   }
+  syncCharacterChoice();
+  if (!getCharacterChoice()) {
+    alert('請勾選職業與性別！');
+    return;
+  }
 
   var btn = document.getElementById('reg-submit-btn');
   btn.disabled = true;
@@ -172,13 +273,10 @@ function regSubmit(e) {
 
   var C = FORUM_CONFIG;
   var form = document.getElementById('reg-form');
+  var settings = registrationFormConfig();
+  var useAppsScript = settings.provider === 'appsScript' || (settings.provider === 'auto' && appsScriptReady(settings));
 
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encodeFormData(form),
-  }).then(function (res) {
-    if (!res.ok) throw new Error('Form submit failed');
+  (useAppsScript ? submitToAppsScript(form, settings) : submitToNetlify(form)).then(function () {
     document.getElementById('reg-form').style.display = 'none';
     document.getElementById('reg-success').style.display = 'block';
     document.getElementById('reg-line-btn').href = C.lineOfficial;
@@ -190,6 +288,16 @@ function regSubmit(e) {
 // ── 初始化 ───────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function () {
   refreshCaptcha();
+  document.querySelectorAll('[data-character-choice]').forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
+      if (checkbox.checked) {
+        document.querySelectorAll('[data-character-choice]').forEach(function (other) {
+          if (other !== checkbox) other.checked = false;
+        });
+      }
+      syncCharacterChoice();
+    });
+  });
 });
 </script>
 
