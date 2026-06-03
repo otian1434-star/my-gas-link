@@ -14,6 +14,7 @@ const FORUM_CONFIG = {
   heroSubTitle:  "經典不敗",
   heroVideo:     "assets/media/hero-bg.mp4",
   heroImage:     "assets/media/hero-characters.png",
+  brandLogo:     "assets/media/brand-logo.png",
 
   // ── 社群連結（換論壇時更換這兩個網址）─────────────────────────
   lineOfficial:   "https://lin.ee/a3TiZsP",           // LINE@ 官方客服

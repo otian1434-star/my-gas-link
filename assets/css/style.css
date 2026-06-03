@@ -64,6 +64,13 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 .logo-icon { font-size: 18px; }
+.logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border: 1px solid rgba(201,169,110,0.38);
+  box-shadow: 0 0 14px rgba(201,169,110,0.18);
+}
 .logo-text {
   font-family: 'Noto Serif TC', serif;
   font-size: 15px;
@@ -355,6 +362,14 @@ img { max-width: 100%; display: block; }
   padding: 64px 42px 34px;
 }
 .hero-copy { position: relative; z-index: 2; }
+.hero-brand-logo {
+  width: min(260px, 38vw);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid rgba(231,201,138,0.46);
+  box-shadow: 0 24px 58px rgba(0,0,0,0.55), 0 0 34px rgba(201,169,110,0.16);
+  margin: 0 0 18px;
+}
 .hero-eyebrow {
   display: inline-block;
   border: 1px solid rgba(231,201,138,0.45);
@@ -996,6 +1011,7 @@ img { max-width: 100%; display: block; }
     gap: 6px;
     padding: 78px 22px 42px;
   }
+  .hero-brand-logo { width: 170px; margin-left: auto; margin-right: auto; }
   .hero-divider { margin-left: auto; margin-right: auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
   .hero-stats, .hero-btns { justify-content: center; }
   .hero-stat { text-align: center; padding: 0 14px; }
@@ -1022,6 +1038,7 @@ img { max-width: 100%; display: block; }
   #page-content { padding: 0 14px 40px; }
   #hero { min-height: 720px; }
   .hero-content { padding: 72px 16px 36px; }
+  .hero-brand-logo { width: 132px; margin-bottom: 12px; }
   .hero-title { font-size: 42px; }
   .hero-tagline { font-size: 13px; letter-spacing: 1px; }
   .dir-grid { grid-template-columns: repeat(2, 1fr); }

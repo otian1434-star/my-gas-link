@@ -32,7 +32,7 @@
     const headerHTML = `
     <header id="top-header">
       <a href="${r}index.html" class="logo-area">
-        <span class="logo-icon">⚔️</span>
+        ${C.brandLogo ? `<img class="logo-img" src="${resolveLink(C.brandLogo, r)}" alt="${escapeHTML(C.forumName)}">` : '<span class="logo-icon">⚔️</span>'}
         <span class="logo-text">${C.forumName}</span>
       </a>
       <div class="logo-divider"></div>

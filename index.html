@@ -19,6 +19,7 @@
   </div>
   <div class="hero-content">
     <div class="hero-copy">
+      <img class="hero-brand-logo" id="hero-brand-logo" src="assets/media/brand-logo.png" alt="曜舞天堂 LOGO">
       <div class="hero-eyebrow" id="hero-eyebrow">LINEAGE PRIVATE SERVER</div>
       <h1 class="hero-title" id="hero-title-main">
         曜舞天堂<span id="hero-title-sub">經典不敗</span>
@@ -146,6 +147,11 @@ if (window.netlifyIdentity) {
     if (heroCharacter && C.heroImage) {
       heroCharacter.src = C.heroImage;
       heroCharacter.alt = C.forumFullName || C.forumName;
+    }
+    const heroBrandLogo = document.getElementById('hero-brand-logo');
+    if (heroBrandLogo && C.brandLogo) {
+      heroBrandLogo.src = C.brandLogo;
+      heroBrandLogo.alt = (C.forumName || '曜舞天堂') + ' LOGO';
     }
     document.getElementById('hero-title-main').childNodes[0].textContent = C.heroTitle || C.forumName;
     document.getElementById('hero-title-sub').textContent = C.heroSubTitle || '經典不敗';
