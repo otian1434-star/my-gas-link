@@ -16,9 +16,9 @@ const FORUM_CONFIG = {
   heroImage:     "assets/media/hero-characters.png",
   brandLogo:     "assets/media/brand-logo.png",
 
-  // ── 社群連結（換論壇時更換這兩個網址）─────────────────────────
-  lineOfficial:   "https://lin.ee/a3TiZsP",           // LINE@ 官方客服
-  lineCommunity:  "https://line.me/R/ti/g/XXXXXXX",   // LINE 社群（請更換）
+  // ── 社群連結（換論壇時更換）───────────────────────────────────
+  lineOfficial:   "https://lin.ee/8Dy3o36",           // LINE@ 官方客服：@184jiknt
+  lineCommunity:  "",                                 // LINE 社群，沒有可留空
 
   // ── 遊戲下載連結（換論壇時更換）──────────────────────────────
   download: {
@@ -41,7 +41,7 @@ const FORUM_CONFIG = {
     title: "曜舞快捷",
     note: "官方客服 · 贊助入口 · 下載資訊",
     links: [
-      { label: "LINE 官方客服", icon: "LINE", url: "https://lin.ee/a3TiZsP", style: "line" },
+      { label: "LINE 官方客服", icon: "LINE", url: "https://lin.ee/8Dy3o36", style: "line" },
       { label: "贊助連結", icon: "SP", url: "pages/sponsor.html", style: "gold" },
       { label: "遊戲下載", icon: "DL", url: "pages/download.html", style: "blue" },
       { label: "最新文章", icon: "NEWS", url: "pages/news.html", style: "dark" },
@@ -62,7 +62,7 @@ const FORUM_CONFIG = {
                🎁 開服禮包 · 全員贈送<br>
                💬 加入官方LINE獲取最新消息`,
     btnText:  "加入官方 LINE@",
-    btnUrl:   "https://lin.ee/a3TiZsP",
+    btnUrl:   "https://lin.ee/8Dy3o36",
     showOnce: true,   // true = 每次瀏覽只顯示一次
   },
 
@@ -84,6 +84,6 @@ const FORUM_CONFIG = {
   ],
 
   // ── 客服資訊 ──────────────────────────────────────────────────
-  lineId:   "@021ngtgv",
+  lineId:   "@184jiknt",
   teamName: "曜舞天堂管理團隊",
 };

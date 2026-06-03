@@ -159,11 +159,11 @@
 
     <div class="action-area">
         <a href="https://sites.google.com/d/1_ubTiFNQZnWrf1xzblqOEyUOdz5UdgpH/p/1YFAdrRCzg_E-qpWdMPscObFI85vMgXI8/edit" target="_blank" class="btn btn-download">檔案下載專區</a>
-        <a href="https://lin.ee/a3TiZsP" target="_blank" class="btn btn-line">聯繫官方 LINE 客服</a>
+        <a href="https://lin.ee/8Dy3o36" target="_blank" class="btn btn-line">聯繫官方 LINE 客服</a>
     </div>
 
     <div class="footer-info">
-        曜舞天堂管理團隊 敬啟 | 客服 ID：@021ngtgv
+        曜舞天堂管理團隊 敬啟 | 客服 ID：@184jiknt
     </div>
 </div>
 

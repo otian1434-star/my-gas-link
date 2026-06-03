@@ -29,6 +29,7 @@
   function buildHeader() {
     const C = FORUM_CONFIG;
     const r = root();
+    const communityLink = C.lineCommunity && C.lineCommunity !== C.lineOfficial ? C.lineCommunity : '';
 
     const headerHTML = `
     <header id="top-header">
@@ -138,9 +139,9 @@
         <a href="${C.lineOfficial}" target="_blank" rel="noopener" class="btn-line-o">
           LINE<span class="btn-label"> 官方客服</span>
         </a>
-        <a href="${C.lineCommunity}" target="_blank" rel="noopener" class="btn-line-c">
+        ${communityLink ? `<a href="${communityLink}" target="_blank" rel="noopener" class="btn-line-c">
           LINE<span class="btn-label"> 社群</span>
-        </a>
+        </a>` : ''}
         <a href="${r}register.html" class="btn-register">
           📝<span class="btn-label"> 申辦帳號</span>
         </a>
@@ -248,6 +249,7 @@
   function buildFooter() {
     const C = FORUM_CONFIG;
     const r = root();
+    const communityLink = C.lineCommunity && C.lineCommunity !== C.lineOfficial ? C.lineCommunity : '';
     const footerHTML = `
     <footer id="site-footer">
       <div class="footer-inner">
@@ -256,7 +258,7 @@
           <ul class="footer-links">
             <li><span style="color:var(--text-muted);font-size:12px;">${C.forumSlogan || '天堂私服論壇'}</span></li>
             <li><a href="${C.lineOfficial}" target="_blank" rel="noopener">LINE 官方客服</a></li>
-            <li><a href="${C.lineCommunity}" target="_blank" rel="noopener">LINE 社群</a></li>
+            ${communityLink ? `<li><a href="${communityLink}" target="_blank" rel="noopener">LINE 社群</a></li>` : ''}
             <li><a href="${r}register.html">📝 申辦帳號</a></li>
           </ul>
         </div>
