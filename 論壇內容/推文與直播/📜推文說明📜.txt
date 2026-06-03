@@ -18,7 +18,7 @@
             ✨ 官方提供：包月推文代工服務 ✨
         </strong>
         <div style="color: #5d4037; font-size: 1.3em; font-weight: bold;">
-            每月只要 <span style="color: #d84315; font-size: 1.5em; text-decoration: underline;">$300 TWD無計算讚石與累計</span>
+            每月只要 <span style="color: #d84315; font-size: 1.5em; text-decoration: underline;">$399 TWD無計算讚石與累計</span>
         </div>
         <p style="margin: 10px 0 0 0; color: #795548; font-weight: bold;">
             團隊親自操盤，省去每日回報煩惱，獎勵直接入庫！(詳情請私訊客服)
