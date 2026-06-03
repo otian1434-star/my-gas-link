@@ -287,6 +287,12 @@
       <div class="footer-copy">
         © ${new Date().getFullYear()} ${C.forumFullName} · 本站為私人架設，與 NC 公司無關 · 遊戲資產版權歸原著作權人所有
       </div>
+      <div class="footer-bottom-promo">
+        <div class="footer-designer-credit">阿柴美工 LINE @323rffot 美工找我~</div>
+        <a class="footer-gamex-link" href="https://www.gamex123.com/lineage.html" target="_blank" rel="noopener" aria-label="私服123">
+          <img src="${r}assets/media/private-server-123.gif" alt="私服123">
+        </a>
+      </div>
     </footer>`;
 
     const slot = document.getElementById('footer-slot');
