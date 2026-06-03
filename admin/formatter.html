@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/media/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/media/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/media/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/media/apple-touch-icon.png">
 <meta name="theme-color" content="#0d0b08">
-<title>文章格式化工具 - 曜舞天堂</title>
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="config.js"></script>
+<title>後台文章格式化工具 - 曜舞天堂</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="../config.js"></script>
 <style>
 /* ── 格式化工具專用樣式 ── */
 .fmt-wrap {
@@ -175,10 +176,61 @@
   .fmt-wrap { grid-template-columns: 1fr; height: auto; }
   .fmt-panel { min-height: 300px; }
 }
+
+.admin-auth-gate {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(201,169,110,0.16), transparent 32%),
+    var(--bg);
+}
+.admin-auth-gate[hidden],
+.admin-tool[hidden] { display: none !important; }
+.admin-auth-card {
+  width: min(420px, 100%);
+  background: rgba(17, 14, 10, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 26px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.36);
+}
+.admin-auth-title {
+  color: var(--gold-bright);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.admin-auth-text {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+.admin-auth-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 </style>
 </head>
 <body>
 
+<div id="auth-gate" class="admin-auth-gate" hidden>
+  <div class="admin-auth-card">
+    <div class="admin-auth-title">後台工具</div>
+    <div class="admin-auth-text">文章格式化工具只提供後台發文者使用，請先登入後台帳號。</div>
+    <div class="admin-auth-actions">
+      <button class="tb-btn primary" type="button" onclick="window.netlifyIdentity && window.netlifyIdentity.open('login')">登入後台</button>
+      <a class="tb-btn" href="./">返回後台</a>
+    </div>
+  </div>
+</div>
+
+<div id="protected-tool" class="admin-tool" hidden>
 <div id="header-slot"></div>
 <div id="nav-slot"></div>
 
@@ -339,7 +391,34 @@
 </div>
 
 <div id="footer-slot"></div>
-<script src="assets/js/forum.js"></script>
+<script src="../assets/js/forum.js"></script>
+<script>
+function setAdminToolAccess(user) {
+  const gate = document.getElementById('auth-gate');
+  const tool = document.getElementById('protected-tool');
+  const allowed = !!user;
+  if (gate) gate.hidden = allowed;
+  if (tool) tool.hidden = !allowed;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const identity = window.netlifyIdentity;
+  if (!identity) {
+    setAdminToolAccess(null);
+    return;
+  }
+  identity.on('init', setAdminToolAccess);
+  identity.on('login', function(user) {
+    setAdminToolAccess(user);
+    identity.close();
+  });
+  identity.on('logout', function() {
+    setAdminToolAccess(null);
+  });
+  identity.init();
+  setAdminToolAccess(identity.currentUser && identity.currentUser());
+});
+</script>
 <script>
 // ================================================================
 // 格式化核心引擎
@@ -770,5 +849,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+</div>
 </body>
 </html>

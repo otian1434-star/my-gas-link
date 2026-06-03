@@ -19,7 +19,8 @@
 
   /* 判斷根路徑 */
   function root() {
-    return window.location.pathname.includes('/pages/') ? '../' : './';
+    const path = window.location.pathname;
+    return (path.includes('/pages/') || path.includes('/admin/')) ? '../' : './';
   }
 
   /* ================================================================
@@ -128,7 +129,6 @@
             <a href="${r}pages/promo.html">📜 推文說明</a>
             <a href="${r}pages/stream.html">🎥 直播說明</a>
             <div class="nav-dd-divider"></div>
-            <a href="${r}formatter.html">✍️ 格式化工具</a>
             <a href="${r}admin/">網站後台</a>
           </div>
         </div>
@@ -213,7 +213,6 @@
       <a class="mob-link mob-sub" href="${r}pages/faq.html">❓ 常見問題</a>
       <a class="mob-link mob-sub" href="${r}pages/promo.html">📜 推文說明</a>
       <a class="mob-link mob-sub" href="${r}pages/stream.html">🎥 直播說明</a>
-      <a class="mob-link mob-sub" href="${r}formatter.html">✍️ 格式化工具</a>
       <a class="mob-link" href="${r}register.html">📝 申辦帳號</a>
       <a class="mob-link" href="${r}admin/">網站後台</a>
     </div>`;
@@ -280,7 +279,6 @@
             <li><a href="${r}pages/anti-cheat.html">外掛懲處條例</a></li>
             <li><a href="${r}pages/sponsor.html">贊助說明</a></li>
             <li><a href="${r}pages/promo.html">推文說明</a></li>
-            <li><a href="${r}formatter.html">格式化工具</a></li>
           </ul>
         </div>
       </div>
