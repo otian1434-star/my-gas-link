@@ -23,9 +23,47 @@
     text = text.replace(/\[TAG:([^\]]+)\]/g, function (_, tag) {
       var colorMap = { '開服': 'red', '活動': 'red', '維護': 'blue', '更新': 'blue', '重要': 'red', '提示': 'blue', '完成': 'green', '成功': 'green' };
       var cls = colorMap[tag] || 'gold';
-      return '<span class="yw-tag ' + cls + '">' + escapeHTML(tag) + '</span>';
+      return '<span class="cms-tag ' + cls + '">' + escapeHTML(tag) + '</span>';
     });
     return text;
+  }
+
+  function splitShortcodeParts(value) {
+    return String(value || '').split('|').map(function (part) {
+      return part.trim();
+    });
+  }
+
+  function renderShortcodeLine(trimmed) {
+    var match = trimmed.match(/^\[\[(HERO|GRID|PANEL|BUTTON):([\s\S]*)\]\]$/);
+    if (!match) return '';
+    var type = match[1];
+    var parts = splitShortcodeParts(match[2]);
+
+    if (type === 'HERO') {
+      return '<div class="cms-hero-strip">' +
+        '<h2>' + inlineFormat(parts[0] || '重點標題') + '</h2>' +
+        (parts[1] ? '<p>' + inlineFormat(parts[1]) + '</p>' : '') +
+        (parts[2] ? '<a class="cms-button" href="' + escapeHTML(parts[3] || '#') + '">' + inlineFormat(parts[2]) + '</a>' : '') +
+        '</div>';
+    }
+
+    if (type === 'GRID') {
+      return '<div class="cms-grid">' +
+        '<div class="cms-panel"><h3>' + inlineFormat(parts[0] || '左側標題') + '</h3><p>' + inlineFormat(parts[1] || '左側內容') + '</p></div>' +
+        '<div class="cms-panel"><h3>' + inlineFormat(parts[2] || '右側標題') + '</h3><p>' + inlineFormat(parts[3] || '右側內容') + '</p></div>' +
+        '</div>';
+    }
+
+    if (type === 'PANEL') {
+      return '<div class="cms-panel"><h3>' + inlineFormat(parts[0] || '卡片標題') + '</h3><p>' + inlineFormat(parts[1] || '卡片內容') + '</p></div>';
+    }
+
+    if (type === 'BUTTON') {
+      return '<a class="cms-button" href="' + escapeHTML(parts[1] || '#') + '">' + inlineFormat(parts[0] || '查看詳情') + '</a>';
+    }
+
+    return '';
   }
 
   function renderMarkdown(value) {
@@ -70,9 +108,15 @@
         closeList();
         return;
       }
+      var shortcode = renderShortcodeLine(trimmed);
+      if (shortcode) {
+        closeList();
+        html += shortcode;
+        return;
+      }
       if (trimmed.indexOf('### ') === 0) {
         closeList();
-        html += '<h4>' + inlineFormat(trimmed.slice(4)) + '</h4>';
+        html += '<h3>' + inlineFormat(trimmed.slice(4)) + '</h3>';
         return;
       }
       if (trimmed.indexOf('## ') === 0) {
@@ -92,22 +136,22 @@
       }
       if (trimmed === '===') {
         closeList();
-        html += '<div class="yw-divider">- * * * -</div>';
+        html += '<div class="cms-divider">- * * * -</div>';
         return;
       }
       if (trimmed.indexOf('!!! ') === 0) {
         closeList();
-        html += '<div class="yw-callout red">' + inlineFormat(trimmed.slice(4)) + '</div>';
+        html += '<div class="cms-callout red">' + inlineFormat(trimmed.slice(4)) + '</div>';
         return;
       }
       if (trimmed.indexOf('??? ') === 0) {
         closeList();
-        html += '<div class="yw-callout blue">' + inlineFormat(trimmed.slice(4)) + '</div>';
+        html += '<div class="cms-callout blue">' + inlineFormat(trimmed.slice(4)) + '</div>';
         return;
       }
       if (trimmed.indexOf('+++ ') === 0) {
         closeList();
-        html += '<div class="yw-callout green">' + inlineFormat(trimmed.slice(4)) + '</div>';
+        html += '<div class="cms-callout green">' + inlineFormat(trimmed.slice(4)) + '</div>';
         return;
       }
       if (trimmed.indexOf('> ') === 0) {
@@ -137,6 +181,43 @@
     return html;
   }
 
+  function sanitizeTrustedHTML(value) {
+    var template = document.createElement('template');
+    template.innerHTML = String(value || '');
+    template.content.querySelectorAll('script').forEach(function (node) {
+      node.remove();
+    });
+    template.content.querySelectorAll('*').forEach(function (node) {
+      Array.from(node.attributes).forEach(function (attr) {
+        var name = attr.name.toLowerCase();
+        var attrValue = String(attr.value || '').trim().toLowerCase();
+        if (name.indexOf('on') === 0 || attrValue.indexOf('javascript:') === 0) {
+          node.removeAttribute(attr.name);
+        }
+      });
+    });
+    return template.innerHTML;
+  }
+
+  function entryData(entry) {
+    var data = entry && entry.getIn ? entry.getIn(['data']) : null;
+    return data && data.toJS ? data.toJS() : {};
+  }
+
+  function renderPostPreviewBody(post) {
+    var parts = [];
+    if (post.coverImage) {
+      parts.push('<img class="post-cover" src="' + escapeHTML(post.coverImage) + '" alt="' + escapeHTML(post.title || '') + '">');
+    }
+    if (post.body || post.excerpt) {
+      parts.push('<div class="cms-markdown">' + sanitizeTrustedHTML(renderMarkdown(post.body || post.excerpt || '')) + '</div>');
+    }
+    if (post.customHtml) {
+      parts.push('<div class="cms-custom-html">' + sanitizeTrustedHTML(post.customHtml) + '</div>');
+    }
+    return parts.join('') || '<div class="yw-editor-empty">尚未輸入文章內容</div>';
+  }
+
   function insertAt(text, start, end, before, after) {
     var selected = text.slice(start, end) || '文字';
     var next = text.slice(0, start) + before + selected + after + text.slice(end);
@@ -151,10 +232,17 @@
     return '\n| 欄位一 | 欄位二 | 欄位三 |\n| --- | --- | --- |\n| 內容 | 內容 | 內容 |\n| 內容 | 內容 | 內容 |\n';
   }
 
+  var SHORTCODES = {
+    hero: '\n[[HERO:重點活動標題|這裡輸入活動說明或公告重點|查看詳情|/pages/events.html]]\n',
+    grid: '\n[[GRID:活動時間|2026/06/01 至 2026/06/07|活動獎勵|登入獎勵、推廣獎勵、限定道具]]\n',
+    panel: '\n[[PANEL:重點說明|這裡輸入需要被框起來的補充內容。]]\n',
+    button: '\n[[BUTTON:前往查看|/pages/news.html]]\n',
+  };
+
   var TEMPLATES = {
-    announcement: '# [TAG:活動] 活動公告標題\n\n[TAG:開服] 開始時間：2026/03/01 20:00\n\n## 活動說明\n\n活動期間全服玩家可獲得豐厚獎勵！\n\n## 活動內容\n\n- 限時雙倍經驗值\n- 登入即送 **藍鑽 x100**\n- 推文可獲得額外獎勵\n\n!!! 本活動獎勵為一次性發放，請務必在期限內領取。\n\n+++ 如有任何問題，請聯繫官方 LINE 客服。',
-    update: '# 版本更新公告\n\n[TAG:維護] 維護時間：2026/03/05 00:00 - 06:00\n\n## 本次更新內容\n\n### 新增內容\n- 新增世界 BOSS\n- 新增活動獎勵\n\n### 調整優化\n- 優化伺服器連線穩定性\n- 調整部分掉落設定\n\n---\n\n!!! 維護期間玩家將暫時無法登入。',
-    guide: '# 系統介紹標題\n\n## 基本說明\n\n在這裡輸入系統的基本說明。\n\n## 功能特色\n\n- 特色一：說明內容\n- 特色二：說明內容\n- 特色三：說明內容\n\n??? 如有不清楚的地方，可詢問管理員。',
+    announcement: '# [TAG:活動] 活動公告標題\n\n[[HERO:活動重點|活動期間登入即可獲得限定獎勵，完成指定任務還能追加領取。|查看活動|/pages/events.html]]\n\n## 活動內容\n\n[[GRID:活動時間|2026/03/01 20:00 至 2026/03/07 23:59|活動獎勵|登入獎勵、推文獎勵、限定道具]]\n\n- 限時雙倍經驗值\n- 登入即送 **藍鑽 x100**\n- 推文可獲得額外獎勵\n\n!!! 本活動獎勵為一次性發放，請務必在期限內領取。\n\n+++ 如有任何問題，請聯繫官方 LINE 客服。',
+    update: '# 版本更新公告\n\n[TAG:維護] 維護時間：2026/03/05 00:00 - 06:00\n\n[[PANEL:維護提醒|維護期間玩家將暫時無法登入，請提前下線避免資料異常。]]\n\n## 本次更新內容\n\n### 新增內容\n- 新增世界 BOSS\n- 新增活動獎勵\n\n### 調整優化\n- 優化伺服器連線穩定性\n- 調整部分掉落設定\n\n---\n\n!!! 維護完成後請重新開啟登入器取得最新設定。',
+    guide: '# 系統介紹標題\n\n## 基本說明\n\n在這裡輸入系統的基本說明。\n\n[[GRID:核心特色|特色一、特色二、特色三|適合玩家|新手、回鍋、長期玩家皆可參與]]\n\n## 功能特色\n\n- 特色一：說明內容\n- 特色二：說明內容\n- 特色三：說明內容\n\n??? 如有不清楚的地方，可詢問管理員。',
     rules: '# 規則條款標題\n\n## 第一章 基本規範\n\n- 禁止規則一\n- 禁止規則二\n- 禁止規則三\n\n!!! 違反上述規範者，管理團隊將視情節輕重給予處罰。\n\n## 處罰辦法\n\n| 違規行為 | 處罰方式 | 備註 |\n| --- | --- | --- |\n| 輕度違規 | 警告 1 次 | 首次違規 |\n| 中度違規 | 暫停帳號 7 天 | 累計 2 次 |',
     item: '# 道具名稱\n\n## 基本資訊\n\n| 屬性 | 內容 |\n| --- | --- |\n| 道具類型 | 消耗品 / 裝備 |\n| 取得方式 | BOSS 掉落 / 商城購買 |\n\n## 道具效果\n\n- 效果一：說明\n- 效果二：說明\n\n!!! 此道具使用後無法退還，請確認後再使用。',
   };
@@ -162,6 +250,10 @@
   var FormattingControl = createClass({
     getDefaultProps: function () {
       return { value: '' };
+    },
+
+    getInitialState: function () {
+      return { previewMode: 'desktop' };
     },
 
     setTextarea: function (node) {
@@ -211,6 +303,10 @@
       this.changeValue('');
     },
 
+    setPreviewMode: function (mode) {
+      this.setState({ previewMode: mode });
+    },
+
     renderButton: function (label, before, after, className) {
       var self = this;
       return h('button', {
@@ -229,10 +325,30 @@
       }, label);
     },
 
+    renderInsertButton: function (label, raw) {
+      var self = this;
+      return h('button', {
+        type: 'button',
+        className: 'yw-editor-button',
+        onClick: function () { self.insertRaw(raw); },
+      }, label);
+    },
+
+    renderDeviceButton: function (label, mode) {
+      var self = this;
+      var active = this.state.previewMode === mode;
+      return h('button', {
+        type: 'button',
+        className: 'yw-device-button' + (active ? ' active' : ''),
+        onClick: function () { self.setPreviewMode(mode); },
+      }, label);
+    },
+
     render: function () {
       var self = this;
       var value = this.props.value || '';
       var preview = value.trim() ? renderMarkdown(value) : '<div class="yw-editor-empty">開始輸入文章後，這裡會即時預覽網站排版</div>';
+      var previewMode = this.state.previewMode || 'desktop';
 
       return h('div', { className: this.props.classNameWrapper },
         h('div', { className: 'yw-editor' }, [
@@ -252,6 +368,10 @@
             this.renderButton('提示', '??? ', ''),
             this.renderButton('完成', '+++ ', ''),
             this.renderButton('標籤', '[TAG:', ']'),
+            this.renderInsertButton('重點橫幅', SHORTCODES.hero),
+            this.renderInsertButton('雙欄卡片', SHORTCODES.grid),
+            this.renderInsertButton('卡片', SHORTCODES.panel),
+            this.renderInsertButton('按鈕', SHORTCODES.button),
             h('button', { type: 'button', className: 'yw-editor-button danger', onClick: this.clearAll }, '清除'),
           ]),
           h('div', { className: 'yw-editor-templates' }, [
@@ -279,12 +399,19 @@
             h('div', { className: 'yw-editor-pane' }, [
               h('div', { className: 'yw-editor-head' }, [
                 h('span', {}, '即時預覽'),
-                h('span', { className: 'yw-editor-count' }, '網站效果'),
+                h('span', { className: 'yw-device-switch' }, [
+                  this.renderDeviceButton('桌面', 'desktop'),
+                  this.renderDeviceButton('手機', 'mobile'),
+                ]),
               ]),
               h('div', {
-                className: 'yw-editor-preview yw-preview',
-                dangerouslySetInnerHTML: { __html: preview },
-              }),
+                className: 'yw-editor-preview yw-preview is-' + previewMode,
+              }, h('article', { className: 'post-card post-layout-standard yw-preview-card' }, [
+                h('div', {
+                  className: 'post-body cms-rich',
+                  dangerouslySetInnerHTML: { __html: preview },
+                }),
+              ])),
             ]),
           ]),
         ])
@@ -292,5 +419,41 @@
     },
   });
 
+  var SiteDataPreview = createClass({
+    render: function () {
+      var data = entryData(this.props.entry);
+      var posts = Array.isArray(data.posts) ? data.posts : [];
+
+      if (!posts.length) {
+        return h('div', { className: 'cms-preview-page' },
+          h('div', { className: 'post-card' },
+            h('div', { className: 'post-body cms-rich' }, '目前尚無文章，請在文章清單新增內容。')
+          )
+        );
+      }
+
+      return h('div', { className: 'cms-preview-page' }, posts.map(function (post, index) {
+        return h('article', {
+          key: index,
+          className: 'post-card post-layout-' + escapeHTML(post.layout || 'standard'),
+        }, [
+          h('h2', {}, post.title || '未命名文章'),
+          h('div', { className: 'post-meta' }, [
+            h('span', {}, post.category || '公告'),
+            h('span', {}, post.date || ''),
+            post.pinned ? h('span', {}, '置頂') : null,
+          ]),
+          h('div', {
+            className: 'post-body cms-rich',
+            dangerouslySetInnerHTML: { __html: renderPostPreviewBody(post) },
+          }),
+        ]);
+      }));
+    },
+  });
+
   CMS.registerWidget('yaowu_markdown', FormattingControl);
+  CMS.registerPreviewStyle('../assets/css/style.css');
+  CMS.registerPreviewStyle('./formatting-widget.css');
+  CMS.registerPreviewTemplate('site_data', SiteDataPreview);
 })();

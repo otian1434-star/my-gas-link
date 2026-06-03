@@ -43,14 +43,14 @@ collections:
               - label: 文章內文
                 name: body
                 widget: yaowu_markdown
-                hint: 可直接使用上方按鈕與範本排版，儲存後會顯示在最新文章頁。
+                hint: 建議優先在這裡發文。上方按鈕與範本會輸出官方統一風格，右側可切換桌面/手機預覽，儲存後會顯示在首頁最新公告與最新文章頁。
               - label: 自訂 HTML 區塊
                 name: customHtml
                 widget: code
                 default_language: html
                 allow_language_selection: false
                 required: false
-                hint: 進階排版使用。可以貼入 HTML，例如 div、table、iframe、按鈕區塊。請只讓可信任管理者使用。
+                hint: 進階排版使用。一般發文不必填這裡；若要貼入 div、table、iframe 或特殊版面，請使用 cms-grid、cms-panel、cms-callout、cms-button 等官方 class，並只讓可信任管理者使用。
       - name: home
         label: 首頁底板管理（目錄/伺服器資訊/更新歷程）
         file: data/home.json

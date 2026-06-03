@@ -91,6 +91,44 @@
     return text;
   }
 
+  function splitShortcodeParts(value) {
+    return String(value || '').split('|').map(function (part) {
+      return part.trim();
+    });
+  }
+
+  function renderShortcodeLine(trimmed) {
+    var match = trimmed.match(/^\[\[(HERO|GRID|PANEL|BUTTON):([\s\S]*)\]\]$/);
+    if (!match) return '';
+    var type = match[1];
+    var parts = splitShortcodeParts(match[2]);
+
+    if (type === 'HERO') {
+      return '<div class="cms-hero-strip">' +
+        '<h2>' + inlineMarkdown(parts[0] || '重點標題') + '</h2>' +
+        (parts[1] ? '<p>' + inlineMarkdown(parts[1]) + '</p>' : '') +
+        (parts[2] ? '<a class="cms-button" href="' + escapeHTML(parts[3] || '#') + '">' + inlineMarkdown(parts[2]) + '</a>' : '') +
+        '</div>';
+    }
+
+    if (type === 'GRID') {
+      return '<div class="cms-grid">' +
+        '<div class="cms-panel"><h3>' + inlineMarkdown(parts[0] || '左側標題') + '</h3><p>' + inlineMarkdown(parts[1] || '左側內容') + '</p></div>' +
+        '<div class="cms-panel"><h3>' + inlineMarkdown(parts[2] || '右側標題') + '</h3><p>' + inlineMarkdown(parts[3] || '右側內容') + '</p></div>' +
+        '</div>';
+    }
+
+    if (type === 'PANEL') {
+      return '<div class="cms-panel"><h3>' + inlineMarkdown(parts[0] || '卡片標題') + '</h3><p>' + inlineMarkdown(parts[1] || '卡片內容') + '</p></div>';
+    }
+
+    if (type === 'BUTTON') {
+      return '<a class="cms-button" href="' + escapeHTML(parts[1] || '#') + '">' + inlineMarkdown(parts[0] || '查看詳情') + '</a>';
+    }
+
+    return '';
+  }
+
   function markdownLite(value) {
     var lines = String(value || '').split('\n');
     var html = '';
@@ -131,6 +169,12 @@
 
       if (!trimmed) {
         closeList();
+        return;
+      }
+      var shortcode = renderShortcodeLine(trimmed);
+      if (shortcode) {
+        closeList();
+        html += shortcode;
         return;
       }
       if (trimmed.indexOf('### ') === 0) {

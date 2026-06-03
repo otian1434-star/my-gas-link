@@ -1203,6 +1203,7 @@ img { max-width: 100%; display: block; }
 }
 .post-meta span:first-child { color: var(--gold); border-color: rgba(201,169,110,0.48); }
 .post-body { color: var(--text); font-size: 14px; line-height: 2; }
+.cms-rich { overflow-wrap: anywhere; word-break: break-word; }
 .post-cover {
   width: 100%;
   max-height: 420px;
@@ -1231,7 +1232,7 @@ img { max-width: 100%; display: block; }
   color: var(--text);
 }
 .cms-rich hr { border: none; border-top: 1px solid var(--border); margin: 22px 0; }
-.cms-rich table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.cms-rich table { display: block; width: 100%; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 16px 0; }
 .cms-rich th, .cms-rich td { border: 1px solid rgba(201,169,110,0.18); padding: 10px 12px; }
 .cms-rich th { color: var(--gold); background: rgba(201,169,110,0.08); }
 .cms-grid {
@@ -1245,6 +1246,8 @@ img { max-width: 100%; display: block; }
   background: rgba(201,169,110,0.05);
   padding: 16px;
 }
+.cms-panel h3 { margin-top: 0; }
+.cms-panel p:last-child { margin-bottom: 0; }
 .cms-callout {
   border-left: 3px solid var(--gold);
   background: rgba(201,169,110,0.08);
@@ -1283,6 +1286,7 @@ img { max-width: 100%; display: block; }
   padding: 10px 18px;
   font-weight: 700;
   margin: 8px 8px 8px 0;
+  text-align: center;
 }
 .cms-hero-strip {
   border: 1px solid var(--border-bright);
@@ -1291,6 +1295,7 @@ img { max-width: 100%; display: block; }
   margin: 18px 0;
 }
 .cms-hero-strip h2 { border: none; margin-top: 0; padding-bottom: 0; }
+.cms-hero-strip p:last-child { margin-bottom: 0; }
 .btn-small {
   border: 1px solid var(--border);
   background: rgba(201,169,110,0.06);
@@ -1466,6 +1471,9 @@ img { max-width: 100%; display: block; }
     flex-wrap: wrap !important;
   }
   .post-card { padding: 20px 16px; }
+  .cms-rich table { font-size: 12px; }
+  .cms-button { display: block; width: 100%; margin-right: 0; }
+  .cms-hero-strip { padding: 18px 14px; }
   .ann-grid { grid-template-columns: 1fr; }
   .cms-grid { grid-template-columns: 1fr; }
   #floating-panel { right: 12px; bottom: 12px; }
