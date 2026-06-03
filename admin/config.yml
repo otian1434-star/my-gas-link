@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: otian1434-star/my-gas-link
+  name: git-gateway
   branch: main
 
 local_backend: true

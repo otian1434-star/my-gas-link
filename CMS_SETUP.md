@@ -1,6 +1,6 @@
 # 官方文章後台設定
 
-這個網站目前採用 Decap CMS 作為免費文章後台。
+這個網站目前採用 Decap CMS 作為免費文章後台，正式登入建議使用 Netlify Identity + Git Gateway。
 
 ## 使用方式
 
@@ -24,31 +24,74 @@ data/posts.json
 CMS_FORMATTING.md
 ```
 
-## 上線前要修改
+## Netlify 免費部署與後台登入
 
-請打開：
+1. 到 Netlify 註冊/登入：
 
 ```text
-admin/config.yml
+https://app.netlify.com/
 ```
 
-把這一行改成你的 GitHub repo：
+2. 選 `Add new project`，再選 `Import an existing project`。
 
-```yaml
-repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME
+3. 選 GitHub，授權 Netlify 存取你的 GitHub。
+
+4. 選 repo：
+
+```text
+otian1434-star/my-gas-link
 ```
 
-例如：
+5. 部署設定：
 
-```yaml
-repo: myname/yao-forum
+```text
+Build command：留空
+Publish directory：/
+```
+
+6. 按 `Deploy site`。
+
+7. 部署完成後，進入該 Netlify 專案：
+
+```text
+Project configuration > Identity
+```
+
+啟用 Identity。
+
+8. 到：
+
+```text
+Project configuration > Identity > Services > Git Gateway
+```
+
+按 `Enable Git Gateway`。
+
+9. 到：
+
+```text
+Project configuration > Identity > Registration
+```
+
+建議設定成 `Invite only`，避免外人註冊。
+
+10. 邀請管理者：
+
+```text
+Identity > Invite users
+```
+
+輸入你的管理者 Email。
+
+11. 從 Netlify 給你的網站網址進後台：
+
+```text
+https://你的站名.netlify.app/admin/
 ```
 
 ## 管理者權限
 
-這種免費後台的管理者權限由 GitHub 控制。
-
-把可以發文的人加入 GitHub repo 協作者後，他就能透過後台登入並修改文章。
+管理者權限由 Netlify Identity 控制。建議使用 `Invite only`，只邀請你信任的人登入後台。
 
 ## 注意
 

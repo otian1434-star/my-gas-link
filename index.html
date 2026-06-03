@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>曜天堂私服論壇</title>
 <link rel="stylesheet" href="assets/css/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script src="config.js"></script>
 </head>
 <body>
@@ -112,6 +113,15 @@
 <script src="assets/js/cms-posts.js"></script>
 <script src="assets/js/forum.js"></script>
 <script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on('init', function (user) {
+    if (!user) {
+      window.netlifyIdentity.on('login', function () {
+        document.location.href = '/admin/';
+      });
+    }
+  });
+}
 (function () {
   function fill() {
     if (typeof FORUM_CONFIG === 'undefined') { setTimeout(fill, 30); return; }
