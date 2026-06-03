@@ -126,6 +126,22 @@ if (window.netlifyIdentity) {
 
   function defaultHome(C) {
     const updates = Array.isArray(C.updates) ? C.updates : [];
+    const serverCards = [
+      {
+        title: C.forumName,
+        subtitle: 'MAIN SERVER · ' + (C.serverVersion || '3.81'),
+        rows: [
+          { label: '版本', value: C.serverVersion || '3.81', highlight: true },
+          { label: '經驗倍率', value: '× 3', highlight: true },
+          { label: '掉落倍率', value: '× 2', highlight: true },
+          { label: '金幣倍率', value: '× 1', highlight: true },
+          { label: '多開限制', value: 'IP 限制 3 開' },
+          { label: '角色限制', value: '每帳號可創 4 隻' },
+          { label: '公頻發話', value: 'Lv.10 以上' },
+          { label: '密語發話', value: 'Lv.5 以上' },
+        ],
+      },
+    ];
     return {
       sections: {
         announcements: { eyebrow: 'ANNOUNCEMENTS', title: '最新公告', buttonText: '查看全部公告', buttonUrl: 'pages/news.html' },
@@ -153,30 +169,7 @@ if (window.netlifyIdentity) {
         { icon: '📄', title: '免責聲明', description: '規章制度', url: 'pages/disclaimer.html', visible: true },
         { icon: '📝', title: '申辦帳號', description: '立即加入', url: 'register.html', highlight: true, visible: true },
       ],
-      serverCards: [
-        {
-          title: C.forumName,
-          subtitle: 'MAIN SERVER · ' + (C.serverVersion || '3.81'),
-          rows: [
-            { label: '版本', value: C.serverVersion || '3.81', highlight: true },
-            { label: '經驗倍率', value: '× 3', highlight: true },
-            { label: '掉落倍率', value: '× 2', highlight: true },
-            { label: '金幣倍率', value: '× 1', highlight: true },
-            { label: '多開限制', value: 'IP 限制 3 開' },
-            { label: '角色限制', value: '每帳號可創 4 隻' },
-            { label: '公頻發話', value: 'Lv.10 以上' },
-            { label: '密語發話', value: 'Lv.5 以上' },
-          ],
-        },
-        {
-          title: '最新更新',
-          subtitle: 'LATEST UPDATE · ' + (C.download ? C.download.updateDate || '' : ''),
-          rows: updates.slice(0, 5).map(function (u) {
-            const content = String(u.content || '');
-            return { label: u.date || '', value: content.substring(0, 28) + (content.length > 28 ? '…' : '') };
-          }),
-        },
-      ],
+      serverCards: serverCards,
       updates: updates.map(function (u) {
         return Object.assign({ visible: true }, u);
       }),
@@ -193,7 +186,7 @@ if (window.netlifyIdentity) {
       sections: sections,
       quickLinks: Array.isArray(data.quickLinks) && data.quickLinks.length ? data.quickLinks : base.quickLinks,
       serverCards: Array.isArray(data.serverCards) && data.serverCards.length ? data.serverCards : base.serverCards,
-      updates: Array.isArray(data.updates) && data.updates.length ? data.updates : base.updates,
+      updates: Array.isArray(data.updates) ? data.updates : base.updates,
     };
   }
 

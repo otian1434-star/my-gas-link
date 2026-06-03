@@ -12,13 +12,14 @@ collections:
     label: 網站內容
     files:
       - name: posts
-        label: 文章管理
+        label: 文章管理（新增網站文章）
         file: data/posts.json
         fields:
           - label: 文章
             name: posts
             widget: list
             summary: "{{fields.date}} [{{fields.category}}] {{fields.title}}"
+            hint: 新增文章請在這個「文章」清單按新增。儲存發布後，文章會自動出現在首頁「最新公告」與「最新文章」頁，不會自動出現在首頁「伺服器資訊」的最新更新卡片。
             fields:
               - { label: 標題, name: title, widget: string }
               - label: 分類
@@ -51,7 +52,7 @@ collections:
                 required: false
                 hint: 進階排版使用。可以貼入 HTML，例如 div、table、iframe、按鈕區塊。請只讓可信任管理者使用。
       - name: home
-        label: 首頁底板管理
+        label: 首頁底板管理（目錄/伺服器資訊/更新歷程）
         file: data/home.json
         fields:
           - label: 區塊標題
@@ -101,6 +102,7 @@ collections:
             name: serverCards
             widget: list
             summary: "{{fields.title}}"
+            hint: 這裡控制首頁「伺服器資訊」區塊。你截圖中的「最新更新」卡片也是這裡的卡片；要刪除或新增卡片，請在此清單操作。
             fields:
               - { label: 標題, name: title, widget: string }
               - { label: 副標題, name: subtitle, widget: string, required: false }
@@ -112,11 +114,11 @@ collections:
                   - { label: 左側文字, name: label, widget: string }
                   - { label: 右側內容, name: value, widget: string }
                   - { label: 金色強調, name: highlight, widget: boolean, default: false }
-          - label: 更新歷程
+          - label: 更新歷程清單
             name: updates
             widget: list
             summary: "{{fields.date}} [{{fields.tag}}] {{fields.content}}"
-            hint: 這裡會顯示在首頁「更新歷程」，也會作為首頁公告沒有文章時的備用內容。
+            hint: 這裡會顯示在首頁下方「更新歷程」與「更新歷程」頁面。這不是一般發文區；一般公告文章請到「文章管理」新增。
             fields:
               - { label: 顯示, name: visible, widget: boolean, default: true }
               - { label: 日期, name: date, widget: datetime, format: "YYYY/MM/DD", date_format: "YYYY/MM/DD", time_format: false }
