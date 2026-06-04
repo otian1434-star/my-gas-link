@@ -1213,6 +1213,39 @@ img { max-width: 100%; display: block; }
 .form-body { padding: 28px; }
 .form-intro { background: var(--bg4); border-left: 2px solid var(--gold); padding: 12px 16px; margin-bottom: 22px; font-size: 12px; color: var(--text-dim); line-height: 1.9; }
 .form-intro strong { color: var(--gold-light); }
+.register-notes {
+  background:
+    linear-gradient(90deg, rgba(201,169,110,0.1), transparent 58%),
+    var(--bg3);
+  border-color: rgba(201,169,110,0.38);
+}
+.register-notes h3 { color: var(--gold-light); font-size: 15px; }
+.register-notes ul {
+  padding-left: 22px;
+  margin: 8px 0 4px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 2.15;
+  font-weight: 500;
+}
+.register-notes li {
+  padding-left: 2px;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.register-notes li::marker { color: var(--gold-light); }
+.form-hint {
+  margin-top: 6px;
+  color: var(--gold-light);
+  font-size: 12px;
+  line-height: 1.75;
+  opacity: 0.9;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 .form-group { margin-bottom: 17px; }
 .form-label { display: block; margin-bottom: 6px; font-size: 12px; color: var(--text-dim); letter-spacing: 1px; }
 .form-label .req { color: var(--crimson); margin-left: 4px; }
@@ -1673,6 +1706,15 @@ img { max-width: 100%; display: block; }
   .class-choice-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 18px; }
   .content-card { padding: 18px 14px; }
+  .register-notes ul {
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 2;
+  }
+  .form-hint {
+    font-size: 11.5px;
+    line-height: 1.7;
+  }
   .content-embed > div,
   #js-download-content > div,
   .cms-rich .cms-custom-html > div {
