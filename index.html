@@ -8,7 +8,6 @@
 <meta name="theme-color" content="#0d0b08">
 <title>曜舞天堂 經典不敗</title>
 <link rel="stylesheet" href="assets/css/style.css">
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script src="config.js"></script>
 </head>
 <body>
@@ -114,15 +113,6 @@
 <script src="assets/js/cms-posts.js"></script>
 <script src="assets/js/forum.js"></script>
 <script>
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on('init', function (user) {
-    if (!user) {
-      window.netlifyIdentity.on('login', function () {
-        document.location.href = '/admin/';
-      });
-    }
-  });
-}
 (function () {
   function escapeHTML(value) {
     return String(value || '').replace(/[&<>"']/g, function (char) {
