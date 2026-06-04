@@ -1,0 +1,15 @@
+# Local scratch and browser-test files
+.codex*/
+*.log
+
+# Raw source assets kept outside the published site bundle.
+# Production assets should live under assets/media/ or assets/game-db/.
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/*.gif
+/*.mp4
+/*.txt
+/職業介紹圖片/
+/論壇內容/
