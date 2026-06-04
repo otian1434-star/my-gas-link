@@ -69,7 +69,7 @@ const FORUM_CONFIG = {
   registrationForm: {
     provider: "auto", // auto | appsScript | netlify
     appsScript: {
-      endpoint: "", // Google Apps Script Web App /exec 網址
+      endpoint: "https://script.google.com/macros/s/AKfycbwP5pmmCMGgcr__owE1SHVYgQ4RMUHtZWr5UtOpxqgSbmZhaVtxHhrK2W_CUeB_tXo2/exec", // Google Apps Script Web App /exec 網址
       token: "",    // 選填，需與 Apps Script 內的 TOKEN 相同
     },
   },
