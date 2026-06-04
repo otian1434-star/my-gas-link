@@ -119,7 +119,6 @@
         <div class="nav-item">
           <button class="nav-link-top">道具介紹 <span class="nav-arrow">▶</span></button>
           <div class="nav-dropdown">
-            <a href="${r}pages/items-gacha.html">🎁 神奇扭蛋</a>
             <a href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
             <a href="${r}pages/items-vip-card.html">👑 貴賓卡</a>
             <a href="${r}pages/items-candle.html">🕯️ 回憶蠟燭</a>
@@ -198,7 +197,6 @@
       <a class="mob-link mob-sub" href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
-      <a class="mob-link mob-sub" href="${r}pages/items-gacha.html">🎁 神奇扭蛋</a>
       <a class="mob-link mob-sub" href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
       <a class="mob-link mob-sub" href="${r}pages/items-vip-card.html">👑 貴賓卡</a>
       <a class="mob-link mob-sub" href="${r}pages/items-candle.html">🕯️ 回憶蠟燭</a>

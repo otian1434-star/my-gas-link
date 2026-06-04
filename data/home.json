@@ -30,7 +30,7 @@
     { "icon": "👹", "title": "BOSS介紹", "description": "時刻表與掉落", "url": "pages/boss-schedule.html", "highlight": false, "visible": true },
     { "icon": "⚔️", "title": "武器介紹", "description": "武器製作強化", "url": "pages/weapons-overview.html", "highlight": false, "visible": true },
     { "icon": "🛡️", "title": "防具介紹", "description": "防具總覽", "url": "pages/armor-overview.html", "highlight": false, "visible": true },
-    { "icon": "🎁", "title": "道具介紹", "description": "扭蛋龍眼等", "url": "pages/items-gacha.html", "highlight": false, "visible": true },
+    { "icon": "👁️", "title": "道具介紹", "description": "龍眼徽章等", "url": "pages/items-dragon-eye.html", "highlight": false, "visible": true },
     { "icon": "🧸", "title": "娃娃介紹", "description": "聖物系統", "url": "pages/dolls-guide.html", "highlight": false, "visible": true },
     { "icon": "🎭", "title": "變身介紹", "description": "變身圖鑑", "url": "pages/transform-guide.html", "highlight": false, "visible": true },
     { "icon": "🗺️", "title": "地圖介紹", "description": "地圖說明", "url": "pages/map.html", "highlight": false, "visible": true },
