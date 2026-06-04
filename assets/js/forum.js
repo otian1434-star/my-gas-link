@@ -81,6 +81,8 @@
         <div class="nav-item">
           <button class="nav-link-top">遊戲資料 <span class="nav-arrow">▶</span></button>
           <div class="nav-dropdown">
+            <a href="${r}pages/game-database.html">📚 完整資料庫</a>
+            <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">遊戲特色</div>
             <a href="${r}pages/features-jobs.html">⚔️ 職業之力</a>
             <a href="${r}pages/features-job-skills.html">📚 職業特色技能</a>
@@ -102,8 +104,10 @@
             <a href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
             <a href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
             <a href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
+            <a href="${r}pages/items-overview.html">🎒 道具列表</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">圖鑑</div>
+            <a href="${r}pages/mobs-overview.html">👹 怪物列表</a>
             <a href="${r}pages/boss-schedule.html">🌍 世界BOSS時刻表</a>
             <a href="${r}pages/boss-drops.html">🎁 BOSS掉落物</a>
             <a href="${r}pages/boss-collection.html">🖼️ BOSS收藏圖鑑</a>
@@ -163,6 +167,7 @@
       <a class="mob-link" href="${r}pages/search.html">🔎 全站搜尋</a>
       <a class="mob-link" href="${r}pages/download.html">📥 遊戲下載</a>
       <a class="mob-link" href="${r}pages/version.html">🔧 版本設定</a>
+      <a class="mob-link" href="${r}pages/game-database.html">📚 遊戲資料庫</a>
       <a class="mob-link" href="${r}pages/updates.html">📋 更新歷程</a>
       <a class="mob-link" href="${r}pages/news.html">📰 最新文章</a>
       <a class="mob-link" href="${r}pages/events.html">🎉 活動公告</a>
@@ -197,12 +202,14 @@
       <a class="mob-link mob-sub" href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
+      <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>
       <a class="mob-link mob-sub" href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
       <a class="mob-link mob-sub" href="${r}pages/items-vip-card.html">👑 貴賓卡</a>
       <a class="mob-link mob-sub" href="${r}pages/items-candle.html">🕯️ 回憶蠟燭</a>
       <a class="mob-link mob-sub" href="${r}pages/items-pvp-badge.html">🛡️ 戰場PVP徽章</a>
 
       <div class="mob-section">圖鑑</div>
+      <a class="mob-link mob-sub" href="${r}pages/mobs-overview.html">👹 怪物列表</a>
       <a class="mob-link mob-sub" href="${r}pages/boss-schedule.html">🌍 世界BOSS時刻表</a>
       <a class="mob-link mob-sub" href="${r}pages/boss-drops.html">🎁 BOSS掉落物</a>
       <a class="mob-link mob-sub" href="${r}pages/boss-collection.html">🖼️ BOSS收藏圖鑑</a>
@@ -270,6 +277,7 @@
           <div class="footer-col-title">遊戲資訊</div>
           <ul class="footer-links">
             <li><a href="${r}pages/search.html">全站搜尋</a></li>
+            <li><a href="${r}pages/game-database.html">遊戲資料庫</a></li>
             <li><a href="${r}pages/download.html">遊戲下載</a></li>
             <li><a href="${r}pages/version.html">版本設定</a></li>
             <li><a href="${r}pages/updates.html">更新歷程</a></li>

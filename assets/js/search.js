@@ -177,6 +177,19 @@
     return records;
   }
 
+  function gameDbRecords(data) {
+    return (data.records || []).map(function (record) {
+      return {
+        type: 'game-db',
+        title: record.title || '遊戲資料',
+        category: record.category || '遊戲資料庫',
+        url: normalizeUrl(record.url),
+        description: record.description || '',
+        content: record.content || '',
+      };
+    });
+  }
+
   function fetchJson(url) {
     return fetch(url, { cache: 'no-store' }).then(function (res) {
       if (!res.ok) throw new Error(url + ' load failed');
@@ -286,6 +299,7 @@
       fetchJson(root() + 'data/search-index.json').then(pageRecords),
       fetchJson(root() + 'data/posts.json').then(postRecords),
       fetchJson(root() + 'data/home.json').then(homeRecords),
+      fetchJson(root() + 'data/game-db/search-index.json').then(gameDbRecords),
     ]).then(function (parts) {
       records = parts.reduce(function (all, part) {
         return part.status === 'fulfilled' ? all.concat(part.value) : all;
