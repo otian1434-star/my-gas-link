@@ -81,20 +81,8 @@
   </div>
 </section>
 
-<!-- ══ 伺服器資訊 ══ -->
-<section class="section section-bg-server">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow" id="server-eyebrow">SERVER INFO</div>
-      <h2 class="section-title" id="server-title">伺服器資訊</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="server-grid" id="server-info"></div>
-  </div>
-</section>
-
 <!-- ══ 更新歷程 ══ -->
-<section class="section section-alt">
+<section class="section">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow" id="updates-eyebrow">PATCH NOTES</div>
@@ -105,6 +93,33 @@
     <div style="text-align:center;margin-top:26px;">
       <a class="btn-outline" id="updates-button" href="pages/updates.html">查看完整歷程</a>
     </div>
+  </div>
+</section>
+
+<!-- ══ 職業介紹 ══ -->
+<section class="class-carousel-section" id="class-intro">
+  <div class="section-header class-section-header">
+    <div class="section-eyebrow">CLASS INTRODUCTION</div>
+    <h2 class="section-title">職業介紹</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="class-carousel" id="class-carousel" aria-label="職業介紹輪播">
+    <div class="class-track" id="class-track"></div>
+    <button class="class-nav class-prev" type="button" aria-label="上一個職業"></button>
+    <button class="class-nav class-next" type="button" aria-label="下一個職業"></button>
+    <div class="class-thumbs" id="class-thumbs" aria-label="選擇職業"></div>
+  </div>
+</section>
+
+<!-- ══ 伺服器資訊 ══ -->
+<section class="section section-bg-server">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow" id="server-eyebrow">SERVER INFO</div>
+      <h2 class="section-title" id="server-title">伺服器資訊</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="server-grid" id="server-info"></div>
   </div>
 </section>
 
@@ -282,6 +297,187 @@
     }).join('') : '<p style="color:var(--text-dim);text-align:center;padding:30px 0;letter-spacing:2px;">暫無更新記錄</p>';
   }
 
+  const classSlides = [
+    {
+      title: '王族',
+      image: '../media/classes/royal.jpg',
+      lead: '亞丁王室血脈的繼承者。',
+      body: [
+        '他們並非最強大的戰士，卻是最偉大的領導者。',
+        '在混亂的時代中集結志同道合的夥伴，建立血盟、攻城掠地，帶領眾人走向榮耀與勝利。',
+      ],
+      quote: '真正的王者，能讓無數人為他而戰。',
+    },
+    {
+      title: '騎士',
+      image: '../media/classes/knight.jpg',
+      lead: '以信念守護王國的鋼鐵戰士。',
+      body: [
+        '身披重甲、手持利劍，擁有強大的防禦與近戰能力。',
+        '無論面對多麼兇猛的魔物與敵人，都將站在最前線守護身後的夥伴。',
+      ],
+      quote: '榮耀即吾命，戰鬥至最後一刻。',
+    },
+    {
+      title: '妖精',
+      image: '../media/classes/elf.jpg',
+      lead: '來自森林深處的自然守護者。',
+      body: [
+        '精通弓術與元素之力，能以百步穿楊的箭術擊潰敵人。',
+        '同時擁有風、火、水、地四大精靈的祝福，是戰場上最靈活的存在。',
+      ],
+      quote: '箭矢所至，即是自然的審判。',
+    },
+    {
+      title: '法師',
+      image: '../media/classes/wizard.jpg',
+      lead: '探索真理與禁忌的魔法學者。',
+      body: [
+        '操控火焰、冰霜、雷電等強大元素魔法，',
+        '以毀天滅地的法術改變整個戰局，是所有敵人最畏懼的存在。',
+      ],
+      quote: '知識能創造奇蹟，也能帶來毀滅。',
+    },
+    {
+      title: '黑暗妖精',
+      image: '../media/classes/dark-elf.jpg',
+      lead: '誕生於黑暗與復仇之中的獵殺者。',
+      body: [
+        '擁有驚人的速度與爆發力，',
+        '擅長以雙刃與暗殺技巧迅速收割敵人生命，',
+        '在敵人察覺之前便已結束戰鬥。',
+      ],
+      quote: '黑暗不是我的歸宿，而是敵人的墳墓。',
+    },
+    {
+      title: '龍騎士',
+      image: '../media/classes/dragon-knight.jpg',
+      lead: '繼承古龍意志的傳承者。',
+      body: [
+        '體內流淌著龍族的力量，',
+        '能以龍之氣息與強大的近戰技巧橫掃戰場，',
+        '展現無與倫比的破壞力與威嚴。',
+      ],
+      quote: '龍魂覺醒之日，眾敵皆將臣服。',
+    },
+    {
+      title: '幻術士',
+      image: '../media/classes/illusionist.jpg',
+      lead: '遊走於真實與虛幻之間的操控者。',
+      body: [
+        '透過強大的幻術干擾敵人的感知，',
+        '削弱對手、強化盟友，',
+        '讓整個戰局依照自己的意志運轉。',
+      ],
+      quote: '當你看見幻象時，敗北早已注定。',
+    },
+  ];
+
+  function renderClassCarousel() {
+    const carousel = document.getElementById('class-carousel');
+    const track = document.getElementById('class-track');
+    const thumbs = document.getElementById('class-thumbs');
+    if (!carousel || !track || !thumbs) return;
+
+    let current = 0;
+    let timer = null;
+    let pointerStart = 0;
+
+    track.innerHTML = classSlides.map(function (item, index) {
+      return '<article class="class-slide' + (index === 0 ? ' is-active' : '') + '" style="--class-bg:url(' + escapeHTML(item.image) + ')">' +
+        '<div class="class-copy">' +
+          '<span class="class-kicker">CLASS ' + String(index + 1).padStart(2, '0') + '</span>' +
+          '<h3>' + escapeHTML(item.title) + '</h3>' +
+          '<p class="class-lead">' + escapeHTML(item.lead) + '</p>' +
+          item.body.map(function (line) {
+            return '<p>' + escapeHTML(line) + '</p>';
+          }).join('') +
+          '<blockquote>「' + escapeHTML(item.quote) + '」</blockquote>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+
+    thumbs.innerHTML = classSlides.map(function (item, index) {
+      return '<button class="class-thumb' + (index === 0 ? ' is-active' : '') + '" type="button" style="--thumb-bg:url(' + escapeHTML(item.image) + ')" aria-label="切換到' + escapeHTML(item.title) + '" data-class-index="' + index + '">' +
+        '<span>' + escapeHTML(item.title) + '</span>' +
+      '</button>';
+    }).join('');
+
+    const slides = Array.from(track.querySelectorAll('.class-slide'));
+    const thumbButtons = Array.from(thumbs.querySelectorAll('.class-thumb'));
+    const prev = carousel.querySelector('.class-prev');
+    const next = carousel.querySelector('.class-next');
+
+    function go(index) {
+      current = (index + classSlides.length) % classSlides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      slides.forEach(function (slide, slideIndex) {
+        slide.classList.toggle('is-active', slideIndex === current);
+      });
+      thumbButtons.forEach(function (button, buttonIndex) {
+        button.classList.toggle('is-active', buttonIndex === current);
+        button.setAttribute('aria-current', buttonIndex === current ? 'true' : 'false');
+      });
+    }
+
+    function start() {
+      stop();
+      timer = window.setInterval(function () {
+        go(current + 1);
+      }, 5200);
+    }
+
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    prev.addEventListener('click', function () {
+      go(current - 1);
+      start();
+    });
+    next.addEventListener('click', function () {
+      go(current + 1);
+      start();
+    });
+    thumbButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        go(Number(button.dataset.classIndex || 0));
+        start();
+      });
+    });
+
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', start);
+    carousel.addEventListener('focusin', stop);
+    carousel.addEventListener('focusout', start);
+    carousel.addEventListener('pointerdown', function (event) {
+      pointerStart = event.clientX;
+    });
+    carousel.addEventListener('pointerup', function (event) {
+      const diff = event.clientX - pointerStart;
+      if (Math.abs(diff) > 48) {
+        go(diff < 0 ? current + 1 : current - 1);
+        start();
+      }
+      pointerStart = 0;
+    });
+
+    go(0);
+    start();
+  }
+
+  function initClassSectionFocus() {
+    const section = document.getElementById('class-intro');
+    if (!section || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(function (entries) {
+      document.body.classList.toggle('class-section-visible', entries.some(function (entry) {
+        return entry.isIntersecting;
+      }));
+    }, { threshold: 0.34 });
+    observer.observe(section);
+  }
+
   function fill() {
     if (typeof FORUM_CONFIG === 'undefined') { setTimeout(fill, 30); return; }
     const C = FORUM_CONFIG;
@@ -337,6 +533,8 @@
     });
   }
   fill();
+  renderClassCarousel();
+  initClassSectionFocus();
 })();
 </script>
 </body>
