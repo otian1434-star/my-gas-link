@@ -1,11 +1,14 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: otian1434-star/my-gas-link
   branch: main
+  base_url: https://yaowu-cms-oauth.otian1434.workers.dev
+  auth_endpoint: auth
 
 local_backend: true
 locale: zh_Hant
 media_folder: assets/uploads
-public_folder: /assets/uploads
+public_folder: /my-gas-link/assets/uploads
 
 collections:
   - name: site_data
