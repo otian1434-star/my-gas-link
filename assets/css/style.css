@@ -92,7 +92,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   flex: 1;
   height: var(--nav-h);
-  overflow: hidden;
+  overflow: visible;
 }
 .nav-item {
   position: relative;
@@ -129,7 +129,8 @@ img { max-width: 100%; display: block; }
 .nav-link-top:hover, .nav-link-top.active { color: var(--gold); }
 .nav-link-top:hover::after, .nav-link-top.active::after { transform: scaleX(1); }
 .nav-arrow { font-size: 8px; opacity: 0.55; transition: transform 0.2s; }
-.nav-item:hover .nav-arrow { transform: rotate(90deg); }
+.nav-item:hover .nav-arrow,
+.nav-item.open .nav-arrow { transform: rotate(90deg); }
 
 /* 下拉選單 */
 .nav-dropdown {
@@ -142,11 +143,16 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   border-top: 2px solid var(--gold);
   padding: 6px 0;
+  max-height: calc(100vh - var(--nav-h) - 14px);
+  overflow-y: auto;
   z-index: 1000;
   backdrop-filter: blur(12px);
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
-.nav-item:hover .nav-dropdown { display: block; }
+.nav-item:hover .nav-dropdown,
+.nav-item.open .nav-dropdown { display: block; }
+.nav-item.open > .nav-link-top { color: var(--gold); }
+.nav-item.open > .nav-link-top::after { transform: scaleX(1); }
 .nav-dropdown a {
   display: block;
   padding: 8px 18px;

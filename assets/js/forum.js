@@ -16,6 +16,7 @@
     initPopup();
     highlightNav();
     addPageHdrLine();
+    initDesktopDropdowns();
   }
 
   /* 判斷根路徑 */
@@ -252,6 +253,49 @@
       line.className = 'page-hdr-line';
       hdr.appendChild(line);
     }
+  }
+
+  function initDesktopDropdowns() {
+    const nav = document.getElementById('main-nav');
+    if (!nav) return;
+
+    nav.querySelectorAll('.nav-item > button.nav-link-top').forEach(button => {
+      button.setAttribute('type', 'button');
+      button.setAttribute('aria-expanded', 'false');
+
+      button.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const item = button.closest('.nav-item');
+        if (!item) return;
+        const willOpen = !item.classList.contains('open');
+
+        nav.querySelectorAll('.nav-item.open').forEach(openItem => {
+          openItem.classList.remove('open');
+          const openButton = openItem.querySelector('button.nav-link-top');
+          if (openButton) openButton.setAttribute('aria-expanded', 'false');
+        });
+
+        if (willOpen) {
+          item.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    document.addEventListener('click', () => closeDesktopDropdowns(nav));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeDesktopDropdowns(nav);
+    });
+  }
+
+  function closeDesktopDropdowns(nav) {
+    nav.querySelectorAll('.nav-item.open').forEach(item => {
+      item.classList.remove('open');
+      const button = item.querySelector('button.nav-link-top');
+      if (button) button.setAttribute('aria-expanded', 'false');
+    });
   }
 
   /* ================================================================
