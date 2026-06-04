@@ -53,13 +53,14 @@
             <label class="form-label" for="reg-account">遊戲帳號 <span style="color:#ff6464;">*</span></label>
             <input class="form-input" type="text" id="reg-account" name="gameAccount"
                    placeholder="請輸入欲申請的遊戲帳號" required maxlength="20" autocomplete="username">
+            <div class="form-hint">⚠️ 請勿使用信箱格式作為遊戲帳號</div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="reg-password">遊戲密碼 <span style="color:#ff6464;">*</span></label>
             <input class="form-input" type="password" id="reg-password" name="gamePassword"
-                   placeholder="請輸入欲設定的遊戲密碼" required minlength="4" maxlength="24" autocomplete="new-password">
-            <div class="form-hint">🔐 建議不要使用與其他網站相同的密碼</div>
+                   placeholder="請輸入欲設定的遊戲密碼" required minlength="4" maxlength="10" autocomplete="new-password">
+            <div class="form-hint">🔐 勿超過 10 碼，建議不要使用與其他網站相同的密碼</div>
           </div>
 
           <div class="form-group">
