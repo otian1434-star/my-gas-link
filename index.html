@@ -301,6 +301,7 @@
     {
       title: '王族',
       image: '../media/classes/royal.jpg',
+      thumb: '../media/classes/thumbs/royal.jpg',
       lead: '亞丁王室血脈的繼承者。',
       body: [
         '他們並非最強大的戰士，卻是最偉大的領導者。',
@@ -311,6 +312,7 @@
     {
       title: '騎士',
       image: '../media/classes/knight.jpg',
+      thumb: '../media/classes/thumbs/knight.jpg',
       lead: '以信念守護王國的鋼鐵戰士。',
       body: [
         '身披重甲、手持利劍，擁有強大的防禦與近戰能力。',
@@ -321,6 +323,7 @@
     {
       title: '妖精',
       image: '../media/classes/elf.jpg',
+      thumb: '../media/classes/thumbs/elf.jpg',
       lead: '來自森林深處的自然守護者。',
       body: [
         '精通弓術與元素之力，能以百步穿楊的箭術擊潰敵人。',
@@ -331,6 +334,7 @@
     {
       title: '法師',
       image: '../media/classes/wizard.jpg',
+      thumb: '../media/classes/thumbs/wizard.jpg',
       lead: '探索真理與禁忌的魔法學者。',
       body: [
         '操控火焰、冰霜、雷電等強大元素魔法，',
@@ -341,6 +345,7 @@
     {
       title: '黑暗妖精',
       image: '../media/classes/dark-elf.jpg',
+      thumb: '../media/classes/thumbs/dark-elf.jpg',
       lead: '誕生於黑暗與復仇之中的獵殺者。',
       body: [
         '擁有驚人的速度與爆發力，',
@@ -352,6 +357,7 @@
     {
       title: '龍騎士',
       image: '../media/classes/dragon-knight.jpg',
+      thumb: '../media/classes/thumbs/dragon-knight.jpg',
       lead: '繼承古龍意志的傳承者。',
       body: [
         '體內流淌著龍族的力量，',
@@ -363,6 +369,7 @@
     {
       title: '幻術士',
       image: '../media/classes/illusionist.jpg',
+      thumb: '../media/classes/thumbs/illusionist.jpg',
       lead: '遊走於真實與虛幻之間的操控者。',
       body: [
         '透過強大的幻術干擾敵人的感知，',
@@ -398,7 +405,7 @@
     }).join('');
 
     thumbs.innerHTML = classSlides.map(function (item, index) {
-      return '<button class="class-thumb' + (index === 0 ? ' is-active' : '') + '" type="button" style="--thumb-bg:url(' + escapeHTML(item.image) + ')" aria-label="切換到' + escapeHTML(item.title) + '" data-class-index="' + index + '">' +
+      return '<button class="class-thumb' + (index === 0 ? ' is-active' : '') + '" type="button" style="--thumb-bg:url(' + escapeHTML(item.thumb || item.image) + ')" aria-label="切換到' + escapeHTML(item.title) + '" data-class-index="' + index + '">' +
         '<span>' + escapeHTML(item.title) + '</span>' +
       '</button>';
     }).join('');
