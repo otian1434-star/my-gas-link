@@ -324,6 +324,7 @@
       title: '妖精',
       image: '../media/classes/elf.jpg',
       thumb: '../media/classes/thumbs/elf.jpg',
+      bgPosition: 'center top',
       lead: '來自森林深處的自然守護者。',
       body: [
         '精通弓術與元素之力，能以百步穿楊的箭術擊潰敵人。',
@@ -391,7 +392,7 @@
     let pointerStart = 0;
 
     track.innerHTML = classSlides.map(function (item, index) {
-      return '<article class="class-slide' + (index === 0 ? ' is-active' : '') + '" style="--class-bg:url(' + escapeHTML(item.image) + ')">' +
+      return '<article class="class-slide' + (index === 0 ? ' is-active' : '') + '" style="--class-bg:url(' + escapeHTML(item.image) + ');--class-bg-position:' + escapeHTML(item.bgPosition || 'center') + '">' +
         '<div class="class-copy">' +
           '<span class="class-kicker">CLASS ' + String(index + 1).padStart(2, '0') + '</span>' +
           '<h3>' + escapeHTML(item.title) + '</h3>' +
@@ -474,17 +475,6 @@
     start();
   }
 
-  function initClassSectionFocus() {
-    const section = document.getElementById('class-intro');
-    if (!section || !('IntersectionObserver' in window)) return;
-    const observer = new IntersectionObserver(function (entries) {
-      document.body.classList.toggle('class-section-visible', entries.some(function (entry) {
-        return entry.isIntersecting;
-      }));
-    }, { threshold: 0.34 });
-    observer.observe(section);
-  }
-
   function fill() {
     if (typeof FORUM_CONFIG === 'undefined') { setTimeout(fill, 30); return; }
     const C = FORUM_CONFIG;
@@ -541,7 +531,6 @@
   }
   fill();
   renderClassCarousel();
-  initClassSectionFocus();
 })();
 </script>
 </body>
