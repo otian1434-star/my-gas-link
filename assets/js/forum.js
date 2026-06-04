@@ -81,7 +81,7 @@
         <div class="nav-item">
           <button class="nav-link-top">遊戲資料 <span class="nav-arrow">▶</span></button>
           <div class="nav-dropdown">
-            <a href="${r}pages/game-database.html">📚 完整資料庫</a>
+            <a href="${r}pages/game-database.html">📚 遊戲資料庫</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">遊戲特色</div>
             <a href="${r}pages/features-jobs.html">⚔️ 職業之力</a>
