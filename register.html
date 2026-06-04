@@ -208,6 +208,13 @@ function appsScriptReady(settings) {
   return !!(settings.endpoint && /^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/i.test(settings.endpoint));
 }
 
+function normalizePhoneNumber(value) {
+  var phone = (value || '').trim();
+  var digits = phone.replace(/[^\d]/g, '');
+  if (/^9\d{8}$/.test(digits)) return '0' + digits;
+  return phone;
+}
+
 function buildApplicationPayload(form, settings) {
   var data = new FormData();
   data.append('gameAccount', form.gameAccount.value.trim());
@@ -215,7 +222,7 @@ function buildApplicationPayload(form, settings) {
   data.append('playerName', form.playerName.value.trim());
   data.append('characterChoice', form.characterChoice.value);
   data.append('email', form.email.value.trim());
-  data.append('phone', form.phone.value.trim());
+  data.append('phone', normalizePhoneNumber(form.phone.value));
   data.append('source', form.source.value || '');
   data.append('submittedAt', new Date().toISOString());
   data.append('pageUrl', window.location.href);
