@@ -207,7 +207,7 @@
   function renderPostPreviewBody(post) {
     var parts = [];
     if (post.coverImage) {
-      parts.push('<img class="post-cover" src="' + escapeHTML(post.coverImage) + '" alt="' + escapeHTML(post.title || '') + '">');
+      parts.push('<img class="post-cover" src="' + escapeHTML(resolveAssetUrl(post.coverImage)) + '" alt="' + escapeHTML(post.title || '') + '">');
     }
     if (post.body || post.excerpt) {
       parts.push('<div class="cms-markdown">' + sanitizeTrustedHTML(renderMarkdown(post.body || post.excerpt || '')) + '</div>');
@@ -216,6 +216,192 @@
       parts.push('<div class="cms-custom-html">' + sanitizeTrustedHTML(post.customHtml) + '</div>');
     }
     return parts.join('') || '<div class="yw-editor-empty">尚未輸入文章內容</div>';
+  }
+
+  function resolveAssetUrl(url) {
+    var value = String(url || '').trim();
+    if (!value || /^(https?:|data:|blob:|\/)/.test(value)) return value;
+    return '../' + value.replace(/^\.?\//, '');
+  }
+
+  function safeClass(value, fallback) {
+    return String(value || fallback || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9_-]+/g, '-')
+      .replace(/^-+|-+$/g, '') || fallback || 'standard';
+  }
+
+  function isPostLike(data) {
+    return !!(data && (
+      Object.prototype.hasOwnProperty.call(data, 'title') ||
+      Object.prototype.hasOwnProperty.call(data, 'category') ||
+      Object.prototype.hasOwnProperty.call(data, 'layout') ||
+      Object.prototype.hasOwnProperty.call(data, 'body') ||
+      Object.prototype.hasOwnProperty.call(data, 'customHtml')
+    ));
+  }
+
+  function isHomeLike(data) {
+    return !!(data && (
+      Object.prototype.hasOwnProperty.call(data, 'sections') ||
+      Object.prototype.hasOwnProperty.call(data, 'quickLinks') ||
+      Object.prototype.hasOwnProperty.call(data, 'serverCards') ||
+      Object.prototype.hasOwnProperty.call(data, 'updates')
+    ));
+  }
+
+  function sectionHeading(section, fallbackEyebrow, fallbackTitle) {
+    var item = section || {};
+    return h('div', { className: 'section-header' }, [
+      h('div', { className: 'section-eyebrow' }, item.eyebrow || fallbackEyebrow || ''),
+      h('h2', { className: 'section-title' }, item.title || fallbackTitle || ''),
+      h('div', { className: 'section-line' }),
+    ]);
+  }
+
+  function emptyOfficialMessage(text) {
+    return h('div', { className: 'cms-official-empty' }, text);
+  }
+
+  function visibleItems(items) {
+    return (Array.isArray(items) ? items : []).filter(function (item) {
+      return item && item.visible !== false;
+    });
+  }
+
+  function renderHomeAnnouncements(data) {
+    var section = data.sections && data.sections.announcements;
+    return h('section', { className: 'section cms-preview-section' }, [
+      h('div', { className: 'container' }, [
+        sectionHeading(section, 'ANNOUNCEMENTS', '最新公告'),
+        h('div', { className: 'ann-grid cms-preview-ann-grid' }, [
+          h('div', { className: 'ann-card cms-preview-placeholder-card' }, [
+            h('div', { className: 'ann-card-meta' }, [
+              h('span', { className: 'ann-tag tag-sys' }, '文章'),
+              h('span', { className: 'ann-date' }, '由文章管理產生'),
+            ]),
+            h('div', { className: 'ann-card-title' }, '最新公告會依「文章管理」的發布內容自動顯示'),
+            h('div', { className: 'ann-card-excerpt' }, '此區塊在這裡預覽標題與按鈕文字；文章卡片請到「文章管理」新增或編輯。'),
+            h('div', { className: 'ann-card-more' }, (section && section.buttonText) || '查看全部公告'),
+          ]),
+        ]),
+      ]),
+    ]);
+  }
+
+  function renderHomeQuickLinks(data) {
+    var links = visibleItems(data.quickLinks);
+    var section = data.sections && data.sections.quickLinks;
+    return h('section', { className: 'section section-alt section-bg-quick cms-preview-section' }, [
+      h('div', { className: 'container' }, [
+        sectionHeading(section, 'QUICK NAVIGATION', '快速目錄'),
+        links.length ? h('div', { className: 'dir-grid' }, links.map(function (link, index) {
+          return h('div', {
+            key: index,
+            className: 'dir-card' + (link.highlight ? ' highlight' : ''),
+          }, [
+            h('span', { className: 'dir-icon' }, link.icon || '*'),
+            h('span', { className: 'dir-name' }, link.title || '未命名'),
+            h('span', { className: 'dir-desc' }, link.description || link.url || ''),
+          ]);
+        })) : emptyOfficialMessage('目前沒有顯示中的快速目錄卡片'),
+      ]),
+    ]);
+  }
+
+  function renderHomeUpdates(data) {
+    var updates = visibleItems(data.updates);
+    var section = data.sections && data.sections.updates;
+    return h('section', { className: 'section cms-preview-section' }, [
+      h('div', { className: 'container' }, [
+        sectionHeading(section, 'PATCH NOTES', '更新歷程'),
+        updates.length ? h('div', { className: 'update-list' }, updates.slice(0, 8).map(function (item, index) {
+          return h('div', { key: index, className: 'update-item' }, [
+            h('span', { className: 'update-date' }, item.date || ''),
+            h('span', { className: 'update-tag' }, item.tag || ''),
+            h('span', { className: 'update-content' }, item.content || item.title || ''),
+          ]);
+        })) : emptyOfficialMessage('目前沒有顯示中的更新歷程'),
+        h('div', { className: 'cms-preview-button-row' },
+          h('span', { className: 'btn-outline cms-preview-fake-button' }, (section && section.buttonText) || '查看完整歷程')
+        ),
+      ]),
+    ]);
+  }
+
+  function renderHomeServerInfo(data) {
+    var cards = Array.isArray(data.serverCards) ? data.serverCards : [];
+    var section = data.sections && data.sections.serverInfo;
+    return h('section', { className: 'section section-bg-server cms-preview-section' }, [
+      h('div', { className: 'container' }, [
+        sectionHeading(section, 'SERVER INFO', '伺服器資訊'),
+        cards.length ? h('div', { className: 'server-grid' }, cards.map(function (card, index) {
+          var rows = Array.isArray(card.rows) ? card.rows : [];
+          return h('div', { key: index, className: 'server-card' }, [
+            h('div', { className: 'server-card-name' }, card.title || '未命名卡片'),
+            h('div', { className: 'server-card-sub' }, card.subtitle || ''),
+            rows.length ? rows.map(function (row, rowIndex) {
+              return h('div', { key: rowIndex, className: 'server-info-row' }, [
+                h('span', { className: 'server-info-key' }, row.label || ''),
+                h('span', { className: 'server-info-val' + (row.highlight ? ' hl' : '') }, row.value || ''),
+              ]);
+            }) : emptyOfficialMessage('這張卡片尚未新增內容列'),
+          ]);
+        })) : emptyOfficialMessage('目前沒有伺服器資訊卡片'),
+      ]),
+    ]);
+  }
+
+  function renderHomePreview(data) {
+    return h('div', { className: 'cms-preview-page cms-official-preview cms-home-preview' }, [
+      h('div', { className: 'cms-preview-ribbon' }, '首頁底板即時預覽'),
+      renderHomeAnnouncements(data),
+      renderHomeQuickLinks(data),
+      renderHomeUpdates(data),
+      renderHomeServerInfo(data),
+    ]);
+  }
+
+  function renderSinglePost(post, index) {
+    var item = post || {};
+    return h('article', {
+      key: index || 0,
+      className: 'post-card post-layout-' + safeClass(item.layout, 'standard'),
+    }, [
+      h('div', { className: 'cms-preview-post-kicker' }, [
+        h('span', {}, item.published === false ? '尚未顯示於網站' : '網站文章預覽'),
+        item.pinned ? h('strong', {}, '置頂') : null,
+      ]),
+      h('h2', {}, item.title || '未命名文章'),
+      h('div', { className: 'post-meta' }, [
+        h('span', {}, item.category || '公告'),
+        h('span', {}, item.date || '尚未設定日期'),
+        h('span', {}, item.layout || 'standard'),
+      ]),
+      item.excerpt ? h('p', { className: 'cms-preview-excerpt' }, item.excerpt) : null,
+      h('div', {
+        className: 'post-body cms-rich',
+        dangerouslySetInnerHTML: { __html: renderPostPreviewBody(item) },
+      }),
+    ]);
+  }
+
+  function renderPostsPreview(posts) {
+    var items = (Array.isArray(posts) ? posts : []).filter(function (post) {
+      return post && post.published !== false;
+    });
+
+    return h('div', { className: 'cms-preview-page cms-official-preview cms-posts-preview' }, [
+      h('div', { className: 'cms-preview-ribbon' }, '文章頁即時預覽'),
+      h('section', { className: 'section cms-preview-section' }, [
+        h('div', { className: 'container' }, [
+          sectionHeading({ eyebrow: 'NEWS', title: '最新文章' }, 'NEWS', '最新文章'),
+          items.length ? items.map(renderSinglePost) : h('div', { className: 'post-card' },
+            h('div', { className: 'post-body cms-rich' }, '目前尚無已顯示的文章，請新增文章或打開「顯示在網站」。')
+          ),
+        ]),
+      ]),
+    ]);
   }
 
   function insertAt(text, start, end, before, after) {
@@ -422,33 +608,23 @@
   var SiteDataPreview = createClass({
     render: function () {
       var data = entryData(this.props.entry);
-      var posts = Array.isArray(data.posts) ? data.posts : [];
 
-      if (!posts.length) {
-        return h('div', { className: 'cms-preview-page' },
-          h('div', { className: 'post-card' },
-            h('div', { className: 'post-body cms-rich' }, '目前尚無文章，請在文章清單新增內容。')
-          )
-        );
-      }
-
-      return h('div', { className: 'cms-preview-page' }, posts.map(function (post, index) {
-        return h('article', {
-          key: index,
-          className: 'post-card post-layout-' + escapeHTML(post.layout || 'standard'),
-        }, [
-          h('h2', {}, post.title || '未命名文章'),
-          h('div', { className: 'post-meta' }, [
-            h('span', {}, post.category || '公告'),
-            h('span', {}, post.date || ''),
-            post.pinned ? h('span', {}, '置頂') : null,
-          ]),
-          h('div', {
-            className: 'post-body cms-rich',
-            dangerouslySetInnerHTML: { __html: renderPostPreviewBody(post) },
-          }),
+      if (Array.isArray(data.posts)) return renderPostsPreview(data.posts);
+      if (isPostLike(data)) {
+        return h('div', { className: 'cms-preview-page cms-official-preview cms-posts-preview' }, [
+          h('div', { className: 'cms-preview-ribbon' }, '文章頁即時預覽'),
+          h('section', { className: 'section cms-preview-section' },
+            h('div', { className: 'container' }, renderSinglePost(data, 0))
+          ),
         ]);
-      }));
+      }
+      if (isHomeLike(data)) return renderHomePreview(data);
+
+      return h('div', { className: 'cms-preview-page cms-official-preview' },
+        h('div', { className: 'post-card' },
+          h('div', { className: 'post-body cms-rich' }, '請開始編輯左側欄位，右側會顯示網站樣式預覽。')
+        )
+      );
     },
   });
 
@@ -456,4 +632,6 @@
   CMS.registerPreviewStyle('../assets/css/style.css');
   CMS.registerPreviewStyle('./formatting-widget.css');
   CMS.registerPreviewTemplate('site_data', SiteDataPreview);
+  CMS.registerPreviewTemplate('posts', SiteDataPreview);
+  CMS.registerPreviewTemplate('home', SiteDataPreview);
 })();
