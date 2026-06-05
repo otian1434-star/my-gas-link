@@ -138,8 +138,6 @@
             <a href="${r}pages/faq.html">❓ 常見問題</a>
             <a href="${r}pages/promo.html">📜 推文說明</a>
             <a href="${r}pages/stream.html">🎥 直播說明</a>
-            <div class="nav-dd-divider"></div>
-            <a href="${r}admin/">網站後台</a>
           </div>
         </div>
       </nav>
@@ -153,9 +151,6 @@
         </a>` : ''}
         <a href="${r}register.html" class="btn-register">
           📝<span class="btn-label"> 申辦帳號</span>
-        </a>
-        <a href="${r}admin/" class="btn-admin">
-          後台
         </a>
         <button class="btn-hamburger" id="hamburger-btn" onclick="forumToggleMobile()" aria-label="選單">☰</button>
       </div>
@@ -227,7 +222,6 @@
       <a class="mob-link mob-sub" href="${r}pages/promo.html">📜 推文說明</a>
       <a class="mob-link mob-sub" href="${r}pages/stream.html">🎥 直播說明</a>
       <a class="mob-link" href="${r}register.html">📝 申辦帳號</a>
-      <a class="mob-link" href="${r}admin/">網站後台</a>
     </div>`;
 
     const slot = document.getElementById('header-slot');
