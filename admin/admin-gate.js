@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var ADMIN_HASH = '3b5e3dd6dd4f455e17b362d7c027d653c5addd81a8742157a15881d1bca2fbc9';
+  var ADMIN_HASH = '852f57d2ac6efc633bf86a3e17ada7fc6200fac0bf2fdea956348d4e21f2e7d6';
   var STORAGE_KEY = 'yaowu_admin_gate_v1';
   var SCRIPT_LIST = [
     'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js',
