@@ -1262,6 +1262,113 @@ img { max-width: 100%; display: block; }
 .transform-finale h2 { border-bottom: 0; padding-bottom: 0; }
 .transform-finale p { max-width: 820px; margin-left: auto; margin-right: auto; }
 
+/* 魔法娃娃介紹 */
+.doll-guide-page .content-card { margin-bottom: 22px; }
+.doll-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(201,169,110,0.2), transparent 30%),
+    radial-gradient(circle at 84% 8%, rgba(117,184,240,0.12), transparent 34%),
+    linear-gradient(135deg, rgba(21,18,12,0.95), rgba(30,24,16,0.9)),
+    var(--bg3);
+}
+.doll-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.doll-hero p { max-width: 840px; color: rgba(232,222,202,0.92); }
+.doll-note {
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.1), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.doll-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.doll-card {
+  --doll-accent: var(--gold);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(201,169,110,0.22);
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--doll-accent) 10%, transparent), transparent 62%),
+    rgba(28,24,16,0.82);
+  padding: 20px;
+}
+.doll-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--doll-accent), transparent);
+}
+.doll-card-head {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.doll-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid color-mix(in srgb, var(--doll-accent) 54%, transparent);
+  background: rgba(8,7,5,0.34);
+  font-size: 28px;
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--doll-accent) 28%, transparent));
+}
+.doll-card h2 {
+  margin: 0 0 4px;
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.doll-card-head p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.doll-table {
+  min-width: 460px;
+  table-layout: auto;
+}
+.doll-table th:first-child,
+.doll-table td:first-child {
+  width: 32%;
+  text-align: center;
+  white-space: nowrap;
+}
+.doll-table th:last-child,
+.doll-table td:last-child {
+  text-align: left;
+}
+.doll-table .doll-top-row td {
+  background: color-mix(in srgb, var(--doll-accent) 15%, rgba(8,7,5,0.62));
+  color: var(--gold-light);
+  font-weight: 700;
+}
+.doll-red { --doll-accent: #ef7b73; }
+.doll-purple { --doll-accent: #c68cff; }
+.doll-orange { --doll-accent: #f2a25c; }
+.doll-teal { --doll-accent: #5fc4b0; }
+.doll-blue { --doll-accent: #75b8f0; }
+.doll-green { --doll-accent: #68d08a; }
+.doll-brown { --doll-accent: #c89463; }
+.doll-slate { --doll-accent: #b9b4a8; }
+.doll-stone { --doll-accent: #aeb6bf; }
+.doll-ice { --doll-accent: #9fd2ff; }
+.doll-gold { --doll-accent: #f2d06b; }
+
 /* 裝備收集圖鑑 */
 .collection-page .content-card { margin-bottom: 24px; }
 .collection-intro p { max-width: 820px; }
@@ -2426,6 +2533,13 @@ img { max-width: 100%; display: block; }
   .transform-card-note { grid-template-columns: 1fr; }
   .guarantee-icon { width: 60px; height: 60px; font-size: 28px; }
   .rarity-tag { margin-bottom: 4px; }
+  .doll-hero { padding: 22px 18px; }
+  .doll-grid { grid-template-columns: 1fr; gap: 14px; }
+  .doll-card { padding: 16px; }
+  .doll-card-head { grid-template-columns: 46px 1fr; gap: 10px; }
+  .doll-icon { width: 46px; height: 46px; font-size: 24px; }
+  .doll-table th:first-child,
+  .doll-table td:first-child { width: 32%; }
   .register-notes ul {
     padding-left: 18px;
     font-size: 13px;
