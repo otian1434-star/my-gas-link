@@ -929,6 +929,60 @@ img { max-width: 100%; display: block; }
 .content-empty h2 { border-bottom: 0; margin-bottom: 10px; padding-bottom: 0; font-size: 22px; letter-spacing: 4px; }
 .content-empty p { max-width: 520px; margin: 0 auto; color: var(--text-muted); }
 
+/* 裝備收集圖鑑 */
+.collection-page .content-card { margin-bottom: 24px; }
+.collection-intro p { max-width: 820px; }
+.collection-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.collection-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(201,169,110,0.2);
+  background: rgba(8,7,5,0.36);
+}
+.collection-table {
+  min-width: 820px;
+  margin: 0 !important;
+  table-layout: fixed;
+}
+.collection-table th:nth-child(1),
+.collection-table td:nth-child(1) { width: 20%; }
+.collection-table th:nth-child(2),
+.collection-table td:nth-child(2) { width: 25%; }
+.collection-table th:nth-child(3),
+.collection-table td:nth-child(3) { width: 55%; }
+.collection-table td {
+  vertical-align: middle;
+  text-align: center;
+}
+.collection-table .collection-item {
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: rgba(201,169,110,0.06);
+}
+.collection-table .collection-ability {
+  color: var(--gold-light);
+  font-weight: 700;
+}
+.collection-table .collection-required {
+  text-align: left;
+}
+.collection-level {
+  display: inline-block;
+  min-width: 42px;
+  margin-right: 8px;
+  padding: 2px 10px;
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  border: 1px solid rgba(231,201,138,0.62);
+  font-weight: 800;
+  text-align: center;
+}
+
 /* ══════════════════════════════════════
    遊戲資料庫
 ══════════════════════════════════════ */
