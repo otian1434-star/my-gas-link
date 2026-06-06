@@ -125,6 +125,7 @@
             <a href="${r}pages/transform-guide.html">🎭 變身圖鑑大全</a>
             <a href="${r}pages/transform-list.html">📖 變身收藏清單</a>
             <a href="${r}pages/map.html">🗺️ 地圖介紹</a>
+            <a href="${r}pages/map-training.html">🗺️ 專屬練功地圖</a>
             <a href="${r}pages/map-dream-island.html">🏝️ 夢幻之島</a>
             <a href="${r}pages/map-elemental-prison.html">🏰 屬性監獄</a>
           </div>
@@ -231,6 +232,7 @@
       <a class="mob-link mob-sub" href="${r}pages/transform-guide.html">🎭 變身圖鑑大全</a>
       <a class="mob-link mob-sub" href="${r}pages/transform-list.html">📖 變身收藏清單</a>
       <a class="mob-link mob-sub" href="${r}pages/map.html">🗺️ 地圖介紹</a>
+      <a class="mob-link mob-sub" href="${r}pages/map-training.html">🗺️ 專屬練功地圖</a>
       <a class="mob-link mob-sub" href="${r}pages/map-dream-island.html">🏝️ 夢幻之島</a>
       <a class="mob-link mob-sub" href="${r}pages/map-elemental-prison.html">🏰 屬性監獄</a>
 

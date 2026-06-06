@@ -1362,13 +1362,15 @@ img { max-width: 100%; display: block; }
 }
 .event-coin-summary p { max-width: 760px; margin-left: auto; margin-right: auto; }
 
-/* 地圖介紹 / 屬性監獄 / 夢幻之島 */
+/* 地圖介紹 / 屬性監獄 / 夢幻之島 / 專屬練功地圖 */
 .map-index-page .content-card,
 .elemental-prison-page .content-card,
-.dream-island-page .content-card { margin-bottom: 22px; }
+.dream-island-page .content-card,
+.training-map-page .content-card { margin-bottom: 22px; }
 .map-index-hero,
 .elemental-hero,
-.dream-island-hero {
+.dream-island-hero,
+.training-map-hero {
   overflow: hidden;
   background:
     radial-gradient(circle at 12% 10%, rgba(104,208,138,0.18), transparent 32%),
@@ -1378,7 +1380,8 @@ img { max-width: 100%; display: block; }
 }
 .map-index-hero h2,
 .elemental-hero h2,
-.dream-island-hero h2 {
+.dream-island-hero h2,
+.training-map-hero h2 {
   border-bottom: 0;
   padding-bottom: 0;
   font-size: clamp(22px, 3vw, 34px);
@@ -1386,7 +1389,15 @@ img { max-width: 100%; display: block; }
 }
 .map-index-hero p,
 .elemental-hero p,
-.dream-island-hero p { max-width: 850px; color: rgba(232,222,202,0.92); }
+.dream-island-hero p,
+.training-map-hero p { max-width: 850px; color: rgba(232,222,202,0.92); }
+.training-map-hero {
+  background:
+    radial-gradient(circle at 15% 8%, rgba(117,184,240,0.2), transparent 32%),
+    radial-gradient(circle at 82% 6%, rgba(242,208,107,0.18), transparent 34%),
+    linear-gradient(135deg, rgba(7,16,24,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
 .dream-island-hero {
   background:
     radial-gradient(circle at 12% 10%, rgba(198,140,255,0.22), transparent 32%),
@@ -1528,6 +1539,77 @@ img { max-width: 100%; display: block; }
   text-align: center;
   background:
     radial-gradient(circle at 50% 0%, rgba(242,208,107,0.16), transparent 42%),
+    var(--bg3);
+}
+.training-map-alert {
+  border-color: rgba(239,123,115,0.5);
+  background:
+    linear-gradient(135deg, rgba(139,26,26,0.18), rgba(201,169,110,0.08)),
+    var(--bg3);
+}
+.training-map-alert h2,
+.training-map-summary h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: var(--gold-light);
+}
+.training-map-alert p,
+.training-map-summary p { margin-bottom: 0; color: var(--white); }
+.training-map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.training-map-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(117,184,240,0.12), rgba(8,7,5,0.18)),
+    var(--bg3);
+}
+.training-map-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--map-accent, var(--gold));
+}
+.training-map-card.newbie { --map-accent: #68d08a; }
+.training-map-card.event { --map-accent: #f2d06b; }
+.training-map-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(201,169,110,0.34);
+  background: rgba(8,7,5,0.3);
+  color: var(--gold);
+  font-size: 30px;
+  filter: drop-shadow(0 0 16px rgba(201,169,110,0.22));
+}
+.training-map-card h2,
+.training-map-entry h3 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.training-map-card ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+.training-map-card li { margin-bottom: 8px; }
+.training-map-card strong,
+.training-map-entry strong { color: var(--gold-light); }
+.training-map-entry {
+  border: 1px dashed rgba(201,169,110,0.32);
+  background: rgba(8,7,5,0.28);
+  padding: 16px;
+}
+.training-map-entry p { margin-bottom: 0; }
+.training-map-summary {
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(117,184,240,0.15), transparent 42%),
     var(--bg3);
 }
 
@@ -3165,8 +3247,10 @@ img { max-width: 100%; display: block; }
   .event-coin-hero { padding: 22px 18px; }
   .map-index-hero,
   .elemental-hero,
-  .dream-island-hero { padding: 22px 18px; }
-  .dream-island-feature-grid { grid-template-columns: 1fr; }
+  .dream-island-hero,
+  .training-map-hero { padding: 22px 18px; }
+  .dream-island-feature-grid,
+  .training-map-grid { grid-template-columns: 1fr; }
   .boss-time-card { grid-template-columns: 1fr; }
   .boss-time { min-height: 58px; }
   .boss-dragon-head { flex-direction: column; }
