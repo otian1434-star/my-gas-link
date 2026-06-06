@@ -88,6 +88,7 @@
             <a href="${r}pages/features-overview.html">⚔️ 遊戲特色總覽</a>
             <a href="${r}pages/features-newbie-guide.html">📚 新手引導</a>
             <a href="${r}pages/features-daily-quest.html">📜 每日任務</a>
+            <a href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
             <a href="${r}pages/features-jobs.html">⚔️ 職業之力</a>
             <a href="${r}pages/features-job-skills.html">📚 職業特色技能</a>
             <a href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
@@ -187,6 +188,7 @@
       <a class="mob-link mob-sub" href="${r}pages/features-overview.html">⚔️ 遊戲特色總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/features-newbie-guide.html">📚 新手引導</a>
       <a class="mob-link mob-sub" href="${r}pages/features-daily-quest.html">📜 每日任務</a>
+      <a class="mob-link mob-sub" href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
       <a class="mob-link mob-sub" href="${r}pages/features-jobs.html">⚔️ 職業之力</a>
       <a class="mob-link mob-sub" href="${r}pages/features-job-skills.html">📚 職業特色技能</a>
       <a class="mob-link mob-sub" href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
