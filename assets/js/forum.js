@@ -94,6 +94,7 @@
             <a href="${r}pages/features-prestige.html">🏆 威望系統</a>
             <a href="${r}pages/features-hecate.html">🌙 赫卡特介紹</a>
             <a href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
+            <a href="${r}pages/features-dragon-whisper.html">🐉 龍之呢喃</a>
             <a href="${r}pages/features-equipment-collection.html">📚 裝備收集圖鑑</a>
             <a href="${r}pages/features-main-quest.html">📜 主線任務勳章</a>
             <a href="${r}pages/features-pendant.html">📿 傲慢的掛飾</a>
@@ -190,6 +191,7 @@
       <a class="mob-link mob-sub" href="${r}pages/features-prestige.html">🏆 威望系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-hecate.html">🌙 赫卡特介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
+      <a class="mob-link mob-sub" href="${r}pages/features-dragon-whisper.html">🐉 龍之呢喃</a>
       <a class="mob-link mob-sub" href="${r}pages/features-equipment-collection.html">📚 裝備收集圖鑑</a>
       <a class="mob-link mob-sub" href="${r}pages/features-main-quest.html">📜 主線任務勳章</a>
       <a class="mob-link mob-sub" href="${r}pages/features-pendant.html">📿 傲慢的掛飾</a>

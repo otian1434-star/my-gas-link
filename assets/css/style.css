@@ -1055,6 +1055,87 @@ img { max-width: 100%; display: block; }
 .guide-finale h2 { border-bottom: 0; padding-bottom: 0; }
 .guide-finale p { max-width: 760px; margin-left: auto; margin-right: auto; }
 
+/* 龍之呢喃 */
+.dragon-whisper-page .content-card { margin-bottom: 22px; }
+.dragon-whisper-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(201,169,110,0.22), transparent 34%),
+    radial-gradient(circle at 16% 0%, rgba(139,26,26,0.22), transparent 28%),
+    linear-gradient(135deg, rgba(18,10,7,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.dragon-whisper-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.dragon-whisper-hero p { max-width: 820px; color: rgba(232,222,202,0.92); }
+.dragon-note-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.dragon-note {
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.08), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.dragon-note.warning {
+  background:
+    linear-gradient(135deg, rgba(139,26,26,0.16), rgba(201,169,110,0.08)),
+    var(--bg3);
+}
+.feature-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(201,169,110,0.2);
+  background: rgba(8,7,5,0.36);
+}
+.feature-table {
+  min-width: 760px;
+  width: 100%;
+  margin: 0 !important;
+  table-layout: fixed;
+}
+.feature-table th,
+.feature-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.feature-table th:first-child,
+.feature-table td:first-child {
+  text-align: left;
+  width: 42%;
+}
+.feature-table .table-section-row td {
+  background: rgba(201,169,110,0.14);
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.dragon-enchant-table .weapon-value {
+  color: #f0b08c;
+  font-weight: 700;
+}
+.dragon-enchant-table .armor-value {
+  color: #9fc8f0;
+  font-weight: 700;
+}
+.dragon-enchant-table .empty-value {
+  color: var(--text-muted);
+}
+.dragon-tip-card {
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.1), rgba(139,26,26,0.12)),
+    var(--bg3);
+}
+.dragon-tip-card h2 { border-bottom: 0; padding-bottom: 0; }
+.dragon-tip-card p { max-width: 820px; margin-left: auto; margin-right: auto; }
+
 /* 裝備收集圖鑑 */
 .collection-page .content-card { margin-bottom: 24px; }
 .collection-intro p { max-width: 820px; }
@@ -2114,6 +2195,7 @@ img { max-width: 100%; display: block; }
   .game-db-filter-row { justify-content: flex-start; }
   .game-db-attr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-daily-grid { grid-template-columns: 1fr; }
+  .dragon-note-grid { grid-template-columns: 1fr; }
   .formatter-wrap { grid-template-columns: 1fr; height: auto; }
   .fmt-panel { min-height: 300px; }
 }
@@ -2209,6 +2291,9 @@ img { max-width: 100%; display: block; }
   .guide-level { justify-content: flex-start; min-height: auto; padding: 8px 10px; }
   .guide-actions { flex-direction: column; }
   .guide-actions a { width: 100%; min-width: 0; }
+  .dragon-whisper-hero { padding: 22px 18px; }
+  .feature-table th:first-child,
+  .feature-table td:first-child { width: 46%; }
   .register-notes ul {
     padding-left: 18px;
     font-size: 13px;
