@@ -321,7 +321,7 @@
         <div>
           <div class="footer-col-title">⚔️ ${C.forumName}</div>
           <ul class="footer-links">
-            <li><span style="color:var(--text-muted);font-size:12px;">${C.forumSlogan || '天堂私服論壇'}</span></li>
+            <li><span style="color:var(--text-muted);font-size:12px;">${C.forumSlogan || '曜舞天堂'}</span></li>
             <li><a href="${C.lineOfficial}" target="_blank" rel="noopener">LINE 官方客服</a></li>
             ${communityLink ? `<li><a href="${communityLink}" target="_blank" rel="noopener">LINE 社群</a></li>` : ''}
             <li><a href="${r}register.html">📝 申辦帳號</a></li>
