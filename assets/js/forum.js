@@ -85,13 +85,14 @@
             <a href="${r}pages/game-database.html">📚 遊戲資料庫</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">遊戲特色</div>
+            <a href="${r}pages/features-overview.html">⚔️ 遊戲特色總覽</a>
             <a href="${r}pages/features-jobs.html">⚔️ 職業之力</a>
             <a href="${r}pages/features-job-skills.html">📚 職業特色技能</a>
             <a href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
             <a href="${r}pages/features-pet.html">🐾 寵物系統</a>
             <a href="${r}pages/features-prestige.html">🏆 威望系統</a>
             <a href="${r}pages/features-hecate.html">🌙 赫卡特介紹</a>
-            <a href="${r}pages/features-online-bag.html">🎁 在線福袋</a>
+            <a href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
             <a href="${r}pages/features-main-quest.html">📜 主線任務勳章</a>
             <a href="${r}pages/features-pendant.html">📿 傲慢的掛飾</a>
             <a href="${r}pages/features-hexagram.html">🔯 六芒星徽章</a>
@@ -178,13 +179,14 @@
       <a class="mob-link mob-sub" href="${r}pages/office.html">💻 OFFICE 安裝</a>
 
       <div class="mob-section">遊戲特色</div>
+      <a class="mob-link mob-sub" href="${r}pages/features-overview.html">⚔️ 遊戲特色總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/features-jobs.html">⚔️ 職業之力</a>
       <a class="mob-link mob-sub" href="${r}pages/features-job-skills.html">📚 職業特色技能</a>
       <a class="mob-link mob-sub" href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-pet.html">🐾 寵物系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-prestige.html">🏆 威望系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-hecate.html">🌙 赫卡特介紹</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-online-bag.html">🎁 在線福袋</a>
+      <a class="mob-link mob-sub" href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
       <a class="mob-link mob-sub" href="${r}pages/features-main-quest.html">📜 主線任務勳章</a>
       <a class="mob-link mob-sub" href="${r}pages/features-pendant.html">📿 傲慢的掛飾</a>
       <a class="mob-link mob-sub" href="${r}pages/features-hexagram.html">🔯 六芒星徽章</a>

@@ -690,6 +690,7 @@ img { max-width: 100%; display: block; }
 .dir-icon { font-size: 30px; filter: drop-shadow(0 0 8px rgba(201,169,110,0.28)); }
 .dir-name { font-family: 'Noto Serif TC', serif; font-size: 13px; font-weight: 700; color: var(--gold-light); letter-spacing: 2px; }
 .dir-desc { font-size: 11px; color: var(--text-dim); letter-spacing: 0.5px; }
+.category-menu-grid { margin-top: 28px; }
 
 /* 更新列表 */
 .update-list { display: flex; flex-direction: column; gap: 10px; }
