@@ -2225,6 +2225,105 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
+/* 傲慢寶石 */
+.arrogance-gem-page .content-card { margin-bottom: 22px; }
+.arrogance-gem-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(198,140,255,0.22), transparent 32%),
+    radial-gradient(circle at 86% 8%, rgba(242,208,107,0.18), transparent 34%),
+    linear-gradient(135deg, rgba(22,12,30,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.arrogance-gem-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.arrogance-gem-hero p { max-width: 860px; color: rgba(232,222,202,0.92); }
+.arrogance-gem-recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.arrogance-gem-recipe-card {
+  background:
+    linear-gradient(135deg, rgba(198,140,255,0.12), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.arrogance-gem-recipe-card.stone {
+  background:
+    linear-gradient(135deg, rgba(117,184,240,0.12), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.arrogance-gem-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(201,169,110,0.34);
+  background: rgba(8,7,5,0.32);
+  color: var(--gold);
+  font-size: 30px;
+  filter: drop-shadow(0 0 16px rgba(201,169,110,0.2));
+}
+.arrogance-gem-recipe-card h2,
+.arrogance-gem-alert h2,
+.arrogance-gem-table-card h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.arrogance-gem-recipe-card p { margin-bottom: 10px; }
+.arrogance-gem-recipe-card ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+.arrogance-gem-alert {
+  border-color: rgba(104,208,138,0.48);
+  background:
+    linear-gradient(135deg, rgba(104,208,138,0.14), rgba(201,169,110,0.08)),
+    var(--bg3);
+}
+.arrogance-gem-alert p { margin-bottom: 0; color: var(--white); }
+.arrogance-gem-alert strong,
+.arrogance-gem-recipe-card strong { color: var(--gold-light); }
+.arrogance-gem-table-card {
+  --gem-color: var(--gold-light);
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.08), rgba(8,7,5,0.14)),
+    var(--bg3);
+}
+.arrogance-gem-table-card h2 { color: var(--gem-color); }
+.arrogance-gem-table-card p { color: var(--text-muted); }
+.arrogance-gem-king { --gem-color: #f0b08c; }
+.arrogance-gem-twist { --gem-color: #68d08a; }
+.arrogance-gem-magic { --gem-color: #c68cff; }
+.arrogance-gem-undead { --gem-color: #9fc8f0; }
+.arrogance-gem-table {
+  min-width: 720px;
+  table-layout: fixed;
+}
+.arrogance-gem-table th:first-child,
+.arrogance-gem-table td:first-child {
+  width: 22%;
+  text-align: center;
+}
+.arrogance-gem-table th:nth-child(2),
+.arrogance-gem-table td:nth-child(2) {
+  text-align: left;
+}
+.arrogance-gem-table td:nth-child(2) {
+  color: var(--gem-color);
+  font-weight: 600;
+}
+.arrogance-gem-table tr.top td {
+  background: rgba(201,169,110,0.14);
+  color: var(--gold-light);
+  font-weight: 800;
+}
+
 /* ══════════════════════════════════════
    遊戲資料庫
 ══════════════════════════════════════ */
@@ -3238,6 +3337,7 @@ img { max-width: 100%; display: block; }
   .elemental-system-grid { grid-template-columns: 1fr; }
   .dragon-note-grid { grid-template-columns: 1fr; }
   .transform-flow { grid-template-columns: 1fr; }
+  .arrogance-gem-recipe-grid { grid-template-columns: 1fr; }
   .pet-charm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pet-two-col { grid-template-columns: 1fr; }
   .formatter-wrap { grid-template-columns: 1fr; height: auto; }
@@ -3353,6 +3453,7 @@ img { max-width: 100%; display: block; }
   .feature-table th:first-child,
   .feature-table td:first-child { width: 46%; }
   .transform-fusion-hero { padding: 22px 18px; }
+  .arrogance-gem-hero { padding: 22px 18px; }
   .transform-guarantee,
   .transform-card-note { grid-template-columns: 1fr; }
   .guarantee-icon { width: 60px; height: 60px; font-size: 28px; }

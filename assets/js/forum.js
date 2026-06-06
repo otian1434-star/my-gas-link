@@ -111,6 +111,7 @@
             <a href="${r}pages/weapons-craft.html">⚒️ 武器防具製作</a>
             <a href="${r}pages/weapons-enhance.html">📜 強化說明</a>
             <a href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
+            <a href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
             <a href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
             <a href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
             <a href="${r}pages/items-overview.html">🎒 道具列表</a>
@@ -215,6 +216,7 @@
       <a class="mob-link mob-sub" href="${r}pages/weapons-craft.html">⚒️ 武器防具製作</a>
       <a class="mob-link mob-sub" href="${r}pages/weapons-enhance.html">📜 強化說明</a>
       <a class="mob-link mob-sub" href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
+      <a class="mob-link mob-sub" href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
       <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>
