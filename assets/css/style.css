@@ -1369,6 +1369,166 @@ img { max-width: 100%; display: block; }
 .doll-ice { --doll-accent: #9fd2ff; }
 .doll-gold { --doll-accent: #f2d06b; }
 
+/* 寵物介紹 */
+.pet-guide-page .content-card { margin-bottom: 22px; }
+.pet-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 13% 10%, rgba(104,208,138,0.18), transparent 30%),
+    radial-gradient(circle at 84% 8%, rgba(201,169,110,0.2), transparent 34%),
+    linear-gradient(135deg, rgba(13,20,13,0.95), rgba(30,24,16,0.9)),
+    var(--bg3);
+}
+.pet-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.pet-hero p { max-width: 840px; color: rgba(232,222,202,0.92); }
+.pet-charm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.pet-charm-card {
+  border: 1px solid rgba(201,169,110,0.22);
+  background: rgba(8,7,5,0.28);
+  padding: 16px 12px;
+  text-align: center;
+}
+.pet-charm-card span {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.pet-charm-card strong {
+  display: block;
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.pet-charm-card em {
+  color: var(--gold);
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.pet-charm-card.highlight {
+  border-color: rgba(104,208,138,0.46);
+  background: linear-gradient(135deg, rgba(104,208,138,0.12), rgba(8,7,5,0.22));
+}
+.pet-charm-card.muted { opacity: 0.78; }
+.pet-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.pet-evo-card {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid rgba(201,169,110,0.22);
+  background: rgba(8,7,5,0.28);
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.pet-evo-card:last-child { margin-bottom: 0; }
+.pet-evo-mark {
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  border: 1px solid rgba(104,208,138,0.52);
+  color: #68d08a;
+  font-family: 'Noto Serif TC', serif;
+  letter-spacing: 1px;
+}
+.pet-evo-card.gold .pet-evo-mark {
+  border-color: rgba(242,208,107,0.58);
+  color: #f2d06b;
+}
+.pet-evo-card h3,
+.pet-evo-card p,
+.pet-limit-list p { margin-bottom: 0; }
+.pet-limit-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.pet-limit-list > div {
+  border-left: 2px solid var(--gold-dark);
+  background: rgba(8,7,5,0.24);
+  padding: 12px 14px;
+}
+.pet-limit-list strong {
+  display: block;
+  color: var(--gold-light);
+  margin-bottom: 7px;
+}
+.pet-callout {
+  border: 1px solid rgba(201,169,110,0.34);
+  background: linear-gradient(90deg, rgba(201,169,110,0.12), rgba(8,7,5,0.2));
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.pet-callout strong {
+  display: block;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.pet-callout span { color: var(--text); font-size: 13px; line-height: 1.8; }
+.pet-food-table th:first-child,
+.pet-food-table td:first-child {
+  width: 30%;
+  text-align: left;
+}
+.pet-food-tag {
+  display: inline-block;
+  border: 1px solid #75b8f0;
+  color: #75b8f0;
+  background: rgba(117,184,240,0.08);
+  padding: 2px 9px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.pet-food-tag.carrot {
+  border-color: #ef7b73;
+  color: #ef7b73;
+  background: rgba(239,123,115,0.08);
+}
+.pet-food-tag.special {
+  border-color: #f2d06b;
+  color: #f2d06b;
+  background: rgba(242,208,107,0.08);
+}
+.pet-equipment-table th,
+.pet-equipment-table td { text-align: center; }
+.pet-equipment-table th:first-child,
+.pet-equipment-table td:first-child {
+  width: 30%;
+  text-align: left;
+}
+.pet-equipment-table .pet-rare-row td {
+  background: rgba(201,169,110,0.12);
+  color: var(--gold-light);
+  font-weight: 700;
+}
+.pet-warning-card {
+  text-align: center;
+  border-color: rgba(239,123,115,0.55);
+  background:
+    linear-gradient(135deg, rgba(139,26,26,0.22), rgba(201,169,110,0.08)),
+    var(--bg3);
+}
+.pet-warning-card h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: #ef7b73;
+}
+.pet-warning-card p { max-width: 760px; margin-left: auto; margin-right: auto; }
+
 /* 裝備收集圖鑑 */
 .collection-page .content-card { margin-bottom: 24px; }
 .collection-intro p { max-width: 820px; }
@@ -2430,6 +2590,8 @@ img { max-width: 100%; display: block; }
   .guide-daily-grid { grid-template-columns: 1fr; }
   .dragon-note-grid { grid-template-columns: 1fr; }
   .transform-flow { grid-template-columns: 1fr; }
+  .pet-charm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pet-two-col { grid-template-columns: 1fr; }
   .formatter-wrap { grid-template-columns: 1fr; height: auto; }
   .fmt-panel { min-height: 300px; }
 }
@@ -2540,6 +2702,14 @@ img { max-width: 100%; display: block; }
   .doll-icon { width: 46px; height: 46px; font-size: 24px; }
   .doll-table th:first-child,
   .doll-table td:first-child { width: 32%; }
+  .pet-hero { padding: 22px 18px; }
+  .pet-charm-grid,
+  .pet-limit-list { grid-template-columns: 1fr; }
+  .pet-evo-card { grid-template-columns: 1fr; }
+  .pet-food-table th:first-child,
+  .pet-food-table td:first-child,
+  .pet-equipment-table th:first-child,
+  .pet-equipment-table td:first-child { width: 42%; }
   .register-notes ul {
     padding-left: 18px;
     font-size: 13px;
