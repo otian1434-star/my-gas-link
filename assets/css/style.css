@@ -1146,6 +1146,90 @@ img { max-width: 100%; display: block; }
 }
 .daily-quest-reminder p { max-width: 760px; margin-left: auto; margin-right: auto; }
 
+/* 無限大戰 */
+.infinite-battle-page .content-card { margin-bottom: 22px; }
+.infinite-battle-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(239,123,115,0.22), transparent 32%),
+    radial-gradient(circle at 86% 8%, rgba(242,208,107,0.2), transparent 34%),
+    linear-gradient(135deg, rgba(31,8,8,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.infinite-battle-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.infinite-battle-hero p { max-width: 840px; color: rgba(232,222,202,0.92); }
+.infinite-battle-treasure {
+  border-color: rgba(242,208,107,0.52);
+  background:
+    linear-gradient(135deg, rgba(242,208,107,0.14), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.infinite-battle-treasure h2,
+.infinite-battle-badge h2,
+.infinite-battle-reward h2,
+.infinite-battle-card h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.infinite-battle-treasure strong,
+.infinite-battle-badge strong,
+.infinite-battle-card strong,
+.infinite-battle-reward strong { color: var(--gold-light); }
+.infinite-battle-treasure p,
+.infinite-battle-badge p,
+.infinite-battle-card p,
+.infinite-battle-reward p { margin-bottom: 0; }
+.infinite-battle-badge {
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.1), rgba(139,26,26,0.12)),
+    var(--bg3);
+}
+.infinite-battle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.infinite-battle-card {
+  background:
+    linear-gradient(135deg, rgba(239,123,115,0.1), rgba(8,7,5,0.14)),
+    var(--bg3);
+}
+.infinite-battle-card.rule {
+  background:
+    linear-gradient(135deg, rgba(117,184,240,0.1), rgba(8,7,5,0.14)),
+    var(--bg3);
+}
+.infinite-battle-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(201,169,110,0.34);
+  background: rgba(8,7,5,0.3);
+  color: var(--gold);
+  font-size: 30px;
+  filter: drop-shadow(0 0 16px rgba(201,169,110,0.22));
+}
+.infinite-battle-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.infinite-battle-card li { margin-bottom: 8px; }
+.infinite-battle-card li:last-child { margin-bottom: 0; }
+.infinite-battle-reward {
+  text-align: center;
+  border-style: dashed;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(201,169,110,0.16), transparent 42%),
+    var(--bg3);
+}
+
 /* 世界 BOSS 時刻表 */
 .boss-schedule-page .content-card { margin-bottom: 22px; }
 .boss-schedule-hero {
@@ -3147,6 +3231,7 @@ img { max-width: 100%; display: block; }
   .game-db-attr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-daily-grid { grid-template-columns: 1fr; }
   .daily-quest-rule-grid { grid-template-columns: 1fr; }
+  .infinite-battle-grid { grid-template-columns: 1fr; }
   .boss-dragon-grid { grid-template-columns: 1fr; }
   .event-coin-grid { grid-template-columns: 1fr; }
   .elemental-box-grid,
@@ -3243,6 +3328,7 @@ img { max-width: 100%; display: block; }
   .game-db-attr-grid { grid-template-columns: 1fr; }
   .guide-hero { padding: 22px 18px; }
   .daily-quest-hero { padding: 22px 18px; }
+  .infinite-battle-hero { padding: 22px 18px; }
   .boss-schedule-hero { padding: 22px 18px; }
   .event-coin-hero { padding: 22px 18px; }
   .map-index-hero,
