@@ -2440,6 +2440,145 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0;
 }
 
+/* 釣魚護符 */
+.fishing-talisman-page .content-card { margin-bottom: 22px; }
+.fishing-talisman-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(117,184,240,0.22), transparent 32%),
+    radial-gradient(circle at 86% 8%, rgba(104,208,138,0.18), transparent 34%),
+    linear-gradient(135deg, rgba(7,20,26,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.fishing-talisman-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.fishing-talisman-hero p { max-width: 860px; color: rgba(232,222,202,0.92); }
+.fishing-talisman-alert {
+  border-color: rgba(242,208,107,0.5);
+  background:
+    linear-gradient(135deg, rgba(242,208,107,0.14), rgba(8,7,5,0.12)),
+    var(--bg3);
+  text-align: center;
+}
+.fishing-talisman-alert h2,
+.fishing-talisman-location h2,
+.fishing-talisman-recipe h2,
+.fishing-talisman-warning h2,
+.fishing-talisman-fusion h2,
+.fishing-talisman-table-card h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.fishing-talisman-alert p,
+.fishing-talisman-location p,
+.fishing-talisman-recipe p { margin-bottom: 0; }
+.fishing-talisman-alert strong,
+.fishing-talisman-location strong,
+.fishing-talisman-recipe strong,
+.fishing-talisman-warning strong,
+.fishing-talisman-fusion strong { color: var(--gold-light); }
+.fishing-talisman-location-grid,
+.fishing-talisman-recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.fishing-talisman-location,
+.fishing-talisman-recipe {
+  background:
+    linear-gradient(135deg, rgba(117,184,240,0.1), rgba(8,7,5,0.14)),
+    var(--bg3);
+}
+.fishing-talisman-location.grandma,
+.fishing-talisman-recipe.turtle {
+  background:
+    linear-gradient(135deg, rgba(104,208,138,0.1), rgba(8,7,5,0.14)),
+    var(--bg3);
+}
+.fishing-talisman-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(201,169,110,0.34);
+  background: rgba(8,7,5,0.3);
+  color: var(--gold);
+  font-size: 30px;
+  filter: drop-shadow(0 0 16px rgba(201,169,110,0.22));
+}
+.fishing-talisman-recipe ul,
+.fishing-talisman-warning ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.fishing-talisman-warning {
+  border-color: rgba(239,123,115,0.5);
+  background:
+    linear-gradient(135deg, rgba(139,26,26,0.18), rgba(201,169,110,0.08)),
+    var(--bg3);
+}
+.fishing-talisman-warning li { margin-bottom: 8px; }
+.fishing-talisman-warning li:last-child { margin-bottom: 0; }
+.fishing-talisman-fusion {
+  background:
+    linear-gradient(135deg, rgba(117,184,240,0.1), rgba(201,169,110,0.08)),
+    var(--bg3);
+}
+.fishing-talisman-fusion-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.fishing-talisman-fusion-list > div {
+  border: 1px dashed rgba(201,169,110,0.3);
+  background: rgba(8,7,5,0.24);
+  padding: 14px;
+}
+.fishing-talisman-fusion-list strong,
+.fishing-talisman-fusion-list span {
+  display: block;
+}
+.fishing-talisman-fusion-list span {
+  margin-top: 7px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.fishing-talisman-table {
+  min-width: 780px;
+  table-layout: fixed;
+}
+.fishing-talisman-table th,
+.fishing-talisman-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.fishing-talisman-table th:first-child,
+.fishing-talisman-table td:first-child {
+  width: 18%;
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.fishing-talisman-table th:nth-child(2),
+.fishing-talisman-table td:nth-child(2) { color: #ef7b73; }
+.fishing-talisman-table th:nth-child(3),
+.fishing-talisman-table td:nth-child(3) { color: #75b8f0; }
+.fishing-talisman-table th:nth-child(4),
+.fishing-talisman-table td:nth-child(4) { color: #68d08a; }
+.fishing-talisman-table tr.top td {
+  background: rgba(201,169,110,0.14);
+  color: var(--gold-light);
+  font-weight: 800;
+}
+
 /* ══════════════════════════════════════
    遊戲資料庫
 ══════════════════════════════════════ */
@@ -3456,6 +3595,9 @@ img { max-width: 100%; display: block; }
   .arrogance-gem-recipe-grid { grid-template-columns: 1fr; }
   .hero-badge-step-grid,
   .hero-badge-upgrade-list { grid-template-columns: 1fr; }
+  .fishing-talisman-location-grid,
+  .fishing-talisman-recipe-grid,
+  .fishing-talisman-fusion-list { grid-template-columns: 1fr; }
   .pet-charm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pet-two-col { grid-template-columns: 1fr; }
   .formatter-wrap { grid-template-columns: 1fr; height: auto; }
@@ -3573,6 +3715,7 @@ img { max-width: 100%; display: block; }
   .transform-fusion-hero { padding: 22px 18px; }
   .arrogance-gem-hero { padding: 22px 18px; }
   .hero-badge-hero { padding: 22px 18px; }
+  .fishing-talisman-hero { padding: 22px 18px; }
   .transform-guarantee,
   .transform-card-note { grid-template-columns: 1fr; }
   .guarantee-icon { width: 60px; height: 60px; font-size: 28px; }
