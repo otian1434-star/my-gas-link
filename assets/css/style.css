@@ -1362,6 +1362,94 @@ img { max-width: 100%; display: block; }
 }
 .event-coin-summary p { max-width: 760px; margin-left: auto; margin-right: auto; }
 
+/* 地圖介紹 / 屬性監獄 */
+.map-index-page .content-card,
+.elemental-prison-page .content-card { margin-bottom: 22px; }
+.map-index-hero,
+.elemental-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(104,208,138,0.18), transparent 32%),
+    radial-gradient(circle at 86% 8%, rgba(117,184,240,0.18), transparent 34%),
+    linear-gradient(135deg, rgba(7,22,14,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.map-index-hero h2,
+.elemental-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.map-index-hero p,
+.elemental-hero p { max-width: 850px; color: rgba(232,222,202,0.92); }
+.elemental-time-alert {
+  border-color: rgba(242,208,107,0.48);
+  background:
+    linear-gradient(135deg, rgba(242,208,107,0.14), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.elemental-time-alert h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: #f2d06b;
+}
+.elemental-time-alert p { margin-bottom: 0; color: var(--white); }
+.elemental-drop-table {
+  min-width: 760px;
+  table-layout: fixed;
+}
+.elemental-drop-table th:nth-child(1),
+.elemental-drop-table td:nth-child(1) { width: 30%; }
+.elemental-drop-table th:nth-child(2),
+.elemental-drop-table td:nth-child(2),
+.elemental-drop-table th:nth-child(3),
+.elemental-drop-table td:nth-child(3) { width: 35%; }
+.elemental-drop-table td span {
+  color: var(--element-color, var(--gold-light));
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.elemental-drop-table tr.wind { --element-color: #f2d06b; }
+.elemental-drop-table tr.earth { --element-color: #68d08a; }
+.elemental-drop-table tr.water { --element-color: #75b8f0; }
+.elemental-drop-table tr.fire { --element-color: #ef7b73; }
+.elemental-box-grid,
+.elemental-system-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.elemental-box-option {
+  border: 1px solid rgba(201,169,110,0.22);
+  background: rgba(8,7,5,0.26);
+  padding: 18px;
+}
+.elemental-box-option.key {
+  border-color: rgba(242,208,107,0.48);
+  background: linear-gradient(135deg, rgba(242,208,107,0.12), rgba(8,7,5,0.2));
+}
+.elemental-box-option > span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 30px;
+  filter: drop-shadow(0 0 14px rgba(201,169,110,0.22));
+}
+.elemental-box-option h3 { margin-top: 0; }
+.elemental-box-option p { margin-bottom: 0; }
+.elemental-system-card {
+  background:
+    linear-gradient(135deg, rgba(104,208,138,0.1), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.elemental-system-card.mark {
+  background:
+    linear-gradient(135deg, rgba(198,140,255,0.12), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.elemental-system-card ul { margin-bottom: 0; }
+
 /* 龍之呢喃 */
 .dragon-whisper-page .content-card { margin-bottom: 22px; }
 .dragon-whisper-hero {
@@ -2898,6 +2986,8 @@ img { max-width: 100%; display: block; }
   .daily-quest-rule-grid { grid-template-columns: 1fr; }
   .boss-dragon-grid { grid-template-columns: 1fr; }
   .event-coin-grid { grid-template-columns: 1fr; }
+  .elemental-box-grid,
+  .elemental-system-grid { grid-template-columns: 1fr; }
   .dragon-note-grid { grid-template-columns: 1fr; }
   .transform-flow { grid-template-columns: 1fr; }
   .pet-charm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2992,6 +3082,8 @@ img { max-width: 100%; display: block; }
   .daily-quest-hero { padding: 22px 18px; }
   .boss-schedule-hero { padding: 22px 18px; }
   .event-coin-hero { padding: 22px 18px; }
+  .map-index-hero,
+  .elemental-hero { padding: 22px 18px; }
   .boss-time-card { grid-template-columns: 1fr; }
   .boss-time { min-height: 58px; }
   .boss-dragon-head { flex-direction: column; }
