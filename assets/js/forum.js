@@ -114,6 +114,7 @@
             <a href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
             <a href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
             <a href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
+            <a href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
             <a href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
             <a href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
             <a href="${r}pages/items-overview.html">🎒 道具列表</a>
@@ -221,6 +222,7 @@
       <a class="mob-link mob-sub" href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
+      <a class="mob-link mob-sub" href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
       <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>

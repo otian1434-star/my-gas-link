@@ -2579,6 +2579,106 @@ img { max-width: 100%; display: block; }
   font-weight: 800;
 }
 
+/* 龍印魔石 */
+.dragon-seal-page .content-card { margin-bottom: 22px; }
+.dragon-seal-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(239,123,115,0.2), transparent 32%),
+    radial-gradient(circle at 84% 8%, rgba(201,169,110,0.2), transparent 34%),
+    linear-gradient(135deg, rgba(21,9,9,0.95), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.dragon-seal-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.dragon-seal-hero p { max-width: 880px; color: rgba(232,222,202,0.92); }
+.dragon-seal-alert,
+.dragon-seal-rate-card {
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.12), rgba(8,7,5,0.18)),
+    var(--bg3);
+}
+.dragon-seal-alert {
+  border-color: rgba(104,208,138,0.42);
+  text-align: center;
+}
+.dragon-seal-alert h2,
+.dragon-seal-rate-card h2,
+.dragon-seal-table-card h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.dragon-seal-alert p { margin-bottom: 0; }
+.dragon-seal-alert strong,
+.dragon-seal-rate-card strong { color: var(--gold-light); }
+.dragon-seal-rate-table {
+  min-width: 760px;
+  table-layout: fixed;
+}
+.dragon-seal-rate-table th,
+.dragon-seal-rate-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.dragon-seal-rate-table td:nth-child(odd) {
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.dragon-seal-rate-table .rate-high { color: #68d08a; }
+.dragon-seal-rate-table .rate-mid { color: #f2d06b; }
+.dragon-seal-rate-table .rate-low { color: #f0b08c; }
+.dragon-seal-rate-table .rate-rare { color: #ef7b73; }
+.dragon-seal-rate-table .rate-top { color: #d86aa3; }
+.dragon-seal-rate-table tr.top td {
+  background: rgba(201,169,110,0.14);
+  color: var(--gold-light);
+  font-weight: 800;
+}
+.dragon-seal-table-card {
+  --seal-color: var(--gold-light);
+  border-color: color-mix(in srgb, var(--seal-color) 42%, transparent);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--seal-color) 14%, transparent), rgba(8,7,5,0.16)),
+    var(--bg3);
+}
+.dragon-seal-table-card h2 { color: var(--seal-color); }
+.dragon-seal-table-card p { color: var(--text-muted); }
+.dragon-seal-fighter { --seal-color: #ef7b73; }
+.dragon-seal-archer { --seal-color: #68d08a; }
+.dragon-seal-sage { --seal-color: #c68cff; }
+.dragon-seal-charge { --seal-color: #9fc8f0; }
+.dragon-seal-table {
+  min-width: 760px;
+  table-layout: fixed;
+}
+.dragon-seal-table th,
+.dragon-seal-table td { vertical-align: middle; }
+.dragon-seal-table th:first-child,
+.dragon-seal-table td:first-child {
+  width: 20%;
+  text-align: center;
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.dragon-seal-table th:nth-child(2),
+.dragon-seal-table td:nth-child(2) {
+  color: var(--seal-color);
+  font-weight: 700;
+}
+.dragon-seal-table tr.top td {
+  background: rgba(201,169,110,0.14);
+  color: var(--gold-light);
+  font-weight: 900;
+}
+
 /* ══════════════════════════════════════
    遊戲資料庫
 ══════════════════════════════════════ */
@@ -3716,6 +3816,7 @@ img { max-width: 100%; display: block; }
   .arrogance-gem-hero { padding: 22px 18px; }
   .hero-badge-hero { padding: 22px 18px; }
   .fishing-talisman-hero { padding: 22px 18px; }
+  .dragon-seal-hero { padding: 22px 18px; }
   .transform-guarantee,
   .transform-card-note { grid-template-columns: 1fr; }
   .guarantee-icon { width: 60px; height: 60px; font-size: 28px; }
