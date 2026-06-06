@@ -1146,6 +1146,159 @@ img { max-width: 100%; display: block; }
 }
 .daily-quest-reminder p { max-width: 760px; margin-left: auto; margin-right: auto; }
 
+/* 世界 BOSS 時刻表 */
+.boss-schedule-page .content-card { margin-bottom: 22px; }
+.boss-schedule-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(239,123,115,0.18), transparent 32%),
+    radial-gradient(circle at 86% 10%, rgba(201,169,110,0.22), transparent 34%),
+    linear-gradient(135deg, rgba(31,8,8,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.boss-schedule-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.boss-schedule-hero p { max-width: 850px; color: rgba(232,222,202,0.92); }
+.boss-schedule-notice {
+  border-color: rgba(239,123,115,0.46);
+  background:
+    linear-gradient(135deg, rgba(139,26,26,0.2), rgba(201,169,110,0.08)),
+    var(--bg3);
+}
+.boss-schedule-notice h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: #ef7b73;
+}
+.boss-schedule-notice p { margin-bottom: 0; color: var(--white); }
+.boss-time-list {
+  display: grid;
+  gap: 14px;
+}
+.boss-time-card {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  border: 1px solid rgba(201,169,110,0.24);
+  background:
+    linear-gradient(90deg, rgba(201,169,110,0.08), rgba(8,7,5,0.16)),
+    rgba(8,7,5,0.24);
+  overflow: hidden;
+}
+.boss-time {
+  display: grid;
+  place-items: center;
+  min-height: 92px;
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--boss-color, var(--gold-dark)), var(--boss-color-light, var(--gold-light)));
+  font-family: 'Noto Serif TC', serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.boss-time-info {
+  padding: 18px 22px;
+}
+.boss-time-info h3 {
+  margin-top: 0;
+  color: var(--boss-color-light, var(--gold-light));
+  font-size: 18px;
+}
+.boss-time-info p { margin-bottom: 0; }
+.boss-time-card.sandworm {
+  --boss-color: #d18442;
+  --boss-color-light: #f2a25c;
+}
+.boss-time-card.queen {
+  --boss-color: #8e5cc7;
+  --boss-color-light: #c68cff;
+}
+.boss-time-card.king {
+  --boss-color: #a93530;
+  --boss-color-light: #ef7b73;
+}
+.boss-dragon-section {
+  background:
+    radial-gradient(circle at 90% 0%, rgba(139,26,26,0.2), transparent 34%),
+    linear-gradient(135deg, rgba(4,4,4,0.88), rgba(24,18,10,0.94)),
+    var(--bg3);
+}
+.boss-dragon-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+}
+.boss-dragon-head h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 4px;
+}
+.boss-dragon-head p { margin-bottom: 0; color: var(--text-muted); }
+.boss-dragon-head > span {
+  flex: 0 0 auto;
+  border: 1px solid rgba(239,123,115,0.54);
+  background: rgba(139,26,26,0.28);
+  color: #ef7b73;
+  padding: 7px 12px;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.boss-dragon-alert {
+  border: 1px solid rgba(201,169,110,0.26);
+  background: rgba(201,169,110,0.08);
+  color: var(--gold-light);
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.boss-dragon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.boss-dragon-card {
+  border-left: 3px solid var(--dragon-color, var(--gold));
+  background: rgba(255,255,255,0.04);
+  padding: 14px 16px;
+}
+.boss-dragon-card strong {
+  display: block;
+  color: var(--white);
+  font-family: 'Noto Serif TC', serif;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.boss-dragon-card span {
+  color: var(--text);
+  font-size: 13px;
+}
+.boss-dragon-card.earth { --dragon-color: #68d08a; }
+.boss-dragon-card.water { --dragon-color: #75b8f0; }
+.boss-dragon-card.fire { --dragon-color: #ef7b73; }
+.boss-dragon-card.wind { --dragon-color: #f2d06b; }
+.boss-raid-guide {
+  text-align: center;
+  border-style: dashed;
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.12), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.boss-raid-guide h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.boss-raid-guide p { max-width: 760px; margin-left: auto; margin-right: auto; }
+
 /* 龍之呢喃 */
 .dragon-whisper-page .content-card { margin-bottom: 22px; }
 .dragon-whisper-hero {
@@ -2680,6 +2833,7 @@ img { max-width: 100%; display: block; }
   .game-db-attr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-daily-grid { grid-template-columns: 1fr; }
   .daily-quest-rule-grid { grid-template-columns: 1fr; }
+  .boss-dragon-grid { grid-template-columns: 1fr; }
   .dragon-note-grid { grid-template-columns: 1fr; }
   .transform-flow { grid-template-columns: 1fr; }
   .pet-charm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2772,6 +2926,11 @@ img { max-width: 100%; display: block; }
   .game-db-attr-grid { grid-template-columns: 1fr; }
   .guide-hero { padding: 22px 18px; }
   .daily-quest-hero { padding: 22px 18px; }
+  .boss-schedule-hero { padding: 22px 18px; }
+  .boss-time-card { grid-template-columns: 1fr; }
+  .boss-time { min-height: 58px; }
+  .boss-dragon-head { flex-direction: column; }
+  .boss-dragon-head > span { align-self: flex-start; }
   .guide-kicker { letter-spacing: 4px; }
   .guide-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-nav a,
