@@ -1055,6 +1055,97 @@ img { max-width: 100%; display: block; }
 .guide-finale h2 { border-bottom: 0; padding-bottom: 0; }
 .guide-finale p { max-width: 760px; margin-left: auto; margin-right: auto; }
 
+/* 每日任務 */
+.daily-quest-page .content-card { margin-bottom: 22px; }
+.daily-quest-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(117,184,240,0.16), transparent 30%),
+    radial-gradient(circle at 86% 8%, rgba(201,169,110,0.22), transparent 34%),
+    linear-gradient(135deg, rgba(8,13,20,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.daily-quest-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.daily-quest-hero p { max-width: 840px; color: rgba(232,222,202,0.92); }
+.daily-quest-alert {
+  border-color: rgba(104,208,138,0.45);
+  background:
+    linear-gradient(135deg, rgba(104,208,138,0.12), rgba(201,169,110,0.08)),
+    var(--bg3);
+}
+.daily-quest-alert h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: #68d08a;
+}
+.daily-quest-alert p { margin-bottom: 0; color: var(--white); }
+.daily-quest-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.daily-quest-rule-card {
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.08), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.daily-quest-rule-card.reset {
+  background:
+    linear-gradient(135deg, rgba(242,162,92,0.12), rgba(8,7,5,0.12)),
+    var(--bg3);
+}
+.daily-quest-rule-card p { margin-bottom: 0; }
+.daily-quest-table {
+  min-width: 720px;
+  table-layout: fixed;
+}
+.daily-quest-table th:nth-child(1),
+.daily-quest-table td:nth-child(1) { width: 28%; }
+.daily-quest-table th:nth-child(2),
+.daily-quest-table td:nth-child(2) { width: 44%; }
+.daily-quest-table th:nth-child(3),
+.daily-quest-table td:nth-child(3) {
+  width: 28%;
+  text-align: center;
+}
+.daily-quest-table td strong {
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  letter-spacing: 1px;
+}
+.quest-reward {
+  display: inline-block;
+  border: 1px solid rgba(117,184,240,0.48);
+  background: rgba(117,184,240,0.08);
+  color: #75b8f0;
+  padding: 3px 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.quest-reward.high {
+  border-color: rgba(239,123,115,0.55);
+  background: rgba(139,26,26,0.16);
+  color: #ef7b73;
+  font-weight: 800;
+}
+.daily-quest-highlight td { background: rgba(201,169,110,0.08); }
+.daily-quest-reminder {
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.12), rgba(139,26,26,0.12)),
+    var(--bg3);
+}
+.daily-quest-reminder h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.daily-quest-reminder p { max-width: 760px; margin-left: auto; margin-right: auto; }
+
 /* 龍之呢喃 */
 .dragon-whisper-page .content-card { margin-bottom: 22px; }
 .dragon-whisper-hero {
@@ -2588,6 +2679,7 @@ img { max-width: 100%; display: block; }
   .game-db-filter-row { justify-content: flex-start; }
   .game-db-attr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-daily-grid { grid-template-columns: 1fr; }
+  .daily-quest-rule-grid { grid-template-columns: 1fr; }
   .dragon-note-grid { grid-template-columns: 1fr; }
   .transform-flow { grid-template-columns: 1fr; }
   .pet-charm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2679,6 +2771,7 @@ img { max-width: 100%; display: block; }
   .game-db-detail-head h2 { font-size: 20px; letter-spacing: 1px; }
   .game-db-attr-grid { grid-template-columns: 1fr; }
   .guide-hero { padding: 22px 18px; }
+  .daily-quest-hero { padding: 22px 18px; }
   .guide-kicker { letter-spacing: 4px; }
   .guide-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-nav a,
