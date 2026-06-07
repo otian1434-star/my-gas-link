@@ -99,6 +99,10 @@
             <a href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
             <a href="${r}pages/features-dragon-whisper.html">🐉 龍之呢喃</a>
             <a href="${r}pages/features-equipment-collection.html">📚 裝備收集圖鑑</a>
+            <a href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
+            <a href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
+            <a href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
+            <a href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
             <a href="${r}pages/features-transform-fusion.html">🎭 變身卡合成</a>
             <a href="${r}pages/features-main-quest.html">📜 主線任務勳章</a>
             <a href="${r}pages/features-pendant.html">📿 傲慢的掛飾</a>
@@ -111,10 +115,6 @@
             <a href="${r}pages/weapons-craft.html">⚒️ 武器防具製作</a>
             <a href="${r}pages/weapons-enhance.html">📜 強化說明</a>
             <a href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
-            <a href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
-            <a href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
-            <a href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
-            <a href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
             <a href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
             <a href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
             <a href="${r}pages/items-overview.html">🎒 道具列表</a>
@@ -207,6 +207,10 @@
       <a class="mob-link mob-sub" href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
       <a class="mob-link mob-sub" href="${r}pages/features-dragon-whisper.html">🐉 龍之呢喃</a>
       <a class="mob-link mob-sub" href="${r}pages/features-equipment-collection.html">📚 裝備收集圖鑑</a>
+      <a class="mob-link mob-sub" href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
+      <a class="mob-link mob-sub" href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
+      <a class="mob-link mob-sub" href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
+      <a class="mob-link mob-sub" href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
       <a class="mob-link mob-sub" href="${r}pages/features-transform-fusion.html">🎭 變身卡合成</a>
       <a class="mob-link mob-sub" href="${r}pages/features-main-quest.html">📜 主線任務勳章</a>
       <a class="mob-link mob-sub" href="${r}pages/features-pendant.html">📿 傲慢的掛飾</a>
@@ -219,10 +223,6 @@
       <a class="mob-link mob-sub" href="${r}pages/weapons-craft.html">⚒️ 武器防具製作</a>
       <a class="mob-link mob-sub" href="${r}pages/weapons-enhance.html">📜 強化說明</a>
       <a class="mob-link mob-sub" href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
-      <a class="mob-link mob-sub" href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
-      <a class="mob-link mob-sub" href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
-      <a class="mob-link mob-sub" href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
-      <a class="mob-link mob-sub" href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
       <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>

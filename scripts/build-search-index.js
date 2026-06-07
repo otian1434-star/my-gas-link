@@ -23,6 +23,10 @@ const categoryMap = {
   'faq.html': '玩家服務',
   'promo.html': '玩家服務',
   'stream.html': '玩家服務',
+  'equipment-arrogance-gem.html': '遊戲特色',
+  'equipment-hero-badge.html': '遊戲特色',
+  'equipment-fishing-talisman.html': '遊戲特色',
+  'equipment-dragon-seal.html': '遊戲特色',
 };
 
 function decodeEntities(value) {
