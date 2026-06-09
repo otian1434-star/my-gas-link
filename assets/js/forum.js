@@ -92,7 +92,6 @@
             <a href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
             <a href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
             <a href="${r}pages/features-pet.html">🐾 寵物系統</a>
-            <a href="${r}pages/features-prestige.html">🏆 威望系統</a>
             <a href="${r}pages/features-hecate.html">🌙 赫卡特介紹</a>
             <a href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
             <a href="${r}pages/features-dragon-whisper.html">🐉 龍之呢喃</a>
@@ -107,7 +106,6 @@
             <a href="${r}pages/weapons-overview.html">⚔️ 武器總覽</a>
             <a href="${r}pages/weapons-craft.html">⚒️ 武器防具製作</a>
             <a href="${r}pages/weapons-enhance.html">📜 強化說明</a>
-            <a href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
             <a href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
             <a href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
             <a href="${r}pages/items-overview.html">🎒 道具列表</a>
@@ -115,13 +113,9 @@
             <div class="nav-dd-label">圖鑑</div>
             <a href="${r}pages/mobs-overview.html">👹 怪物列表</a>
             <a href="${r}pages/boss-schedule.html">🌍 世界BOSS時刻表</a>
-            <a href="${r}pages/boss-drops.html">🎁 BOSS掉落物</a>
-            <a href="${r}pages/boss-collection.html">🖼️ BOSS收藏圖鑑</a>
             <a href="${r}pages/dolls-guide.html">🧸 娃娃介紹</a>
             <a href="${r}pages/dolls-list.html">🧸 娃娃圖鑑清單</a>
-            <a href="${r}pages/dolls-sacred.html">✨ 聖物系統</a>
             <a href="${r}pages/transform-guide.html">🎭 變身圖鑑大全</a>
-            <a href="${r}pages/transform-list.html">📖 變身收藏清單</a>
             <a href="${r}pages/map.html">🗺️ 地圖介紹</a>
             <a href="${r}pages/map-training.html">🗺️ 專屬練功地圖</a>
             <a href="${r}pages/map-dream-island.html">🏝️ 夢幻之島</a>
@@ -135,7 +129,6 @@
             <a href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
             <a href="${r}pages/items-vip-card.html">👑 貴賓卡</a>
             <a href="${r}pages/items-candle.html">🕯️ 回憶蠟燭</a>
-            <a href="${r}pages/items-pvp-badge.html">🛡️ 戰場PVP徽章</a>
           </div>
         </div>
         <!-- 玩家服務 -->
@@ -193,7 +186,6 @@
       <a class="mob-link mob-sub" href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
       <a class="mob-link mob-sub" href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-pet.html">🐾 寵物系統</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-prestige.html">🏆 威望系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-hecate.html">🌙 赫卡特介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
       <a class="mob-link mob-sub" href="${r}pages/features-dragon-whisper.html">🐉 龍之呢喃</a>
@@ -208,25 +200,19 @@
       <a class="mob-link mob-sub" href="${r}pages/weapons-overview.html">⚔️ 武器總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/weapons-craft.html">⚒️ 武器防具製作</a>
       <a class="mob-link mob-sub" href="${r}pages/weapons-enhance.html">📜 強化說明</a>
-      <a class="mob-link mob-sub" href="${r}pages/weapons-elemental.html">🔥 屬性強化卷軸</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-overview.html">🛡️ 防具總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
       <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>
       <a class="mob-link mob-sub" href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
       <a class="mob-link mob-sub" href="${r}pages/items-vip-card.html">👑 貴賓卡</a>
       <a class="mob-link mob-sub" href="${r}pages/items-candle.html">🕯️ 回憶蠟燭</a>
-      <a class="mob-link mob-sub" href="${r}pages/items-pvp-badge.html">🛡️ 戰場PVP徽章</a>
 
       <div class="mob-section">圖鑑</div>
       <a class="mob-link mob-sub" href="${r}pages/mobs-overview.html">👹 怪物列表</a>
       <a class="mob-link mob-sub" href="${r}pages/boss-schedule.html">🌍 世界BOSS時刻表</a>
-      <a class="mob-link mob-sub" href="${r}pages/boss-drops.html">🎁 BOSS掉落物</a>
-      <a class="mob-link mob-sub" href="${r}pages/boss-collection.html">🖼️ BOSS收藏圖鑑</a>
       <a class="mob-link mob-sub" href="${r}pages/dolls-guide.html">🧸 娃娃介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/dolls-list.html">🧸 娃娃圖鑑清單</a>
-      <a class="mob-link mob-sub" href="${r}pages/dolls-sacred.html">✨ 聖物系統</a>
       <a class="mob-link mob-sub" href="${r}pages/transform-guide.html">🎭 變身圖鑑大全</a>
-      <a class="mob-link mob-sub" href="${r}pages/transform-list.html">📖 變身收藏清單</a>
       <a class="mob-link mob-sub" href="${r}pages/map.html">🗺️ 地圖介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/map-training.html">🗺️ 專屬練功地圖</a>
       <a class="mob-link mob-sub" href="${r}pages/map-dream-island.html">🏝️ 夢幻之島</a>
