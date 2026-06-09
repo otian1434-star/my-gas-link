@@ -90,8 +90,6 @@
             <a href="${r}pages/features-daily-quest.html">📜 每日任務</a>
             <a href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
             <a href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
-            <a href="${r}pages/features-jobs.html">⚔️ 職業之力</a>
-            <a href="${r}pages/features-job-skills.html">📚 職業特色技能</a>
             <a href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
             <a href="${r}pages/features-pet.html">🐾 寵物系統</a>
             <a href="${r}pages/features-prestige.html">🏆 威望系統</a>
@@ -104,11 +102,6 @@
             <a href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
             <a href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
             <a href="${r}pages/features-transform-fusion.html">🎭 變身卡合成</a>
-            <a href="${r}pages/features-main-quest.html">📜 主線任務勳章</a>
-            <a href="${r}pages/features-pendant.html">📿 傲慢的掛飾</a>
-            <a href="${r}pages/features-hexagram.html">🔯 六芒星徽章</a>
-            <a href="${r}pages/features-horse.html">🗿 戰馬雕像</a>
-            <a href="${r}pages/features-high-pet.html">🪄 高寵介紹</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">裝備道具</div>
             <a href="${r}pages/weapons-overview.html">⚔️ 武器總覽</a>
@@ -198,8 +191,6 @@
       <a class="mob-link mob-sub" href="${r}pages/features-daily-quest.html">📜 每日任務</a>
       <a class="mob-link mob-sub" href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
       <a class="mob-link mob-sub" href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-jobs.html">⚔️ 職業之力</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-job-skills.html">📚 職業特色技能</a>
       <a class="mob-link mob-sub" href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-pet.html">🐾 寵物系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-prestige.html">🏆 威望系統</a>
@@ -212,11 +203,6 @@
       <a class="mob-link mob-sub" href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
       <a class="mob-link mob-sub" href="${r}pages/features-transform-fusion.html">🎭 變身卡合成</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-main-quest.html">📜 主線任務勳章</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-pendant.html">📿 傲慢的掛飾</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-hexagram.html">🔯 六芒星徽章</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-horse.html">🗿 戰馬雕像</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-high-pet.html">🪄 高寵介紹</a>
 
       <div class="mob-section">裝備道具</div>
       <a class="mob-link mob-sub" href="${r}pages/weapons-overview.html">⚔️ 武器總覽</a>
