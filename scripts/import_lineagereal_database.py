@@ -29,17 +29,17 @@ USER_AGENT = (
 
 COLLECTIONS = {
     "weapons": {
-        "label": "武器列表",
+        "label": "武器庫查詢",
         "source": "weapons.php",
         "detail_id": "item_id",
-        "page": "pages/weapons-overview.html",
+        "page": "pages/weapons-database.html",
         "summary_fields": ["傷害", "類別", "材質", "重量"],
     },
     "armors": {
-        "label": "防具列表",
+        "label": "防具庫查詢",
         "source": "armors.php",
         "detail_id": "item_id",
-        "page": "pages/armor-overview.html",
+        "page": "pages/armor-database.html",
         "summary_fields": ["防禦", "類別", "材質", "重量"],
     },
     "items": {

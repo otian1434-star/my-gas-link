@@ -929,6 +929,145 @@ img { max-width: 100%; display: block; }
 .content-empty h2 { border-bottom: 0; margin-bottom: 10px; padding-bottom: 0; font-size: 22px; letter-spacing: 4px; }
 .content-empty p { max-width: 520px; margin: 0 auto; color: var(--text-muted); }
 
+/* 武器 / 防具導覽與強化說明 */
+.equipment-menu-page .content-card,
+.weapon-enhance-page .content-card { margin-bottom: 22px; }
+.equipment-menu-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(201,169,110,0.22), transparent 32%),
+    linear-gradient(135deg, rgba(139,26,26,0.16), rgba(28,24,16,0.92)),
+    var(--bg3);
+}
+.equipment-menu-hero.armor {
+  background:
+    radial-gradient(circle at 14% 12%, rgba(117,184,240,0.18), transparent 32%),
+    linear-gradient(135deg, rgba(24,35,46,0.5), rgba(28,24,16,0.92)),
+    var(--bg3);
+}
+.equipment-menu-hero h2,
+.enhance-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.equipment-menu-hero p,
+.enhance-hero p { max-width: 820px; color: rgba(232,222,202,0.92); }
+.equipment-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+.equipment-menu-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid rgba(201,169,110,0.28);
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.08), rgba(8,7,5,0.2)),
+    var(--bg3);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+.equipment-menu-card.primary {
+  border-color: rgba(201,169,110,0.55);
+  background:
+    radial-gradient(circle at 20% 8%, rgba(201,169,110,0.18), transparent 40%),
+    var(--bg3);
+}
+.equipment-menu-card.primary.armor {
+  border-color: rgba(117,184,240,0.42);
+  background:
+    radial-gradient(circle at 20% 8%, rgba(117,184,240,0.15), transparent 40%),
+    var(--bg3);
+}
+.equipment-menu-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.14), rgba(8,7,5,0.22)),
+    var(--bg3);
+}
+.equipment-menu-card span {
+  font-size: 34px;
+  filter: drop-shadow(0 0 14px rgba(201,169,110,0.22));
+}
+.equipment-menu-card strong {
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.equipment-menu-card em {
+  color: var(--text-muted);
+  font-style: normal;
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+.enhance-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255,95,64,0.16), transparent 32%),
+    radial-gradient(circle at 88% 0%, rgba(201,169,110,0.18), transparent 34%),
+    linear-gradient(135deg, rgba(42,18,12,0.88), rgba(28,24,16,0.92)),
+    var(--bg3);
+}
+.enhance-callout {
+  border: 1px solid rgba(201,169,110,0.24);
+  border-left: 4px solid var(--gold);
+  background: rgba(8,7,5,0.3);
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.enhance-callout strong {
+  display: block;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+.enhance-callout p { margin-bottom: 0; }
+.enhance-callout.blue { border-left-color: #75b8f0; }
+.enhance-callout.blue strong { color: #9fc8f0; }
+.enhance-callout.red { border-left-color: #ef7b73; }
+.enhance-callout.red strong { color: #ef9a92; }
+.enhance-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(201,169,110,0.2);
+  background: rgba(8,7,5,0.36);
+}
+.enhance-table {
+  min-width: 760px;
+  margin: 0 !important;
+}
+.enhance-table.compact { min-width: 520px; }
+.enhance-table.attribute { min-width: 860px; text-align: center; }
+.enhance-table td,
+.enhance-table th { vertical-align: middle; }
+.enhance-table td:nth-child(1) { font-weight: 700; color: var(--gold-light); }
+.enhance-table td:nth-child(2) strong { color: var(--gold-light); }
+.enhance-table .top td {
+  background: rgba(201,169,110,0.14);
+  color: var(--gold-light);
+  font-weight: 800;
+}
+.enhance-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 98px;
+  padding: 4px 12px;
+  border: 1px solid rgba(201,169,110,0.34);
+  color: var(--gold-light);
+  background: rgba(8,7,5,0.34);
+}
+.enhance-badge.safe { color: #8ee0a2; }
+.enhance-badge.rare { color: #9fc8f0; }
+.enhance-badge.epic { color: #cda5ff; }
+.enhance-badge.legend { color: #ef9a92; }
+
 /* 新手引導 */
 .newbie-guide-page .content-card { margin-bottom: 22px; }
 .guide-hero {
