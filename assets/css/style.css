@@ -935,6 +935,7 @@ img { max-width: 100%; display: block; }
 .armor-protect-page .content-card,
 .anti-magic-armor-page .content-card,
 .einhasad-belt-page .content-card,
+.level-badge-page .content-card,
 .accessory-enhance-page .content-card,
 .snapper-ring-page .content-card,
 .roomtis-earring-page .content-card,
@@ -1123,6 +1124,21 @@ img { max-width: 100%; display: block; }
   letter-spacing: 4px;
 }
 .einhasad-belt-hero p { max-width: 840px; color: rgba(232,222,202,0.92); }
+.level-badge-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(232,193,106,0.2), transparent 32%),
+    radial-gradient(circle at 88% 0%, rgba(239,123,115,0.14), transparent 34%),
+    linear-gradient(135deg, rgba(42,32,12,0.78), rgba(28,24,16,0.92)),
+    var(--bg3);
+}
+.level-badge-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.level-badge-hero p { max-width: 860px; color: rgba(232,222,202,0.92); }
 .armor-protect-table {
   text-align: center;
 }
@@ -1242,6 +1258,21 @@ img { max-width: 100%; display: block; }
 .einhasad-belt-card.cha { border-top-color: #9fc8f0; }
 .einhasad-belt-card.con { border-top-color: #efb174; }
 .einhasad-belt-card.wis { border-top-color: #d5c9b5; }
+.level-badge-table {
+  min-width: 1060px;
+}
+.level-badge-table th,
+.level-badge-table td {
+  text-align: center;
+}
+.level-badge-table td:nth-child(3),
+.level-badge-table td:nth-child(4) {
+  text-align: left;
+}
+.level-badge-table td:nth-child(5) {
+  color: var(--gold-light);
+  font-weight: 800;
+}
 .snapper-ring-hero {
   overflow: hidden;
   background:
