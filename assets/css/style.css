@@ -559,11 +559,28 @@ img { max-width: 100%; display: block; }
   background-repeat: no-repeat;
   box-shadow: inset 0 0 150px rgba(0,0,0,0.58);
 }
-.section-bg-quick {
-  background-image:
+/* 快速目錄：影片背景 + 原本的金色暗化漸層覆蓋（文字內容在 .container，z-index:1 之上）*/
+.section-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.section-video-bg video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-video-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
     linear-gradient(180deg, rgba(13,11,8,0.46), rgba(13,11,8,0.68)),
-    radial-gradient(ellipse 860px 360px at 50% 18%, rgba(201,169,110,0.24), transparent 68%),
-    url('../media/quick-nav-bg.webp');
+    radial-gradient(ellipse 860px 360px at 50% 18%, rgba(201,169,110,0.24), transparent 68%);
+  box-shadow: inset 0 0 150px rgba(0,0,0,0.58);
 }
 .section-bg-server {
   background-image:
