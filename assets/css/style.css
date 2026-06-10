@@ -786,6 +786,7 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: var(--class-bg-position, center);  /* 沿用每張投影片的取景，妖精=center top 才不會切到臉 */
   z-index: 0;
 }
 /* 影片上層的金色暗化覆蓋，確保文字清楚 */
