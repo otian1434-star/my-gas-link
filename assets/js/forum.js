@@ -546,6 +546,7 @@
     let order = [];
     let pos = 0;
     let seeking = false;
+    let userPaused = false;   // 只有「使用者主動按暫停」才為 true；首頁自動靜音、瀏覽器擋自動播放都不算
     let errCount = 0;
     let saveTimer = 0;
 
@@ -611,7 +612,7 @@
           track: order[pos],
           time: audio.currentTime,
           vol: audio.volume,
-          paused: audio.paused,
+          paused: userPaused,
           shuffle: shuffle,
         }));
       } catch (e) {}
@@ -621,7 +622,10 @@
       saveTimer = setTimeout(function () { saveTimer = 0; saveState(); }, 1000);
     }
 
-    playBtn.addEventListener('click', function () { audio.paused ? play() : audio.pause(); });
+    playBtn.addEventListener('click', function () {
+      if (audio.paused) { userPaused = false; play(); }
+      else { userPaused = true; audio.pause(); }
+    });
     nextBtn.addEventListener('click', next);
     prevBtn.addEventListener('click', prev);
     shuffleBtn.addEventListener('click', function () {
