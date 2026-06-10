@@ -115,6 +115,13 @@
           </div>
 
           <div class="form-group">
+            <label class="form-label" for="reg-lineid">LINE ID</label>
+            <input class="form-input" type="text" id="reg-lineid" name="lineId"
+                   placeholder="您的 LINE ID（選填）" maxlength="50" autocomplete="off">
+            <div class="form-hint">💬 方便管理員透過 LINE 與您聯繫，可留空</div>
+          </div>
+
+          <div class="form-group">
             <label class="form-label" for="reg-how">如何得知本伺服器</label>
             <select class="form-input" id="reg-how" name="source">
               <option value="">— 請選擇 —</option>
@@ -298,6 +305,7 @@ function buildApplicationPayload(form, settings) {
   data.append('characterChoice', form.characterChoice.value);
   data.append('email', form.email.value.trim());
   data.append('phone', normalizePhoneNumber(form.phone.value));
+  data.append('lineId', form.lineId ? form.lineId.value.trim() : '');
   data.append('source', form.source.value || '');
   data.append('submittedAt', new Date().toISOString());
   data.append('pageUrl', window.location.href);

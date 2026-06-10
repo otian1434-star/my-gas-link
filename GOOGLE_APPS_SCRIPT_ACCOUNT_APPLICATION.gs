@@ -1,7 +1,7 @@
 const SHEET_NAME = '申請資料';
 const TOKEN = '';
 
-const COLUMN_WIDTHS = [170, 140, 130, 130, 150, 230, 150, 130, 420, 220];
+const COLUMN_WIDTHS = [170, 140, 130, 130, 150, 230, 150, 130, 420, 220, 160];
 
 const HEADERS = [
   '送出時間',
@@ -13,7 +13,8 @@ const HEADERS = [
   '手機號碼',
   '如何得知',
   '來源頁面',
-  '備註'
+  '備註',
+  'LINE ID'
 ];
 
 function doPost(e) {
@@ -45,7 +46,8 @@ function doPost(e) {
       normalizePhone_(data.phone),
       text_(data.source),
       text_(data.pageUrl),
-      ''
+      '',
+      text_(data.lineId)
     ];
     const nextRow = sheet.getLastRow() + 1;
     setTextColumns_(sheet, nextRow);
