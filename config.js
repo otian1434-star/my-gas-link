@@ -64,6 +64,15 @@ const FORUM_CONFIG = {
     },
   },
 
+  // ── 全站音樂播放器 ─────────────────────────────────────────
+  musicPlayer: {
+    enabled: true,
+    title: "曜舞音樂",
+    playlistUrl: "https://y.qq.com/n/ryqq/playlist/9571699937",
+    embedUrl: "https://i.y.qq.com/n2/m/outchain/player/index.html?songlistid=9571699937",
+    autoplay: true,
+  },
+
   // ── 申辦帳號表單 ────────────────────────────────────────────
   // provider: "auto" 會在 Apps Script 網址設定後送到 Google 試算表，否則保留 Netlify Forms 收件。
   registrationForm: {

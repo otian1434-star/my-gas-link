@@ -13,6 +13,7 @@
     buildFooter();
     buildFloatingPanel();
     buildSideBanners();
+    buildMusicPlayer();
     initPopup();
     highlightNav();
     addPageHdrLine();
@@ -439,6 +440,52 @@
     document.body.insertAdjacentHTML('beforeend', html);
   }
 
+  function buildMusicPlayer() {
+    const C = FORUM_CONFIG;
+    if (!C.musicPlayer || !C.musicPlayer.enabled) return;
+    const r = root();
+    const title = escapeHTML(C.musicPlayer.title || '音樂');
+    const playlistUrl = C.musicPlayer.playlistUrl || '';
+    const embedUrl = C.musicPlayer.embedUrl || playlistUrl;
+    if (!embedUrl) return;
+
+    const source = buildMusicEmbedUrl(embedUrl, !!C.musicPlayer.autoplay);
+    const externalUrl = resolveLink(playlistUrl || embedUrl, r);
+    const html = `
+    <div id="site-music-player" class="is-compact" aria-label="${title}">
+      <button class="music-toggle" type="button" onclick="forumToggleMusic()" aria-label="開啟音樂播放器" title="${title}">
+        <span>♫</span>
+      </button>
+      <div class="music-panel">
+        <div class="music-head">
+          <strong>${title}</strong>
+          <button type="button" onclick="forumToggleMusic()" aria-label="收合音樂播放器">×</button>
+        </div>
+        <iframe
+          title="${title}"
+          src="${escapeHTML(source)}"
+          loading="eager"
+          allow="autoplay; encrypted-media; clipboard-write"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="music-open-link" href="${escapeHTML(externalUrl)}" target="_blank" rel="noopener">開啟 QQ 音樂庫</a>
+      </div>
+    </div>`;
+    document.body.insertAdjacentHTML('beforeend', html);
+  }
+
+  function buildMusicEmbedUrl(url, autoplay) {
+    try {
+      const musicUrl = new URL(url, window.location.href);
+      if (autoplay) {
+        musicUrl.searchParams.set('autoplay', '1');
+        musicUrl.searchParams.set('auto', '1');
+      }
+      return musicUrl.toString();
+    } catch (err) {
+      return url;
+    }
+  }
+
   function escapeHTML(value) {
     return String(value || '').replace(/[&<>"']/g, function (char) {
       return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char];
@@ -514,4 +561,8 @@ function forumClosePopup() {
 function forumToggleFloat() {
   const p = document.getElementById('floating-panel');
   if (p) p.classList.toggle('open');
+}
+function forumToggleMusic() {
+  const p = document.getElementById('site-music-player');
+  if (p) p.classList.toggle('is-open');
 }
