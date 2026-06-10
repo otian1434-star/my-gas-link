@@ -933,6 +933,7 @@ img { max-width: 100%; display: block; }
 .equipment-menu-page .content-card,
 .weapon-enhance-page .content-card,
 .armor-protect-page .content-card,
+.anti-magic-armor-page .content-card,
 .accessory-enhance-page .content-card,
 .snapper-ring-page .content-card,
 .roomtis-earring-page .content-card,
@@ -1091,6 +1092,21 @@ img { max-width: 100%; display: block; }
 .armor-protect-hero p { max-width: 760px; color: rgba(232,222,202,0.92); }
 .enhance-callout.armor-drop { border-left-color: #e8c16a; }
 .enhance-callout.armor-drop strong { color: var(--gold-light); }
+.anti-magic-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(239,123,115,0.18), transparent 32%),
+    radial-gradient(circle at 88% 0%, rgba(201,169,110,0.18), transparent 34%),
+    linear-gradient(135deg, rgba(58,18,12,0.76), rgba(28,24,16,0.92)),
+    var(--bg3);
+}
+.anti-magic-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.anti-magic-hero p { max-width: 800px; color: rgba(232,222,202,0.92); }
 .armor-protect-table {
   text-align: center;
 }
@@ -1104,6 +1120,44 @@ img { max-width: 100%; display: block; }
 .protect-danger { color: #ef9a92 !important; }
 .protect-warning { color: #e8c16a !important; }
 .protect-safe { color: #8ee0a2 !important; }
+.anti-magic-table {
+  min-width: 720px;
+  text-align: center;
+}
+.anti-magic-table th,
+.anti-magic-table td {
+  text-align: center;
+}
+.anti-magic-table td:nth-child(2) {
+  text-align: left;
+  color: rgba(232,222,202,0.92);
+}
+.anti-magic-recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.anti-magic-recipe-card {
+  border: 1px solid rgba(201,169,110,0.24);
+  border-left: 4px solid #cda5ff;
+  background:
+    radial-gradient(circle at 0 0, rgba(205,165,255,0.12), transparent 34%),
+    rgba(8,7,5,0.32);
+  padding: 18px 20px;
+}
+.anti-magic-recipe-card.blue {
+  border-left-color: #75b8f0;
+  background:
+    radial-gradient(circle at 0 0, rgba(117,184,240,0.12), transparent 34%),
+    rgba(8,7,5,0.32);
+}
+.anti-magic-recipe-card h3 {
+  margin-top: 0;
+  color: var(--gold-light);
+}
+.anti-magic-recipe-card ul {
+  margin-bottom: 0;
+}
 .snapper-ring-hero {
   overflow: hidden;
   background:
