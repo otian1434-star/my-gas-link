@@ -398,7 +398,14 @@
     let pointerStart = 0;
 
     track.innerHTML = classSlides.map(function (item, index) {
+      var videoSrc = item.video || (item.image || '').replace(/\.(jpe?g|png|webp)$/i, '.mp4');
+      var videoHtml = videoSrc
+        ? '<video class="class-video" muted loop playsinline preload="none" poster="' + escapeHTML(item.image) + '">' +
+            '<source src="' + escapeHTML(videoSrc) + '" type="video/mp4"></video>'
+        : '';
       return '<article class="class-slide' + (index === 0 ? ' is-active' : '') + '" style="--class-bg:url(' + escapeHTML(item.image) + ');--class-bg-position:' + escapeHTML(item.bgPosition || 'center') + '">' +
+        videoHtml +
+        '<div class="class-slide-overlay"></div>' +
         '<div class="class-copy">' +
           '<span class="class-kicker">CLASS ' + String(index + 1).padStart(2, '0') + '</span>' +
           '<h3>' + escapeHTML(item.title) + '</h3>' +
@@ -427,6 +434,15 @@
       track.style.transform = 'translateX(-' + (current * 100) + '%)';
       slides.forEach(function (slide, slideIndex) {
         slide.classList.toggle('is-active', slideIndex === current);
+        var video = slide.querySelector('.class-video');
+        if (video) {
+          if (slideIndex === current) {
+            var pr = video.play();
+            if (pr && pr.catch) pr.catch(function () {});
+          } else {
+            video.pause();
+          }
+        }
       });
       thumbButtons.forEach(function (button, buttonIndex) {
         button.classList.toggle('is-active', buttonIndex === current);
