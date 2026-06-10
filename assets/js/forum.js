@@ -698,10 +698,8 @@
     }
 
     // 自動播放：先嘗試，被瀏覽器擋下時改在使用者第一次互動時開始。
-    // 但若本頁有會發聲的 hero 影片（如首頁），就不自動播放音樂，避免兩個聲音打架；
-    // 使用者仍可手動按播放鍵。
-    const hasHeroVideo = !!document.querySelector('.hero-youtube-card iframe');
-    const wantPlay = cfg.autoplay !== false && !hasHeroVideo && !(saved && saved.paused === true);
+    // （首頁 hero 影片已靜音，所以背景音樂在所有頁面都自動播放）
+    const wantPlay = cfg.autoplay !== false && !(saved && saved.paused === true);
     if (wantPlay) {
       play();
       const events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
