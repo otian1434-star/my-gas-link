@@ -58,8 +58,14 @@
 
           <div class="form-group">
             <label class="form-label" for="reg-password">遊戲密碼 <span style="color:#ff6464;">*</span></label>
-            <input class="form-input" type="password" id="reg-password" name="gamePassword"
-                   placeholder="請輸入欲設定的遊戲密碼" required minlength="4" maxlength="10" autocomplete="new-password">
+            <div class="pw-field">
+              <input class="form-input" type="password" id="reg-password" name="gamePassword"
+                     placeholder="請輸入欲設定的遊戲密碼" required minlength="4" maxlength="10" autocomplete="new-password">
+              <button type="button" class="pw-toggle" id="reg-password-toggle"
+                      onclick="toggleRegPassword()" aria-label="顯示密碼" aria-pressed="false" title="顯示／隱藏密碼">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17a5 5 0 110-10 5 5 0 010 10zm0-8a3 3 0 100 6 3 3 0 000-6z"/></svg>
+              </button>
+            </div>
             <div class="form-hint">🔐 勿超過 10 碼，建議不要使用與其他網站相同的密碼</div>
           </div>
 
@@ -177,6 +183,18 @@ function genCaptcha() {
 function refreshCaptcha() {
   _captchaCode = genCaptcha();
   document.getElementById('captcha-display').textContent = _captchaCode;
+}
+
+// ── 密碼顯示/隱藏 ────────────────────────────────────────────
+function toggleRegPassword() {
+  var input = document.getElementById('reg-password');
+  var btn = document.getElementById('reg-password-toggle');
+  if (!input || !btn) return;
+  var show = input.type === 'password';
+  input.type = show ? 'text' : 'password';
+  btn.classList.toggle('is-on', show);
+  btn.setAttribute('aria-pressed', show ? 'true' : 'false');
+  btn.setAttribute('aria-label', show ? '隱藏密碼' : '顯示密碼');
 }
 
 function encodeFormData(form) {

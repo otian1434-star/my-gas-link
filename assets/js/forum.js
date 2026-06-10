@@ -383,9 +383,8 @@
     if (!C.floatingPanel || !C.floatingPanel.enabled) return;
     const r = root();
     const links = C.floatingPanel.links || [];
-    const panelOpen = window.matchMedia && window.matchMedia('(max-width: 640px)').matches ? '' : 'open';
     const html = `
-    <div id="floating-panel" class="${panelOpen}">
+    <div id="floating-panel">
       <button class="float-toggle" onclick="forumToggleFloat()" aria-label="快捷連結">
         <span>快捷</span>
       </button>
@@ -789,9 +788,19 @@ function forumClosePopup() {
 }
 function forumToggleFloat() {
   const p = document.getElementById('floating-panel');
-  if (p) p.classList.toggle('open');
+  if (!p) return;
+  p.classList.toggle('open');
+  if (p.classList.contains('open')) {
+    const m = document.getElementById('site-music-player');
+    if (m) m.classList.remove('is-open');   // 開快捷時收起音樂面板，避免左下角重疊
+  }
 }
 function forumToggleMusic() {
   const p = document.getElementById('site-music-player');
-  if (p) p.classList.toggle('is-open');
+  if (!p) return;
+  p.classList.toggle('is-open');
+  if (p.classList.contains('is-open')) {
+    const f = document.getElementById('floating-panel');
+    if (f) f.classList.remove('open');       // 開音樂時收起快捷面板
+  }
 }

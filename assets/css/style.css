@@ -3943,11 +3943,12 @@ img { max-width: 100%; display: block; }
 ══════════════════════════════════════ */
 #floating-panel {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
+  left: 16px;
+  bottom: 58px;            /* 疊在左下角音樂鈕正上方 */
   z-index: 1050;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column-reverse;  /* 按鈕在下、面板往上展開 */
+  align-items: flex-start;
   gap: 10px;
 }
 .float-toggle {
@@ -4402,6 +4403,23 @@ img { max-width: 100%; display: block; }
 .form-input:focus, .form-select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,169,110,0.08); }
 .form-input::placeholder { color: var(--text-muted); }
 .form-select option { background: var(--bg3); }
+/* 密碼顯示/隱藏開關 */
+.pw-field { position: relative; }
+.pw-field .form-input { padding-right: 44px; }
+.pw-toggle {
+  position: absolute; top: 0; right: 0; height: 100%; width: 42px;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent; border: 0; padding: 0; cursor: pointer;
+  color: var(--text-dim); transition: color 0.15s;
+}
+.pw-toggle:hover { color: var(--gold); }
+.pw-toggle svg { width: 20px; height: 20px; fill: currentColor; display: block; }
+.pw-toggle.is-on { color: var(--gold); }
+.pw-toggle.is-on::after {
+  content: ''; position: absolute; left: 10px; right: 10px; top: 50%;
+  height: 2px; background: currentColor; border-radius: 2px;
+  transform: rotate(-18deg);
+}
 .captcha-row { display: flex; gap: 10px; align-items: center; }
 .captcha-code { font-family: monospace; font-size: 20px; letter-spacing: 6px; color: var(--gold); background: var(--bg4); border: 1px solid var(--border); padding: 8px 16px; user-select: none; cursor: pointer; white-space: nowrap; }
 .check-row { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
@@ -5063,7 +5081,7 @@ img { max-width: 100%; display: block; }
   .search-submit { min-height: 44px; }
   .search-result-card { padding: 16px 14px; }
   .search-result-card:hover { transform: none; }
-  #floating-panel { right: 12px; bottom: 12px; }
+  #floating-panel { left: 10px; bottom: 50px; }
   #site-music-player {
     left: 10px;
     bottom: 10px;
