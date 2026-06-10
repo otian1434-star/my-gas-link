@@ -111,6 +111,7 @@
             <a href="${r}pages/armor-database.html">🔎 防具庫查詢</a>
             <a href="${r}pages/armor-enhance-protect.html">📜 防具強化與防爆</a>
             <a href="${r}pages/armor-anti-magic.html">🔥 滅魔裝備介紹</a>
+            <a href="${r}pages/armor-einhasad-belt.html">☀️ 殷海薩腰帶</a>
             <a href="${r}pages/armor-accessory-enhance.html">📿 飾品強化介紹</a>
             <a href="${r}pages/armor-snappers-ring.html">💍 史奈普戒指</a>
             <a href="${r}pages/armor-roomtis-earring.html">👂 倫提斯耳環</a>
@@ -214,6 +215,7 @@
       <a class="mob-link mob-sub" href="${r}pages/armor-database.html">🔎 防具庫查詢</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-enhance-protect.html">📜 防具強化與防爆</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-anti-magic.html">🔥 滅魔裝備介紹</a>
+      <a class="mob-link mob-sub" href="${r}pages/armor-einhasad-belt.html">☀️ 殷海薩腰帶</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-accessory-enhance.html">📿 飾品強化介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-snappers-ring.html">💍 史奈普戒指</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-roomtis-earring.html">👂 倫提斯耳環</a>

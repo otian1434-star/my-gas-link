@@ -934,6 +934,7 @@ img { max-width: 100%; display: block; }
 .weapon-enhance-page .content-card,
 .armor-protect-page .content-card,
 .anti-magic-armor-page .content-card,
+.einhasad-belt-page .content-card,
 .accessory-enhance-page .content-card,
 .snapper-ring-page .content-card,
 .roomtis-earring-page .content-card,
@@ -1107,6 +1108,21 @@ img { max-width: 100%; display: block; }
   letter-spacing: 4px;
 }
 .anti-magic-hero p { max-width: 800px; color: rgba(232,222,202,0.92); }
+.einhasad-belt-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(232,193,106,0.24), transparent 32%),
+    radial-gradient(circle at 88% 0%, rgba(117,184,240,0.12), transparent 34%),
+    linear-gradient(135deg, rgba(62,45,14,0.76), rgba(28,24,16,0.92)),
+    var(--bg3);
+}
+.einhasad-belt-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.einhasad-belt-hero p { max-width: 840px; color: rgba(232,222,202,0.92); }
 .armor-protect-table {
   text-align: center;
 }
@@ -1158,6 +1174,74 @@ img { max-width: 100%; display: block; }
 .anti-magic-recipe-card ul {
   margin-bottom: 0;
 }
+.einhasad-material-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+.einhasad-material-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid rgba(201,169,110,0.24);
+  background: rgba(201,169,110,0.07);
+  color: var(--gold-light);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.einhasad-belt-table {
+  min-width: 620px;
+  text-align: center;
+}
+.einhasad-belt-table th,
+.einhasad-belt-table td {
+  text-align: center;
+}
+.einhasad-belt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+.einhasad-belt-card {
+  border: 1px solid rgba(201,169,110,0.22);
+  border-top: 3px solid var(--gold);
+  background:
+    radial-gradient(circle at 16% 0, rgba(201,169,110,0.13), transparent 38%),
+    rgba(8,7,5,0.34);
+  padding: 18px 20px;
+}
+.einhasad-belt-card h3 {
+  margin: 0 0 12px;
+  color: var(--gold-light);
+  letter-spacing: 2px;
+}
+.einhasad-belt-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.einhasad-belt-card li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid rgba(201,169,110,0.12);
+  padding: 6px 0;
+  color: rgba(232,222,202,0.9);
+}
+.einhasad-belt-card li:last-child {
+  border-bottom: 0;
+}
+.einhasad-belt-card b {
+  color: var(--white);
+}
+.einhasad-belt-card.str { border-top-color: #ef9a92; }
+.einhasad-belt-card.dex { border-top-color: #8ee0a2; }
+.einhasad-belt-card.int { border-top-color: #d6b7ff; }
+.einhasad-belt-card.cha { border-top-color: #9fc8f0; }
+.einhasad-belt-card.con { border-top-color: #efb174; }
+.einhasad-belt-card.wis { border-top-color: #d5c9b5; }
 .snapper-ring-hero {
   overflow: hidden;
   background:
@@ -1325,6 +1409,8 @@ img { max-width: 100%; display: block; }
 .stat-dex { color: #8ee0a2 !important; }
 .stat-int { color: #d6b7ff !important; }
 .stat-cha { color: #9fc8f0 !important; }
+.stat-con { color: #efb174 !important; }
+.stat-wis { color: #d5c9b5 !important; }
 
 .special-shield-hero {
   overflow: hidden;
