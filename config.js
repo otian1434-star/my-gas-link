@@ -64,13 +64,24 @@ const FORUM_CONFIG = {
     },
   },
 
-  // ── 全站音樂播放器 ─────────────────────────────────────────
+  // ── 全站音樂播放器（自架 MP3，無外部服務）─────────────────────
+  // 用法：把 MP3 放進 assets/media/music/，再到下方 tracks 依序列出。
+  //   - url：音檔路徑（站內相對路徑或完整 https 網址皆可）
+  //   - cover：封面圖（可省略，省略時顯示預設音符圖示）
+  //   - artist：演出者（可省略）
   musicPlayer: {
     enabled: true,
     title: "曜舞音樂",
-    playlistUrl: "https://y.qq.com/n/ryqq/playlist/9571699937",
-    embedUrl: "https://i.y.qq.com/n2/m/outchain/player/index.html?songlistid=9571699937",
-    autoplay: true,
+    autoplay: true,   // 嘗試自動播放；瀏覽器會擋住「未互動前的有聲播放」，
+                      // 所以會在使用者第一次點擊／捲動頁面時自動開始。
+    loop: true,       // 整個清單循環
+    shuffle: true,    // 隨機播放順序
+    volume: 0.7,      // 預設音量 0 ~ 1
+    tracks: [
+      { title: "曜舞背景音樂", artist: "", url: "assets/media/music/music0.mp3" },
+      // 要再加歌就照這個格式往下加，例如：
+      // { title: "歌名", artist: "演出者", url: "assets/media/music/music1.mp3", cover: "assets/media/music/music1.jpg" },
+    ],
   },
 
   // ── 申辦帳號表單 ────────────────────────────────────────────

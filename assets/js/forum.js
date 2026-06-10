@@ -443,47 +443,272 @@
   function buildMusicPlayer() {
     const C = FORUM_CONFIG;
     if (!C.musicPlayer || !C.musicPlayer.enabled) return;
+    const cfg = C.musicPlayer;
     const r = root();
-    const title = escapeHTML(C.musicPlayer.title || '音樂');
-    const playlistUrl = C.musicPlayer.playlistUrl || '';
-    const embedUrl = C.musicPlayer.embedUrl || playlistUrl;
-    if (!embedUrl) return;
+    const title = escapeHTML(cfg.title || '音樂');
 
-    const source = buildMusicEmbedUrl(embedUrl, !!C.musicPlayer.autoplay);
-    const externalUrl = resolveLink(playlistUrl || embedUrl, r);
-    const html = `
-    <div id="site-music-player" class="is-compact" aria-label="${title}">
-      <button class="music-toggle" type="button" onclick="forumToggleMusic()" aria-label="開啟音樂播放器" title="${title}">
-        <span>♫</span>
-      </button>
-      <div class="music-panel">
-        <div class="music-head">
-          <strong>${title}</strong>
-          <button type="button" onclick="forumToggleMusic()" aria-label="收合音樂播放器">×</button>
-        </div>
-        <iframe
-          title="${title}"
-          src="${escapeHTML(source)}"
-          loading="eager"
-          allow="autoplay; encrypted-media; clipboard-write"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <a class="music-open-link" href="${escapeHTML(externalUrl)}" target="_blank" rel="noopener">開啟 QQ 音樂庫</a>
-      </div>
-    </div>`;
+    // 整理歌曲清單：過濾沒有 url 的項目，並把路徑解析成正確的相對／絕對網址
+    const tracks = (Array.isArray(cfg.tracks) ? cfg.tracks : [])
+      .filter(function (t) { return t && t.url; })
+      .map(function (t) {
+        return {
+          title: t.title || '未命名曲目',
+          artist: t.artist || '',
+          url: resolveLink(t.url, r),
+          cover: t.cover ? resolveLink(t.cover, r) : '',
+        };
+      });
+
+    const ICON = {
+      prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6h2v12H7zm3.5 6 8.5 6V6z"/></svg>',
+      next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6h2v12h-2zM5 6l8.5 6L5 18z"/></svg>',
+      play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>',
+      shuffle: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.59 9.17 5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.41 9.41-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.05-3.13z"/></svg>',
+    };
+
+    let bodyHtml;
+    if (tracks.length) {
+      const listHtml = tracks.map(function (t, i) {
+        return '<li class="music-item" data-i="' + i + '">' +
+                 '<span class="music-item-idx">' + (i + 1) + '</span>' +
+                 '<span class="music-item-name">' + escapeHTML(t.title) + '</span>' +
+                 '<span class="music-item-artist">' + escapeHTML(t.artist) + '</span>' +
+               '</li>';
+      }).join('');
+      bodyHtml =
+        '<div class="music-now">' +
+          '<div class="music-cover" data-cover><span>♪</span></div>' +
+          '<div class="music-meta">' +
+            '<div class="music-track-title" data-title>—</div>' +
+            '<div class="music-track-artist" data-artist></div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="music-progress">' +
+          '<span class="music-time" data-cur>00:00</span>' +
+          '<input type="range" class="music-seek" data-seek min="0" max="1000" value="0" aria-label="播放進度">' +
+          '<span class="music-time" data-dur>00:00</span>' +
+        '</div>' +
+        '<div class="music-controls">' +
+          '<button type="button" class="music-btn" data-prev aria-label="上一首">' + ICON.prev + '</button>' +
+          '<button type="button" class="music-btn music-btn-play" data-play aria-label="播放／暫停">' + ICON.play + '</button>' +
+          '<button type="button" class="music-btn" data-next aria-label="下一首">' + ICON.next + '</button>' +
+          '<button type="button" class="music-btn music-btn-mode" data-shuffle aria-label="隨機播放" title="隨機播放">' + ICON.shuffle + '</button>' +
+          '<div class="music-volume"><input type="range" class="music-vol" data-vol min="0" max="1" step="0.01" value="0.7" aria-label="音量"></div>' +
+        '</div>' +
+        '<ul class="music-list" data-list>' + listHtml + '</ul>';
+    } else {
+      bodyHtml =
+        '<div class="music-empty">尚未加入歌曲。<br>' +
+        '請把 MP3 放進 <code>assets/media/music/</code>，<br>' +
+        '再到 <code>config.js</code> 的 <code>musicPlayer.tracks</code> 列出。</div>';
+    }
+
+    const html =
+      '<div id="site-music-player" class="is-compact" aria-label="' + title + '">' +
+        '<button class="music-toggle" type="button" onclick="forumToggleMusic()" aria-label="開啟音樂播放器" title="' + title + '"><span>♫</span></button>' +
+        '<div class="music-panel">' +
+          '<div class="music-head"><strong>' + title + '</strong>' +
+            '<button type="button" onclick="forumToggleMusic()" aria-label="收合音樂播放器">×</button></div>' +
+          '<div class="music-body">' + bodyHtml + '</div>' +
+          '<audio data-audio preload="metadata"></audio>' +
+        '</div>' +
+      '</div>';
     document.body.insertAdjacentHTML('beforeend', html);
+
+    if (tracks.length) initMusicEngine(cfg, tracks);
   }
 
-  function buildMusicEmbedUrl(url, autoplay) {
-    try {
-      const musicUrl = new URL(url, window.location.href);
-      if (autoplay) {
-        musicUrl.searchParams.set('autoplay', '1');
-        musicUrl.searchParams.set('auto', '1');
+  // 自架 MP3 播放引擎：播放／暫停、上下首、進度、音量、隨機、清單循環、跨頁續播
+  function initMusicEngine(cfg, tracks) {
+    const player = document.getElementById('site-music-player');
+    if (!player) return;
+    const audio = player.querySelector('[data-audio]');
+    const sel = function (s) { return player.querySelector(s); };
+    const coverEl = sel('[data-cover]');
+    const titleEl = sel('[data-title]');
+    const artistEl = sel('[data-artist]');
+    const curEl = sel('[data-cur]');
+    const durEl = sel('[data-dur]');
+    const seekEl = sel('[data-seek]');
+    const playBtn = sel('[data-play]');
+    const prevBtn = sel('[data-prev]');
+    const nextBtn = sel('[data-next]');
+    const shuffleBtn = sel('[data-shuffle]');
+    const volEl = sel('[data-vol]');
+    const listItems = Array.prototype.slice.call(player.querySelectorAll('.music-item'));
+
+    const PLAY_ICON = playBtn.innerHTML;
+    const PAUSE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
+    const STORE_KEY = 'site-music-state';
+
+    let shuffle = cfg.shuffle !== false;
+    const loopAll = cfg.loop !== false;
+    let order = [];
+    let pos = 0;
+    let seeking = false;
+    let errCount = 0;
+    let saveTimer = 0;
+
+    function buildOrder(keepTrack) {
+      order = tracks.map(function (_, i) { return i; });
+      if (shuffle) {
+        for (let i = order.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const tmp = order[i]; order[i] = order[j]; order[j] = tmp;
+        }
       }
-      return musicUrl.toString();
-    } catch (err) {
-      return url;
+      pos = 0;
+      if (typeof keepTrack === 'number') {
+        const at = order.indexOf(keepTrack);
+        if (at >= 0) pos = at;
+      }
     }
+
+    function fmt(t) {
+      if (!isFinite(t) || t < 0) t = 0;
+      const m = Math.floor(t / 60);
+      const s = Math.floor(t % 60);
+      return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function highlight() {
+      const ti = order[pos];
+      listItems.forEach(function (li) {
+        li.classList.toggle('is-playing', Number(li.dataset.i) === ti);
+      });
+    }
+
+    function loadTrack(autoplayThis) {
+      const t = tracks[order[pos]];
+      if (!t) return;
+      audio.src = t.url;
+      titleEl.textContent = t.title;
+      artistEl.textContent = t.artist;
+      if (t.cover) {
+        coverEl.style.backgroundImage = 'url("' + t.cover + '")';
+        coverEl.classList.add('has-cover');
+      } else {
+        coverEl.style.backgroundImage = '';
+        coverEl.classList.remove('has-cover');
+      }
+      curEl.textContent = '00:00';
+      seekEl.value = 0;
+      highlight();
+      if (autoplayThis) play();
+    }
+
+    function play() { const p = audio.play(); if (p && p.catch) p.catch(function () {}); }
+    function next() { pos = (pos + 1) % order.length; loadTrack(true); }
+    function prev() {
+      if (audio.currentTime > 3) { audio.currentTime = 0; return; }
+      pos = (pos - 1 + order.length) % order.length;
+      loadTrack(true);
+    }
+
+    function saveState() {
+      try {
+        sessionStorage.setItem(STORE_KEY, JSON.stringify({
+          track: order[pos],
+          time: audio.currentTime,
+          vol: audio.volume,
+          paused: audio.paused,
+          shuffle: shuffle,
+        }));
+      } catch (e) {}
+    }
+    function saveStateThrottled() {
+      if (saveTimer) return;
+      saveTimer = setTimeout(function () { saveTimer = 0; saveState(); }, 1000);
+    }
+
+    playBtn.addEventListener('click', function () { audio.paused ? play() : audio.pause(); });
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+    shuffleBtn.addEventListener('click', function () {
+      shuffle = !shuffle;
+      shuffleBtn.classList.toggle('is-active', shuffle);
+      buildOrder(order[pos]);
+      highlight();
+      saveState();
+    });
+    volEl.addEventListener('input', function () { audio.volume = Number(volEl.value); saveState(); });
+    listItems.forEach(function (li) {
+      li.addEventListener('click', function () {
+        const at = order.indexOf(Number(li.dataset.i));
+        pos = at >= 0 ? at : 0;
+        loadTrack(true);
+      });
+    });
+
+    audio.addEventListener('play', function () { playBtn.innerHTML = PAUSE_ICON; player.classList.add('is-playing'); });
+    audio.addEventListener('pause', function () { playBtn.innerHTML = PLAY_ICON; player.classList.remove('is-playing'); });
+    audio.addEventListener('playing', function () { errCount = 0; });
+    audio.addEventListener('ended', function () {
+      if (!loopAll && pos === order.length - 1) return;
+      next();
+    });
+    audio.addEventListener('error', function () {
+      // 此首載入失敗（檔名錯誤或格式不支援）→ 跳下一首；全部失敗則停止避免無限迴圈
+      errCount++;
+      if (errCount >= tracks.length) return;
+      next();
+    });
+    audio.addEventListener('loadedmetadata', function () { durEl.textContent = fmt(audio.duration); });
+    audio.addEventListener('timeupdate', function () {
+      if (!seeking) {
+        curEl.textContent = fmt(audio.currentTime);
+        seekEl.value = audio.duration ? (audio.currentTime / audio.duration) * 1000 : 0;
+      }
+      saveStateThrottled();
+    });
+    seekEl.addEventListener('input', function () {
+      seeking = true;
+      if (audio.duration) curEl.textContent = fmt((seekEl.value / 1000) * audio.duration);
+    });
+    seekEl.addEventListener('change', function () {
+      if (audio.duration) audio.currentTime = (seekEl.value / 1000) * audio.duration;
+      seeking = false;
+    });
+
+    // 還原上次狀態（同一個瀏覽分頁內換頁時，音樂可接續播放）
+    let saved = null;
+    try { saved = JSON.parse(sessionStorage.getItem(STORE_KEY) || 'null'); } catch (e) {}
+
+    let initVol = (typeof cfg.volume === 'number') ? cfg.volume : 0.7;
+    if (saved && typeof saved.vol === 'number') initVol = saved.vol;
+    initVol = Math.min(1, Math.max(0, initVol));
+    audio.volume = initVol;
+    volEl.value = initVol;
+
+    if (saved && typeof saved.shuffle === 'boolean') shuffle = saved.shuffle;
+    shuffleBtn.classList.toggle('is-active', shuffle);
+
+    buildOrder(saved && typeof saved.track === 'number' ? saved.track : undefined);
+    loadTrack(false);
+
+    if (saved && typeof saved.time === 'number' && saved.time > 0) {
+      const restore = function () {
+        try { audio.currentTime = saved.time; } catch (e) {}
+        audio.removeEventListener('loadedmetadata', restore);
+      };
+      audio.addEventListener('loadedmetadata', restore);
+    }
+
+    // 自動播放：先嘗試，被瀏覽器擋下時改在使用者第一次互動時開始。
+    // 但若本頁有會發聲的 hero 影片（如首頁），就不自動播放音樂，避免兩個聲音打架；
+    // 使用者仍可手動按播放鍵。
+    const hasHeroVideo = !!document.querySelector('.hero-youtube-card iframe');
+    const wantPlay = cfg.autoplay !== false && !hasHeroVideo && !(saved && saved.paused === true);
+    if (wantPlay) {
+      play();
+      const events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+      const kick = function () { play(); detach(); };
+      function detach() { events.forEach(function (ev) { window.removeEventListener(ev, kick, true); }); }
+      events.forEach(function (ev) { window.addEventListener(ev, kick, { capture: true, passive: true }); });
+      audio.addEventListener('playing', detach, { once: true });
+    }
+
+    window.addEventListener('pagehide', saveState);
   }
 
   function escapeHTML(value) {
