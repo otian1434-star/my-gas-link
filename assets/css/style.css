@@ -2034,6 +2034,111 @@ img { max-width: 100%; display: block; }
 }
 .event-coin-summary p { max-width: 760px; margin-left: auto; margin-right: auto; }
 
+/* 商城介紹 */
+.shop-page .content-card { margin-bottom: 22px; }
+.shop-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(232,193,106,0.24), transparent 32%),
+    radial-gradient(circle at 86% 8%, rgba(117,184,240,0.16), transparent 34%),
+    linear-gradient(135deg, rgba(42,26,8,0.94), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.shop-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.shop-hero p { max-width: 840px; color: rgba(232,222,202,0.92); }
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+.shop-card {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 0, rgba(201,169,110,0.12), transparent 38%),
+    var(--bg3);
+}
+.shop-card.blue { border-left: 4px solid #75b8f0; }
+.shop-card.gray { border-left: 4px solid #d5c9b5; }
+.shop-card.gold { border-left: 4px solid var(--gold); }
+.shop-card h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.shop-card p { margin-bottom: 0; }
+.shop-card-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(201,169,110,0.34);
+  background: rgba(8,7,5,0.32);
+  color: var(--gold);
+  font-size: 30px;
+  filter: drop-shadow(0 0 16px rgba(201,169,110,0.2));
+}
+.shop-box-grid,
+.shop-random-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.shop-box,
+.shop-random-box {
+  border: 1px solid rgba(201,169,110,0.24);
+  border-left: 4px solid var(--gold);
+  background:
+    radial-gradient(circle at 0 0, rgba(201,169,110,0.11), transparent 36%),
+    rgba(8,7,5,0.32);
+  padding: 18px 20px;
+}
+.shop-box h3,
+.shop-random-box h3 {
+  margin-top: 0;
+  color: var(--gold-light);
+}
+.shop-box p,
+.shop-random-box p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.shop-box.purple { border-left-color: #cda5ff; }
+.shop-box.orange { border-left-color: #efb174; }
+.shop-box.green { border-left-color: #8ee0a2; }
+.shop-box.dark { border-left-color: #d5c9b5; }
+.shop-random-box.weapon { border-left-color: #ef9a92; }
+.shop-random-box.armor { border-left-color: #75b8f0; }
+.shop-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.shop-chip-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid rgba(201,169,110,0.22);
+  background: rgba(201,169,110,0.07);
+  color: rgba(232,222,202,0.92);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+.shop-scroll-table {
+  text-align: center;
+}
+.shop-scroll-table th,
+.shop-scroll-table td {
+  text-align: center;
+}
+.scroll-blessed { color: #ef9a92 !important; }
+.scroll-cursed { color: #cda5ff !important; }
+
 /* 地圖介紹 / 屬性監獄 / 夢幻之島 / 專屬練功地圖 */
 .map-index-page .content-card,
 .elemental-prison-page .content-card,
