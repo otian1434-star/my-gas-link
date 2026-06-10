@@ -935,6 +935,7 @@ img { max-width: 100%; display: block; }
 .armor-protect-page .content-card,
 .snapper-ring-page .content-card,
 .roomtis-earring-page .content-card,
+.stat-shirt-page .content-card,
 .special-shield-page .content-card { margin-bottom: 22px; }
 .equipment-menu-hero {
   overflow: hidden;
@@ -1131,6 +1132,21 @@ img { max-width: 100%; display: block; }
   letter-spacing: 4px;
 }
 .roomtis-earring-hero p { max-width: 840px; color: rgba(232,222,202,0.92); }
+.stat-shirt-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(117,184,240,0.18), transparent 32%),
+    radial-gradient(circle at 86% 4%, rgba(142,224,162,0.14), transparent 34%),
+    linear-gradient(135deg, rgba(18,42,48,0.72), rgba(28,24,16,0.92)),
+    var(--bg3);
+}
+.stat-shirt-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.stat-shirt-hero p { max-width: 820px; color: rgba(232,222,202,0.92); }
 .snapper-rate-table,
 .snapper-ability-table {
   text-align: center;
@@ -1171,6 +1187,23 @@ img { max-width: 100%; display: block; }
 .rate-mid { color: #efb174 !important; }
 .rate-danger { color: #ef9a92 !important; }
 .rate-deep { color: #d56d66 !important; }
+.stat-shirt-table {
+  text-align: center;
+}
+.stat-shirt-table th,
+.stat-shirt-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.stat-shirt-table.special { min-width: 840px; }
+.stat-shirt-table td:first-child {
+  color: var(--gold-light);
+  font-weight: 800;
+}
+.stat-str { color: #ef9a92 !important; }
+.stat-dex { color: #8ee0a2 !important; }
+.stat-int { color: #d6b7ff !important; }
+.stat-cha { color: #9fc8f0 !important; }
 
 .special-shield-hero {
   overflow: hidden;
