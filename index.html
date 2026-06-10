@@ -397,15 +397,12 @@
     let timer = null;
     let pointerStart = 0;
 
-    // 手機（≤640px）只顯示靜態圖、不載入影片以節省流量；電腦才播動畫
-    var enableVideo = !(window.matchMedia && window.matchMedia('(max-width: 640px)').matches);
-
     track.innerHTML = classSlides.map(function (item, index) {
       // 資料用的是 ../media/（給 CSS 背景用）；HTML 屬性需相對網頁，改成 assets/media/
       var toDoc = function (p) { return (p || '').replace(/^\.\.\/media\//, 'assets/media/'); };
       var posterSrc = toDoc(item.image);
       var videoSrc = item.video ? toDoc(item.video) : posterSrc.replace(/\.(jpe?g|png|webp)$/i, '.mp4');
-      var videoHtml = (enableVideo && videoSrc)
+      var videoHtml = videoSrc
         ? '<video class="class-video" muted loop playsinline preload="none" poster="' + escapeHTML(posterSrc) + '">' +
             '<source src="' + escapeHTML(videoSrc) + '" type="video/mp4"></video>'
         : '';
