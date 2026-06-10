@@ -113,6 +113,7 @@
             <a href="${r}pages/armor-snappers-ring.html">💍 史奈普戒指</a>
             <a href="${r}pages/armor-roomtis-earring.html">👂 倫提斯耳環</a>
             <a href="${r}pages/armor-stat-shirt.html">👕 能力內衣</a>
+            <a href="${r}pages/armor-stat-boots.html">🥾 能力長靴</a>
             <a href="${r}pages/armor-special-shield.html">🛡️ 特殊臂盾介紹</a>
             <a href="${r}pages/items-overview.html">🎒 道具列表</a>
             <div class="nav-dd-divider"></div>
@@ -213,6 +214,7 @@
       <a class="mob-link mob-sub" href="${r}pages/armor-snappers-ring.html">💍 史奈普戒指</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-roomtis-earring.html">👂 倫提斯耳環</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-stat-shirt.html">👕 能力內衣</a>
+      <a class="mob-link mob-sub" href="${r}pages/armor-stat-boots.html">🥾 能力長靴</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-special-shield.html">🛡️ 特殊臂盾介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>
       <a class="mob-link mob-sub" href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
