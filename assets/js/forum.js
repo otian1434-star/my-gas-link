@@ -109,7 +109,7 @@
             <a href="${r}pages/weapons-enhance.html">📜 武器強化說明</a>
             <a href="${r}pages/armor-overview.html">🛡️ 防具介紹</a>
             <a href="${r}pages/armor-database.html">🔎 防具庫查詢</a>
-            <a href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
+            <a href="${r}pages/armor-special-shield.html">🛡️ 特殊臂盾介紹</a>
             <a href="${r}pages/items-overview.html">🎒 道具列表</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">圖鑑</div>
@@ -205,7 +205,7 @@
       <a class="mob-link mob-sub" href="${r}pages/weapons-enhance.html">📜 武器強化說明</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-overview.html">🛡️ 防具介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-database.html">🔎 防具庫查詢</a>
-      <a class="mob-link mob-sub" href="${r}pages/armor-craft.html">⚒️ 防具製作</a>
+      <a class="mob-link mob-sub" href="${r}pages/armor-special-shield.html">🛡️ 特殊臂盾介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>
       <a class="mob-link mob-sub" href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
       <a class="mob-link mob-sub" href="${r}pages/items-vip-card.html">👑 貴賓卡</a>

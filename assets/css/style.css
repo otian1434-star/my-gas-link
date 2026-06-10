@@ -931,7 +931,8 @@ img { max-width: 100%; display: block; }
 
 /* 武器 / 防具導覽與強化說明 */
 .equipment-menu-page .content-card,
-.weapon-enhance-page .content-card { margin-bottom: 22px; }
+.weapon-enhance-page .content-card,
+.special-shield-page .content-card { margin-bottom: 22px; }
 .equipment-menu-hero {
   overflow: hidden;
   background:
@@ -1067,6 +1068,111 @@ img { max-width: 100%; display: block; }
 .enhance-badge.rare { color: #9fc8f0; }
 .enhance-badge.epic { color: #cda5ff; }
 .enhance-badge.legend { color: #ef9a92; }
+
+.special-shield-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(117,184,240,0.18), transparent 32%),
+    radial-gradient(circle at 88% 0%, rgba(201,169,110,0.18), transparent 34%),
+    linear-gradient(135deg, rgba(16,28,40,0.72), rgba(28,24,16,0.92)),
+    var(--bg3);
+}
+.special-shield-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.special-shield-hero p { max-width: 760px; color: rgba(232,222,202,0.92); }
+.special-shield-callout {
+  border: 1px solid rgba(239,123,115,0.28);
+  border-left: 4px solid #ef7b73;
+  background:
+    radial-gradient(circle at 0 0, rgba(239,123,115,0.16), transparent 34%),
+    rgba(8,7,5,0.34);
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.special-shield-callout strong {
+  display: block;
+  color: #ef9a92;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+.special-shield-callout p { margin-bottom: 0; }
+.special-shield-callout b { color: var(--gold-light); }
+.special-shield-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(201,169,110,0.22);
+  background: rgba(8,7,5,0.36);
+}
+.special-shield-table {
+  min-width: 920px;
+  margin: 0 !important;
+}
+.special-shield-table.compact { min-width: 720px; }
+.special-shield-table th,
+.special-shield-table td {
+  vertical-align: middle;
+}
+.special-shield-table th {
+  text-align: center;
+  white-space: nowrap;
+}
+.special-shield-table th span {
+  color: var(--text-muted);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.special-shield-table td {
+  line-height: 1.8;
+}
+.special-shield-table td:first-child {
+  text-align: center;
+  min-width: 150px;
+}
+.special-shield-table td b { color: var(--gold-light); }
+.shield-name {
+  display: block;
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.shield-source {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  padding: 2px 9px;
+  border: 1px solid rgba(201,169,110,0.24);
+  color: var(--text-muted);
+  background: rgba(8,7,5,0.28);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.shield-stage-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.shield-stage-list span {
+  display: block;
+  border: 1px solid rgba(201,169,110,0.18);
+  background: rgba(201,169,110,0.06);
+  padding: 6px 9px;
+  color: rgba(232,222,202,0.9);
+}
+.shield-name.melee,
+.shield-name.fire { color: #ef9a92; }
+.shield-name.ranged,
+.shield-name.wind { color: #9fc8f0; }
+.shield-name.earth { color: #8ee0a2; }
+.shield-name.sand { color: #e8c16a; }
+.shield-name.water { color: #75b8f0; }
+.shield-name.guard { color: #d5c9b5; }
+.shield-name.mage { color: #cda5ff; }
 
 /* 新手引導 */
 .newbie-guide-page .content-card { margin-bottom: 22px; }
