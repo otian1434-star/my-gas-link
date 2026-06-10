@@ -28,6 +28,13 @@ function doPost(e) {
     }
 
     const sheet = getApplicationSheet_();
+
+    // 伺服器端重複防護：遊戲帳號與暱稱皆不可重複（即使前端檢查被略過也擋得住）
+    const dup = checkDuplicates_(sheet, data.gameAccount, data.playerName);
+    if (dup.accountTaken || dup.nameTaken) {
+      return json_({ ok: false, error: 'duplicate', accountTaken: dup.accountTaken, nameTaken: dup.nameTaken });
+    }
+
     const row = [
       new Date(),
       text_(data.gameAccount),
@@ -57,8 +64,53 @@ function doPost(e) {
   }
 }
 
-function doGet() {
-  return json_({ ok: true, message: '曜舞天堂申請資料接收端正常運作' });
+function doGet(e) {
+  const params = (e && e.parameter) || {};
+
+  // 查詢是否已註冊：/exec?action=check&account=xxx&name=yyy&callback=fn
+  if (params.action === 'check') {
+    const sheet = getApplicationSheet_();
+    const dup = checkDuplicates_(sheet, params.account, params.name);
+    return reply_({ ok: true, accountTaken: dup.accountTaken, nameTaken: dup.nameTaken }, params.callback);
+  }
+
+  return reply_({ ok: true, message: '曜舞天堂申請資料接收端正常運作' }, params.callback);
+}
+
+// 比對遊戲帳號（第 2 欄）與暱稱（第 4 欄）是否已存在；比對時去頭尾空白、不分大小寫
+function checkDuplicates_(sheet, account, name) {
+  const acc = normalizeKey_(account);
+  const nm = normalizeKey_(name);
+  const lastRow = sheet.getLastRow();
+  let accountTaken = false;
+  let nameTaken = false;
+
+  if (lastRow > 1) {
+    const values = sheet.getRange(2, 2, lastRow - 1, 3).getValues(); // 第2~4欄：帳號、密碼、暱稱
+    for (let i = 0; i < values.length; i += 1) {
+      if (acc && normalizeKey_(values[i][0]) === acc) accountTaken = true; // 第2欄=遊戲帳號
+      if (nm && normalizeKey_(values[i][2]) === nm) nameTaken = true;       // 第4欄=暱稱
+    }
+  }
+
+  return { accountTaken: accountTaken, nameTaken: nameTaken };
+}
+
+function normalizeKey_(value) {
+  return String(value == null ? '' : value).trim().toLowerCase();
+}
+
+// 有帶 callback 就回 JSONP（JavaScript），否則回純 JSON
+function reply_(payload, callback) {
+  const body = JSON.stringify(payload);
+  if (callback) {
+    return ContentService
+      .createTextOutput(callback + '(' + body + ')')
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+  return ContentService
+    .createTextOutput(body)
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 function formatExistingApplicationSheet() {

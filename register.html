@@ -54,6 +54,7 @@
             <input class="form-input" type="text" id="reg-account" name="gameAccount"
                    placeholder="請輸入欲申請的遊戲帳號" required maxlength="20" autocomplete="username">
             <div class="form-hint">⚠️ 請勿使用信箱格式作為遊戲帳號</div>
+            <div class="field-status" id="reg-account-status" aria-live="polite"></div>
           </div>
 
           <div class="form-group">
@@ -73,6 +74,7 @@
             <label class="form-label" for="reg-name">暱稱 <span style="color:#ff6464;">*</span></label>
             <input class="form-input" type="text" id="reg-name" name="playerName"
                    placeholder="請輸入您在遊戲中使用的暱稱" required maxlength="20">
+            <div class="field-status" id="reg-name-status" aria-live="polite"></div>
           </div>
 
           <div class="form-group">
@@ -226,6 +228,61 @@ function appsScriptReady(settings) {
   return !!(settings.endpoint && /^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/i.test(settings.endpoint));
 }
 
+// ── 重複檢查（用 JSONP 才讀得到 Apps Script 回應，避開跨網域限制）──────
+var _checkSeq = 0;
+function jsonpCheck(params, cb) {
+  var settings = registrationFormConfig();
+  if (!appsScriptReady(settings)) { cb(null); return; }
+  var cbName = '__regCheck' + (++_checkSeq);
+  var script = document.createElement('script');
+  var done = false;
+  var timer = setTimeout(function () { finish(null); }, 8000);
+  function finish(data) {
+    if (done) return;
+    done = true;
+    clearTimeout(timer);
+    try { delete window[cbName]; } catch (e) { window[cbName] = undefined; }
+    if (script.parentNode) script.parentNode.removeChild(script);
+    cb(data);
+  }
+  window[cbName] = function (data) { finish(data); };
+  var qs = [];
+  Object.keys(params).forEach(function (k) {
+    qs.push(encodeURIComponent(k) + '=' + encodeURIComponent(params[k]));
+  });
+  qs.push('callback=' + cbName);
+  script.src = settings.endpoint + '?' + qs.join('&');
+  script.onerror = function () { finish(null); };
+  document.head.appendChild(script);
+}
+
+function setFieldStatus(fieldId, text, kind) {
+  var el = document.getElementById(fieldId + '-status');
+  if (!el) return;
+  el.textContent = text || '';
+  el.className = 'field-status' + (kind ? ' is-' + kind : '');
+}
+
+// 帳號 / 暱稱失焦時即時查重
+function checkRegField(which) {
+  var settings = registrationFormConfig();
+  if (!appsScriptReady(settings)) return;          // 沒接 Apps Script 就不檢查
+  var fieldId = which === 'account' ? 'reg-account' : 'reg-name';
+  var val = (document.getElementById(fieldId).value || '').trim();
+  if (!val) { setFieldStatus(fieldId, '', ''); return; }
+  var query = which === 'account' ? { action: 'check', account: val } : { action: 'check', name: val };
+  setFieldStatus(fieldId, '檢查中…', 'checking');
+  jsonpCheck(query, function (data) {
+    if (!data || !data.ok) { setFieldStatus(fieldId, '', ''); return; }  // 檢查失敗就不顯示，避免誤判
+    var taken = which === 'account' ? data.accountTaken : data.nameTaken;
+    if (taken) {
+      setFieldStatus(fieldId, which === 'account' ? '✗ 此遊戲帳號已被使用，請換一個' : '✗ 此暱稱已被使用，請換一個', 'bad');
+    } else {
+      setFieldStatus(fieldId, '✓ 可以使用', 'ok');
+    }
+  });
+}
+
 function normalizePhoneNumber(value) {
   var phone = (value || '').trim();
   var digits = phone.replace(/[^\d]/g, '');
@@ -295,11 +352,35 @@ function regSubmit(e) {
 
   var btn = document.getElementById('reg-submit-btn');
   btn.disabled = true;
-  btn.textContent = '送出中…';
+  btn.textContent = '檢查中…';
 
-  var C = FORUM_CONFIG;
   var form = document.getElementById('reg-form');
   var settings = registrationFormConfig();
+  var account = form.gameAccount.value.trim();
+  var playerName = form.playerName.value.trim();
+
+  // 送出前最後一次查重（僅在有接 Apps Script 時）
+  if (appsScriptReady(settings)) {
+    jsonpCheck({ action: 'check', account: account, name: playerName }, function (data) {
+      if (data && data.ok && (data.accountTaken || data.nameTaken)) {
+        if (data.accountTaken) setFieldStatus('reg-account', '✗ 此遊戲帳號已被使用，請換一個', 'bad');
+        if (data.nameTaken) setFieldStatus('reg-name', '✗ 此暱稱已被使用，請換一個', 'bad');
+        var msg = (data.accountTaken && data.nameTaken) ? '遊戲帳號與暱稱都已被使用，請更換後再送出。'
+                : data.accountTaken ? '此遊戲帳號已被使用，請更換後再送出。'
+                : '此暱稱已被使用，請更換後再送出。';
+        showSubmitError(msg);
+        return;
+      }
+      doActualSubmit(form, settings);  // 通過、或檢查失敗（讀不到）都照常送出，避免誤殺
+    });
+  } else {
+    doActualSubmit(form, settings);
+  }
+}
+
+function doActualSubmit(form, settings) {
+  var C = FORUM_CONFIG;
+  document.getElementById('reg-submit-btn').textContent = '送出中…';
   var useAppsScript = settings.provider === 'appsScript' || (settings.provider === 'auto' && appsScriptReady(settings));
 
   (useAppsScript ? submitToAppsScript(form, settings) : submitToNetlify(form)).then(function () {
@@ -314,6 +395,19 @@ function regSubmit(e) {
 // ── 初始化 ───────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function () {
   refreshCaptcha();
+
+  // 帳號 / 暱稱：失焦時查重，重新編輯時清掉舊狀態
+  var accEl = document.getElementById('reg-account');
+  var nameEl = document.getElementById('reg-name');
+  if (accEl) {
+    accEl.addEventListener('blur', function () { checkRegField('account'); });
+    accEl.addEventListener('input', function () { setFieldStatus('reg-account', '', ''); });
+  }
+  if (nameEl) {
+    nameEl.addEventListener('blur', function () { checkRegField('name'); });
+    nameEl.addEventListener('input', function () { setFieldStatus('reg-name', '', ''); });
+  }
+
   document.querySelectorAll('[data-character-choice]').forEach(function (checkbox) {
     checkbox.addEventListener('change', function () {
       if (checkbox.checked) {

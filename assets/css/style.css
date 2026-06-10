@@ -4420,6 +4420,11 @@ img { max-width: 100%; display: block; }
   height: 2px; background: currentColor; border-radius: 2px;
   transform: rotate(-18deg);
 }
+/* 帳號/暱稱查重狀態 */
+.field-status { margin-top: 5px; min-height: 16px; font-size: 12px; letter-spacing: 0.5px; line-height: 1.4; }
+.field-status.is-checking { color: var(--text-dim); }
+.field-status.is-ok { color: #50c878; }
+.field-status.is-bad { color: #ff6464; }
 .captcha-row { display: flex; gap: 10px; align-items: center; }
 .captcha-code { font-family: monospace; font-size: 20px; letter-spacing: 6px; color: var(--gold); background: var(--bg4); border: 1px solid var(--border); padding: 8px 16px; user-select: none; cursor: pointer; white-space: nowrap; }
 .check-row { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
