@@ -106,7 +106,6 @@
             <div class="nav-dd-label">裝備道具</div>
             <a href="${r}pages/weapons-overview.html">⚔️ 武器介紹</a>
             <a href="${r}pages/weapons-database.html">🔎 武器庫查詢</a>
-            <a href="${r}pages/weapons-craft.html">⚒️ 武器防具製作</a>
             <a href="${r}pages/weapons-enhance.html">📜 武器強化說明</a>
             <a href="${r}pages/armor-overview.html">🛡️ 防具介紹</a>
             <a href="${r}pages/armor-database.html">🔎 防具庫查詢</a>
@@ -212,7 +211,6 @@
       <div class="mob-section">裝備道具</div>
       <a class="mob-link mob-sub" href="${r}pages/weapons-overview.html">⚔️ 武器介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/weapons-database.html">🔎 武器庫查詢</a>
-      <a class="mob-link mob-sub" href="${r}pages/weapons-craft.html">⚒️ 武器防具製作</a>
       <a class="mob-link mob-sub" href="${r}pages/weapons-enhance.html">📜 武器強化說明</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-overview.html">🛡️ 防具介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-database.html">🔎 防具庫查詢</a>
