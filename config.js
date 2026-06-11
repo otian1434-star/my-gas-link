@@ -18,7 +18,7 @@ const FORUM_CONFIG = {
 
   // ── 社群連結（換論壇時更換）───────────────────────────────────
   lineOfficial:   "https://lin.ee/8Dy3o36",           // LINE@ 官方客服：@184jiknt
-  lineCommunity:  "",                                 // LINE 社群，沒有可留空
+  lineCommunity:  "https://line.me/ti/g2/isRv4MoNBwp1W2ww7zcXZrJesAE3878R2RLijA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",  // 玩家討論區（LINE 社群）
 
   // ── 遊戲下載連結（換論壇時更換）──────────────────────────────
   download: {
@@ -41,6 +41,7 @@ const FORUM_CONFIG = {
     title: "曜舞快捷",
     note: "官方客服 · 贊助入口 · 下載資訊",
     links: [
+      { label: "玩家討論區", icon: "💬", url: "https://line.me/ti/g2/isRv4MoNBwp1W2ww7zcXZrJesAE3878R2RLijA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default", style: "line" },
       { label: "LINE 官方客服", icon: "LINE", url: "https://lin.ee/8Dy3o36", style: "line" },
       { label: "贊助連結", icon: "SP", url: "pages/sponsor.html", style: "gold" },
       { label: "遊戲下載", icon: "DL", url: "pages/download.html", style: "blue" },

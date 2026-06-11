@@ -155,12 +155,12 @@
       </nav>
 
       <div class="header-right">
+        ${communityLink ? `<a href="${communityLink}" target="_blank" rel="noopener" class="btn-line-c">
+          💬<span class="btn-label"> 玩家討論區</span>
+        </a>` : ''}
         <a href="${C.lineOfficial}" target="_blank" rel="noopener" class="btn-line-o">
           LINE<span class="btn-label"> 官方客服</span>
         </a>
-        ${communityLink ? `<a href="${communityLink}" target="_blank" rel="noopener" class="btn-line-c">
-          LINE<span class="btn-label"> 社群</span>
-        </a>` : ''}
         <a href="${r}register.html" class="btn-register">
           📝<span class="btn-label"> 申辦帳號</span>
         </a>
@@ -329,8 +329,8 @@
           <div class="footer-col-title">⚔️ ${C.forumName}</div>
           <ul class="footer-links">
             <li><span style="color:var(--text-muted);font-size:12px;">${C.forumSlogan || '曜舞天堂'}</span></li>
+            ${communityLink ? `<li><a href="${communityLink}" target="_blank" rel="noopener">💬 玩家討論區</a></li>` : ''}
             <li><a href="${C.lineOfficial}" target="_blank" rel="noopener">LINE 官方客服</a></li>
-            ${communityLink ? `<li><a href="${communityLink}" target="_blank" rel="noopener">LINE 社群</a></li>` : ''}
             <li><a href="${r}register.html">📝 申辦帳號</a></li>
           </ul>
         </div>
