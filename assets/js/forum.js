@@ -139,7 +139,6 @@
           <button class="nav-link-top">道具介紹 <span class="nav-arrow">▶</span></button>
           <div class="nav-dropdown">
             <a href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
-            <a href="${r}pages/items-vip-card.html">👑 貴賓卡</a>
             <a href="${r}pages/items-candle.html">🕯️ 回憶蠟燭</a>
           </div>
         </div>
@@ -227,7 +226,6 @@
       <a class="mob-link mob-sub" href="${r}pages/armor-special-shield.html">🛡️ 特殊臂盾介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>
       <a class="mob-link mob-sub" href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
-      <a class="mob-link mob-sub" href="${r}pages/items-vip-card.html">👑 貴賓卡</a>
       <a class="mob-link mob-sub" href="${r}pages/items-candle.html">🕯️ 回憶蠟燭</a>
 
       <div class="mob-section">圖鑑</div>
