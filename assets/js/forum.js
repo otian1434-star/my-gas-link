@@ -695,13 +695,17 @@
       audio.addEventListener('loadedmetadata', restore);
     }
 
-    // 自動播放：先嘗試，被瀏覽器擋下時改在使用者第一次互動時開始。
-    // （首頁 hero 影片已靜音，所以背景音樂在所有頁面都自動播放）
+    // 自動播放：先嘗試，被瀏覽器擋下時，改在使用者第一次「在播放器以外」互動時開始。
+    // 播放器內的按鈕（播放/暫停等）自己管控，必須排除，否則點暫停會被這裡又播回去。
     const wantPlay = cfg.autoplay !== false && !(saved && saved.paused === true);
     if (wantPlay) {
       play();
-      const events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
-      const kick = function () { play(); detach(); };
+      const events = ['pointerdown', 'keydown', 'touchstart'];
+      const kick = function (e) {
+        if (e && e.target && player.contains(e.target)) return; // 播放器內的操作不在此處理
+        detach();
+        if (!userPaused) play();                                // 已被手動暫停就不自動播回
+      };
       function detach() { events.forEach(function (ev) { window.removeEventListener(ev, kick, true); }); }
       events.forEach(function (ev) { window.addEventListener(ev, kick, { capture: true, passive: true }); });
       audio.addEventListener('playing', detach, { once: true });

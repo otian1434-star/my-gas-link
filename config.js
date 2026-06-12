@@ -78,10 +78,20 @@ const FORUM_CONFIG = {
     loop: true,       // 整個清單循環
     shuffle: true,    // 隨機播放順序
     volume: 0.7,      // 預設音量 0 ~ 1
+    // 隨機播放（shuffle: true）；要改歌名直接改 title 即可
     tracks: [
-      { title: "曜舞背景音樂", artist: "", url: "assets/media/music/music0.mp3" },
-      // 要再加歌就照這個格式往下加，例如：
-      // { title: "歌名", artist: "演出者", url: "assets/media/music/music1.mp3", cover: "assets/media/music/music1.jpg" },
+      { title: "背景音樂 1",  url: "assets/media/music/music0.mp3" },
+      { title: "背景音樂 2",  url: "assets/media/music/music10.mp3" },
+      { title: "背景音樂 3",  url: "assets/media/music/music12.mp3" },
+      { title: "背景音樂 4",  url: "assets/media/music/music13.mp3" },
+      { title: "背景音樂 5",  url: "assets/media/music/music14.mp3" },
+      { title: "背景音樂 6",  url: "assets/media/music/music16.mp3" },
+      { title: "背景音樂 7",  url: "assets/media/music/music18.mp3" },
+      { title: "背景音樂 8",  url: "assets/media/music/music23.mp3" },
+      { title: "背景音樂 9",  url: "assets/media/music/music27.mp3" },
+      { title: "背景音樂 10", url: "assets/media/music/music28.mp3" },
+      { title: "背景音樂 11", url: "assets/media/music/music37.mp3" },
+      { title: "背景音樂 12", url: "assets/media/music/music50.mp3" },
     ],
   },
 
