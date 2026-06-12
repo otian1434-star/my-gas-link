@@ -3987,6 +3987,7 @@ img { max-width: 100%; display: block; }
   flex-direction: column-reverse;  /* 按鈕在下、面板往上展開 */
   align-items: flex-start;
   gap: 10px;
+  pointer-events: none;    /* 容器本身不吃點擊，避免收合時蓋住下方音樂播放器的控制鍵 */
 }
 .float-toggle {
   width: 54px;
@@ -3996,6 +3997,7 @@ img { max-width: 100%; display: block; }
   color: var(--bg);
   border-radius: 50%;
   cursor: pointer;
+  pointer-events: auto;    /* 容器設為 none，按鈕本身要可點 */
   font-family: 'Noto Serif TC', serif;
   font-weight: 700;
   box-shadow: 0 12px 32px rgba(0,0,0,0.48), 0 0 20px rgba(201,169,110,0.22);
