@@ -135,3 +135,39 @@ const FORUM_CONFIG = {
   lineId:   "@184jiknt",
   teamName: "曜舞天堂管理團隊",
 };
+
+// ================================================================
+// ⭐ 後台設定覆蓋
+// 上面是「預設值／後備」；實際以後台 CMS 編輯的 data/site.json 為準。
+// 讀不到或失敗時自動沿用上面的預設值，網站照常運作（雙重保險）。
+// ================================================================
+(function () {
+  function deepMergeConfig(target, src) {
+    if (!src || typeof src !== 'object') return;
+    Object.keys(src).forEach(function (key) {
+      var sv = src[key];
+      var tv = target[key];
+      if (sv && typeof sv === 'object' && !Array.isArray(sv) &&
+          tv && typeof tv === 'object' && !Array.isArray(tv)) {
+        deepMergeConfig(tv, sv);          // 巢狀物件：逐層合併
+      } else if (sv !== undefined) {
+        target[key] = sv;                  // 陣列與一般值：直接覆蓋
+      }
+    });
+  }
+
+  window.FORUM_CONFIG_READY = new Promise(function (resolve) {
+    var settled = false;
+    function finish() { if (settled) return; settled = true; resolve(FORUM_CONFIG); }
+    setTimeout(finish, 2500);              // 安全逾時，避免 fetch 卡住導致頁面不渲染
+    try {
+      var p = window.location.pathname;
+      var base = (p.indexOf('/pages/') >= 0 || p.indexOf('/admin/') >= 0) ? '../' : './';
+      fetch(base + 'data/site.json', { cache: 'no-store' })
+        .then(function (r) { return (r && r.ok) ? r.json() : null; })
+        .then(function (data) { if (data) deepMergeConfig(FORUM_CONFIG, data); })
+        .catch(function () {})
+        .then(finish);
+    } catch (e) { finish(); }
+  });
+})();

@@ -1,0 +1,89 @@
+{
+  "forumName": "曜舞天堂",
+  "forumFullName": "曜舞天堂 經典不敗",
+  "forumSlogan": "經典不敗 · 3.81 內掛版",
+  "serverVersion": "3.81 內掛版",
+  "heroTitle": "曜舞天堂",
+  "heroSubTitle": "經典不敗",
+  "heroVideo": "assets/media/hero-bg.mp4",
+  "heroImage": "assets/media/hero-characters.png",
+  "brandLogo": "assets/media/brand-logo.png",
+  "lineOfficial": "https://lin.ee/8Dy3o36",
+  "lineCommunity": "https://line.me/ti/g2/isRv4MoNBwp1W2ww7zcXZrJesAE3878R2RLijA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
+  "sponsorUrl": "pages/sponsor.html",
+  "download": {
+    "mainUrl": "",
+    "backup1": "",
+    "backup2": "",
+    "backup3": "",
+    "patchUrl": "",
+    "noBlinkPatch": "https://drive.google.com/file/d/1aMc_XsVz8gBuUirB10IgCQRhVWyobJw_/view?usp=sharing",
+    "updateDate": "2026/02/14",
+    "anyDeskUrl": "https://anydesk.com/zh-tw/downloads/windows"
+  },
+  "floatingPanel": {
+    "enabled": true,
+    "title": "曜舞快捷",
+    "note": "官方客服 · 贊助入口 · 下載資訊",
+    "links": [
+      { "label": "玩家討論區", "icon": "💬", "url": "https://line.me/ti/g2/isRv4MoNBwp1W2ww7zcXZrJesAE3878R2RLijA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default", "style": "line" },
+      { "label": "LINE 官方客服", "icon": "LINE", "url": "https://lin.ee/8Dy3o36", "style": "line" },
+      { "label": "贊助連結", "icon": "SP", "url": "pages/sponsor.html", "style": "gold" },
+      { "label": "遊戲下載", "icon": "DL", "url": "pages/download.html", "style": "blue" },
+      { "label": "全站搜尋", "icon": "查", "url": "pages/search.html", "style": "dark" },
+      { "label": "最新文章", "icon": "NEWS", "url": "pages/news.html", "style": "dark" }
+    ]
+  },
+  "sideBanners": {
+    "enabled": true,
+    "left": { "image": "assets/media/side-line-official.png", "url": "https://lin.ee/u799TqF", "alt": "官方 LINE@" },
+    "right": { "image": "assets/media/side-auto-sponsor.png", "url": "", "alt": "自動贊助" }
+  },
+  "musicPlayer": {
+    "enabled": true,
+    "title": "曜舞音樂",
+    "autoplay": true,
+    "loop": true,
+    "shuffle": true,
+    "volume": 0.7,
+    "tracks": [
+      { "title": "背景音樂 1", "url": "assets/media/music/music0.mp3" },
+      { "title": "背景音樂 2", "url": "assets/media/music/music10.mp3" },
+      { "title": "背景音樂 3", "url": "assets/media/music/music12.mp3" },
+      { "title": "背景音樂 4", "url": "assets/media/music/music13.mp3" },
+      { "title": "背景音樂 5", "url": "assets/media/music/music14.mp3" },
+      { "title": "背景音樂 6", "url": "assets/media/music/music16.mp3" },
+      { "title": "背景音樂 7", "url": "assets/media/music/music18.mp3" },
+      { "title": "背景音樂 8", "url": "assets/media/music/music23.mp3" },
+      { "title": "背景音樂 9", "url": "assets/media/music/music27.mp3" },
+      { "title": "背景音樂 10", "url": "assets/media/music/music28.mp3" },
+      { "title": "背景音樂 11", "url": "assets/media/music/music37.mp3" },
+      { "title": "背景音樂 12", "url": "assets/media/music/music50.mp3" }
+    ]
+  },
+  "registrationForm": {
+    "provider": "auto",
+    "appsScript": {
+      "endpoint": "https://script.google.com/macros/s/AKfycbwP5pmmCMGgcr__owE1SHVYgQ4RMUHtZWr5UtOpxqgSbmZhaVtxHhrK2W_CUeB_tXo2/exec",
+      "token": ""
+    }
+  },
+  "popup": {
+    "enabled": false,
+    "title": "📢 最新公告",
+    "content": "⚔️ <strong>曜舞天堂</strong> 正式開服！<br><br>📅 <strong>開服時間：</strong>2026/02/28 20:00<br>🎁 開服禮包 · 全員贈送<br>💬 加入官方LINE獲取最新消息",
+    "btnText": "加入官方 LINE@",
+    "btnUrl": "https://lin.ee/8Dy3o36",
+    "showOnce": true
+  },
+  "heroBadges": [
+    "✦ 3.81 內掛版",
+    "⚡ 經驗 x3",
+    "💰 金幣 x1",
+    "🎁 掉落 x2",
+    "🛡️ 強化 x2",
+    "⚖️ IP 限制 3 開"
+  ],
+  "lineId": "@184jiknt",
+  "teamName": "曜舞天堂管理團隊"
+}

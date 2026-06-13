@@ -504,6 +504,9 @@
 
   function fill() {
     if (typeof FORUM_CONFIG === 'undefined') { setTimeout(fill, 30); return; }
+    (window.FORUM_CONFIG_READY || Promise.resolve()).then(fillNow);
+  }
+  function fillNow() {
     const C = FORUM_CONFIG;
 
     if (C.serverVersion) {

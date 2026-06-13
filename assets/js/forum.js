@@ -8,6 +8,10 @@
 
   function init() {
     if (typeof FORUM_CONFIG === 'undefined') { setTimeout(init, 30); return; }
+    // 等後台設定（data/site.json）載入合併完再建構；舊版/讀不到時也會立即進行
+    (window.FORUM_CONFIG_READY || Promise.resolve()).then(initNow);
+  }
+  function initNow() {
     buildHeader();
     removeOldNav();
     buildFooter();
