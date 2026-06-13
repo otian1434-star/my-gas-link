@@ -129,6 +129,11 @@ collections:
               - { label: 標籤, name: tag, widget: string }
               - { label: 標題, name: title, widget: string, required: false }
               - { label: 內容, name: content, widget: text }
+  - name: site_settings
+    label: 站台設定
+    editor:
+      preview: false
+    files:
       - name: settings
         label: 站台設定（音樂／連結／Hero／倍率／彈窗）
         file: data/site.json
