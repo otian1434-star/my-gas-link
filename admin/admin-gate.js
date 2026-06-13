@@ -3,9 +3,10 @@
 
   var ADMIN_HASH = '852f57d2ac6efc633bf86a3e17ada7fc6200fac0bf2fdea956348d4e21f2e7d6';
   var STORAGE_KEY = 'yaowu_admin_gate_v1';
+  // 升級為 Sveltia CMS：Decap 的現代化替代品，沿用同一份 config.yml 與 GitHub 後端。
+  // 不載入 formatting-widget.js（Sveltia 不支援 Decap 的自訂元件/自訂預覽）。
   var SCRIPT_LIST = [
-    'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js',
-    './formatting-widget.js',
+    'https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js',
   ];
 
   function bytesToHex(buffer) {
