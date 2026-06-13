@@ -4058,6 +4058,7 @@ img { max-width: 100%; display: block; }
   background: rgba(13,11,8,0.76);
   color: var(--gold-light);
   cursor: pointer;
+  pointer-events: auto;    /* 容器設為 none，開關鈕本身要可點 */
   box-shadow: 0 10px 24px rgba(0,0,0,0.42);
   backdrop-filter: blur(8px);
   font-family: 'Noto Serif TC', serif;
