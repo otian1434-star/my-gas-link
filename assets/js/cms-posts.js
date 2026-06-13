@@ -293,6 +293,8 @@
   function renderEventsList(target) {
     loadPosts().then(function (posts) {
       var events = posts.filter(function (post) { return post.category === '活動'; });
+      // 已結束的活動排到最下方（其餘維持置頂/日期排序，sort 為穩定排序）
+      events.sort(function (a, b) { return (a.status === '已結束' ? 1 : 0) - (b.status === '已結束' ? 1 : 0); });
       if (!events.length) {
         target.innerHTML = '<div class="content-card" style="text-align:center;padding:60px 40px;">' +
           '<div style="font-size:64px;margin-bottom:20px;">🗓️</div>' +
@@ -303,11 +305,12 @@
         return;
       }
       target.innerHTML = '<div class="event-list">' + events.map(function (post) {
-        return '<div class="event-item' + (post.pinned ? ' is-pinned' : '') + '">' +
+        var ended = post.status === '已結束';
+        return '<div class="event-item' + (ended ? ' is-ended' : (post.pinned ? ' is-pinned' : '')) + '">' +
           '<button class="event-head" type="button" aria-expanded="false">' +
             '<span class="event-date">' + escapeHTML(post.date) + '</span>' +
             '<span class="event-title">' + escapeHTML(post.title) + '</span>' +
-            (post.pinned ? '<span class="event-badge">進行中</span>' : '') +
+            '<span class="event-badge' + (ended ? ' ended' : '') + '">' + (ended ? '已結束' : '進行中') + '</span>' +
             '<span class="event-arrow" aria-hidden="true">▾</span>' +
           '</button>' +
           '<div class="event-body cms-rich" hidden>' + renderPostBody(post) + '</div>' +

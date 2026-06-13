@@ -41,6 +41,7 @@ collections:
               - { label: 日期, name: date, widget: datetime, format: "YYYY/MM/DD", date_format: "YYYY/MM/DD", time_format: false }
               - { label: 顯示在網站, name: published, widget: boolean, default: true }
               - { label: 置頂, name: pinned, widget: boolean, default: false }
+              - { label: 活動狀態, name: status, widget: select, options: [進行中, 已結束], default: 進行中, required: false, hint: "僅活動公告頁使用；活動結束改成「已結束」即可，會變灰並自動排到清單最下方，不必刪除。" }
               - { label: 封面圖片, name: coverImage, widget: image, required: false }
               - { label: 摘要, name: excerpt, widget: text, required: false }
               - label: 文章內文
