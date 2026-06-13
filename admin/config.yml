@@ -46,8 +46,8 @@ collections:
               - { label: 摘要, name: excerpt, widget: text, required: false }
               - label: 文章內文
                 name: body
-                widget: markdown
-                hint: 用編輯器撰寫內文（支援標題、清單、表格、連結、粗體等），儲存後會顯示在首頁最新公告與最新文章頁。
+                widget: yaowu_markdown
+                hint: 建議優先在這裡發文。上方按鈕與範本會輸出官方統一風格，右側可切換桌面/手機預覽，儲存後會顯示在首頁最新公告與最新文章頁。
               - label: 自訂 HTML 區塊
                 name: customHtml
                 widget: code
