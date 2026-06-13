@@ -397,12 +397,14 @@
     let timer = null;
     let pointerStart = 0;
 
+    // 手機（≤768px）效能考量：不載入影片，只顯示靜態圖
+    var enableVideo = !(window.matchMedia && window.matchMedia('(max-width: 768px)').matches);
     track.innerHTML = classSlides.map(function (item, index) {
       // 資料用的是 ../media/（給 CSS 背景用）；HTML 屬性需相對網頁，改成 assets/media/
       var toDoc = function (p) { return (p || '').replace(/^\.\.\/media\//, 'assets/media/'); };
       var posterSrc = toDoc(item.image);
       var videoSrc = item.video ? toDoc(item.video) : posterSrc.replace(/\.(jpe?g|png|webp)$/i, '.mp4');
-      var videoHtml = videoSrc
+      var videoHtml = (enableVideo && videoSrc)
         ? '<video class="class-video" muted loop playsinline preload="none" poster="' + escapeHTML(posterSrc) + '">' +
             '<source src="' + escapeHTML(videoSrc) + '" type="video/mp4"></video>'
         : '';
@@ -509,7 +511,16 @@
         'LINEAGE PRIVATE SERVER · VERSION ' + C.serverVersion;
     }
     const heroVideo = document.getElementById('hero-video');
-    if (heroVideo && C.heroVideo) heroVideo.src = C.heroVideo;
+    // 手機效能：手機版不跑這些影片（hero 背景片、hero YouTube、快速目錄影片），
+    // 否則手機同時解碼多支影片會卡到點擊變遲鈍。改用靜態圖；電腦版維持影片。
+    const liteMedia = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    if (heroVideo && C.heroVideo && !liteMedia) heroVideo.src = C.heroVideo;
+    if (liteMedia) {
+      const qv = document.getElementById('quick-video');
+      if (qv) qv.remove();                 // 快速目錄影片 → 改顯示靜態圖（CSS 背景）
+      const ytCard = document.querySelector('.hero-youtube-card');
+      if (ytCard) ytCard.remove();         // hero 的 YouTube 影片（iframe 即使隱藏仍會載入解碼，需移除）
+    }
     const heroCharacter = document.getElementById('hero-character');
     if (heroCharacter && C.heroImage) {
       heroCharacter.src = C.heroImage;

@@ -4048,6 +4048,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: flex-end;
   gap: 8px;
+  pointer-events: none;    /* 容器不吃點擊；收合時的隱形面板才不會擋住手機左下角的內容 */
 }
 .music-toggle {
   width: 34px;
@@ -4911,6 +4912,14 @@ img { max-width: 100%; display: block; }
   .pet-two-col { grid-template-columns: 1fr; }
   .formatter-wrap { grid-template-columns: 1fr; height: auto; }
   .fmt-panel { min-height: 300px; }
+}
+/* 手機效能：影片由 JS 移除，這裡讓快速目錄區改用靜態圖，並防禦性隱藏影片/YouTube */
+@media (max-width: 768px) {
+  .hero-youtube-card { display: none; }
+  .section-bg-quick .section-video-bg {
+    background: url('../media/quick-nav-bg.webp') center / cover no-repeat;
+  }
+  .section-bg-quick .section-video-bg video { display: none; }
 }
 @media (max-width: 600px) {
   #top-header { padding: 0 14px; }
