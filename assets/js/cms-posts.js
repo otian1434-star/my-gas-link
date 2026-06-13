@@ -290,9 +290,52 @@
     });
   }
 
+  function renderEventsList(target) {
+    loadPosts().then(function (posts) {
+      var events = posts.filter(function (post) { return post.category === '活動'; });
+      if (!events.length) {
+        target.innerHTML = '<div class="content-card" style="text-align:center;padding:60px 40px;">' +
+          '<div style="font-size:64px;margin-bottom:20px;">🗓️</div>' +
+          '<h2 style="color:var(--gold);font-size:1.6em;margin-bottom:15px;letter-spacing:2px;">暫無活動公告</h2>' +
+          '<p style="color:var(--text-dim);font-size:1.05em;line-height:1.8;max-width:500px;margin:0 auto 25px;">目前尚無進行中的活動。請持續關注本頁面，管理團隊將在此公告各類限時活動、節慶特典與特別賽事。</p>' +
+          '<div class="notice gold" style="max-width:500px;margin:0 auto;text-align:left;"><strong>📌 管理員說明</strong><br>活動公告將由管理團隊定期更新。重大活動亦會同步發布於官方 LINE@ 群組，請務必加入以接收即時通知。</div>' +
+          '</div>';
+        return;
+      }
+      target.innerHTML = '<div class="event-list">' + events.map(function (post) {
+        return '<div class="event-item' + (post.pinned ? ' is-pinned' : '') + '">' +
+          '<button class="event-head" type="button" aria-expanded="false">' +
+            '<span class="event-date">' + escapeHTML(post.date) + '</span>' +
+            '<span class="event-title">' + escapeHTML(post.title) + '</span>' +
+            (post.pinned ? '<span class="event-badge">進行中</span>' : '') +
+            '<span class="event-arrow" aria-hidden="true">▾</span>' +
+          '</button>' +
+          '<div class="event-body cms-rich" hidden>' + renderPostBody(post) + '</div>' +
+        '</div>';
+      }).join('') + '</div>';
+      Array.prototype.forEach.call(target.querySelectorAll('.event-head'), function (head) {
+        head.addEventListener('click', function () {
+          var body = head.nextElementSibling;
+          if (body.hasAttribute('hidden')) {
+            body.removeAttribute('hidden');
+            head.classList.add('is-open');
+            head.setAttribute('aria-expanded', 'true');
+          } else {
+            body.setAttribute('hidden', '');
+            head.classList.remove('is-open');
+            head.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }).catch(function () {
+      target.innerHTML = '<div class="notice red">活動資料讀取失敗，請確認 data/posts.json 是否存在。</div>';
+    });
+  }
+
   window.ForumCmsPosts = {
     loadPosts,
     renderAnnouncements,
     renderNewsList,
+    renderEventsList,
   };
 })();
