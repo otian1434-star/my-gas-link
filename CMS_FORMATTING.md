@@ -111,11 +111,11 @@
   <tbody>
     <tr>
       <td>經驗倍率</td>
-      <td>x3</td>
+      <td>x3（內掛 x1）</td>
     </tr>
     <tr>
       <td>掉落倍率</td>
-      <td>x2</td>
+      <td>x1</td>
     </tr>
   </tbody>
 </table>
