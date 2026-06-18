@@ -27,7 +27,7 @@ const FORUM_CONFIG = {
     backup2:      "",   // 7Z
     backup3:      "",   // ZIP
     patchUrl:     "",   // 合併補丁
-    noBlinkPatch: "https://drive.google.com/file/d/1aMc_XsVz8gBuUirB10IgCQRhVWyobJw_/view?usp=sharing", // 功能性補丁
+    noBlinkPatch: "https://drive.google.com/file/d/119_5OrCMO-p78mp8gWumjdO3OZpeUqdo/view?usp=sharing", // 功能性補丁
     updateDate:   "2026/02/14",
     anyDeskUrl:   "https://anydesk.com/zh-tw/downloads/windows",
   },
