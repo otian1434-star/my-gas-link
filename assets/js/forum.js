@@ -105,7 +105,6 @@
             <a href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
             <a href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
             <a href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
-            <a href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
             <a href="${r}pages/features-transform-fusion.html">🎭 變身卡合成</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">裝備道具</div>
@@ -209,7 +208,6 @@
       <a class="mob-link mob-sub" href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
-      <a class="mob-link mob-sub" href="${r}pages/equipment-dragon-seal.html">🐉 龍印魔石</a>
       <a class="mob-link mob-sub" href="${r}pages/features-transform-fusion.html">🎭 變身卡合成</a>
 
       <div class="mob-section">裝備道具</div>
