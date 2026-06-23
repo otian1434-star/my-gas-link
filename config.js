@@ -33,7 +33,7 @@ const FORUM_CONFIG = {
   },
 
   // ── 贊助連結（換論壇時更換）──────────────────────────────────
-  sponsorUrl: "pages/sponsor.html",   // ← 填入贊助頁面 URL
+  sponsorUrl: "https://web-hosts.net/%E6%9B%9C%E8%88%9E%E5%A4%A9%E5%A0%82.html",   // ← 填入贊助頁面 URL
 
   // ── 浮動快捷視窗 ─────────────────────────────────────────────
   floatingPanel: {
@@ -43,7 +43,7 @@ const FORUM_CONFIG = {
     links: [
       { label: "玩家討論區", icon: "💬", url: "https://line.me/ti/g2/isRv4MoNBwp1W2ww7zcXZrJesAE3878R2RLijA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default", style: "line" },
       { label: "LINE 官方客服", icon: "LINE", url: "https://lin.ee/8Dy3o36", style: "line" },
-      { label: "贊助連結", icon: "SP", url: "pages/sponsor.html", style: "gold" },
+      { label: "贊助連結", icon: "SP", url: "https://web-hosts.net/%E6%9B%9C%E8%88%9E%E5%A4%A9%E5%A0%82.html", style: "gold" },
       { label: "遊戲下載", icon: "DL", url: "pages/download.html", style: "blue" },
       { label: "全站搜尋", icon: "查", url: "pages/search.html", style: "dark" },
       { label: "最新文章", icon: "NEWS", url: "pages/news.html", style: "dark" },
@@ -60,7 +60,7 @@ const FORUM_CONFIG = {
     },
     right: {
       image: "assets/media/side-auto-sponsor.png",
-      url: "",
+      url: "https://web-hosts.net/%E6%9B%9C%E8%88%9E%E5%A4%A9%E5%A0%82.html",
       alt: "自動贊助",
     },
   },

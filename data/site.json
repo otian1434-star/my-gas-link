@@ -10,7 +10,7 @@
   "brandLogo": "assets/media/brand-logo.png",
   "lineOfficial": "https://lin.ee/8Dy3o36",
   "lineCommunity": "https://line.me/ti/g2/isRv4MoNBwp1W2ww7zcXZrJesAE3878R2RLijA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
-  "sponsorUrl": "pages/sponsor.html",
+  "sponsorUrl": "https://web-hosts.net/%E6%9B%9C%E8%88%9E%E5%A4%A9%E5%A0%82.html",
   "download": {
     "mainUrl": "",
     "backup1": "",
@@ -28,7 +28,7 @@
     "links": [
       { "label": "玩家討論區", "icon": "💬", "url": "https://line.me/ti/g2/isRv4MoNBwp1W2ww7zcXZrJesAE3878R2RLijA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default", "style": "line" },
       { "label": "LINE 官方客服", "icon": "LINE", "url": "https://lin.ee/8Dy3o36", "style": "line" },
-      { "label": "贊助連結", "icon": "SP", "url": "pages/sponsor.html", "style": "gold" },
+      { "label": "贊助連結", "icon": "SP", "url": "https://web-hosts.net/%E6%9B%9C%E8%88%9E%E5%A4%A9%E5%A0%82.html", "style": "gold" },
       { "label": "遊戲下載", "icon": "DL", "url": "pages/download.html", "style": "blue" },
       { "label": "全站搜尋", "icon": "查", "url": "pages/search.html", "style": "dark" },
       { "label": "最新文章", "icon": "NEWS", "url": "pages/news.html", "style": "dark" }
@@ -37,7 +37,7 @@
   "sideBanners": {
     "enabled": true,
     "left": { "image": "assets/media/side-line-official.png", "url": "https://lin.ee/u799TqF", "alt": "官方 LINE@" },
-    "right": { "image": "assets/media/side-auto-sponsor.png", "url": "", "alt": "自動贊助" }
+    "right": { "image": "assets/media/side-auto-sponsor.png", "url": "https://web-hosts.net/%E6%9B%9C%E8%88%9E%E5%A4%A9%E5%A0%82.html", "alt": "自動贊助" }
   },
   "musicPlayer": {
     "enabled": true,
