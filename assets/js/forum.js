@@ -75,7 +75,7 @@
             <a href="${r}pages/disclaimer.html">🦊 免責聲明</a>
             <a href="${r}pages/rules.html">⛔ 遊戲管理規章</a>
             <a href="${r}pages/anti-cheat.html">🚫 外掛懲處條例</a>
-            <a href="${r}pages/anti-detect.html">😈 防外掛偵測</a>
+            <a href="${r}pages/anti-detect.html">😈 防外掛驗證教學</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">服務說明</div>
             <a href="${r}pages/job-transfer.html">🛡️ 轉職服務</a>
@@ -188,7 +188,7 @@
       <a class="mob-link mob-sub" href="${r}pages/disclaimer.html">🦊 免責聲明</a>
       <a class="mob-link mob-sub" href="${r}pages/rules.html">⛔ 遊戲管理規章</a>
       <a class="mob-link mob-sub" href="${r}pages/anti-cheat.html">🚫 外掛懲處條例</a>
-      <a class="mob-link mob-sub" href="${r}pages/anti-detect.html">😈 防外掛偵測</a>
+      <a class="mob-link mob-sub" href="${r}pages/anti-detect.html">😈 防外掛驗證教學</a>
       <a class="mob-link mob-sub" href="${r}pages/job-transfer.html">🛡️ 轉職服務</a>
       <a class="mob-link mob-sub" href="${r}pages/accelerator.html">🤔 加速器迷思</a>
       <a class="mob-link mob-sub" href="${r}pages/office.html">💻 OFFICE 安裝</a>
