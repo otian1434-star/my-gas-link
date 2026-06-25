@@ -166,7 +166,6 @@ collections:
               - { label: 備載 7Z, name: backup2, widget: string, required: false }
               - { label: 備載 ZIP, name: backup3, widget: string, required: false }
               - { label: 合併補丁, name: patchUrl, widget: string, required: false }
-              - { label: 功能性補丁, name: noBlinkPatch, widget: string, required: false }
               - { label: 更新日期, name: updateDate, widget: string, required: false }
               - { label: AnyDesk 連結, name: anyDeskUrl, widget: string, required: false }
           - label: 浮動快捷視窗
