@@ -142,7 +142,7 @@
     }
 
     function closeTable() {
-      if (inTable) { html += '</tbody></table>'; inTable = false; }
+      if (inTable) { html += '</tbody></table></div>'; inTable = false; }
     }
 
     lines.forEach(function (line) {
@@ -153,7 +153,7 @@
         if (cells.every(function (cell) { return /^[-: ]+$/.test(cell); })) return;
         closeList();
         if (!inTable) {
-          html += '<table><thead><tr>';
+          html += '<div class="cms-table-wrap" tabindex="0" aria-label="可左右滑動查看完整表格"><table><thead><tr>';
           cells.forEach(function (cell) { html += '<th>' + inlineMarkdown(cell) + '</th>'; });
           html += '</tr></thead><tbody>';
           inTable = true;
@@ -276,6 +276,23 @@
     return parts.join('');
   }
 
+  function enhanceScrollableTables(scope) {
+    if (!scope) return;
+    var wraps = scope.querySelectorAll('.cms-table-wrap');
+    wraps.forEach(function (wrap) {
+      var check = function () {
+        wrap.classList.toggle('is-scrollable', wrap.scrollWidth > wrap.clientWidth + 2);
+      };
+      check();
+      if (window.ResizeObserver) {
+        var observer = new ResizeObserver(check);
+        observer.observe(wrap);
+      } else {
+        window.addEventListener('resize', check);
+      }
+    });
+  }
+
   function renderNewsList(target) {
     loadPosts().then(function (posts) {
       target.innerHTML = posts.length ? posts.map(function (post, index) {
@@ -285,6 +302,7 @@
           '<div class="post-body cms-rich">' + renderPostBody(post) + '</div>' +
           '</article>';
       }).join('') : '<div class="notice blue">目前尚無文章。</div>';
+      enhanceScrollableTables(target);
     }).catch(function () {
       target.innerHTML = '<div class="notice red">文章資料讀取失敗，請確認 data/posts.json 是否存在。</div>';
     });
@@ -316,6 +334,7 @@
           '<div class="event-body cms-rich" hidden>' + renderPostBody(post) + '</div>' +
         '</div>';
       }).join('') + '</div>';
+      enhanceScrollableTables(target);
       Array.prototype.forEach.call(target.querySelectorAll('.event-head'), function (head) {
         head.addEventListener('click', function () {
           var body = head.nextElementSibling;

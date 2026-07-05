@@ -22,6 +22,7 @@
     highlightNav();
     addPageHdrLine();
     initDesktopDropdowns();
+    enhanceArticleTables();
   }
 
   /* 判斷根路徑 */
@@ -727,6 +728,50 @@
   function resolveLink(url, r) {
     if (/^(https?:|mailto:|tel:|#)/.test(url)) return url;
     return r + url.replace(/^\.\//, '');
+  }
+
+  function enhanceArticleTables() {
+    const selector = '.content-embed, #js-download-content, .cms-rich';
+    const updateWrap = function (wrap) {
+      const check = function () {
+        wrap.classList.toggle('is-scrollable', wrap.scrollWidth > wrap.clientWidth + 2);
+      };
+      requestAnimationFrame(check);
+      if (wrap.dataset.scrollEnhanced) return;
+      wrap.dataset.scrollEnhanced = '1';
+      if (window.ResizeObserver) {
+        const observer = new ResizeObserver(check);
+        observer.observe(wrap);
+      } else {
+        window.addEventListener('resize', check);
+      }
+    };
+    const process = function () {
+      document.querySelectorAll(selector).forEach(function (rootEl) {
+        rootEl.querySelectorAll('table').forEach(function (table) {
+          if (table.closest('.cms-table-wrap')) return;
+          const wrap = document.createElement('div');
+          wrap.className = 'cms-table-wrap';
+          wrap.tabIndex = 0;
+          wrap.setAttribute('aria-label', '可左右滑動查看完整表格');
+          table.parentNode.insertBefore(wrap, table);
+          wrap.appendChild(table);
+        });
+        rootEl.querySelectorAll('.cms-table-wrap').forEach(updateWrap);
+      });
+    };
+
+    process();
+    let pending = false;
+    const observer = new MutationObserver(function () {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(function () {
+        pending = false;
+        process();
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
   }
 
   /* ================================================================

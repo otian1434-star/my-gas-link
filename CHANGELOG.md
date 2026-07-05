@@ -3,6 +3,33 @@
 本檔記錄網站、內容、圖片、影片、後台、表單、部署與文件異動。
 新的 AI 或新的聊天室接手時，請先讀 `AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`，再讀本檔最近紀錄。
 
+## 2026-07-05 - 調整直播推廣箱兌換證數量
+
+### 類型
+- 網站內容
+- 文件
+
+### 異動
+- `pages/stream.html` 直播推廣箱內容物調整為：
+  - 1 HR：藍鑽 60、推文幣 15、直播獎勵兌換證 1 個。
+  - 2 HR：藍鑽 120、推文幣 30、直播獎勵兌換證 2 個。
+  - 3 HR：藍鑽 150、推文幣 45、直播獎勵兌換證 3 個。
+- `社群文宣提案.md`、`PROJECT_MEMORY.md`、`AI_HANDOFF_曜舞天堂.md` 同步更新。
+- `pages/transform-guide.html` 移除「傳說 → 神話 0%」合成機率。
+- `data/posts.json` 開服活動小怪掉落表移除「機率參考」欄位。
+- `assets/js/cms-posts.js`、`assets/js/forum.js` 與 `assets/css/style.css` 調整文章與內容頁表格呈現：
+  - 桌機表格依內容寬度顯示，不再撐滿整個文章外框。
+  - 手機若表格超出寬度，顯示「左右滑動查看完整表格」提示。
+- `data/search-index.json` 已重新生成。
+
+### 驗證
+- `node scripts\build-search-index.js` 成功，產出 63 筆搜尋紀錄。
+- `data/posts.json`、`data/search-index.json`、`data/site.json` JSON 解析通過。
+- `assets/js/cms-posts.js`、`config.js`、`assets/js/forum.js` 語法檢查通過。
+
+### 備註
+- 本次更新將隨部署提交推送到 `target main`。
+
 ## 2026-07-05 - 開服前內容、活動公告與音樂素材更新
 
 ### 類型
