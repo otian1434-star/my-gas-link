@@ -57,7 +57,17 @@
       { "title": "背景音樂 9", "url": "assets/media/music/music27.mp3" },
       { "title": "背景音樂 10", "url": "assets/media/music/music28.mp3" },
       { "title": "背景音樂 11", "url": "assets/media/music/music37.mp3" },
-      { "title": "背景音樂 12", "url": "assets/media/music/music50.mp3" }
+      { "title": "背景音樂 12", "url": "assets/media/music/music76.mp3" },
+      { "title": "背景音樂 13", "url": "assets/media/music/music82.mp3" },
+      { "title": "背景音樂 14", "url": "assets/media/music/music83.mp3" },
+      { "title": "背景音樂 15", "url": "assets/media/music/music142.mp3" },
+      { "title": "背景音樂 16", "url": "assets/media/music/music146.mp3" },
+      { "title": "背景音樂 17", "url": "assets/media/music/music149.mp3" },
+      { "title": "背景音樂 18", "url": "assets/media/music/music153.mp3" },
+      { "title": "背景音樂 19", "url": "assets/media/music/music164.mp3" },
+      { "title": "背景音樂 20", "url": "assets/media/music/music165.mp3" },
+      { "title": "背景音樂 21", "url": "assets/media/music/music176.mp3" },
+      { "title": "背景音樂 22", "url": "assets/media/music/music178.mp3" }
     ]
   },
   "registrationForm": {

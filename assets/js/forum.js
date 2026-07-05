@@ -93,6 +93,7 @@
             <a href="${r}pages/features-overview.html">⚔️ 遊戲特色總覽</a>
             <a href="${r}pages/features-newbie-guide.html">📚 新手引導</a>
             <a href="${r}pages/features-daily-quest.html">📜 每日任務</a>
+            <a href="${r}pages/features-level-rewards.html">🎁 等級獎勵表</a>
             <a href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
             <a href="${r}pages/features-shop.html">💎 商城介紹</a>
             <a href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
@@ -196,6 +197,7 @@
       <a class="mob-link mob-sub" href="${r}pages/features-overview.html">⚔️ 遊戲特色總覽</a>
       <a class="mob-link mob-sub" href="${r}pages/features-newbie-guide.html">📚 新手引導</a>
       <a class="mob-link mob-sub" href="${r}pages/features-daily-quest.html">📜 每日任務</a>
+      <a class="mob-link mob-sub" href="${r}pages/features-level-rewards.html">🎁 等級獎勵表</a>
       <a class="mob-link mob-sub" href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
       <a class="mob-link mob-sub" href="${r}pages/features-shop.html">💎 商城介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>

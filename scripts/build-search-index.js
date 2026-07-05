@@ -77,7 +77,8 @@ function stripScripts(html) {
 function categoryFor(filePath) {
   const name = path.basename(filePath);
   if (categoryMap[name]) return categoryMap[name];
-  if (/^(features|boss|dolls|transform|map)/.test(name)) return '遊戲資料';
+  if (/^features/.test(name)) return '遊戲特色';
+  if (/^(boss|dolls|transform|map)/.test(name)) return '遊戲資料';
   if (/^(weapons|armor|items)/.test(name)) return '裝備道具';
   return '固定頁面';
 }
