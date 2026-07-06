@@ -3621,6 +3621,8 @@ img { max-width: 100%; display: block; }
 .game-db-controls { display: grid; grid-template-columns: minmax(240px, 1fr) auto; gap: 12px; align-items: start; }
 .game-db-search-input,
 .game-db-filter-row select { width: 100%; background: rgba(0,0,0,0.28); border: 1px solid rgba(201,169,110,0.28); color: var(--text); padding: 12px 14px; font-family: 'Noto Sans TC', sans-serif; font-size: 13px; outline: none; }
+.game-db-filter-row select option { background: #100d08; color: var(--gold-light); }
+.game-db-filter-row select option:checked { background: #3c2d12; color: var(--white); }
 .game-db-search-input:focus,
 .game-db-filter-row select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,169,110,0.08); }
 .game-db-filter-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
