@@ -293,6 +293,24 @@
     });
   }
 
+  function scrollToCurrentHash(scope) {
+    if (!scope || !window.location.hash) return;
+
+    var id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+
+    var target = document.getElementById(id);
+    if (!target || !scope.contains(target)) return;
+
+    window.requestAnimationFrame(function () {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.classList.add('is-hash-target');
+      window.setTimeout(function () {
+        target.classList.remove('is-hash-target');
+      }, 1800);
+    });
+  }
+
   function renderNewsList(target) {
     loadPosts().then(function (posts) {
       target.innerHTML = posts.length ? posts.map(function (post, index) {
@@ -303,6 +321,7 @@
           '</article>';
       }).join('') : '<div class="notice blue">目前尚無文章。</div>';
       enhanceScrollableTables(target);
+      scrollToCurrentHash(target);
     }).catch(function () {
       target.innerHTML = '<div class="notice red">文章資料讀取失敗，請確認 data/posts.json 是否存在。</div>';
     });

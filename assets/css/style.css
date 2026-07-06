@@ -4515,6 +4515,11 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow: hidden;
   box-shadow: 0 18px 54px rgba(0,0,0,0.42);
+  scroll-margin-top: 104px;
+}
+.post-card.is-hash-target {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 0 1px rgba(232,193,106,0.48), 0 18px 60px rgba(0,0,0,0.5), 0 0 34px rgba(201,169,110,0.16);
 }
 .post-card.post-layout-featured {
   border-color: var(--border-bright);

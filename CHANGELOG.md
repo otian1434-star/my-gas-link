@@ -3,6 +3,23 @@
 本檔記錄網站、內容、圖片、影片、後台、表單、部署與文件異動。
 新的 AI 或新的聊天室接手時，請先讀 `AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`，再讀本檔最近紀錄。
 
+## 2026-07-06 - 修正首頁公告卡片指定文章定位
+
+### 類型
+- 前台互動
+- 使用體驗
+- 文件
+
+### 異動
+- `assets/js/cms-posts.js` 修正從首頁最新公告卡片進入 `pages/news.html#post-x` 時，因文章列表非同步載入導致 hash 定位失效的問題。
+- 文章列表渲染完成後會依目前網址 hash 自動捲到指定文章。
+- `assets/css/style.css` 新增文章錨點保留上方距離，避免固定導覽列遮住目標文章，並加入短暫高亮效果。
+- `PROJECT_MEMORY.md`、`AI_HANDOFF_曜舞天堂.md` 同步更新。
+
+### 驗證
+- `assets/js/cms-posts.js`、`assets/js/forum.js` 語法檢查通過。
+- `data/posts.json`、`data/search-index.json`、`data/site.json` JSON 解析通過。
+
 ## 2026-07-06 - 新增 LINE 禮盒永久活動與推文素材圖庫
 
 ### 類型
