@@ -3,6 +3,34 @@
 本檔記錄網站、內容、圖片、影片、後台、表單、部署與文件異動。
 新的 AI 或新的聊天室接手時，請先讀 `AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`，再讀本檔最近紀錄。
 
+## 2026-07-06 - 空部署成功並整理目前狀態記憶
+
+### 類型
+- 部署
+- 文件
+- AI 交接
+
+### 異動
+- 建立空 commit `e3491c0 Trigger GitHub Pages rebuild` 觸發 GitHub Pages，但第一次 deploy job 失敗。
+- 建立第二個空 commit `5726213 Retry GitHub Pages deployment` 重新觸發部署，GitHub Pages 成功上架。
+- 線上驗證 `assets/js/cms-posts.js` 已包含 `scrollToCurrentHash`，表示公告指定文章定位修正已上線。
+- 新增 `CURRENT_STATE_曜舞天堂.md`，整理目前網站、部署、連結、伺服器設定、內容狀態、Git 注意事項與交接句。
+- `PROJECT_MEMORY.md` 與 `AI_HANDOFF_曜舞天堂.md` 補充最新部署狀態與新的接手讀取順序。
+
+### 相關檔案
+- `CURRENT_STATE_曜舞天堂.md`
+- `PROJECT_MEMORY.md`
+- `AI_HANDOFF_曜舞天堂.md`
+- `CHANGELOG.md`
+
+### 驗證
+- GitHub Actions `pages build and deployment` run `146` 成功。
+- 線上 `cms-posts.js` 檢查到 `scrollToCurrentHash`。
+
+### 備註
+- 本次文件更新會另外提交；若推送後產生新的文件 commit，不影響 `5726213` 的功能部署驗證結論。
+- 未追蹤影片與行銷素材仍保留本機，未納入提交。
+
 ## 2026-07-06 - 修正首頁公告卡片指定文章定位
 
 ### 類型

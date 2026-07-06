@@ -3,19 +3,29 @@
 這份文件是給新的 AI、剪輯工具、或新的聊天室快速接手用。
 接手順序建議：
 
-1. 先讀本檔。
-2. 再讀 `PROJECT_MEMORY.md`。
-3. 再讀 `AI_WORKFLOW.md`。
-4. 看最近變更時讀 `CHANGELOG.md`。
-5. 如果要做影片或文宣，再讀 `影片處理skill/README.md` 與 `yaowu-remotion-video/src/Composition.tsx`。
-6. 如果要規劃後續影片系列或挑素材，再讀 `影片處理skill/yaowu-video-roadmap.md`。
+1. 先讀 `CURRENT_STATE_曜舞天堂.md`。
+2. 再讀本檔。
+3. 再讀 `PROJECT_MEMORY.md`。
+4. 再讀 `AI_WORKFLOW.md`。
+5. 看最近變更時讀 `CHANGELOG.md`。
+6. 如果要做影片或文宣，再讀 `影片處理skill/README.md` 與 `yaowu-remotion-video/src/Composition.tsx`。
+7. 如果要規劃後續影片系列或挑素材，再讀 `影片處理skill/yaowu-video-roadmap.md`。
 
 ## 強制紀錄規則
 
 - 每次完成網站、內容、圖片、影片、後台、表單、部署、文件更新後，都要更新 `CHANGELOG.md`。
 - 若是長期會影響後續接手的資訊，也要同步更新 `PROJECT_MEMORY.md`。
 - 若是會影響新 AI 工作方式、使用者偏好、風格規則、素材位置、影片流程，還要同步更新本檔。
+- 若是目前狀態、部署狀態、常用連結、公開內容狀態有變，也要同步更新 `CURRENT_STATE_曜舞天堂.md`。
 - 影片和文宣素材預設只留在本地紀錄，不推上網站 Git，除非使用者明確要求。
+
+## 最新部署狀態
+
+- 目前已驗證上線的功能部署 commit：`5726213 Retry GitHub Pages deployment`。
+- 若文件整理本身再產生新的 commit，不代表功能部署驗證失效；請看 GitHub Actions 最新 `pages build and deployment` 是否成功。
+- 2026-07-06 空部署第一次 `e3491c0 Trigger GitHub Pages rebuild` 的 Pages deploy job 失敗；第二次 `5726213 Retry GitHub Pages deployment` 成功。
+- 線上已驗證 `assets/js/cms-posts.js` 包含 `scrollToCurrentHash`，首頁公告卡片指定文章定位已生效。
+- 如果推送後 GitHub Pages 沒更新，先檢查 GitHub Actions 的 `pages build and deployment`，不要只看本機 push 是否成功。
 
 ## 專案定位
 
@@ -336,6 +346,7 @@ npx remotion render YaowuOutro6 out\yaowu-outro-6s.mp4 --codec=h264 --crf=18
 
 ## 後續接手提醒
 
+- 換聊天室時，直接丟給新 AI 的第一句可以是：「請先讀 `CURRENT_STATE_曜舞天堂.md`、`AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`、`CHANGELOG.md` 再開始。」
 - 新 AI 若要改網站，先查本次相關檔案，不要全站亂重構。
 - 新 AI 若要做影片，不要把影片素材提交到網站 Git。
 - 新 AI 若要新增文章內容，要統一轉成曜舞黑金風格。

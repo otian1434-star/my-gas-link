@@ -1,5 +1,19 @@
 # 曜舞天堂網站 Memory
 
+## 最新接手狀態（2026-07-06）
+
+- 新增精簡交接總覽：`CURRENT_STATE_曜舞天堂.md`。新聊天室或新 AI 接手時請優先讀這份。
+- 目前已驗證上線的功能部署 commit：`5726213 Retry GitHub Pages deployment`。
+- 若本文件後續又被提交推送，會產生新的文件 commit；不要因此誤判 `5726213` 的功能部署驗證結論失效。
+- 2026-07-06 曾先用空 commit `e3491c0 Trigger GitHub Pages rebuild` 觸發 Pages，但 deploy job 失敗；之後用 `5726213 Retry GitHub Pages deployment` 重試成功。
+- 線上已驗證：`https://otian1434-star.github.io/my-gas-link/assets/js/cms-posts.js` 已包含 `scrollToCurrentHash`，首頁公告卡片可連到指定公告文章。
+- 若日後 push 後網站沒更新，先到 GitHub Actions 檢查 `pages build and deployment` 是否成功；必要時可再用空 commit 觸發：
+
+```powershell
+git commit --allow-empty -m "Retry GitHub Pages deployment"
+git push origin main
+```
+
 ## 專案概況
 
 - 專案資料夾：`c:\Users\User\Desktop\GIT論壇開發`
@@ -180,10 +194,12 @@ git push target main
 
 ## AI 交接文件
 
+- 新增 `CURRENT_STATE_曜舞天堂.md` 作為最短版目前狀態總覽。
 - 已新增 `AI_HANDOFF_曜舞天堂.md` 作為跨聊天室、跨 AI 的交接文件。
 - 已新增 `AI_WORKFLOW.md` 作為所有 AI 的固定工作規範。
 - 已新增 `CHANGELOG.md` 作為每次更新的固定紀錄檔。
 - 新 AI 接手時建議先讀：
+  - `CURRENT_STATE_曜舞天堂.md`
   - `AI_HANDOFF_曜舞天堂.md`
   - `PROJECT_MEMORY.md`
   - `AI_WORKFLOW.md`
