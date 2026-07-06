@@ -3,6 +3,32 @@
 本檔記錄網站、內容、圖片、影片、後台、表單、部署與文件異動。
 新的 AI 或新的聊天室接手時，請先讀 `AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`，再讀本檔最近紀錄。
 
+## 2026-07-06 - 新增 LINE 禮盒永久活動與推文素材圖庫
+
+### 類型
+- 網站內容
+- 活動公告
+- 推文說明
+- 文件
+
+### 異動
+- `data/posts.json` 新增活動公告：
+  - `🎁 永久活動 ── 曜舞官方的祝福・加 LINE 好禮`
+- `pages/promo.html` 推文說明頁調整：
+  - 包月推文代工服務保留每月 `$399 TWD`，新增三組優惠價 `$1000 TWD`。
+  - 發文規定獎勵上限改為單則 6 顆印章 / 單日上限 60 顆（10 次）。
+  - 分享圖片區新增 `完整文宣圖` 內 13 張官方文宣圖片，採折疊式縮圖圖庫與 lazy loading，避免頁面初始高度過大。
+- `data/search-index.json` 已重新生成。
+- `PROJECT_MEMORY.md`、`AI_HANDOFF_曜舞天堂.md` 同步更新。
+
+### 驗證
+- `data/posts.json` JSON 解析通過。
+- `assets/js/cms-posts.js`、`assets/js/forum.js` 語法檢查通過。
+- `node scripts\build-search-index.js` 成功，產出 63 筆搜尋紀錄。
+
+### 備註
+- `完整文宣圖/` 目前是未追蹤資料夾；若要正式上架推文圖庫，推送時需一併納入對應圖片檔。
+
 ## 2026-07-05 - 調整直播推廣箱兌換證數量
 
 ### 類型
