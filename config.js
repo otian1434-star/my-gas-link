@@ -22,12 +22,12 @@ const FORUM_CONFIG = {
 
   // ── 遊戲下載連結（換論壇時更換）──────────────────────────────
   download: {
-    mainUrl:      "",
-    backup1:      "",   // RAR
-    backup2:      "",   // 7Z
-    backup3:      "",   // ZIP
+    mainUrl:      "https://drive.google.com/file/d/1EvJ8gctj9W1Qd5p8qtibt8akQU0eRdJO/view?usp=drive_link",
+    backup1:      "https://drive.google.com/file/d/1I93hGQQ-zGJA3WljMhXbbQESx5PgmWT1/view?usp=drive_link",   // RAR
+    backup2:      "https://drive.google.com/file/d/1dUptGvBz3w3GlNxnfMtSJc_z4_j-9e4I/view?usp=sharing",       // 7Z
+    backup3:      "https://drive.google.com/file/d/1EvJ8gctj9W1Qd5p8qtibt8akQU0eRdJO/view?usp=drive_link",   // ZIP
     patchUrl:     "",   // 合併補丁
-    updateDate:   "2026/02/14",
+    updateDate:   "2026/07/08",
     anyDeskUrl:   "https://anydesk.com/zh-tw/downloads/windows",
   },
 
