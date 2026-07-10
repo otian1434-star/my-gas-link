@@ -1,7 +1,7 @@
 const SHEET_NAME = '申請資料';
 const TOKEN = '';
 
-const COLUMN_WIDTHS = [170, 140, 130, 130, 150, 230, 150, 130, 420, 220, 160];
+const COLUMN_WIDTHS = [170, 140, 130, 130, 150, 180, 230, 150, 130, 420, 220, 160];
 
 const HEADERS = [
   '送出時間',
@@ -9,6 +9,7 @@ const HEADERS = [
   '遊戲密碼',
   '暱稱',
   '職業與性別',
+  '伺服器選擇',
   '電子信箱',
   '手機號碼',
   '如何得知',
@@ -42,6 +43,7 @@ function doPost(e) {
       text_(data.gamePassword),
       text_(data.playerName),
       text_(data.characterChoice),
+      text_(data.serverName),
       text_(data.email),
       normalizePhone_(data.phone),
       text_(data.source),
@@ -126,11 +128,28 @@ function getApplicationSheet_() {
 
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(HEADERS);
+  } else {
+    ensureSchema_(sheet);
   }
 
   formatHeader_(sheet);
 
   return sheet;
+}
+
+function ensureSchema_(sheet) {
+  const headerCount = Math.max(sheet.getLastColumn(), HEADERS.length);
+  const headers = sheet
+    .getRange(1, 1, 1, headerCount)
+    .getValues()[0]
+    .map(function (value) {
+      return text_(value);
+    });
+
+  // 舊版試算表沒有「伺服器選擇」欄，插入在「職業與性別」後方，避免既有資料錯位。
+  if (headers.indexOf('伺服器選擇') === -1) {
+    sheet.insertColumnAfter(5);
+  }
 }
 
 function formatHeader_(sheet) {
@@ -183,14 +202,14 @@ function formatDataRows_(sheet) {
   sheet.getRange(2, 1, rowCount, 1).setNumberFormat('yyyy/mm/dd hh:mm:ss');
   sheet.getRange(2, 2, rowCount, lastCol - 1).setNumberFormat('@');
   sheet.getRange(2, 2, rowCount, 6).setHorizontalAlignment('left');
-  sheet.getRange(2, 7, rowCount, 2).setHorizontalAlignment('center');
-  sheet.getRange(2, 9, rowCount, 2).setHorizontalAlignment('left');
+  sheet.getRange(2, 8, rowCount, 2).setHorizontalAlignment('center');
+  sheet.getRange(2, 10, rowCount, 2).setHorizontalAlignment('left');
   sheet.setRowHeights(2, rowCount, 34);
   ensureFilter_(sheet);
 }
 
 function normalizePhoneColumn_(sheet, rowCount) {
-  const phoneRange = sheet.getRange(2, 7, rowCount, 1);
+  const phoneRange = sheet.getRange(2, 8, rowCount, 1);
   const values = phoneRange.getValues().map(function (row) {
     return [normalizePhone_(row[0])];
   });

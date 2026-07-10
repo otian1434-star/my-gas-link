@@ -50,6 +50,16 @@
           </p>
 
           <div class="form-group">
+            <label class="form-label" for="reg-server">伺服器選擇 <span style="color:#ff6464;">*</span></label>
+            <select class="form-input" id="reg-server" name="serverName" required>
+              <option value="">— 請選擇伺服器 —</option>
+              <option value="曜舞天堂主服">曜舞天堂主服</option>
+              <option value="曜舞天堂太陽神服">曜舞天堂太陽神服</option>
+              <option value="曜舞天堂愛神服">曜舞天堂愛神服</option>
+            </select>
+          </div>
+
+          <div class="form-group">
             <label class="form-label" for="reg-account">遊戲帳號 <span style="color:#ff6464;">*</span></label>
             <input class="form-input" type="text" id="reg-account" name="gameAccount"
                    placeholder="請輸入欲申請的遊戲帳號" required maxlength="20" autocomplete="username">
@@ -125,6 +135,8 @@
             <label class="form-label" for="reg-how">如何得知本伺服器</label>
             <select class="form-input" id="reg-how" name="source">
               <option value="">— 請選擇 —</option>
+              <option value="抖音">抖音</option>
+              <option value="私服123">私服123</option>
               <option value="FB社團">Facebook 社團推文</option>
               <option value="朋友介紹">朋友介紹</option>
               <option value="YouTube">YouTube 影片</option>
@@ -303,6 +315,7 @@ function buildApplicationPayload(form, settings) {
   data.append('gamePassword', form.gamePassword.value);
   data.append('playerName', form.playerName.value.trim());
   data.append('characterChoice', form.characterChoice.value);
+  data.append('serverName', form.serverName ? form.serverName.value : '');
   data.append('email', form.email.value.trim());
   data.append('phone', normalizePhoneNumber(form.phone.value));
   data.append('lineId', form.lineId ? form.lineId.value.trim() : '');
