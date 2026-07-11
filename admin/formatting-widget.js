@@ -321,7 +321,7 @@
             h('span', { className: 'update-tag' }, item.tag || ''),
             h('span', { className: 'update-content' }, item.content || item.title || ''),
           ]);
-        })) : emptyOfficialMessage('目前沒有顯示中的更新歷程'),
+        })) : emptyOfficialMessage('目前沒有手動更新條列；前台仍會自動讀取「文章管理」中分類為「更新」的文章。'),
         h('div', { className: 'cms-preview-button-row' },
           h('span', { className: 'btn-outline cms-preview-fake-button' }, (section && section.buttonText) || '查看完整歷程')
         ),

@@ -35,6 +35,106 @@
       });
   }
 
+  function loadHomeUpdates(fallbackUpdates) {
+    if (Array.isArray(fallbackUpdates)) {
+      return Promise.resolve(fallbackUpdates);
+    }
+    return fetch(root() + 'data/home.json', { cache: 'no-store' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('home data not found');
+        return res.json();
+      })
+      .then(function (data) {
+        return Array.isArray(data.updates) ? data.updates : [];
+      })
+      .catch(function () {
+        if (typeof FORUM_CONFIG !== 'undefined' && Array.isArray(FORUM_CONFIG.updates)) {
+          return FORUM_CONFIG.updates;
+        }
+        return [];
+      });
+  }
+
+  function isUpdateCategory(category) {
+    var value = String(category || '').trim();
+    return value === '更新' || value === '更新歷程';
+  }
+
+  function updateText(item) {
+    var title = String(item.title || '').trim();
+    var content = String(item.content || '').trim();
+    if (title && content && title !== content) return title + ' - ' + content;
+    return content || title || '';
+  }
+
+  function sortUpdateItems(items) {
+    return items.slice().sort(function (a, b) {
+      if (!!a.pinned !== !!b.pinned) return a.pinned ? -1 : 1;
+      return String(b.date || '').localeCompare(String(a.date || ''));
+    });
+  }
+
+  function dedupeUpdateItems(items) {
+    var seen = {};
+    return items.filter(function (item) {
+      var key = [
+        item.date || '',
+        item.tag || '',
+        item.title || '',
+        item.content || '',
+      ].join('|');
+      if (seen[key]) return false;
+      seen[key] = true;
+      return true;
+    });
+  }
+
+  function withUpdateAnchors(items) {
+    return items.map(function (item, index) {
+      return Object.assign({}, item, { anchor: 'update-' + index });
+    });
+  }
+
+  function loadUpdateItems(fallbackUpdates) {
+    return Promise.allSettled([
+      loadPosts(),
+      loadHomeUpdates(fallbackUpdates),
+    ]).then(function (parts) {
+      var posts = parts[0].status === 'fulfilled' ? parts[0].value : [];
+      var manualUpdates = parts[1].status === 'fulfilled' ? parts[1].value : [];
+      var postItems = posts.map(function (post, index) {
+        return { post: post, newsIndex: index };
+      }).filter(function (item) {
+        return isUpdateCategory(item.post.category);
+      }).map(function (item) {
+        var post = item.post;
+        return {
+          type: 'post',
+          post: post,
+          newsIndex: item.newsIndex,
+          date: post.date || '',
+          tag: post.category || '更新',
+          title: post.title || '未命名更新',
+          content: post.excerpt || '',
+          pinned: post.pinned,
+        };
+      });
+      var manualItems = (manualUpdates || []).filter(function (item) {
+        return item && item.visible !== false;
+      }).map(function (item) {
+        return {
+          type: 'manual',
+          date: item.date || '',
+          tag: item.tag || '更新',
+          title: item.title || '',
+          content: item.content || '',
+          pinned: item.pinned,
+        };
+      });
+      return withUpdateAnchors(dedupeUpdateItems(sortUpdateItems(postItems.concat(manualItems))));
+    });
+  }
+
   function renderAnnouncements(target, fallbackConfig) {
     loadPosts().then(function (posts) {
       if (!posts.length) throw new Error('empty posts');
@@ -327,6 +427,71 @@
     });
   }
 
+  function renderUpdatesEmpty(target) {
+    target.innerHTML = '<div class="content-card" style="text-align:center;padding:60px 40px;">' +
+      '<div style="font-size:64px;margin-bottom:20px;">📭</div>' +
+      '<h2 style="color:var(--gold);font-size:1.6em;margin-bottom:15px;letter-spacing:2px;">暫無更新記錄</h2>' +
+      '<p style="color:var(--text-secondary);font-size:1.05em;line-height:1.8;max-width:500px;margin:0 auto 25px;">目前尚無版本更新記錄。請到後台「文章管理」新增文章，並將分類設為「更新」，發布後會自動同步到此頁。</p>' +
+      '<div class="notice gold" style="max-width:500px;margin:0 auto;text-align:left;"><strong>📌 管理員說明</strong><br>若只需要簡短條列，也可在後台「首頁底板管理」的更新歷程清單補充。</div>' +
+      '</div>';
+  }
+
+  function renderUpdatesSummary(target, fallbackUpdates, options) {
+    var opts = options || {};
+    var limit = opts.limit || 6;
+    loadUpdateItems(fallbackUpdates).then(function (items) {
+      if (!items.length) {
+        target.innerHTML = opts.emptyHTML || '<p style="color:var(--text-dim);text-align:center;padding:30px 0;letter-spacing:2px;">暫無更新記錄</p>';
+        return;
+      }
+      target.innerHTML = items.slice(0, limit).map(function (item) {
+        var href = root() + 'pages/updates.html#' + item.anchor;
+        return '<a class="update-item" href="' + escapeHTML(href) + '">' +
+          '<span class="update-date">' + escapeHTML(item.date || '') + '</span>' +
+          '<span class="update-tag">' + escapeHTML(item.tag || '更新') + '</span>' +
+          '<span class="update-content">' + escapeHTML(updateText(item)) + '</span>' +
+          '</a>';
+      }).join('');
+    }).catch(function () {
+      target.innerHTML = opts.errorHTML || '<div class="notice red">更新歷程讀取失敗，請確認 data/posts.json 是否存在。</div>';
+    });
+  }
+
+  function renderUpdateFullItem(item) {
+    if (item.type === 'post' && item.post) {
+      var post = item.post;
+      return '<article class="post-card post-layout-' + escapeHTML(post.layout || 'standard') + '" id="' + escapeHTML(item.anchor) + '">' +
+        '<h2>' + escapeHTML(post.title || '未命名更新') + '</h2>' +
+        '<div class="post-meta">' +
+          '<span>' + escapeHTML(post.category || '更新') + '</span>' +
+          '<span>' + escapeHTML(post.date || '') + '</span>' +
+          (post.pinned ? '<span>置頂</span>' : '') +
+          (typeof item.newsIndex === 'number' ? '<span><a href="' + escapeHTML(root() + 'pages/news.html#post-' + item.newsIndex) + '">文章頁</a></span>' : '') +
+        '</div>' +
+        '<div class="post-body cms-rich">' + renderPostBody(post) + '</div>' +
+        '</article>';
+    }
+    return '<div class="update-item" id="' + escapeHTML(item.anchor) + '">' +
+      '<span class="update-date">' + escapeHTML(item.date || '') + '</span>' +
+      '<span class="update-tag">' + escapeHTML(item.tag || '更新') + '</span>' +
+      '<span class="update-content">' + escapeHTML(updateText(item)) + '</span>' +
+      '</div>';
+  }
+
+  function renderUpdatesFullList(target, fallbackUpdates) {
+    loadUpdateItems(fallbackUpdates).then(function (items) {
+      if (!items.length) {
+        renderUpdatesEmpty(target);
+        return;
+      }
+      target.innerHTML = items.map(renderUpdateFullItem).join('');
+      enhanceScrollableTables(target);
+      scrollToCurrentHash(target);
+    }).catch(function () {
+      target.innerHTML = '<div class="notice red">更新歷程讀取失敗，請確認 data/posts.json 是否存在。</div>';
+    });
+  }
+
   function renderEventsList(target) {
     loadPosts().then(function (posts) {
       var events = posts.filter(function (post) { return post.category === '活動'; });
@@ -375,8 +540,11 @@
 
   window.ForumCmsPosts = {
     loadPosts,
+    loadUpdateItems,
     renderAnnouncements,
     renderNewsList,
+    renderUpdatesSummary,
+    renderUpdatesFullList,
     renderEventsList,
   };
 })();

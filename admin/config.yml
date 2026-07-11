@@ -22,7 +22,7 @@ collections:
             name: posts
             widget: list
             summary: "{{fields.date}} [{{fields.category}}] {{fields.title}}"
-            hint: 新增文章請在這個「文章」清單按新增。儲存發布後，文章會自動出現在首頁「最新公告」與「最新文章」頁，不會自動出現在首頁「伺服器資訊」的最新更新卡片。
+            hint: 新增文章請在這個「文章」清單按新增。儲存發布後，文章會自動出現在首頁「最新公告」與「最新文章」頁；分類選「更新」時，也會同步出現在首頁「更新歷程」與「更新歷程」完整頁。
             fields:
               - { label: 標題, name: title, widget: string }
               - label: 分類
@@ -47,7 +47,7 @@ collections:
               - label: 文章內文
                 name: body
                 widget: yaowu_markdown
-                hint: 建議優先在這裡發文。上方按鈕與範本會輸出官方統一風格，右側可切換桌面/手機預覽，儲存後會顯示在首頁最新公告與最新文章頁。
+                hint: 建議優先在這裡發文。上方按鈕與範本會輸出官方統一風格，右側可切換桌面/手機預覽；分類為「更新」的文章會同步成更新歷程內容。
               - label: 自訂 HTML 區塊
                 name: customHtml
                 widget: code
@@ -122,7 +122,7 @@ collections:
             name: updates
             widget: list
             summary: "{{fields.date}} [{{fields.tag}}] {{fields.content}}"
-            hint: 這裡會顯示在首頁下方「更新歷程」與「更新歷程」頁面。這不是一般發文區；一般公告文章請到「文章管理」新增。
+            hint: 這裡是簡短更新條列的補充區。若要發布完整更新內容，請到「文章管理」新增文章並將分類設為「更新」，系統會自動同步到首頁「更新歷程」與完整頁。
             fields:
               - { label: 顯示, name: visible, widget: boolean, default: true }
               - { label: 日期, name: date, widget: datetime, format: "YYYY/MM/DD", date_format: "YYYY/MM/DD", time_format: false }

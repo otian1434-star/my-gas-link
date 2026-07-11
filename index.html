@@ -293,6 +293,10 @@
 
   function renderUpdates(home) {
     const target = document.getElementById('update-list');
+    if (window.ForumCmsPosts && ForumCmsPosts.renderUpdatesSummary) {
+      ForumCmsPosts.renderUpdatesSummary(target, visibleUpdates(home), { limit: 6 });
+      return;
+    }
     const updates = visibleUpdates(home);
     target.innerHTML = updates.length ? updates.slice(0, 6).map(function (u) {
       return '<div class="update-item">' +
