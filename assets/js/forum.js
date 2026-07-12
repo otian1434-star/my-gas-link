@@ -97,7 +97,6 @@
             <a href="${r}pages/features-level-rewards.html">🎁 等級獎勵表</a>
             <a href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
             <a href="${r}pages/features-shop.html">💎 商城介紹</a>
-            <a href="${r}pages/features-shop-boxes.html">🎁 商城道具箱子介紹</a>
             <a href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
             <a href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
             <a href="${r}pages/features-pet.html">🐾 寵物系統</a>
@@ -202,7 +201,6 @@
       <a class="mob-link mob-sub" href="${r}pages/features-level-rewards.html">🎁 等級獎勵表</a>
       <a class="mob-link mob-sub" href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
       <a class="mob-link mob-sub" href="${r}pages/features-shop.html">💎 商城介紹</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-shop-boxes.html">🎁 商城道具箱子介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
       <a class="mob-link mob-sub" href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-pet.html">🐾 寵物系統</a>
