@@ -22,12 +22,12 @@ const FORUM_CONFIG = {
 
   // ── 遊戲下載連結（換論壇時更換）──────────────────────────────
   download: {
-    mainUrl:      "https://drive.google.com/file/d/1vf8CFDjCYwOt4E41xTKE8tfO1-TB6dDg/view?usp=sharing",
-    backup1:      "https://drive.google.com/file/d/1SWtjnQK8a5o-c8DUYm3jGcjzy2Qg2uGC/view?usp=sharing",   // RAR
-    backup2:      "https://drive.google.com/file/d/1s9xne_bRHwwOFc5X2jGphjBtVfOckxgd/view?usp=sharing",   // 7Z
-    backup3:      "https://drive.google.com/file/d/1vf8CFDjCYwOt4E41xTKE8tfO1-TB6dDg/view?usp=sharing",   // ZIP
+    mainUrl:      "https://drive.google.com/file/d/1M52E4UbTGp-0ueqDvbHxsfEncWtr0cNW/view?usp=sharing",
+    backup1:      "https://drive.google.com/file/d/15ng7Uw89BMCyltO13Nhl5l6OCgblsOUN/view?usp=sharing",   // RAR
+    backup2:      "https://drive.google.com/file/d/1ZaSNW98ZnTxi1ygdgsWUrTCFzqlI-YK7/view?usp=sharing",   // 7Z
+    backup3:      "https://drive.google.com/file/d/1M52E4UbTGp-0ueqDvbHxsfEncWtr0cNW/view?usp=sharing",   // ZIP
     patchUrl:     "",   // 合併補丁
-    updateDate:   "2026/07/11",
+    updateDate:   "2026/07/12",
     anyDeskUrl:   "https://anydesk.com/zh-tw/downloads/windows",
   },
 
