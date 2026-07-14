@@ -3,6 +3,25 @@
 本檔記錄網站、內容、圖片、影片、後台、表單、部署與文件異動。
 新的 AI 或新的聊天室接手時，請先讀 `AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`，再讀本檔最近紀錄。
 
+## 2026-07-14 - 補上變身卡合成機率表
+
+### 類型
+- 網站內容
+- 遊戲特色
+- 搜尋索引
+
+### 異動
+- `pages/features-transform-fusion.html` 新增「變身合成機率說明」表格。
+- `assets/css/style.css` 新增變身合成機率表欄寬與成功率樣式。
+- `data/search-index.json` 重新生成。
+
+### 驗證
+- `node scripts\build-search-index.js` 成功，產出 63 筆搜尋紀錄。
+- `data/posts.json`、`data/search-index.json`、`data/site.json` JSON 解析通過。
+- `assets/js/forum.js`、`assets/js/cms-posts.js`、`config.js` 語法檢查通過。
+- `git diff --check` 無空白錯誤，僅有 Windows 換行提示。
+- 已確認頁面與搜尋索引包含「變身合成機率說明」及四段成功機率。
+
 ## 2026-07-14 - 新增圖鑑收藏內容與 07/14 更新歷程
 
 ### 類型

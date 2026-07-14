@@ -2765,6 +2765,20 @@ img { max-width: 100%; display: block; }
   width: 50%;
   text-align: left;
 }
+.transform-rate-table th:first-child,
+.transform-rate-table td:first-child {
+  width: 60%;
+  text-align: left;
+}
+.transform-rate-table th:last-child,
+.transform-rate-table td:last-child {
+  width: 40%;
+  text-align: center;
+}
+.transform-rate-table .rate-value {
+  color: var(--gold-light);
+  font-weight: 800;
+}
 .rarity-tag {
   display: inline-flex;
   align-items: center;
