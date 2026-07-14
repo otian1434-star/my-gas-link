@@ -3,6 +3,26 @@
 本檔記錄網站、內容、圖片、影片、後台、表單、部署與文件異動。
 新的 AI 或新的聊天室接手時，請先讀 `AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`，再讀本檔最近紀錄。
 
+## 2026-07-14 - 新增圖鑑收藏內容與 07/14 更新歷程
+
+### 類型
+- 網站內容
+- 更新歷程
+- 搜尋索引
+
+### 異動
+- `pages/features-equipment-collection.html` 改為「圖鑑收藏」，新增開通方式與奇岩村 NPC 製作位置。
+- 圖鑑收藏頁依武器、防具、飾品整理能力清單。
+- `pages/features-overview.html` 與 `assets/js/forum.js` 導覽入口改為「圖鑑收藏」。
+- `data/posts.json` 新增 `07/14-更新歷程`，並加入圖鑑收藏官方查詢連結。
+- `data/search-index.json` 重新生成。
+
+### 驗證
+- `node scripts\build-search-index.js` 成功，產出 63 筆搜尋紀錄。
+- `data/posts.json`、`data/search-index.json`、`data/site.json` JSON 解析通過。
+- `assets/js/forum.js`、`config.js` 語法檢查通過。
+- `git diff --check` 無空白錯誤，僅有 Windows 換行提示。
+
 ## 2026-07-06 - 空部署成功並整理目前狀態記憶
 
 ### 類型

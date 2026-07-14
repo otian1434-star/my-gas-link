@@ -3095,7 +3095,7 @@ img { max-width: 100%; display: block; }
 }
 .pet-warning-card p { max-width: 760px; margin-left: auto; margin-right: auto; }
 
-/* 裝備收集圖鑑 */
+/* 圖鑑收藏 */
 .collection-page .content-card { margin-bottom: 24px; }
 .collection-intro p { max-width: 820px; }
 .collection-section h2 {
@@ -3119,6 +3119,13 @@ img { max-width: 100%; display: block; }
 .collection-table td:nth-child(2) { width: 25%; }
 .collection-table th:nth-child(3),
 .collection-table td:nth-child(3) { width: 55%; }
+.collection-table.ability-table {
+  min-width: 640px;
+}
+.collection-table.ability-table th:nth-child(1),
+.collection-table.ability-table td:nth-child(1) { width: 34%; }
+.collection-table.ability-table th:nth-child(2),
+.collection-table.ability-table td:nth-child(2) { width: 66%; }
 .collection-table td {
   vertical-align: middle;
   text-align: center;
@@ -3133,6 +3140,9 @@ img { max-width: 100%; display: block; }
 .collection-table .collection-ability {
   color: var(--gold-light);
   font-weight: 700;
+}
+.collection-table.ability-table .collection-ability {
+  text-align: left;
 }
 .collection-table .collection-required {
   text-align: left;

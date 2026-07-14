@@ -103,7 +103,7 @@
             <a href="${r}pages/features-hecate.html">🌙 赫卡特介紹</a>
             <a href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
             <a href="${r}pages/features-dragon-whisper.html">🐉 龍之呢喃</a>
-            <a href="${r}pages/features-equipment-collection.html">📚 裝備收集圖鑑</a>
+            <a href="${r}pages/features-equipment-collection.html">📚 圖鑑收藏</a>
             <a href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
             <a href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
             <a href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
@@ -207,7 +207,7 @@
       <a class="mob-link mob-sub" href="${r}pages/features-hecate.html">🌙 赫卡特介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/features-online-bag.html">🕊️ 在線獎勵</a>
       <a class="mob-link mob-sub" href="${r}pages/features-dragon-whisper.html">🐉 龍之呢喃</a>
-      <a class="mob-link mob-sub" href="${r}pages/features-equipment-collection.html">📚 裝備收集圖鑑</a>
+      <a class="mob-link mob-sub" href="${r}pages/features-equipment-collection.html">📚 圖鑑收藏</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
