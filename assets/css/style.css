@@ -3119,13 +3119,6 @@ img { max-width: 100%; display: block; }
 .collection-table td:nth-child(2) { width: 25%; }
 .collection-table th:nth-child(3),
 .collection-table td:nth-child(3) { width: 55%; }
-.collection-table.ability-table {
-  min-width: 640px;
-}
-.collection-table.ability-table th:nth-child(1),
-.collection-table.ability-table td:nth-child(1) { width: 34%; }
-.collection-table.ability-table th:nth-child(2),
-.collection-table.ability-table td:nth-child(2) { width: 66%; }
 .collection-table td {
   vertical-align: middle;
   text-align: center;
@@ -3140,9 +3133,6 @@ img { max-width: 100%; display: block; }
 .collection-table .collection-ability {
   color: var(--gold-light);
   font-weight: 700;
-}
-.collection-table.ability-table .collection-ability {
-  text-align: left;
 }
 .collection-table .collection-required {
   text-align: left;

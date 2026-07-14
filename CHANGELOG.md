@@ -12,7 +12,7 @@
 
 ### 異動
 - `pages/features-equipment-collection.html` 改為「圖鑑收藏」，新增開通方式與奇岩村 NPC 製作位置。
-- 圖鑑收藏頁依武器、防具、飾品整理能力清單。
+- 圖鑑收藏頁依武器、防具、飾品整理能力清單，並補上所需強化等級與裝備製作需求。
 - `pages/features-overview.html` 與 `assets/js/forum.js` 導覽入口改為「圖鑑收藏」。
 - `data/posts.json` 新增 `07/14-更新歷程`，並加入圖鑑收藏官方查詢連結。
 - `data/search-index.json` 重新生成。
