@@ -466,4 +466,128 @@
 - 本次尚未推送 Git。
 - 影片與文宣素材仍預設為本地行銷資料，不列入網站 Git 上架範圍。
 
+## 2026-07-19 19:44 - 新品牌快速開服與廣告影片模板
+
+### 類型
+- 影片 / 文件 / 行銷流程
+
+### 異動
+- 新增資料驅動的 15 秒直式、15 秒橫式廣告與兩種社群封面 Composition。
+- 品牌名稱、定位、開服時間、三個賣點、CTA、色系、Logo、QR、背景與音樂集中由單一 JSON 控制。
+- 新增曜舞可渲染範例、新品牌空白設定、素材規格與新品牌資料夾建立腳本。
+- 新增品牌立項、人口計畫、賽季合併制度、開服宣傳排程、廣告腳本題庫與論壇換牌清單。
+- 保留所有既有曜舞與太陽神影片 Composition，未修改正式網站公開內容。
+
+### 相關檔案
+- `品牌快速開服模板/`
+- `yaowu-remotion-video/src/brand-template/`
+- `yaowu-remotion-video/brand-presets/`
+- `yaowu-remotion-video/public/brand-assets/README.md`
+- `yaowu-remotion-video/scripts/new-brand.ps1`
+- `yaowu-remotion-video/src/Root.tsx`
+- `yaowu-remotion-video/package.json`
+- `yaowu-remotion-video/tsconfig.json`
+- `AI_HANDOFF_曜舞天堂.md`
+- `PROJECT_MEMORY.md`
+- `CURRENT_STATE_曜舞天堂.md`
+- `影片處理skill/yaowu-video-roadmap.md`
+
+### 驗證
+- `npm run lint` 通過，ESLint 與 TypeScript 無錯誤。
+- PowerShell Parser 驗證 `scripts/new-brand.ps1` 語法通過。
+- 實際輸出直式與橫式 Hook、賣點、CTA 共 6 張 QA 圖，確認文字與 QR 未裁切。
+- `npm run brand:vertical` 成功輸出完整 15 秒 H.264 MP4，約 8 MB。
+
+### 備註
+- 本次尚未推送 Git。
+- 品牌影片、QA 圖與輸出 MP4 仍屬本機行銷資料，預設不列入網站 Git 上架範圍。
+
+## 2026-07-19 20:25 - 胤天天堂獨立官方站與品牌主題
+
+### 類型
+- 新功能 / 品牌視覺 / 獨立部署準備
+
+### 異動
+- 新增 `yintian-forum/`，以現有攻略內容為基礎建立可獨立部署的胤天天堂官方站。
+- 首頁與 63 個內頁全面改用古卷、黑鐵、舊銅、暗紅封蠟的胤天主題。
+- 新增胤天 SVG 品牌印記與字標，所有頁面改用胤天 favicon。
+- LINE、註冊、下載、贊助與推文回報均改為胤天專屬籌備狀態，未串接任何既有品牌服務。
+- 移除副本內舊品牌 Logo、favicon、影片背景與客服／贊助側幅；原正式站檔案不受影響。
+- 移除副本內未使用的音樂與影片，站點由約 104 MB 精簡為約 49 MB；保留原專案素材。
+- 重建 63 筆搜尋索引，並新增獨立部署說明與品牌規範。
+
+### 驗證
+- JavaScript 語法與 JSON 解析通過。
+- 64 個 HTML 檔案的本機圖片、樣式與腳本引用檢查：0 個遺失。
+- 首頁、資料庫、下載、註冊與推文頁本機 HTTP 回應均為 200。
+- 全站掃描無「曜舞／太陽神／愛神」文字、舊 LINE、舊表單、舊 GitHub 與舊贊助網址。
+
+### 備註
+- 本次尚未建立新 Git 儲存庫、綁定獨立網址或推送上線。
+- `admin/` 未複製；胤天後台與服務端點後續需使用獨立憑證建立。
+
+## 2026-07-19 21:32 - 胤天天堂獨立部署上線
+
+### 類型
+- 部署 / 獨立網站 / 玩家服務
+
+### 異動
+- `yintian-forum/` 建立自己的巢狀 Git repository，未使用曜舞 Git 或網址。
+- 建立 Sites 專案「胤天天堂」，公開網址為 `https://yintian-lineage-tw.shop954344.chatgpt.site`。
+- 網站改為純靜態架構；不設文章後台、資料庫、帳號申請表單或帳號 API。
+- 原帳號申請入口改為「加入官方 LINE」；尚未取得胤天專屬 LINE 時只顯示籌備中，絕不導向其他伺服器。
+- 部署封裝改為 769-byte 輕量 Worker，避開舊版 Vinext Worker 超過 10 MiB 的平台限制。
+- 獨立原始碼提交 `de6798bf2bb190bd72324fb591b857bd7081b415` 已推送至胤天專案的 `main` 分支。
+
+### 驗證
+- `npm run build` 通過，輸出 2,834 個靜態檔案與約 51.7 MB 素材。
+- `npm audit --omit=dev`：0 個弱點。
+- Sites 第 5 版正式部署成功。
+- 線上首頁、官方 LINE 入口、遊戲資料庫與胤天樣式檔均回應 HTTP 200。
+- 線上 LINE 入口不含 `<form>`，並正確顯示「官方 LINE 籌備中」。
+
+### 備註
+- 胤天官方 LINE 網址仍待使用者提供；收到後只需更新胤天站的 `config.js` 與 `data/site.json`。
+- 此部署不影響曜舞 GitHub Pages、曜舞後台、曜舞表單或曜舞官方 LINE。
+
+## 2026-07-19 21:56 - 胤天官方 Logo 與伺服器設定上線
+
+### 類型
+- 品牌視覺 / 網站內容 / 部署
+
+### 異動
+- 依使用者選定的古卷黑鐵、舊銅與暗紅封蠟風格產出正式胤天 Logo：`yintian-forum/assets/media/yintian-official-logo.png`。
+- 首頁導覽列、主視覺、品牌理念區、攻略內頁導覽列、LINE 頁與推廣頁改用正式 Logo。
+- 首頁新增八格「伺服器設定」，同步版本、倍率、多開、角色與發話限制。
+- `pages/version.html` 與 `data/home.json` 同步相同規格文字。
+- 新手入口由「申請」改為「LINE」，維持不設網站帳號申請的原則。
+- 獨立原始碼提交 `79600c5f87c65a185228ddb66d1fcdfd6334c1d5` 已推送至胤天專案 `main` 分支並發佈為 Sites 第 6 版。
+
+### 驗證
+- 搜尋索引重建為 63 筆，JavaScript 與 JSON 驗證通過。
+- `npm run build` 與 `npm audit --omit=dev` 通過，0 個弱點。
+- 本機與線上 1440px 寬畫面均完成實際截圖檢查。
+- 線上首頁、正式 Logo 與版本頁均回應 HTTP 200；八項規格文字全部存在。
+
+## 2026-07-20 - 新增 07/20 更新歷程
+
+### 類型
+- 網站內容
+- 更新歷程
+- 搜尋索引
+
+### 異動
+- `data/posts.json` 新增 `07/20-更新歷程`（分類：更新，狀態：已更新），置於清單最前。
+- 內容包含：瑪那魔杖吸取魔力量由 2 調整為 5 ~ 10、瑪那相關全武器替換（玩家 / 販賣 / 盒子 / 製作）、全 0 階魔法娃娃新增回收獲得金幣 20 萬、愛神伺服器掉落顯示修正。
+- `data/search-index.json` 重新生成。
+
+### 相關檔案
+- `data/posts.json`
+- `data/search-index.json`
+
+### 驗證
+- `node scripts/build-search-index.js` 成功，產出 63 筆搜尋紀錄。
+- `data/posts.json` JSON 解析通過，共 10 篇文章，首篇為 `07/20-更新歷程`。
+- 已確認 `status` 欄位僅活動公告頁使用，更新分類不受影響。
+
 <!-- 新紀錄請在此處上方新增 -->
