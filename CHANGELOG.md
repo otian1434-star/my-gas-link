@@ -3,6 +3,25 @@
 本檔記錄網站、內容、圖片、影片、後台、表單、部署與文件異動。
 新的 AI 或新的聊天室接手時，請先讀 `AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`，再讀本檔最近紀錄。
 
+## 2026-07-21 - 新增 07/21 與 07/22 更新歷程
+
+### 類型
+- 網站內容
+- 更新歷程
+- 搜尋索引
+
+### 異動
+- `data/posts.json` 新增 `07/21-更新歷程`，記錄暗黑斯克巴女皇掉落機率提高，以及太陽神、愛神伺服器瑪那魔法杖吸魔修正。
+- `data/posts.json` 新增 `07/22-更新歷程`，記錄 LV.60 開放、赫卡特商城與掉落更新、官方介紹，以及 07/22～07/30 超值經驗包活動。
+- 超值經驗包補上購買方式、單角色限購規則、累計贊助說明與完整道具表。
+- `data/search-index.json` 重新生成。
+
+### 驗證
+- `data/posts.json`、`data/search-index.json`、`data/site.json` JSON 解析通過。
+- `assets/js/cms-posts.js`、`assets/js/forum.js`、`config.js` 語法檢查通過。
+- `node scripts\build-search-index.js` 成功完成。
+- `git diff --check` 無空白錯誤。
+
 ## 2026-07-14 - 補充 07/14 更新歷程 BOSS 血量調整
 
 ### 類型
