@@ -305,6 +305,57 @@
           "value": "Lv.5 以上"
         }
       ]
+    },
+    {
+      "title": "曜舞美神服 07/30",
+      "subtitle": "MAIN SERVER · 3.81 內掛版",
+      "rows": [
+        {
+          "highlight": true,
+          "label": "版本",
+          "value": "3.81 內掛版"
+        },
+        {
+          "highlight": true,
+          "label": "倍率設定",
+          "value": "07/30～08/13"
+        },
+        {
+          "highlight": true,
+          "label": "經驗倍率",
+          "value": "× 6.6（內掛 × 1）"
+        },
+        {
+          "highlight": true,
+          "label": "掉落倍率",
+          "value": "× 2.2"
+        },
+        {
+          "highlight": true,
+          "label": "金幣倍率",
+          "value": "× 2.2"
+        },
+        {
+          "highlight": false,
+          "label": "多開限制",
+          "value": "IP 限制 3 開"
+        },
+        {
+          "highlight": false,
+          "label": "角色限制",
+          "value": "每帳號可創 4 隻"
+        },
+        {
+          "highlight": false,
+          "label": "公頻發話",
+          "value": "Lv.10 以上"
+        },
+        {
+          "highlight": false,
+          "label": "密語發話",
+          "value": "Lv.5 以上"
+        }
+      ]
     }
   ],
   "updates": []

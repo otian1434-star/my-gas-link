@@ -47,3 +47,15 @@ registrationForm: {
 4. 第一次執行如果跳授權，照 Google 提示允許即可。
 
 執行後會套用標題列、欄寬、日期格式、純文字手機欄位、交錯底色、邊框與換行；如果既有手機欄位已經變成 9 碼，會一併補回開頭 `0`。
+
+## 新增或調整伺服器選項
+
+論壇申辦頁的伺服器選項位於 `register.html`，Google 試算表接收端的同步清單位於 `GOOGLE_APPS_SCRIPT_ACCOUNT_APPLICATION.gs` 的 `SERVER_OPTIONS`。
+
+新增分流時必須同步修改兩處，名稱需完全一致。Apps Script 會驗證送出的 `serverName`，並把同一份清單套用到試算表第 6 欄「伺服器選擇」下拉選單。
+
+本次已加入：`曜舞天堂美神服`（論壇顯示為「曜舞天堂美神服 07/30」）。
+
+修改 Apps Script 程式後，請在 Apps Script 後台執行「部署 → 管理部署作業 → 編輯 → 新版本 → 部署」。沿用原本的 Web App `/exec` 網址即可，不需要更換 `data/site.json` 的 endpoint。
+
+部署後可手動執行一次 `formatExistingApplicationSheet`，立即更新既有試算表的伺服器下拉選單；若未手動執行，下一筆申請送達時也會自動套用。

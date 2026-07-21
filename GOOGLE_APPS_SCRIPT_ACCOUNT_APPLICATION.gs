@@ -1,6 +1,13 @@
 const SHEET_NAME = '申請資料';
 const TOKEN = '';
 
+const SERVER_OPTIONS = [
+  '曜舞天堂主服',
+  '曜舞天堂太陽神服',
+  '曜舞天堂愛神服',
+  '曜舞天堂美神服'
+];
+
 const COLUMN_WIDTHS = [170, 140, 130, 130, 150, 180, 230, 150, 130, 420, 220, 160];
 
 const HEADERS = [
@@ -29,6 +36,11 @@ function doPost(e) {
       throw new Error('Invalid token');
     }
 
+    const serverName = text_(data.serverName);
+    if (SERVER_OPTIONS.indexOf(serverName) === -1) {
+      return json_({ ok: false, error: 'invalid_server', message: '請重新選擇有效的伺服器。' });
+    }
+
     const sheet = getApplicationSheet_();
 
     // 伺服器端重複防護：遊戲帳號與暱稱皆不可重複（即使前端檢查被略過也擋得住）
@@ -43,7 +55,7 @@ function doPost(e) {
       text_(data.gamePassword),
       text_(data.playerName),
       text_(data.characterChoice),
-      text_(data.serverName),
+      serverName,
       text_(data.email),
       normalizePhone_(data.phone),
       text_(data.source),
@@ -133,6 +145,7 @@ function getApplicationSheet_() {
   }
 
   formatHeader_(sheet);
+  applyServerValidation_(sheet);
 
   return sheet;
 }
@@ -173,6 +186,17 @@ function formatHeader_(sheet) {
   });
 
   sheet.getRange(1, 1, sheet.getMaxRows(), lastCol).setFontFamily('Noto Sans TC');
+}
+
+function applyServerValidation_(sheet) {
+  const rowCount = Math.max(sheet.getMaxRows() - 1, 1);
+  const rule = SpreadsheetApp.newDataValidation()
+    .requireValueInList(SERVER_OPTIONS, true)
+    .setAllowInvalid(false)
+    .setHelpText('請從曜舞官方伺服器清單中選擇。')
+    .build();
+
+  sheet.getRange(2, 6, rowCount, 1).setDataValidation(rule);
 }
 
 function formatDataRows_(sheet) {
