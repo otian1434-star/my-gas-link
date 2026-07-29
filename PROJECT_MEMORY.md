@@ -108,15 +108,14 @@ git push origin main
   - 贊助說明頁按鈕
 - 推文回報頁已加入按鈕：
   - `https://web-hosts.net/share/WtNas3Zg`
-- 龍印魔石頁已暫時下架：
-  - 移除選單入口。
-  - 移除遊戲特色總覽卡片。
-  - 刪除公開頁 `pages/equipment-dragon-seal.html`。
-  - 搜尋頁加了過濾保護。
+- 龍印魔石頁曾於 2026-06-23 暫時下架，2026-07-29 已重新上架：
+  - 還原公開頁 `pages/equipment-dragon-seal.html`。
+  - 桌機與手機選單入口已補回。
+  - 遊戲特色總覽卡片已補回。
+  - 搜尋的過濾保護已移除，`data/search-index.json` 已重建。
 
 ## 暫時隱藏或待更新內容
 
-- 龍印魔石：目前不給玩家看，等使用者之後提供新版內容再恢復。
 - `pages/download.html` 目前也有既有未提交變更，後續處理時需先確認差異。
 
 ## 工作樹注意事項
@@ -213,6 +212,30 @@ git push target main
 - 長期設定與專案狀態寫入 `PROJECT_MEMORY.md`。
 - 跨 AI 交接規則、使用者偏好、風格規範、影片流程寫入 `AI_HANDOFF_曜舞天堂.md`。
 - 寫完後回覆使用者時，需說明紀錄更新在哪裡。
+
+## 新品牌量產流程（2026-07-19）
+
+- 已新增 `品牌快速開服模板/`，涵蓋品牌定位、人口門檻、賽季／合併制度、開服前後排程、廣告腳本題庫與論壇換牌清單。
+- Remotion 已新增資料驅動的通用廣告模板，集中讀取 `yaowu-remotion-video/brand-presets/*.json`。
+- 新品牌只需準備 Logo、LINE QR、直式背景、橫式背景、特色背景、音樂與一份品牌 JSON。
+- 通用影片輸出包含 15 秒直式、15 秒橫式及兩種封面；舊有曜舞、太陽神 Composition 全部保留。
+- 新品牌素材放在 `yaowu-remotion-video/public/brand-assets/<slug>/`，可用 `yaowu-remotion-video/scripts/new-brand.ps1` 建立骨架。
+- 正式論壇尚未切換成多品牌程式；等實際新品牌名稱、網域、LINE、版本與活動確定後，再依 `品牌快速開服模板/04-論壇換牌清單.md` 實作。
+- 模板與影片輸出屬本機行銷資料，預設不要推送到網站 Git。
+
+## 胤天天堂獨立站（2026-07-19）
+
+- 新站位於 `yintian-forum/`，是完整獨立的靜態網站資料夾，不得覆蓋或混入既有正式站。
+- 首頁採用古卷、黑鐵、舊銅與暗紅封蠟；攻略內頁由 `assets/css/yintian-theme.css` 統一覆蓋。
+- 胤天品牌設定集中於 `yintian-forum/config.js` 與 `yintian-forum/data/site.json`。
+- 未取得胤天專屬資料前，LINE、註冊、下載、贊助、推文回報一律保持籌備中，不可借用其他品牌連結。
+- `admin/` 未複製；未來要建立胤天後台時，OAuth、資料來源與帳號都要獨立申請。
+- 部署方式與維護入口記錄於 `yintian-forum/README.md`。
+- 已建立自己的巢狀 Git repository 與 Sites 專案，公開網址：`https://yintian-lineage-tw.shop954344.chatgpt.site`。
+- 2026-07-19 已驗證正式部署成功；線上首頁、LINE 入口、遊戲資料庫與樣式檔皆為 HTTP 200。
+- 胤天不設文章後台或網站帳號申請；原申請入口只負責轉往胤天官方 LINE。
+- 胤天官方 LINE 尚未提供，目前維持「籌備中」，不可代入曜舞或其他品牌 LINE。
+- 胤天 Sites 正式版本 6（commit `79600c5f87c65a185228ddb66d1fcdfd6334c1d5`）已將古卷黑鐵正式 Logo 與八項伺服器設定上線。
 
 ## 影片與文宣製作紀錄
 

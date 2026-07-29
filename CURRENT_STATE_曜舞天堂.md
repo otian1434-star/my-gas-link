@@ -88,7 +88,7 @@
   - 稀有到英雄 35%
   - 英雄到傳說 18%
   - 傳說到神話目前不公開
-- 龍印魔石目前暫時下架，不給玩家看到。
+- 龍印魔石已於 2026-07-29 重新上架，選單、遊戲特色總覽與搜尋皆可正常看到。
 - 防外掛驗證教學已移除影片，只保留教學文字。
 - 功能性補丁下載點：
   `https://drive.google.com/file/d/119_5OrCMO-p78mp8gWumjdO3OZpeUqdo/view?usp=sharing`
@@ -137,6 +137,13 @@
 - 完整文宣圖：`完整文宣圖/`
 - 影片素材預設只留本機，不推網站 Git。
 - 若要人物頭髮、臉、衣服自然動起來，必須先用真正 Image-to-Video 產 B-roll，再用 Remotion 後製。
+- 已新增 `品牌快速開服模板/` 與資料驅動的 Remotion 通用品牌廣告，可由單一 JSON 快速輸出 15 秒直式、橫式及社群封面。
+- 新品牌影片設定位置：`yaowu-remotion-video/brand-presets/`；新素材位置：`yaowu-remotion-video/public/brand-assets/`。
+- 正式曜舞論壇尚未改成多品牌部署，現階段不影響線上網站。
+- 已在 `yintian-forum/` 建立完全獨立的胤天天堂官方站副本；內容可沿用，但品牌、Logo、客服、註冊、下載、贊助與推文入口均已切斷。
+- 胤天站已使用自己的巢狀 Git 與 Sites 專案獨立部署：`https://yintian-lineage-tw.shop954344.chatgpt.site`，不影響曜舞正式網址。
+- 胤天沒有後台或網站帳號申請；帳號服務入口將轉往胤天官方 LINE。目前專屬 LINE 尚未提供，因此安全顯示籌備中。
+- 胤天 Sites 正式版本 6 已上線，來源 commit `79600c5f87c65a185228ddb66d1fcdfd6334c1d5`；正式 Logo 與八項伺服器設定已完成線上驗證。
 
 ## 目前可直接交給下一個 AI 的一句話
 

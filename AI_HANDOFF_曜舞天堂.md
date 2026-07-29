@@ -159,7 +159,7 @@
   - `🎁 永久活動 ── 曜舞官方的祝福・加 LINE 好禮`
   - `🎉 開服活動 ── 歡慶開服慶`
   - `💎 開服活動 ── 開服贊助好禮`
-- 龍印魔石目前先不要公開，後續使用者提供新版內容再恢復。
+- 龍印魔石已於 2026-07-29 重新公開，內容沿用 2026-06 版本。
 - 防外掛驗證教學已移除影片，只保留文字教學。
 - 功能性補丁下載點已換新：
   - `https://drive.google.com/file/d/119_5OrCMO-p78mp8gWumjdO3OZpeUqdo/view?usp=sharing`
@@ -352,3 +352,33 @@ npx remotion render YaowuOutro6 out\yaowu-outro-6s.mp4 --codec=h264 --crf=18
 - 新 AI 若要新增文章內容，要統一轉成曜舞黑金風格。
 - 新 AI 若看到白底 HTML，應重製樣式，不是照貼。
 - 新 AI 若要上架，必須明確確認要推到 `otian1434-star/my-gas-link`。
+
+## 新品牌快速開服模板（2026-07-19）
+
+- 完整操作文件：`品牌快速開服模板/`。
+- 通用 Remotion 元件：`yaowu-remotion-video/src/brand-template/BrandAdTemplate.tsx`。
+- Studio 預設品牌設定：`yaowu-remotion-video/brand-presets/active-brand.json`。
+- 新品牌空白設定：`yaowu-remotion-video/brand-presets/new-brand-template.json`。
+- 新品牌素材放在：`yaowu-remotion-video/public/brand-assets/<品牌英文代號>/`。
+- 已註冊 Composition：
+  - `BrandAdVertical15`：1080x1920，15 秒。
+  - `BrandAdWide15`：1920x1080，15 秒。
+  - `BrandAdVerticalCover`：1080x1920 封面。
+  - `BrandAdWideCover`：1920x1080 封面。
+- 主要文案、開服資訊、色系與素材路徑均由一份 JSON 控制，不要再把新品牌文字硬寫進大型 `.tsx`。
+- `scripts/new-brand.ps1 -Slug <英文代號>` 可建立新 preset 與素材資料夾。
+- 直式完整測試輸出：`yaowu-remotion-video/out/brand-ad-vertical-15.mp4`，僅供本機 QA。
+- 這套模板尚未把正式論壇改為多品牌部署；論壇目前只提供換牌清單，避免未確認新品牌資料前影響曜舞正式站。
+
+## 胤天天堂獨立官方站（2026-07-19）
+
+- 本機站點：`yintian-forum/`。
+- 禁止把它部署到曜舞正式專案或網址；必須建立新的 repository／部署專案／網域。
+- 胤天視覺：古卷羊皮紙、黑鐵字、舊銅框、暗紅封蠟；主標語為「正統承胤・天命再臨」。
+- 所有攻略頁已套 `assets/css/yintian-theme.css`；首頁使用 `assets/css/homepage.css`。
+- 胤天專屬 LINE、下載、贊助、推文服務尚未提供，因此設定為 disabled／籌備中，不可暫接任何舊服務。
+- 胤天不設後台與網站帳號申請；`register.html` 僅是官方 LINE 轉址相容入口，不含表單或資料蒐集。
+- 已使用自己的巢狀 Git 與 Sites 專案上線：`https://yintian-lineage-tw.shop954344.chatgpt.site`。
+- 目前線上來源 commit：`79600c5f87c65a185228ddb66d1fcdfd6334c1d5`；Sites 正式版本 6。
+- 胤天正式 Logo：`yintian-forum/assets/media/yintian-official-logo.png`；可見品牌位置已統一使用此圖。
+- 維護前先讀 `yintian-forum/README.md` 與 `BRAND_GUIDE.md`；任何服務網址只能使用胤天專屬資料。
