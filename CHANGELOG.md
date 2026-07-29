@@ -3,6 +3,29 @@
 本檔記錄網站、內容、圖片、影片、後台、表單、部署與文件異動。
 新的 AI 或新的聊天室接手時，請先讀 `AI_HANDOFF_曜舞天堂.md`、`PROJECT_MEMORY.md`、`AI_WORKFLOW.md`，再讀本檔最近紀錄。
 
+## 2026-07-29 - 重新上架龍印魔石並新增 07/29 更新歷程
+
+### 類型
+- 網站內容
+- 更新歷程
+- 搜尋索引
+
+### 異動
+- 重新上架龍印魔石（2026-06-23 曾暫時下架）：
+  - 還原公開頁 `pages/equipment-dragon-seal.html`（內容沿用下架前版本）。
+  - `assets/js/forum.js` 桌機與手機選單補回「🐉 龍印魔石」入口。
+  - `pages/features-overview.html` 補回龍印魔石卡片。
+  - `pages/features-newbie-guide.html` 推文幣說明還原「龍印魔石強化卷」。
+  - `assets/js/search.js` 移除 `HIDDEN_PAGE_URLS` / `HIDDEN_TEXT_PATTERNS` 過濾保護。
+- `data/posts.json` 新增 `07/29-更新歷程`（狀態：已更新），分為「龍印魔石／BOSS 墮落／古代武器優化／即將更新」四大區塊，綠框標示維修後已完成、藍框標示傳送師 NPC 預告。
+- 內容涵蓋：龍印魔石上架官方介紹、強化卷軸現階段僅能透過推廣購買、藍鑽商城放入龍印魔石販售；墮落 BOSS 新增墮落斗篷／長袍／手套／長靴；古老的巨劍與古老的劍改為可強化（安定 6）；傳送師 NPC 預計 8 月前更新完畢。
+- `AI_HANDOFF_曜舞天堂.md`、`CURRENT_STATE_曜舞天堂.md`、`PROJECT_MEMORY.md` 的龍印魔石狀態由「暫時下架」改為「已上架」。
+
+### 驗證
+- `node scripts/build-search-index.js` 重建 `data/search-index.json`，共 64 筆，含 `pages/equipment-dragon-seal.html`。
+- `node` 解析 `data/posts.json` 通過，新貼文為陣列首筆、共 14 筆。
+- 線上驗證（GitHub Pages）：龍印魔石頁 HTTP 200、`forum.js` 選單 2 處入口、`search.js` 已無過濾保護、搜尋索引含該頁。
+
 ## 2026-07-26 - 新增 07/23～26 更新歷程
 
 ### 類型
