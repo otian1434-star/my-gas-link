@@ -5660,3 +5660,80 @@ img { max-width: 100%; display: block; }
   .btn-line-o, .btn-line-c, .btn-register, .btn-admin { display: none; }
   .btn-admin { display: none; }
 }
+/* ══════════════════════════════════════
+   五大職業特色技能｜曜舞戰典
+══════════════════════════════════════ */
+.yaowu-skills-page { --skill-accent: var(--gold); }
+.yaowu-skill-hero {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 28px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 18px;
+  padding: 32px 36px;
+  border: 1px solid rgba(201,169,110,.48);
+  background:
+    radial-gradient(circle at 8% 50%, rgba(225,171,72,.2), transparent 22%),
+    radial-gradient(circle at 92% 20%, rgba(139,26,26,.3), transparent 34%),
+    linear-gradient(125deg, #241a0f, #120d09 62%, #260e0e);
+  box-shadow: inset 0 0 50px rgba(0,0,0,.5), 0 18px 42px rgba(0,0,0,.28);
+}
+.yaowu-skill-hero::after {
+  content: "YAOWU BATTLE ARCHIVE";
+  position: absolute;
+  right: -4px;
+  bottom: 2px;
+  color: rgba(231,201,138,.07);
+  font: 700 28px/1 'Noto Serif TC', serif;
+  letter-spacing: .18em;
+}
+.yaowu-hero-emblem {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(231,201,138,.55);
+  outline: 1px solid rgba(139,26,26,.75);
+  outline-offset: -8px;
+  color: #f1d69b;
+  background: radial-gradient(circle, #75201b, #260d0b 72%);
+  box-shadow: 0 0 30px rgba(139,26,26,.44), inset 0 0 20px rgba(0,0,0,.7);
+  font: 700 40px/1 'Noto Serif TC', serif;
+  transform: rotate(-3deg);
+}
+.yaowu-kicker { display: block; margin-bottom: 8px; color: #d2a44f; font-size: 10px; letter-spacing: .48em; }
+.yaowu-skill-hero h2 { margin: 0 0 8px; color: #f3dfb2; font: 700 clamp(24px,3.4vw,38px)/1.25 'Noto Serif TC',serif; letter-spacing: .14em; }
+.yaowu-skill-hero p { position: relative; z-index: 1; max-width: 760px; color: #cbb98f; font-size: 14px; line-height: 1.9; }
+.yaowu-class-nav { display: grid; grid-template-columns: repeat(5,1fr); gap: 8px; margin-bottom: 18px; }
+.yaowu-class-nav a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 8px; border: 1px solid rgba(201,169,110,.26); color: #cdbb92; background: linear-gradient(180deg,rgba(42,31,19,.88),rgba(16,12,9,.92)); font: 600 12px/1.2 'Noto Serif TC',serif; letter-spacing: .12em; transition: .2s ease; }
+.yaowu-class-nav a:hover { border-color: #c9a96e; color: #f0dfb7; background: linear-gradient(180deg,rgba(108,36,27,.55),rgba(30,18,12,.95)); transform: translateY(-2px); }
+.yaowu-class-nav span { font-size: 17px; }
+.yaowu-skill-list { display: grid; gap: 14px; }
+.yaowu-skill-card { --skill-accent:#c9a96e; overflow: hidden; scroll-margin-top: 86px; border: 1px solid rgba(201,169,110,.25); border-left: 3px solid var(--skill-accent); background: linear-gradient(115deg,rgba(65,42,22,.2),transparent 34%),#17130e; box-shadow: 0 10px 28px rgba(0,0,0,.2); }
+.yaowu-skill-card.skill-royal { --skill-accent:#e1b95f; }
+.yaowu-skill-card.skill-knight { --skill-accent:#dc6655; }
+.yaowu-skill-card.skill-elf { --skill-accent:#63b987; }
+.yaowu-skill-card.skill-wizard { --skill-accent:#9d7de2; }
+.yaowu-skill-card.skill-dark-elf { --skill-accent:#7182c9; }
+.yaowu-skill-card > header { display: grid; grid-template-columns: 52px 1fr auto; gap: 14px; align-items: center; padding: 16px 22px; border-bottom: 1px solid rgba(201,169,110,.16); background: linear-gradient(90deg,color-mix(in srgb,var(--skill-accent) 12%,transparent),transparent 58%); }
+.yaowu-class-icon { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid color-mix(in srgb,var(--skill-accent) 55%,transparent); background: rgba(5,4,3,.38); font-size: 23px; }
+.yaowu-skill-card header small { display: block; color: var(--skill-accent); font-size: 9px; letter-spacing: .3em; }
+.yaowu-skill-card header h2 { margin: 3px 0 0; color: #f0e4cb; font: 700 18px/1.2 'Noto Serif TC',serif; letter-spacing: .28em; }
+.yaowu-skill-card header b { padding: 6px 10px; border: 1px solid color-mix(in srgb,var(--skill-accent) 45%,transparent); color: var(--skill-accent); font-size: 11px; letter-spacing: .08em; }
+.yaowu-skill-body { display: grid; grid-template-columns: 180px minmax(220px,1fr) minmax(330px,1.35fr); gap: 24px; align-items: center; padding: 20px 24px 22px; }
+.yaowu-skill-name span { display: block; margin-bottom: 3px; color: #8f8065; font-size: 10px; letter-spacing: .22em; }
+.yaowu-skill-name strong { color: var(--skill-accent); font: 700 22px/1.3 'Noto Serif TC',serif; letter-spacing: .12em; }
+.yaowu-skill-body > p { color: #c8b895; font-size: 13px; line-height: 1.85; }
+.yaowu-skill-body em { color: #f2e5c7; font-style: normal; font-weight: 600; }
+.yaowu-skill-body dl { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; }
+.yaowu-skill-body dl div { padding: 9px 6px; border: 1px solid rgba(201,169,110,.15); background: rgba(5,4,3,.28); text-align: center; }
+.yaowu-skill-body dt { color: #766b58; font-size: 9px; letter-spacing: .1em; }
+.yaowu-skill-body dd { margin-top: 2px; color: #eee0c1; font-size: 12px; font-weight: 600; }
+.yaowu-drop-note { display: flex; gap: 16px; align-items: center; margin-top: 20px; padding: 18px 22px; border: 1px solid rgba(207,79,54,.42); background: linear-gradient(90deg,rgba(116,27,20,.34),rgba(37,22,14,.7)); }
+.yaowu-drop-note > span { font-size: 30px; filter: drop-shadow(0 0 10px rgba(214,82,55,.5)); }
+.yaowu-drop-note strong { color: #e8bd69; font: 700 15px/1.4 'Noto Serif TC',serif; letter-spacing: .16em; }
+.yaowu-drop-note p { margin-top: 3px; color: #b9a886; font-size: 12px; }
+@media (max-width: 980px) { .yaowu-skill-body { grid-template-columns: 160px 1fr; } .yaowu-skill-body dl { grid-column: 1/-1; } }
+@media (max-width: 640px) { .yaowu-skill-hero { grid-template-columns: 1fr; padding: 25px 22px; } .yaowu-hero-emblem { width: 72px; font-size: 30px; } .yaowu-class-nav { grid-template-columns: repeat(5,1fr); } .yaowu-class-nav a { flex-direction: column; gap: 4px; font-size: 10px; letter-spacing: .04em; } .yaowu-skill-card > header { grid-template-columns: 44px 1fr auto; padding: 14px; } .yaowu-class-icon { width: 40px; height: 40px; } .yaowu-skill-body { grid-template-columns: 1fr; gap: 12px; padding: 17px; } .yaowu-skill-body dl { grid-column: auto; grid-template-columns: repeat(2,1fr); } }
