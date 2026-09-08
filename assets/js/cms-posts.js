@@ -509,7 +509,8 @@
       target.innerHTML = '<div class="event-list">' + events.map(function (post) {
         var ended = post.status === '已結束';
         var eventId = post.anchor ? ' id="' + escapeHTML(post.anchor) + '"' : '';
-        return '<div class="event-item' + (ended ? ' is-ended' : (post.pinned ? ' is-pinned' : '')) + '"' + eventId + '>' +
+        var themeClass = post.layout === 'midautumn' ? ' event-theme-midautumn' : '';
+        return '<div class="event-item' + (ended ? ' is-ended' : (post.pinned ? ' is-pinned' : '')) + themeClass + '"' + eventId + '>' +
           '<button class="event-head" type="button" aria-expanded="false">' +
             '<span class="event-date">' + escapeHTML(post.date) + '</span>' +
             '<span class="event-title">' + escapeHTML(post.title) + '</span>' +
