@@ -22,12 +22,12 @@ const FORUM_CONFIG = {
 
   // ── 遊戲下載連結（換論壇時更換）──────────────────────────────
   download: {
-    mainUrl:      "https://disk.cloud-shield.app/s/99y5ne",   // 下載點一
-    backup1:      "https://disk.cloud-shield.app/s/uN9JAc",   // 下載點二
-    backup2:      "https://disk.cloud-shield.app/s/QTJJwV",   // 下載點三
+    mainUrl:      "https://disk.cloud-shield.app/s/276YCS",   // 下載點一
+    backup1:      "https://disk.cloud-shield.app/s/fzCVDS",   // 下載點二
+    backup2:      "https://disk.cloud-shield.app/s/VxXqXu",   // 下載點三
     backup3:      "",
     patchUrl:     "",   // 合併補丁
-    updateDate:   "2026/09/09",
+    updateDate:   "2026/09/11",
     anyDeskUrl:   "https://anydesk.com/zh-tw/downloads/windows",
   },
 
