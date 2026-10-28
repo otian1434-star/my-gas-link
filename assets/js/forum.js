@@ -98,6 +98,7 @@
             <a href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
             <a href="${r}pages/features-shop.html">💎 商城介紹</a>
             <a href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
+            <a href="${r}pages/features-infinite-brawl.html">⚔️ 無限大亂鬥介紹</a>
             <a href="${r}pages/features-castle-siege.html">🏰 攻城戰</a>
             <a href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
             <a href="${r}pages/features-pet.html">🐾 寵物系統</a>
@@ -207,6 +208,7 @@
       <a class="mob-link mob-sub" href="${r}pages/features-event-coin.html">🎉 活動金幣</a>
       <a class="mob-link mob-sub" href="${r}pages/features-shop.html">💎 商城介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/features-infinite-battle.html">⚔️ 無限大戰</a>
+      <a class="mob-link mob-sub" href="${r}pages/features-infinite-brawl.html">⚔️ 無限大亂鬥介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/features-castle-siege.html">🏰 攻城戰</a>
       <a class="mob-link mob-sub" href="${r}pages/features-mage-summon.html">✨ 法師召喚系統</a>
       <a class="mob-link mob-sub" href="${r}pages/features-pet.html">🐾 寵物系統</a>
